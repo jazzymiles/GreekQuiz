@@ -1,0 +1,156 @@
+[
+    {
+    "ru": "понедельник",
+    "el": "Δευτέρα",
+    "transcription": "дэфтэ́ра",
+    "category": "дни",
+    "gender": "женский"
+    },
+    {
+    "ru": "вторник",
+    "el": "Τρίτη",
+    "transcription": "три́ти",
+    "category": "дни",
+    "gender": "женский"
+    },
+    {
+    "ru": "среда",
+    "el": "Τετάρτη",
+    "transcription": "тэта́рти",
+    "category": "дни",
+    "gender": "женский"
+    },
+    {
+    "ru": "четверг",
+    "el": "Πέμπτη",
+    "transcription": "пэ́мпти",
+    "category": "дни",
+    "gender": "женский"
+    },
+    {
+    "ru": "пятница",
+    "el": "Παρασκευή",
+    "transcription": "параскеви́",
+    "category": "дни",
+    "gender": "женский"
+    },
+    {
+    "ru": "суббота",
+    "el": "Σάββατο",
+    "transcription": "са́вато",
+    "category": "дни",
+    "gender": "средний"
+    },
+    {
+    "ru": "воскресенье",
+    "el": "Κυριακή",
+    "transcription": "кириаки́",
+    "category": "дни",
+    "gender": "женский"
+    },
+    {
+      "ru": "сегодня",
+      "el": "σήμερα",
+      "transcription": "сúмэра",
+      "category": "время",
+      "gender": "-"
+    },
+    {
+      "ru": "завтра",
+      "el": "αύριο",
+      "transcription": "áврио",
+      "category": "время",
+      "gender": "-"
+    },
+    {
+      "ru": "вчера",
+      "el": "χθες",
+      "transcription": "хтэс",
+      "category": "время",
+      "gender": "-"
+    },
+    {
+      "ru": "январь",
+      "el": "Ιανουάριος",
+      "transcription": "иануа́риос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "февраль",
+      "el": "Φεβρουάριος",
+      "transcription": "февруа́риос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "март",
+      "el": "Μάρτιος",
+      "transcription": "ма́ртиос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "апрель",
+      "el": "Απρίλιος",
+      "transcription": "апри́лиос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "май",
+      "el": "Μάιος",
+      "transcription": "ма́йос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "июнь",
+      "el": "Ιούνιος",
+      "transcription": "иу́ниос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "июль",
+      "el": "Ιούλιος",
+      "transcription": "иу́лиос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "август",
+      "el": "Αύγουστος",
+      "transcription": "а́вгустос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "сентябрь",
+      "el": "Σεπτέμβριος",
+      "transcription": "септе́вриос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "октябрь",
+      "el": "Οκτώβριος",
+      "transcription": "окто́вриос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "ноябрь",
+      "el": "Νοέμβριος",
+      "transcription": "ноэ́вриос",
+      "category": "месяц",
+      "gender": "м"
+    },
+    {
+      "ru": "декабрь",
+      "el": "Δεκέμβριος",
+      "transcription": "деке́вриос",
+      "category": "месяц",
+      "gender": "м"
+    }
+]

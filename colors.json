@@ -1,0 +1,93 @@
+[
+  {
+    "ru": "белый",
+    "el": "άσπρος",
+    "transcription": "а́спрос",
+    "category": "цвет",
+    "gender": "м"
+  },
+  {
+    "ru": "чёрный",
+    "el": "μαύρος",
+    "transcription": "ма́врос",
+    "category": "цвет",
+    "gender": "м"
+  },
+  {
+    "ru": "красный",
+    "el": "κόκκινος",
+    "transcription": "ко́кинос",
+    "category": "цвет",
+    "gender": "м"
+  },
+  {
+    "ru": "синий",
+    "el": "μπλε",
+    "transcription": "бле",
+    "category": "цвет",
+    "gender": "-"
+  },
+  {
+    "ru": "зелёный",
+    "el": "πράσινος",
+    "transcription": "пра́синос",
+    "category": "цвет",
+    "gender": "м"
+  },
+  {
+    "ru": "жёлтый",
+    "el": "κίτρινος",
+    "transcription": "ки́тринос",
+    "category": "цвет",
+    "gender": "м"
+  },
+  {
+    "ru": "оранжевый",
+    "el": "πορτοκαλί",
+    "transcription": "портокали́",
+    "category": "цвет",
+    "gender": "-"
+  },
+  {
+    "ru": "фиолетовый",
+    "el": "μωβ",
+    "transcription": "мов",
+    "category": "цвет",
+    "gender": "-"
+  },
+  {
+    "ru": "розовый",
+    "el": "ροζ",
+    "transcription": "роз",
+    "category": "цвет",
+    "gender": "-"
+  },
+  {
+    "ru": "коричневый",
+    "el": "καφέ",
+    "transcription": "кафе́",
+    "category": "цвет",
+    "gender": "-"
+  },
+  {
+    "ru": "серый",
+    "el": "γκρι",
+    "transcription": "гри",
+    "category": "цвет",
+    "gender": "-"
+  },
+  {
+    "ru": "золотой",
+    "el": "χρυσός",
+    "transcription": "хрисо́с",
+    "category": "цвет",
+    "gender": "м"
+  },
+  {
+    "ru": "серебряный",
+    "el": "ασημένιος",
+    "transcription": "асиме́ньос",
+    "category": "цвет",
+    "gender": "м"
+  }
+]

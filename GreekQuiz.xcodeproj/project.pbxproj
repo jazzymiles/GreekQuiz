@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0224523E2DD8782B00A6727A /* numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 0224523D2DD8782B00A6727A /* numbers.json */; };
+		0224523F2DD8782B00A6727A /* dictionaries.json in Resources */ = {isa = PBXBuildFile; fileRef = 0224523C2DD8782B00A6727A /* dictionaries.json */; };
+		022452432DD87AEE00A6727A /* days.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452402DD87AEE00A6727A /* days.json */; };
+		022452442DD87AEE00A6727A /* my_words_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452422DD87AEE00A6727A /* my_words_3.json */; };
+		022452452DD87AEE00A6727A /* my_words_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452412DD87AEE00A6727A /* my_words_2.json */; };
+		022452472DD87BB700A6727A /* diff.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452462DD87BB700A6727A /* diff.json */; };
+		022452492DD87F9100A6727A /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452482DD87F9100A6727A /* colors.json */; };
+		0224524B2DD8807D00A6727A /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = 0224524A2DD8807D00A6727A /* food.json */; };
+		0279D9CD2DD102D800288BB2 /* my_words_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0279D9CC2DD102D800288BB2 /* my_words_1.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0279D9B02DD1022600288BB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0279D9972DD1022500288BB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0279D99E2DD1022500288BB2;
+			remoteInfo = GreekQuiz;
+		};
+		0279D9BA2DD1022600288BB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0279D9972DD1022500288BB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0279D99E2DD1022500288BB2;
+			remoteInfo = GreekQuiz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0224523C2DD8782B00A6727A /* dictionaries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dictionaries.json; sourceTree = "<group>"; };
+		0224523D2DD8782B00A6727A /* numbers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = numbers.json; sourceTree = "<group>"; };
+		022452402DD87AEE00A6727A /* days.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = days.json; sourceTree = "<group>"; };
+		022452412DD87AEE00A6727A /* my_words_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = my_words_2.json; sourceTree = "<group>"; };
+		022452422DD87AEE00A6727A /* my_words_3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = my_words_3.json; sourceTree = "<group>"; };
+		022452462DD87BB700A6727A /* diff.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = diff.json; sourceTree = "<group>"; };
+		022452482DD87F9100A6727A /* colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
+		0224524A2DD8807D00A6727A /* food.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
+		0279D99F2DD1022500288BB2 /* GreekQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0279D9AF2DD1022600288BB2 /* GreekQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreekQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0279D9B92DD1022600288BB2 /* GreekQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreekQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0279D9CC2DD102D800288BB2 /* my_words_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = my_words_1.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0279D9A12DD1022500288BB2 /* GreekQuiz */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GreekQuiz;
+			sourceTree = "<group>";
+		};
+		0279D9B22DD1022600288BB2 /* GreekQuizTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GreekQuizTests;
+			sourceTree = "<group>";
+		};
+		0279D9BC2DD1022600288BB2 /* GreekQuizUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GreekQuizUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0279D99C2DD1022500288BB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0279D9AC2DD1022600288BB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0279D9B62DD1022600288BB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0279D9962DD1022500288BB2 = {
+			isa = PBXGroup;
+			children = (
+				0224524A2DD8807D00A6727A /* food.json */,
+				022452482DD87F9100A6727A /* colors.json */,
+				022452462DD87BB700A6727A /* diff.json */,
+				022452402DD87AEE00A6727A /* days.json */,
+				022452412DD87AEE00A6727A /* my_words_2.json */,
+				022452422DD87AEE00A6727A /* my_words_3.json */,
+				0224523C2DD8782B00A6727A /* dictionaries.json */,
+				0224523D2DD8782B00A6727A /* numbers.json */,
+				0279D9CC2DD102D800288BB2 /* my_words_1.json */,
+				0279D9A12DD1022500288BB2 /* GreekQuiz */,
+				0279D9B22DD1022600288BB2 /* GreekQuizTests */,
+				0279D9BC2DD1022600288BB2 /* GreekQuizUITests */,
+				0279D9A02DD1022500288BB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0279D9A02DD1022500288BB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0279D99F2DD1022500288BB2 /* GreekQuiz.app */,
+				0279D9AF2DD1022600288BB2 /* GreekQuizTests.xctest */,
+				0279D9B92DD1022600288BB2 /* GreekQuizUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0279D99E2DD1022500288BB2 /* GreekQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0279D9C32DD1022600288BB2 /* Build configuration list for PBXNativeTarget "GreekQuiz" */;
+			buildPhases = (
+				0279D99B2DD1022500288BB2 /* Sources */,
+				0279D99C2DD1022500288BB2 /* Frameworks */,
+				0279D99D2DD1022500288BB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0279D9A12DD1022500288BB2 /* GreekQuiz */,
+			);
+			name = GreekQuiz;
+			packageProductDependencies = (
+			);
+			productName = GreekQuiz;
+			productReference = 0279D99F2DD1022500288BB2 /* GreekQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0279D9AE2DD1022600288BB2 /* GreekQuizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0279D9C62DD1022600288BB2 /* Build configuration list for PBXNativeTarget "GreekQuizTests" */;
+			buildPhases = (
+				0279D9AB2DD1022600288BB2 /* Sources */,
+				0279D9AC2DD1022600288BB2 /* Frameworks */,
+				0279D9AD2DD1022600288BB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0279D9B12DD1022600288BB2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0279D9B22DD1022600288BB2 /* GreekQuizTests */,
+			);
+			name = GreekQuizTests;
+			packageProductDependencies = (
+			);
+			productName = GreekQuizTests;
+			productReference = 0279D9AF2DD1022600288BB2 /* GreekQuizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0279D9B82DD1022600288BB2 /* GreekQuizUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0279D9C92DD1022600288BB2 /* Build configuration list for PBXNativeTarget "GreekQuizUITests" */;
+			buildPhases = (
+				0279D9B52DD1022600288BB2 /* Sources */,
+				0279D9B62DD1022600288BB2 /* Frameworks */,
+				0279D9B72DD1022600288BB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0279D9BB2DD1022600288BB2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0279D9BC2DD1022600288BB2 /* GreekQuizUITests */,
+			);
+			name = GreekQuizUITests;
+			packageProductDependencies = (
+			);
+			productName = GreekQuizUITests;
+			productReference = 0279D9B92DD1022600288BB2 /* GreekQuizUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0279D9972DD1022500288BB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					0279D99E2DD1022500288BB2 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					0279D9AE2DD1022600288BB2 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 0279D99E2DD1022500288BB2;
+					};
+					0279D9B82DD1022600288BB2 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 0279D99E2DD1022500288BB2;
+					};
+				};
+			};
+			buildConfigurationList = 0279D99A2DD1022500288BB2 /* Build configuration list for PBXProject "GreekQuiz" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0279D9962DD1022500288BB2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0279D9A02DD1022500288BB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0279D99E2DD1022500288BB2 /* GreekQuiz */,
+				0279D9AE2DD1022600288BB2 /* GreekQuizTests */,
+				0279D9B82DD1022600288BB2 /* GreekQuizUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0279D99D2DD1022500288BB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0224524B2DD8807D00A6727A /* food.json in Resources */,
+				022452492DD87F9100A6727A /* colors.json in Resources */,
+				0279D9CD2DD102D800288BB2 /* my_words_1.json in Resources */,
+				022452432DD87AEE00A6727A /* days.json in Resources */,
+				022452442DD87AEE00A6727A /* my_words_3.json in Resources */,
+				022452452DD87AEE00A6727A /* my_words_2.json in Resources */,
+				0224523E2DD8782B00A6727A /* numbers.json in Resources */,
+				022452472DD87BB700A6727A /* diff.json in Resources */,
+				0224523F2DD8782B00A6727A /* dictionaries.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0279D9AD2DD1022600288BB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0279D9B72DD1022600288BB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0279D99B2DD1022500288BB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0279D9AB2DD1022600288BB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0279D9B52DD1022600288BB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0279D9B12DD1022600288BB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0279D99E2DD1022500288BB2 /* GreekQuiz */;
+			targetProxy = 0279D9B02DD1022600288BB2 /* PBXContainerItemProxy */;
+		};
+		0279D9BB2DD1022600288BB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0279D99E2DD1022500288BB2 /* GreekQuiz */;
+			targetProxy = 0279D9BA2DD1022600288BB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0279D9C12DD1022600288BB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0279D9C22DD1022600288BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0279D9C42DD1022600288BB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GreekQuiz/Preview Content\"";
+				DEVELOPMENT_TEAM = 52WL2PY5B8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = miles.GreekQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0279D9C52DD1022600288BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GreekQuiz/Preview Content\"";
+				DEVELOPMENT_TEAM = 52WL2PY5B8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = miles.GreekQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0279D9C72DD1022600288BB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52WL2PY5B8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = miles.GreekQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreekQuiz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GreekQuiz";
+			};
+			name = Debug;
+		};
+		0279D9C82DD1022600288BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52WL2PY5B8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = miles.GreekQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreekQuiz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GreekQuiz";
+			};
+			name = Release;
+		};
+		0279D9CA2DD1022600288BB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52WL2PY5B8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = miles.GreekQuizUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GreekQuiz;
+			};
+			name = Debug;
+		};
+		0279D9CB2DD1022600288BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 52WL2PY5B8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = miles.GreekQuizUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GreekQuiz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0279D99A2DD1022500288BB2 /* Build configuration list for PBXProject "GreekQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0279D9C12DD1022600288BB2 /* Debug */,
+				0279D9C22DD1022600288BB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0279D9C32DD1022600288BB2 /* Build configuration list for PBXNativeTarget "GreekQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0279D9C42DD1022600288BB2 /* Debug */,
+				0279D9C52DD1022600288BB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0279D9C62DD1022600288BB2 /* Build configuration list for PBXNativeTarget "GreekQuizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0279D9C72DD1022600288BB2 /* Debug */,
+				0279D9C82DD1022600288BB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0279D9C92DD1022600288BB2 /* Build configuration list for PBXNativeTarget "GreekQuizUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0279D9CA2DD1022600288BB2 /* Debug */,
+				0279D9CB2DD1022600288BB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0279D9972DD1022500288BB2 /* Project object */;
+}

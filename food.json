@@ -1,0 +1,142 @@
+[
+  {
+    "ru": "еда",
+    "el": "φαγητό",
+    "transcription": "фагито́",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "хлеб",
+    "el": "ψωμί",
+    "transcription": "псоми́",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "вода",
+    "el": "νερό",
+    "transcription": "неро́",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "мясо",
+    "el": "κρέας",
+    "transcription": "крэас",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "рыба",
+    "el": "ψάρι",
+    "transcription": "пса́ри",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "суп",
+    "el": "σούπα",
+    "transcription": "су́па",
+    "category": "еда",
+    "gender": "ж"
+  },
+  {
+    "ru": "сыр",
+    "el": "τυρί",
+    "transcription": "тири́",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "масло",
+    "el": "βούτυρο",
+    "transcription": "ву́тиро",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "молоко",
+    "el": "γάλα",
+    "transcription": "га́ла",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "яйцо",
+    "el": "αυγό",
+    "transcription": "авго́",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "овощи",
+    "el": "λαχανικά",
+    "transcription": "лаханика́",
+    "category": "еда",
+    "gender": "мн"
+  },
+  {
+    "ru": "фрукты",
+    "el": "φρούτα",
+    "transcription": "фру́та",
+    "category": "еда",
+    "gender": "мн"
+  },
+  {
+    "ru": "яблоко",
+    "el": "μήλο",
+    "transcription": "ми́ло",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "апельсин",
+    "el": "πορτοκάλι",
+    "transcription": "портока́ли",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "картошка",
+    "el": "πατάτα",
+    "transcription": "пата́та",
+    "category": "еда",
+    "gender": "ж"
+  },
+  {
+    "ru": "рис",
+    "el": "ρύζι",
+    "transcription": "ри́зи",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "салат",
+    "el": "σαλάτα",
+    "transcription": "сала́та",
+    "category": "еда",
+    "gender": "ж"
+  },
+  {
+    "ru": "кофе",
+    "el": "καφές",
+    "transcription": "кафэ́с",
+    "category": "еда",
+    "gender": "м"
+  },
+  {
+    "ru": "чай",
+    "el": "τσάι",
+    "transcription": "ца́и",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "вино",
+    "el": "κρασί",
+    "transcription": "краси́",
+    "category": "еда",
+    "gender": "ср"
+  }
+]
