@@ -68,29 +68,36 @@ struct ContentView: View {
 
                 Spacer()
 
-                VStack(spacing: 16) {
+                VStack(spacing: 0) { // Используем 0, чтобы контролировать отступы явно
                     if !activeWords.isEmpty {
                         Text(activeWords[currentWordIndex].el)
                             .font(.system(size: 40, weight: .bold))
+                            .padding(.bottom, 8) // Добавляем небольшой отступ снизу
 
                         Text(activeWords[currentWordIndex].transcription)
                             .font(.system(size: 28))
                             .foregroundColor(.gray)
-                            .padding(-8)
+                            .padding(.bottom, 16) // Отступ до TextField
+
                         TextField("Ваш перевод", text: $userInput)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal)
                             .focused($isTextFieldFocused)
-                            .padding(18)
+                            .padding(.bottom, 18) // Отступ после TextField
 
                         Button("Проверить") {
                             checkAnswer()
                         }
+                        .padding(.bottom, 20) // Отступ после кнопки "Проверить"
 
-                        if showAnswer {
+                        // Этот VStack будет содержать элементы, которые появляются/исчезают
+                        // Мы зададим ему фиксированную высоту, чтобы основной макет не прыгал
+                        VStack(spacing: 0) {
                             Text("Правильный перевод: \(activeWords[currentWordIndex].ru)")
                                 .foregroundColor(.white)
-                                .padding()
+                                .padding(.vertical, 9) // Вертикальный отступ текста
+                                .padding(.horizontal)
+                                .frame(maxWidth: .infinity) // Чтобы текст занимал всю ширину для стабильности
 
                             Button("Дальше") {
                                 showAnswer = false
@@ -100,22 +107,22 @@ struct ContentView: View {
                             .background(Color.blue)
                             .foregroundColor(.white)
                             .cornerRadius(10)
-                        } else {
-                            Button(action: {
-                                isCorrect = false
-                                showAnswer = true
-                            }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.red)
-                                    .font(.system(size: 30))
-                            }
+                            .padding(.top, 10) // Отступ сверху для кнопки "Дальше"
                         }
+                        // Задаем фиксированную высоту для этого блока, чтобы он не прыгал
+                        // Это значение нужно будет подобрать опытным путем, чтобы оно было достаточным
+                        // для отображения текста и кнопки "Дальше" со всеми отступами.
+                        // Пример: (высота текста + padding) + (высота кнопки + padding)
+                        .frame(height: 100) // Adjust this value based on actual content height
+                        .opacity(showAnswer ? 1 : 0) // Делаем невидимым, но сохраняем место
+                        .animation(.easeIn, value: showAnswer) // Добавляем анимацию для плавности
+
                     } else {
                         Text("Выберите хотя бы один словарь.")
                             .foregroundColor(.gray)
                     }
                 }
-                .padding(.bottom, 100)
+                .padding(.bottom, 30)
 
                 Spacer()
             }
@@ -179,8 +186,8 @@ struct ContentView: View {
 
         for filename in selectedDictionaries {
             if let url = Bundle.main.url(forResource: filename.replacingOccurrences(of: ".json", with: ""), withExtension: "json"),
-               let data = try? Data(contentsOf: url),
-               let decoded = try? JSONDecoder().decode([Word].self, from: data) {
+                let data = try? Data(contentsOf: url),
+                let decoded = try? JSONDecoder().decode([Word].self, from: data) {
                 combinedWords.append(contentsOf: decoded)
             }
         }

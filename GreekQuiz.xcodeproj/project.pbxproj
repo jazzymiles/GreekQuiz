@@ -6,18 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		0224523E2DD8782B00A6727A /* numbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 0224523D2DD8782B00A6727A /* numbers.json */; };
-		0224523F2DD8782B00A6727A /* dictionaries.json in Resources */ = {isa = PBXBuildFile; fileRef = 0224523C2DD8782B00A6727A /* dictionaries.json */; };
-		022452432DD87AEE00A6727A /* days.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452402DD87AEE00A6727A /* days.json */; };
-		022452442DD87AEE00A6727A /* my_words_3.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452422DD87AEE00A6727A /* my_words_3.json */; };
-		022452452DD87AEE00A6727A /* my_words_2.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452412DD87AEE00A6727A /* my_words_2.json */; };
-		022452472DD87BB700A6727A /* diff.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452462DD87BB700A6727A /* diff.json */; };
-		022452492DD87F9100A6727A /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 022452482DD87F9100A6727A /* colors.json */; };
-		0224524B2DD8807D00A6727A /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = 0224524A2DD8807D00A6727A /* food.json */; };
-		0279D9CD2DD102D800288BB2 /* my_words_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0279D9CC2DD102D800288BB2 /* my_words_1.json */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		0279D9B02DD1022600288BB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -36,18 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0224523C2DD8782B00A6727A /* dictionaries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dictionaries.json; sourceTree = "<group>"; };
-		0224523D2DD8782B00A6727A /* numbers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = numbers.json; sourceTree = "<group>"; };
-		022452402DD87AEE00A6727A /* days.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = days.json; sourceTree = "<group>"; };
-		022452412DD87AEE00A6727A /* my_words_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = my_words_2.json; sourceTree = "<group>"; };
-		022452422DD87AEE00A6727A /* my_words_3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = my_words_3.json; sourceTree = "<group>"; };
-		022452462DD87BB700A6727A /* diff.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = diff.json; sourceTree = "<group>"; };
-		022452482DD87F9100A6727A /* colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
-		0224524A2DD8807D00A6727A /* food.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
 		0279D99F2DD1022500288BB2 /* GreekQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0279D9AF2DD1022600288BB2 /* GreekQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreekQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0279D9B92DD1022600288BB2 /* GreekQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreekQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0279D9CC2DD102D800288BB2 /* my_words_1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = my_words_1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -96,15 +75,6 @@
 		0279D9962DD1022500288BB2 = {
 			isa = PBXGroup;
 			children = (
-				0224524A2DD8807D00A6727A /* food.json */,
-				022452482DD87F9100A6727A /* colors.json */,
-				022452462DD87BB700A6727A /* diff.json */,
-				022452402DD87AEE00A6727A /* days.json */,
-				022452412DD87AEE00A6727A /* my_words_2.json */,
-				022452422DD87AEE00A6727A /* my_words_3.json */,
-				0224523C2DD8782B00A6727A /* dictionaries.json */,
-				0224523D2DD8782B00A6727A /* numbers.json */,
-				0279D9CC2DD102D800288BB2 /* my_words_1.json */,
 				0279D9A12DD1022500288BB2 /* GreekQuiz */,
 				0279D9B22DD1022600288BB2 /* GreekQuizTests */,
 				0279D9BC2DD1022600288BB2 /* GreekQuizUITests */,
@@ -242,15 +212,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0224524B2DD8807D00A6727A /* food.json in Resources */,
-				022452492DD87F9100A6727A /* colors.json in Resources */,
-				0279D9CD2DD102D800288BB2 /* my_words_1.json in Resources */,
-				022452432DD87AEE00A6727A /* days.json in Resources */,
-				022452442DD87AEE00A6727A /* my_words_3.json in Resources */,
-				022452452DD87AEE00A6727A /* my_words_2.json in Resources */,
-				0224523E2DD8782B00A6727A /* numbers.json in Resources */,
-				022452472DD87BB700A6727A /* diff.json in Resources */,
-				0224523F2DD8782B00A6727A /* dictionaries.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
