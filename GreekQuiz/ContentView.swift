@@ -26,6 +26,9 @@ struct ContentView: View {
     @State private var score = UserDefaults.standard.integer(forKey: "score")
     @FocusState private var isTextFieldFocused: Bool
 
+    // Новое свойство для управления видимостью транскрипции
+    @AppStorage("showTranscription") private var showTranscription: Bool = true
+
     var body: some View {
         ZStack {
             backgroundColor()
@@ -74,11 +77,26 @@ struct ContentView: View {
                             .font(.system(size: 40, weight: .bold))
                             .padding(.bottom, 8) // Добавляем небольшой отступ снизу
 
-                        Text(activeWords[currentWordIndex].transcription)
-                            .font(.system(size: 28))
-                            .foregroundColor(.gray)
-                            .padding(.bottom, 16) // Отступ до TextField
-
+                        // HStack для транскрипции и кнопки, отцентрированный
+                        HStack(spacing: 5) {
+                            Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
+                                .font(.system(size: 28))
+                                .foregroundColor(.gray)
+                                .padding(.leading, 10) // Вернули отступ слева
+                            
+                            Button(action: {
+                                showTranscription.toggle() // Переключаем видимость транскрипции
+                            }) {
+                                Image(systemName: showTranscription ? "eye.fill" : "eye.slash.fill")
+                                    .font(.system(size: 24))
+                                    .foregroundColor(.gray)
+                            }
+                            .padding(.trailing, 10) // Отступ справа от кнопки
+                        }
+                        // Центрируем HStack, чтобы он не прижимался к краю
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .padding(.bottom, 16) // Отступ до TextField
+                        
                         TextField("Ваш перевод", text: $userInput)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal)
@@ -90,14 +108,12 @@ struct ContentView: View {
                         }
                         .padding(.bottom, 20) // Отступ после кнопки "Проверить"
 
-                        // Этот VStack будет содержать элементы, которые появляются/исчезают
-                        // Мы зададим ему фиксированную высоту, чтобы основной макет не прыгал
                         VStack(spacing: 0) {
                             Text("Правильный перевод: \(activeWords[currentWordIndex].ru)")
                                 .foregroundColor(.white)
-                                .padding(.vertical, 9) // Вертикальный отступ текста
+                                .padding(.vertical, 9)
                                 .padding(.horizontal)
-                                .frame(maxWidth: .infinity) // Чтобы текст занимал всю ширину для стабильности
+                                .frame(maxWidth: .infinity)
 
                             Button("Дальше") {
                                 showAnswer = false
@@ -107,15 +123,12 @@ struct ContentView: View {
                             .background(Color.blue)
                             .foregroundColor(.white)
                             .cornerRadius(10)
-                            .padding(.top, 10) // Отступ сверху для кнопки "Дальше"
+                            .padding(.top, 10)
                         }
-                        // Задаем фиксированную высоту для этого блока, чтобы он не прыгал
-                        // Это значение нужно будет подобрать опытным путем, чтобы оно было достаточным
-                        // для отображения текста и кнопки "Дальше" со всеми отступами.
-                        // Пример: (высота текста + padding) + (высота кнопки + padding)
-                        .frame(height: 100) // Adjust this value based on actual content height
-                        .opacity(showAnswer ? 1 : 0) // Делаем невидимым, но сохраняем место
-                        .animation(.easeIn, value: showAnswer) // Добавляем анимацию для плавности
+                        .frame(height: 100)
+                        .opacity(showAnswer ? 1 : 0)
+                        // Анимация здесь остаётся, чтобы блок с ответом появлялся плавно
+                        .animation(.easeIn, value: showAnswer)
 
                     } else {
                         Text("Выберите хотя бы один словарь.")
