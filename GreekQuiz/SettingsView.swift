@@ -1,13 +1,20 @@
 // SettingsView.swift
 import SwiftUI
 
+// enum DictionarySource теперь объявлен в ContentView.swift и доступен глобально
+
 struct SettingsView: View {
     @Binding var showTranscription: Bool
     @Binding var autoPlaySound: Bool
-    @Binding var colorSchemePreference: String // "system", "light", "dark"
-    @Environment(\.dismiss) var dismiss // Для закрытия листа
+    @Binding var colorSchemePreference: String
+    @Binding var dictionarySource: DictionarySource
+    @Binding var customDictionaryURL: String
+    @Environment(\.dismiss) var dismiss
 
-    @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme // Чтобы отображать текущую системную тему
+    // Callback для уведомления ContentView о необходимости загрузки словарей
+    var onDownloadDictionaries: () -> Void
+
+    @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
 
     var body: some View {
         NavigationView {
@@ -27,7 +34,32 @@ struct SettingsView: View {
                         Text("Светлая").tag("light")
                         Text("Темная").tag("dark")
                     }
-                    .pickerStyle(.segmented) // Или .menu
+                    .pickerStyle(.segmented)
+                }
+
+                // Раздел: Словари
+                Section(header: Text("Словари")) {
+                    Picker("Источник словарей", selection: $dictionarySource) {
+                        ForEach(DictionarySource.allCases) { source in
+                            Text(source.displayName).tag(source)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+
+                    if dictionarySource == .customURL {
+                        TextField("Введите адрес файла dictionaries.txt", text: $customDictionaryURL)
+                            .keyboardType(.URL)
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                    }
+
+                    Button("Скачать и сохранить словари") {
+                        // Этот callback будет запускать соответствующую функцию загрузки в ContentView
+                        onDownloadDictionaries()
+                        // dismiss() // Можно раскомментировать, если хотите, чтобы лист закрывался сразу
+                    }
+                    .disabled(dictionarySource == .customURL && customDictionaryURL.isEmpty)
+                    .tint(.blue)
                 }
             }
             .navigationTitle("Настройки")
