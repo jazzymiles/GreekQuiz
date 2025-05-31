@@ -43,7 +43,8 @@ struct ContentView: View {
     @State private var cardOptions: [String] = []
 
     @State private var showingDictionarySelection = false
-    @State private var showingRules = false // НОВОЕ: Состояние для отображения правил
+    @State private var showingRules = false // Состояние для отображения правил
+    @State private var showingSettings = false // НОВОЕ: Состояние для отображения настроек
 
     @AppStorage("showTranscription") private var showTranscription: Bool = true
     @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true // По умолчанию звук включен
@@ -96,7 +97,7 @@ struct ContentView: View {
 
                     Spacer() // Чтобы кнопки словарей, темы, звука и транскрипции были справа
 
-                    // НОВОЕ: Кнопка "Правила"
+                    // Кнопка "Правила"
                     Button(action: {
                         showingRules = true // Показываем новый лист с правилами
                     }) {
@@ -137,34 +138,15 @@ struct ContentView: View {
                         )
                     }
 
-                    // НОВАЯ КНОПКА: Переключение темы (светлая/темная)
-                    Button(action: {
-                        switch colorSchemePreference {
-                        case "system":
-                            colorSchemePreference = "light"
-                        case "light":
-                            colorSchemePreference = "dark"
-                        case "dark":
-                            colorSchemePreference = "system" // Возвращаемся к системным настройкам
-                        default:
-                            colorSchemePreference = "system"
-                        }
-                    }) {
-                        Image(getThemeIconName()) // Используем новую вспомогательную функцию
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(8)
-                            .background(Color.gray.opacity(0.3))
-                            .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
+                    // НОВАЯ КНОПКА: Переключение темы (светлая/темная) - Убрана отсюда и перенесена в настройки
+                    // КНОПКА: Включение/выключение автоматического произношения - Убрана отсюда и перенесена в настройки
+                    // Кнопка "Транскрипция" - Убрана отсюда и перенесена в настройки
 
-                    // КНОПКА: Включение/выключение автоматического произношения
+                    // НОВАЯ КНОПКА: Настройки (вместо транскрипции)
                     Button(action: {
-                        autoPlaySound.toggle() // Переключаем состояние автоматического произношения
+                        showingSettings = true // Показываем экран настроек
                     }) {
-                        Image(autoPlaySound ? "sound_on" : "sound_off") // Имена ваших SVG файлов
+                        Image("settings") // Имя вашего SVG файла в Assets.xcassets
                             .resizable()
                             .scaledToFit()
                             .frame(width: 30, height: 30)
@@ -173,20 +155,13 @@ struct ContentView: View {
                             .cornerRadius(8)
                     }
                     .buttonStyle(PlainButtonStyle())
-
-                    // Кнопка "Транскрипция"
-                    Button(action: {
-                        showTranscription.toggle() // Переключаем видимость транскрипции
-                    }) {
-                        Image(showTranscription ? "eye_open" : "eye_closed") // Имена ваших SVG файлов
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(8)
-                            .background(Color.gray.opacity(0.3))
-                            .cornerRadius(8)
+                    .sheet(isPresented: $showingSettings) {
+                        SettingsView(
+                            showTranscription: $showTranscription,
+                            autoPlaySound: $autoPlaySound,
+                            colorSchemePreference: $colorSchemePreference
+                        )
                     }
-                    .buttonStyle(PlainButtonStyle())
                 }
                 .padding(.horizontal)
                 .padding(.top, 10)
