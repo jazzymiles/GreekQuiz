@@ -1,4 +1,5 @@
 import SwiftUI
+import AVFoundation
 
 struct Word: Codable, Equatable { // Добавлено Equatable
     let ru: String
@@ -42,6 +43,8 @@ struct ContentView: View {
     @State private var showingDictionarySelection = false
 
     @AppStorage("showTranscription") private var showTranscription: Bool = true
+    
+    private let synthesizer = AVSpeechSynthesizer()
 
     var body: some View {
                 ZStack {
@@ -129,11 +132,26 @@ struct ContentView: View {
 
                         VStack(spacing: 0) {
                             if !activeWords.isEmpty {
-                                Text(activeWords[currentWordIndex].el)
-                                    .font(.system(size: 40, weight: .bold))
-                                    .padding(.bottom, 8)
+                                HStack(spacing: 10) { // Отступ между словом и иконкой
+                                    // УДАЛЕН .frame(maxWidth: .infinity, alignment: .center) С ТЕКСТА
+                                    Text(activeWords[currentWordIndex].el)
+                                        .font(.system(size: 40, weight: .bold))
+                                        // .padding(.bottom, 8) // Этот padding перемещен ниже на HStack
 
-                                // Транскрипция (убираем старую иконку рядом)
+                                    Button(action: {
+                                        speakWord(activeWords[currentWordIndex].el, language: "el-GR")
+                                    }) {
+                                        Image(systemName: "speaker.wave.3.fill")
+                                            .font(.title)
+                                            .foregroundColor(.blue)
+                                            // .padding(.bottom, 8) // Этот padding перемещен ниже на HStack
+                                    }
+                                    // УДАЛЕН .frame(maxWidth: .infinity, alignment: .center) С КНОПКИ
+                                }
+                                .frame(maxWidth: .infinity, alignment: .center) // ВОТ ГЛАВНОЕ ИЗМЕНЕНИЕ ДЛЯ ЦЕНТРИРОВАНИЯ ВСЕГО HStack
+                                .padding(.bottom, 8) 
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding(.bottom, 8) //
                                 HStack(spacing: 5) {
                                     Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
                                         .font(.system(size: 28))
@@ -343,30 +361,32 @@ struct ContentView: View {
         
         // Новая функция для проверки ответа в режиме карточек
         func checkCardAnswer() {
-            guard let selectedAnswer = selectedAnswer else {
-                // Пользователь не выбрал ответ
-                isShowingFeedback = true
-                isCorrect = false
-                showAnswer = true // Показываем правильный ответ, если пользователь ничего не выбрал
+            // Если ответ не выбран, это неправильный ответ.
+            if selectedAnswer == nil {
+                isCorrect = false // Устанавливаем, что ответ неправильный
+                showAnswer = true // Показываем блок ответа (красный фон, правильный перевод)
+                // Не устанавливаем isShowingFeedback, потому что это не "быстрая" обратная связь,
+                // а скорее отображение правильного ответа, требующее действия "Дальше".
+                print("Ошибка: Ответ не выбран. Показ правильного ответа.")
                 return
             }
 
             let correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
             
-            if correctAnswers.contains(selectedAnswer.lowercased()) {
+            if correctAnswers.contains(selectedAnswer!.lowercased()) { // Теперь мы уверены, что selectedAnswer не nil
                 isCorrect = true
                 score += 1
                 UserDefaults.standard.set(score, forKey: "score")
                 isShowingFeedback = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                     isShowingFeedback = false
-                    nextWord() // Переходим к следующему слову
-                    self.selectedAnswer = nil // Сброс выбранного ответа
-                    generateCardOptions() // Генерируем новые опции
+                    nextWord()
+                    self.selectedAnswer = nil
+                    generateCardOptions()
                 }
             } else {
                 isCorrect = false
-                showAnswer = true // Показываем правильный ответ
+                showAnswer = true
             }
         }
 
@@ -432,6 +452,39 @@ struct ContentView: View {
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
             return parts
         }
+    
+    func speakWord(_ text: String, language: String) {
+        // Убедимся, что синтезатор не занят
+        if synthesizer.isSpeaking {
+            synthesizer.stopSpeaking(at: .immediate) // Останавливаем немедленно, если что-то уже говорится
+        }
+
+        let utterance = AVSpeechUtterance(string: text)
+        
+        // Попытка найти голос для указанного языка
+        if let voice = AVSpeechSynthesisVoice(language: language) {
+            utterance.voice = voice
+            print("Используется голос для языка: \(language) - \(voice.identifier)")
+        } else {
+            // Если голос для указанного языка не найден, попробуем найти любой греческий голос
+            print("Голос для языка '\(language)' не найден. Попытка найти альтернативный греческий голос.")
+            let availableGreekVoices = AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("el") }
+            if let firstGreekVoice = availableGreekVoices.first {
+                utterance.voice = firstGreekVoice
+                print("Используется доступный греческий голос: \(firstGreekVoice.identifier)")
+            } else {
+                // Если греческий голос не найден вообще, используем системный голос по умолчанию.
+                // В этом случае произношение будет не на греческом, но хотя бы будет звук.
+                utterance.voice = AVSpeechSynthesisVoice(language: Locale.current.identifier)
+                print("Греческий голос не найден. Используется системный голос по умолчанию: \(Locale.current.identifier)")
+            }
+        }
+        
+        utterance.rate = 0.5 // Можно попробовать немного увеличить для лучшей слышимости
+        utterance.pitchMultiplier = 1.0
+
+        synthesizer.speak(utterance)
+    }
     }
     #Preview {
         ContentView()
