@@ -1,6 +1,6 @@
 import SwiftUI
 import AVFoundation
-import WebKit // Import WebKit for WKWebView
+import WebKit // Импортируем WebKit для WKWebView
 
 struct Word: Codable, Equatable {
     let ru: String
@@ -8,11 +8,11 @@ struct Word: Codable, Equatable {
     let transcription: String
 }
 
-enum QuizMode: String, CaseIterable, Identifiable { // Make QuizMode identifiable
+enum QuizMode: String, CaseIterable, Identifiable { // Делаем QuizMode идентифицируемым
     case keyboard
     case cards
 
-    var id: String { self.rawValue } // Provide an id for ForEach
+    var id: String { self.rawValue } // Предоставляем id для ForEach
 }
 
 struct DictionaryInfo: Codable, Identifiable, Hashable {
@@ -43,7 +43,7 @@ struct ContentView: View {
     @State private var cardOptions: [String] = []
 
     @State private var showingDictionarySelection = false
-    @State private var showingRules = false // State for showing rules
+    @State private var showingRules = false // НОВОЕ: Состояние для отображения правил
 
     @AppStorage("showTranscription") private var showTranscription: Bool = true
     @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true // По умолчанию звук включен
@@ -96,7 +96,7 @@ struct ContentView: View {
 
                     Spacer() // Чтобы кнопки словарей, темы, звука и транскрипции были справа
 
-                    // Кнопка "Правила"
+                    // НОВОЕ: Кнопка "Правила"
                     Button(action: {
                         showingRules = true // Показываем новый лист с правилами
                     }) {
@@ -110,7 +110,7 @@ struct ContentView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     .sheet(isPresented: $showingRules) {
-                        RulesSheetView(htmlFileName: "rules-el") // Use the new wrapper view
+                        RulesSheetView(htmlFileName: "rules-el") // Используем новую обертку представления
                     }
 
 
@@ -447,10 +447,10 @@ struct ContentView: View {
     }
 
     func loadDictionaries() {
-        guard let url = Bundle.main.url(forResource: "dictionaries", withExtension: "json"),
+        guard let url = Bundle.main.url(forResource: "dictionaries", withExtension: "txt"), // ИЗМЕНЕНО: .json на .txt
               let data = try? Data(contentsOf: url),
               let decoded = try? JSONDecoder().decode([DictionaryInfo].self, from: data) else {
-            print("Не удалось загрузить dictionaries.json")
+            print("Не удалось загрузить dictionaries.txt")
             return
         }
 
@@ -461,7 +461,8 @@ struct ContentView: View {
         var combinedWords: [Word] = []
 
         for filename in selectedDictionaries {
-            if let url = Bundle.main.url(forResource: filename.replacingOccurrences(of: ".json", with: ""), withExtension: "json"),
+            // ИЗМЕНЕНО: .json на .txt
+            if let url = Bundle.main.url(forResource: filename.replacingOccurrences(of: ".txt", with: ""), withExtension: "txt"),
                 let data = try? Data(Data(contentsOf: url)),
                 let decoded = try? JSONDecoder().decode([Word].self, from: data) {
                 combinedWords.append(contentsOf: decoded)

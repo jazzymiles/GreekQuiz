@@ -1,50 +1,50 @@
 [
   {
     "name": "я/ты",
-    "filename": "my_words_1.json"
+    "filename": "my_words_1.txt"
   },
   {
     "name": "мамы/папы",
-    "filename": "my_words_2.json"
+    "filename": "my_words_2.txt"
   },
   {
     "name": "глаголы",
-    "filename": "my_words_3.json"
+    "filename": "my_words_3.txt"
   },
   {
     "name": "числа",
-    "filename": "numbers.json"
+    "filename": "numbers.txt"
   },
   {
     "name": "дни",
-    "filename": "days.json"
+    "filename": "days.txt"
   },
   {
     "name": "цвета",
-    "filename": "colors.json"
+    "filename": "colors.txt"
   },
   {
     "name": "еда",
-    "filename": "food.json"
+    "filename": "food.txt"
   },
   {
     "name": "о людях",
-    "filename": "p_adv.json"
+    "filename": "p_adv.txt"
   },
   {
     "name": "общие",
-    "filename": "objects.json"
+    "filename": "objects.txt"
   },
   {
     "name": "одежда",
-    "filename": "wear.json"
+    "filename": "wear.txt"
   },
   {
     "name": "тело",
-    "filename": "body.json"
+    "filename": "body.txt"
   },
   {
     "name": "разное",
-    "filename": "diff.json"
+    "filename": "diff.txt"
   }
 ]
