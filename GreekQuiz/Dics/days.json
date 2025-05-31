@@ -1,156 +1,226 @@
 [
-    {
+  {
     "ru": "понедельник",
-    "el": "Δευτέρα",
+    "el": "η Δευτέρα",
     "transcription": "дэфтэ́ра",
     "category": "дни",
     "gender": "женский"
-    },
-    {
+  },
+  {
     "ru": "вторник",
-    "el": "Τρίτη",
+    "el": "η Τρίτη",
     "transcription": "три́ти",
     "category": "дни",
     "gender": "женский"
-    },
-    {
+  },
+  {
     "ru": "среда",
-    "el": "Τετάρτη",
+    "el": "η Τετάρτη",
     "transcription": "тэта́рти",
     "category": "дни",
     "gender": "женский"
-    },
-    {
+  },
+  {
     "ru": "четверг",
-    "el": "Πέμπτη",
+    "el": "η Πέμπτη",
     "transcription": "пэ́мпти",
     "category": "дни",
     "gender": "женский"
-    },
-    {
+  },
+  {
     "ru": "пятница",
-    "el": "Παρασκευή",
+    "el": "η Παρασκευή",
     "transcription": "параскеви́",
     "category": "дни",
     "gender": "женский"
-    },
-    {
+  },
+  {
     "ru": "суббота",
-    "el": "Σάββατο",
+    "el": "το Σάββατο",
     "transcription": "са́вато",
     "category": "дни",
     "gender": "средний"
-    },
-    {
+  },
+  {
     "ru": "воскресенье",
-    "el": "Κυριακή",
+    "el": "η Κυριακή",
     "transcription": "кириаки́",
     "category": "дни",
     "gender": "женский"
-    },
-    {
-      "ru": "сегодня",
-      "el": "σήμερα",
-      "transcription": "сúмэра",
-      "category": "время",
-      "gender": "-"
-    },
-    {
-      "ru": "завтра",
-      "el": "αύριο",
-      "transcription": "áврио",
-      "category": "время",
-      "gender": "-"
-    },
-    {
-      "ru": "вчера",
-      "el": "χθες",
-      "transcription": "хтэс",
-      "category": "время",
-      "gender": "-"
-    },
-    {
-      "ru": "январь",
-      "el": "Ιανουάριος",
-      "transcription": "иануа́риос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "февраль",
-      "el": "Φεβρουάριος",
-      "transcription": "февруа́риос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "март",
-      "el": "Μάρτιος",
-      "transcription": "ма́ртиос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "апрель",
-      "el": "Απρίλιος",
-      "transcription": "апри́лиос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "май",
-      "el": "Μάιος",
-      "transcription": "ма́йос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "июнь",
-      "el": "Ιούνιος",
-      "transcription": "иу́ниос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "июль",
-      "el": "Ιούλιος",
-      "transcription": "иу́лиос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "август",
-      "el": "Αύγουστος",
-      "transcription": "а́вгустос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "сентябрь",
-      "el": "Σεπτέμβριος",
-      "transcription": "септе́вриос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "октябрь",
-      "el": "Οκτώβριος",
-      "transcription": "окто́вриос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "ноябрь",
-      "el": "Νοέμβριος",
-      "transcription": "ноэ́вриос",
-      "category": "месяц",
-      "gender": "м"
-    },
-    {
-      "ru": "декабрь",
-      "el": "Δεκέμβριος",
-      "transcription": "деке́вриос",
-      "category": "месяц",
-      "gender": "м"
-    }
+  },
+  {
+    "ru": "сегодня",
+    "el": "σήμερα",
+    "transcription": "си́мэра",
+    "category": "время",
+    "gender": "-"
+  },
+  {
+    "ru": "завтра",
+    "el": "αύριο",
+    "transcription": "а́врио",
+    "category": "время",
+    "gender": "-"
+  },
+  {
+    "ru": "вчера",
+    "el": "χθες",
+    "transcription": "хтэс",
+    "category": "время",
+    "gender": "-"
+  },
+  {
+    "ru": "неделя",
+    "el": "η εβδομάδα",
+    "transcription": "эвдома́да",
+    "category": "время",
+    "gender": "женский"
+  },
+  {
+    "ru": "месяц",
+    "el": "ο μήνας",
+    "transcription": "ми́нас",
+    "category": "время",
+    "gender": "мужской"
+  },
+  {
+    "ru": "год",
+    "el": "το έτος",
+    "transcription": "э́тос",
+    "category": "время",
+    "gender": "средний"
+  },
+  {
+    "ru": "час",
+    "el": "η ώρα",
+    "transcription": "о́ра",
+    "category": "время",
+    "gender": "женский"
+  },
+  {
+    "ru": "минута",
+    "el": "το λεπτό",
+    "transcription": "лэпто́",
+    "category": "время",
+    "gender": "средний"
+  },
+  {
+    "ru": "секунда",
+    "el": "το δευτερόλεπτο",
+    "transcription": "дэфтэро́лэпто",
+    "category": "время",
+    "gender": "средний"
+  },
+  {
+    "ru": "утро",
+    "el": "το πρωί",
+    "transcription": "прои́",
+    "category": "время суток",
+    "gender": "средний"
+  },
+  {
+    "ru": "день",
+    "el": "η μέρα",
+    "transcription": "мэ́ра",
+    "category": "время суток",
+    "gender": "женский"
+  },
+  {
+    "ru": "вечер",
+    "el": "το βράδυ",
+    "transcription": "вра́ди",
+    "category": "время суток",
+    "gender": "средний"
+  },
+  {
+    "ru": "ночь",
+    "el": "η νύχτα",
+    "transcription": "ни́хта",
+    "category": "время суток",
+    "gender": "женский"
+  },
+  {
+    "ru": "январь",
+    "el": "ο Ιανουάριος",
+    "transcription": "иануа́риос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "февраль",
+    "el": "ο Φεβρουάριος",
+    "transcription": "февруа́риос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "март",
+    "el": "ο Μάρτιος",
+    "transcription": "ма́ртиос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "апрель",
+    "el": "ο Απρίλιος",
+    "transcription": "апри́лиос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "май",
+    "el": "ο Μάιος",
+    "transcription": "ма́йос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "июнь",
+    "el": "ο Ιούνιος",
+    "transcription": "иу́ниос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "июль",
+    "el": "ο Ιούλιος",
+    "transcription": "иу́лиос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "август",
+    "el": "ο Αύγουστος",
+    "transcription": "а́вгустос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "сентябрь",
+    "el": "ο Σεπτέμβριος",
+    "transcription": "септе́вриос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "октябрь",
+    "el": "ο Οκτώβριος",
+    "transcription": "окто́вриос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ноябрь",
+    "el": "ο Νοέμβριος",
+    "transcription": "ноэ́вриос",
+    "category": "месяц",
+    "gender": "мужской"
+  },
+  {
+    "ru": "декабрь",
+    "el": "ο Δεκέμβριος",
+    "transcription": "деке́вриос",
+    "category": "месяц",
+    "gender": "мужской"
+  }
 ]

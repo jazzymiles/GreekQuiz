@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные правила языка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .content-section {
+            margin-bottom: 40px;
+            padding-top: 20px; /* Для отступа при переходе по якорю */
+        }
+        .toc {
+            margin-bottom: 40px;
+            background-color: #e9e9e9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .toc li {
+            margin-bottom: 5px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        .back-to-top {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Основные правила языка</h1>
+
+    <div class="toc">
+        <h2>Оглавление</h2>
+        <ul>
+            <li><a href="#alphabet">Алфавит</a></li>
+            <li><a href="#sound-combinations">Звуки из нескольких букв</a></li>
+            <li><a href="#pronouns">Местоимения</a></li>
+            <li><a href="#to-be-verb">Глагол "быть" (я есть, ты есть и т.д.)</a></li>
+            <li><a href="#articles-endings">Артикли и окончания слов по родам, артикли множественного числа</a></li>
+            <li><a href="#verb-conjugation">Окончания глаголов всех групп (настоящее время)</a>
+                <ul>
+                    <li><a href="#group1-verbs">Группа 1</a></li>
+                    <li><a href="#group2-verbs">Группа 2</a></li>
+                    <li><a href="#group3-verbs">Группа 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#possessive-adjectives">Правила использования "мой личный" и пр. (Притяжательные прилагательные)</a></li>
+            <li><a href="#negation">Как правильно говорить "нет" (Отрицание)</a></li>
+            <li><a href="#sentence-structure">Правильная структура предложения и вопроса</a></li>
+            <li><a href="#question-words">Вопросительные слова</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div id="alphabet" class="content-section">
+        <h2>Алфавит с названием букв</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Буква</th>
+                    <th>Название</th>
+                    <th>Произношение (примерно)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>A a</td><td>А</td><td>[а]</td></tr>
+                <tr><td>B b</td><td>Бэ</td><td>[б]</td></tr>
+                <tr><td>C c</td><td>Цэ</td><td>[ц] или [к]</td></tr>
+                <tr><td>D d</td><td>Дэ</td><td>[д]</td></tr>
+                <tr><td>E e</td><td>Э</td><td>[э]</td></tr>
+                <tr><td>F f</td><td>Эф</td><td>[ф]</td></tr>
+                <tr><td>G g</td><td>Жэ</td><td>[г] или [ж]</td></tr>
+                <tr><td>H h</td><td>Аш</td><td>[х]</td></tr>
+                <tr><td>I i</td><td>И</td><td>[и]</td></tr>
+                <tr><td>J j</td><td>Жы</td><td>[ж]</td></tr>
+                <tr><td>K k</td><td>Ка</td><td>[к]</td></tr>
+                <tr><td>L l</td><td>Эль</td><td>[л]</td></tr>
+                <tr><td>M m</td><td>Эм</td><td>[м]</td></tr>
+                <tr><td>N n</td><td>Эн</td><td>[н]</td></tr>
+                <tr><td>O o</td><td>О</td><td>[о]</td></tr>
+                <tr><td>P p</td><td>Пэ</td><td>[п]</td></tr>
+                <tr><td>Q q</td><td>Кю</td><td>[кю]</td></tr>
+                <tr><td>R r</td><td>Эр</td><td>[р]</td></tr>
+                <tr><td>S s</td><td>Эс</td><td>[с]</td></tr>
+                <tr><td>T t</td><td>Тэ</td><td>[т]</td></tr>
+                <tr><td>U u</td><td>У</td><td>[у]</td></tr>
+                <tr><td>V v</td><td>Вэ</td><td>[в]</td></tr>
+                <tr><td>W w</td><td>Дубль-вэ</td><td>[в]</td></tr>
+                <tr><td>X x</td><td>Икс</td><td>[кс]</td></tr>
+                <tr><td>Y y</td><td>Игрек</td><td>[и]</td></tr>
+                <tr><td>Z z</td><td>Зэд</td><td>[з]</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="sound-combinations" class="content-section">
+        <h2>Звуки из нескольких букв (Примеры для разных языков, адаптируйте под конкретный)</h2>
+        <p>В этом разделе будут представлены примеры звуков, образуемых комбинациями букв, специфичных для изучаемого языка. Например, во французском это "ou", "ch", "gn", "eau" и т.д.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Комбинация</th>
+                    <th>Звук (примерно)</th>
+                    <th>Пример слова</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ou</td><td>[у]</td><td>Jour (день)</td></tr>
+                <tr><td>Ch</td><td>[ш]</td><td>Chat (кошка)</td></tr>
+                <tr><td>Gn</td><td>[нь]</td><td>Montagne (гора)</td></tr>
+                <tr><td>Eau</td><td>[о]</td><td>Château (замок)</td></tr>
+                <tr><td>Ai</td><td>[э]</td><td>Maison (дом)</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="pronouns" class="content-section">
+        <h2>Местоимения</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Русский</th>
+                    <th>Личное местоимение (Единственное число)</th>
+                    <th>Личное местоимение (Множественное число)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Я</td><td>Je (Я)</td><td>Nous (Мы)</td></tr>
+                <tr><td>Ты</td><td>Tu (Ты)</td><td>Vous (Вы)</td></tr>
+                <tr><td>Он</td><td>Il (Он)</td><td>Ils (Они - муж.р.)</td></tr>
+                <tr><td>Она</td><td>Elle (Она)</td><td>Elles (Они - жен.р.)</td></tr>
+                <tr><td>Оно</td><td>Il (Он) / Elle (Она) *</td><td></td></tr>
+            </tbody>
+        </table>
+        <p>* В некоторых языках нет среднего рода для местоимений, объекты мужского или женского рода.</p>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="to-be-verb" class="content-section">
+        <h2>Глагол "быть" (Я есть, ты есть и т.д.) - спряжение</h2>
+        <p>Пример спряжения глагола "быть" (например, "être" во французском, "to be" в английском) в настоящем времени.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Местоимение</th>
+                    <th>Глагол "быть"</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Я</td><td>Je suis (Я есть)</td></tr>
+                <tr><td>Ты</td><td>Tu es (Ты есть)</td></tr>
+                <tr><td>Он/Она/Оно</td><td>Il/Elle est (Он/Она есть)</td></tr>
+                <tr><td>Мы</td><td>Nous sommes (Мы есть)</td></tr>
+                <tr><td>Вы</td><td>Vous êtes (Вы есть)</td></tr>
+                <tr><td>Они</td><td>Ils/Elles sont (Они есть)</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="articles-endings" class="content-section">
+        <h2>Артикли и окончания слов по родам + артикли множественного числа</h2>
+        <p>Этот раздел сильно зависит от изучаемого языка. Примеры для французского языка:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Род/Число</th>
+                    <th>Определенный артикль</th>
+                    <th>Неопределенный артикль</th>
+                    <th>Типичное окончание (пример)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Мужской род (ед.ч.)</td><td>Le</td><td>Un</td><td>-e (немое), -er, -on</td></tr>
+                <tr><td>Женский род (ед.ч.)</td><td>La</td><td>Une</td><td>-e, -ion, -té</td></tr>
+                <tr><td>Множественное число</td><td>Les</td><td>Des</td><td>-s, -x, -z (на письме)</td></tr>
+                <tr><td>Перед гласной/h (ед.ч.)</td><td>L'</td><td>Un/Une</td><td></td></tr>
+            </tbody>
+        </table>
+        <p>Примечание: Окончания слов - это общие правила, могут быть исключения.</p>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="verb-conjugation" class="content-section">
+        <h2>Окончания глаголов всех групп (настоящее время)</h2>
+
+        <div id="group1-verbs">
+            <h3>Группа 1: Глаголы на -ER (Например, parler - говорить)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Местоимение</th>
+                        <th>Окончание</th>
+                        <th>Пример (parler)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Je</td><td>-e</td><td>Je parle</td></tr>
+                    <tr><td>Tu</td><td>-es</td><td>Tu parles</td></tr>
+                    <tr><td>Il/Elle/On</td><td>-e</td><td>Il/Elle/On parle</td></tr>
+                    <tr><td>Nous</td><td>-ons</td><td>Nous parlons</td></tr>
+                    <tr><td>Vous</td><td>-ez</td><td>Vous parlez</td></tr>
+                    <tr><td>Ils/Elles</td><td>-ent</td><td>Ils/Elles parlent</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="group2-verbs">
+            <h3>Группа 2: Глаголы на -IR (Например, finir - заканчивать)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Местоимение</th>
+                        <th>Окончание</th>
+                        <th>Пример (finir)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Je</td><td>-is</td><td>Je finis</td></tr>
+                    <tr><td>Tu</td><td>-is</td><td>Tu finis</td></tr>
+                    <tr><td>Il/Elle/On</td><td>-it</td><td>Il/Elle/On finit</td></tr>
+                    <tr><td>Nous</td><td>-issons</td><td>Nous finissons</td></tr>
+                    <tr><td>Vous</td><td>-issez</td><td>Vous finissez</td></tr>
+                    <tr><td>Ils/Elles</td><td>-issent</td><td>Ils/Elles finissent</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="group3-verbs">
+            <h3>Группа 3: Неправильные глаголы и глаголы на -RE, -OIR (Например, prendre - брать, vouloir - хотеть)</h3>
+            <p>Эта группа очень разнообразна и требует изучения каждого глагола отдельно. Ниже приведены примеры для одного глагола из этой группы.</p>
+            <h4>Пример: Prendre (брать)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Местоимение</th>
+                        <th>Форма глагола</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Je</td><td>Je prends</td></tr>
+                    <tr><td>Tu</td><td>Tu prends</td></tr>
+                    <tr><td>Il/Elle/On</td><td>Il/Elle/On prend</td></tr>
+                    <tr><td>Nous</td><td>Nous prenons</td></tr>
+                    <tr><td>Vous</td><td>Vous prenez</td></tr>
+                    <tr><td>Ils/Elles</td><td>Ils/Elles prennent</td></tr>
+                </tbody>
+            </table>
+            <h4>Пример: Vouloir (хотеть)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Местоимение</th>
+                        <th>Форма глагола</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Je</td><td>Je veux</td></tr>
+                    <tr><td>Tu</td><td>Tu veux</td></tr>
+                    <tr><td>Il/Elle/On</td><td>Il/Elle/On veut</td></tr>
+                    <tr><td>Nous</td><td>Nous voulons</td></tr>
+                    <tr><td>Vous</td><td>Vous voulez</td></tr>
+                    <tr><td>Ils/Elles</td><td>Ils/Elles veulent</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="possessive-adjectives" class="content-section">
+        <h2>Правила использования "мой личный" и пр. (Притяжательные прилагательные)</h2>
+        <p>Эти прилагательные изменяются по роду и числу в зависимости от существительного, к которому они относятся.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Притяжательное прилагательное</th>
+                    <th>Мужской род (ед.ч.)</th>
+                    <th>Женский род (ед.ч.)</th>
+                    <th>Множественное число</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Мой / Моя / Мои</td><td>Mon</td><td>Ma (Mon перед гласной/h)</td><td>Mes</td></tr>
+                <tr><td>Твой / Твоя / Твои</td><td>Ton</td><td>Ta (Ton перед гласной/h)</td><td>Tes</td></tr>
+                <tr><td>Его / Ее / Их (единственного числа)</td><td>Son</td><td>Sa (Son перед гласной/h)</td><td>Ses</td></tr>
+                <tr><td>Наш / Наша / Наши</td><td>Notre</td><td>Notre</td><td>Nos</td></tr>
+                <tr><td>Ваш / Ваша / Ваши</td><td>Votre</td><td>Votre</td><td>Vos</td></tr>
+                <tr><td>Их (множественного числа)</td><td>Leur</td><td>Leur</td><td>Leurs</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="negation" class="content-section">
+        <h2>Как правильно говорить "нет" (Отрицание)</h2>
+        <p>В большинстве языков отрицание образуется с помощью специальных частиц. Например, во французском это частицы "ne...pas".</p>
+        <h3>Пример для французского языка:</h3>
+        <ul>
+            <li>**Утверждение:** Je parle. (Я говорю.)</li>
+            <li>**Отрицание:** Je **ne** parle **pas**. (Я **не** говорю.)</li>
+            <li>**Утверждение:** Il est beau. (Он красивый.)</li>
+            <li>**Отрицание:** Il **n'**est **pas** beau. (Он **не** красивый.) (ne сокращается перед гласной)</li>
+        </ul>
+        <p>В других языках правила могут отличаться (например, в английском "do not", "does not" или "not" после вспомогательного глагола).</p>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="sentence-structure" class="content-section">
+        <h2>Правильная структура предложения и вопроса</h2>
+        <h3>Структура утвердительного предложения (стандартная)</h3>
+        <p>**Подлежащее + Сказуемое + Дополнение / Обстоятельство**</p>
+        <ul>
+            <li>Пример: **Я** (Подлежащее) **читаю** (Сказуемое) **книгу** (Дополнение).</li>
+            <li>Пример: **Он** (Подлежащее) **быстро** (Обстоятельство) **бежит** (Сказуемое).</li>
+        </ul>
+
+        <h3>Структура вопросительного предложения</h3>
+        <p>Есть несколько способов задать вопрос, в зависимости от языка:</p>
+        <h4>1. Инверсия (часто в формальной речи)</h4>
+        <p>**Сказуемое + Подлежащее + Дополнение / Обстоятельство ?**</p>
+        <ul>
+            <li>Пример: **Читаешь ли** (Сказуемое) **ты** (Подлежащее) **книгу** (Дополнение)?</li>
+        </ul>
+        <h4>2. Использование вопросительных слов</h4>
+        <p>**Вопросительное слово + Сказуемое + Подлежащее + Дополнение / Обстоятельство ?**</p>
+        <ul>
+            <li>Пример: **Где** (Вопросительное слово) **он** (Подлежащее) **живет** (Сказуемое)?</li>
+        </ul>
+        <h4>3. Интонация (в разговорной речи)</h4>
+        <p>Сохраняется структура утвердительного предложения, но изменяется интонация.</p>
+        <ul>
+            <li>Пример: Ты читаешь книгу? (С восходящей интонацией)</li>
+        </ul>
+        <h4>4. Добавление вопросительной частицы/оборота</h4>
+        <p>В некоторых языках используются специальные частицы или обороты для образования вопроса.</p>
+        <ul>
+            <li>Пример (французский): Est-ce que tu parles? (Говоришь ли ты?)</li>
+        </ul>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="question-words" class="content-section">
+        <h2>Таблица вопросительных слов</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Вопросительное слово (Русский)</th>
+                    <th>Вопросительное слово (Например, Французский)</th>
+                    <th>Пример использования</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Кто?</td><td>Qui?</td><td>Qui est là? (Кто там?)</td></tr>
+                <tr><td>Что?</td><td>Qu'est-ce que? / Que?</td><td>Qu'est-ce que tu fais? (Что ты делаешь?)</td></tr>
+                <tr><td>Где?</td><td>Où?</td><td>Où habites-tu? (Где ты живешь?)</td></tr>
+                <tr><td>Когда?</td><td>Quand?</td><td>Quand pars-tu? (Когда ты уезжаешь?)</td></tr>
+                <tr><td>Почему?</td><td>Pourquoi?</td><td>Pourquoi tu pleures? (Почему ты плачешь?)</td></tr>
+                <tr><td>Как?</td><td>Comment?</td><td>Comment ça va? (Как дела?)</td></tr>
+                <tr><td>Сколько?</td><td>Combien (de)?</td><td>Combien de livres? (Сколько книг?)</td></tr>
+                <tr><td>Какой? / Какая? / Какое? / Какие?</td><td>Quel(le)(s)?</td><td>Quel est ton nom? (Как тебя зовут?)</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+    <hr>
+
+    <div id="other-basics" class="content-section">
+        <h2>И другое, что является базой</h2>
+        <p>Этот раздел может быть расширен по мере необходимости. Сюда можно добавить:</p>
+        <ul>
+            <li>**Числа** (от 0 до 100 и далее)</li>
+            <li>**Дни недели, месяцы, времена года**</li>
+            <li>**Цвета**</li>
+            <li>**Базовые предлоги** (в, на, под, за и т.д.)</li>
+            <li>**Прилагательные (описание)**</li>
+            <li>**Наречия (описание действий)**</li>
+            <li>**Простые фразы для общения** (привет, пока, спасибо, пожалуйста, извините)</li>
+            <li>**Формальные и неформальные обращения**</li>
+        </ul>
+        <a href="#top" class="back-to-top">К оглавлению</a>
+    </div>
+
+</body>
+</html>

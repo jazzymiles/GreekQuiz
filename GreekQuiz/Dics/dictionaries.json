@@ -28,6 +28,22 @@
     "filename": "food.json"
   },
   {
+    "name": "о людях",
+    "filename": "p_adv.json"
+  },
+  {
+    "name": "общие",
+    "filename": "objects.json"
+  },
+  {
+    "name": "одежда",
+    "filename": "wear.json"
+  },
+  {
+    "name": "тело",
+    "filename": "body.json"
+  },
+  {
     "name": "разное",
     "filename": "diff.json"
   }

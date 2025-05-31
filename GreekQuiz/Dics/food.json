@@ -1,142 +1,457 @@
 [
   {
     "ru": "еда",
-    "el": "φαγητό",
+    "el": "το φαγητό",
     "transcription": "фагито́",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "хлеб",
-    "el": "ψωμί",
+    "el": "το ψωμί",
     "transcription": "псоми́",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "вода",
-    "el": "νερό",
+    "el": "το νερό",
     "transcription": "неро́",
-    "category": "еда",
+    "category": "напитки",
     "gender": "ср"
   },
   {
     "ru": "мясо",
-    "el": "κρέας",
+    "el": "το κρέας",
     "transcription": "крэас",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "рыба",
-    "el": "ψάρι",
+    "el": "το ψάρι",
     "transcription": "пса́ри",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "суп",
-    "el": "σούπα",
+    "el": "η σούπα",
     "transcription": "су́па",
     "category": "еда",
     "gender": "ж"
   },
   {
     "ru": "сыр",
-    "el": "τυρί",
+    "el": "το τυρί",
     "transcription": "тири́",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "масло",
-    "el": "βούτυρο",
+    "el": "το βούτυρο",
     "transcription": "ву́тиро",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "молоко",
-    "el": "γάλα",
+    "el": "το γάλα",
     "transcription": "га́ла",
-    "category": "еда",
+    "category": "напитки",
     "gender": "ср"
   },
   {
     "ru": "яйцо",
-    "el": "αυγό",
+    "el": "το αυγό",
     "transcription": "авго́",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "овощи",
-    "el": "λαχανικά",
+    "el": "τα λαχανικά",
     "transcription": "лаханика́",
     "category": "еда",
     "gender": "мн"
   },
   {
     "ru": "фрукты",
-    "el": "φρούτα",
+    "el": "τα φρούτα",
     "transcription": "фру́та",
     "category": "еда",
     "gender": "мн"
   },
   {
     "ru": "яблоко",
-    "el": "μήλο",
+    "el": "το μήλο",
     "transcription": "ми́ло",
-    "category": "еда",
+    "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "апельсин",
-    "el": "πορτοκάλι",
+    "el": "το πορτοκάλι",
     "transcription": "портока́ли",
-    "category": "еда",
+    "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "картошка",
-    "el": "πατάτα",
+    "el": "η πατάτα",
     "transcription": "пата́та",
-    "category": "еда",
+    "category": "овощи",
     "gender": "ж"
   },
   {
     "ru": "рис",
-    "el": "ρύζι",
+    "el": "το ρύζι",
     "transcription": "ри́зи",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "салат",
-    "el": "σαλάτα",
+    "el": "η σαλάτα",
     "transcription": "сала́та",
-    "category": "еда",
+    "category": "овощи",
     "gender": "ж"
   },
   {
     "ru": "кофе",
-    "el": "καφές",
+    "el": "ο καφές",
     "transcription": "кафэ́с",
-    "category": "еда",
+    "category": "напитки",
     "gender": "м"
   },
   {
     "ru": "чай",
-    "el": "τσάι",
+    "el": "το τσάι",
     "transcription": "ца́и",
-    "category": "еда",
+    "category": "напитки",
     "gender": "ср"
   },
   {
     "ru": "вино",
-    "el": "κρασί",
+    "el": "το κρασί",
     "transcription": "краси́",
+    "category": "напитки",
+    "gender": "ср"
+  },
+  {
+    "ru": "банан",
+    "el": "η μπανάνα",
+    "transcription": "бана́на",
+    "category": "фрукты",
+    "gender": "ж"
+  },
+  {
+    "ru": "помидор",
+    "el": "η ντομάτα",
+    "transcription": "ндома́та",
+    "category": "овощи",
+    "gender": "ж"
+  },
+  {
+    "ru": "огурец",
+    "el": "το αγγούρι",
+    "transcription": "ангу́ри",
+    "category": "овощи",
+    "gender": "ср"
+  },
+  {
+    "ru": "виноград",
+    "el": "το σταφύλι",
+    "transcription": "стафи́ли",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "соль",
+    "el": "το αλάτι",
+    "transcription": "ала́ти",
     "category": "еда",
     "gender": "ср"
+  },
+  {
+    "ru": "перец",
+    "el": "το πιπέρι",
+    "transcription": "пипэ́ри",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "уксус",
+    "el": "το ξύδι",
+    "transcription": "кси́ди",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "чеснок",
+    "el": "το σκόρδο",
+    "transcription": "ско́рдо",
+    "category": "овощи",
+    "gender": "ср"
+  },
+  {
+    "ru": "лук",
+    "el": "το κρεμμύδι",
+    "transcription": "крэмми́ди",
+    "category": "овощи",
+    "gender": "ср"
+  },
+  {
+    "ru": "морковь",
+    "el": "το καρότο",
+    "transcription": "каро́то",
+    "category": "овощи",
+    "gender": "ср"
+  },
+  {
+    "ru": "арбуз",
+    "el": "το καρπούζι",
+    "transcription": "карпу́зи",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "персик",
+    "el": "το ροδάκινο",
+    "transcription": "рода́кино",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "груша",
+    "el": "το αχλάδι",
+    "transcription": "ахла́ди",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "клубника",
+    "el": "η φράουλα",
+    "transcription": "фра́ула",
+    "category": "фрукты",
+    "gender": "ж"
+  },
+  {
+    "ru": "лимон",
+    "el": "το λεμόνι",
+    "transcription": "лемо́ни",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "маслина",
+    "el": "η ελιά",
+    "transcription": "элья́",
+    "category": "овощи",
+    "gender": "ж"
+  },
+  {
+    "ru": "инжир",
+    "el": "το σύκο",
+    "transcription": "си́ко",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "дыня",
+    "el": "το πεπόνι",
+    "transcription": "пепо́ни",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "черешня",
+    "el": "το κεράσι",
+    "transcription": "кера́си",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "абрикос",
+    "el": "το βερίκοκο",
+    "transcription": "вери́коко",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "гранат",
+    "el": "το ρόδι",
+    "transcription": "ро́ди",
+    "category": "фрукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "баклажан",
+    "el": "η μελιτζάνα",
+    "transcription": "мелидза́на",
+    "category": "овощи",
+    "gender": "ж"
+  },
+  {
+    "ru": "перец (сладкий)",
+    "el": "η πιπεριά",
+    "transcription": "пиперья́",
+    "category": "овощи",
+    "gender": "ж"
+  },
+  {
+    "ru": "фасоль",
+    "el": "τα φασόλια",
+    "transcription": "фасо́ля",
+    "category": "овощи",
+    "gender": "мн"
+  },
+  {
+    "ru": "капуста",
+    "el": "το λάχανο",
+    "transcription": "ла́хано",
+    "category": "овощи",
+    "gender": "ср"
+  },
+  {
+    "ru": "шпинат",
+    "el": "το σπανάκι",
+    "transcription": "спана́ки",
+    "category": "овощи",
+    "gender": "ср"
+  },
+  {
+    "ru": "цукини",
+    "el": "το κολοκυθάκι",
+    "transcription": "колокита́ки",
+    "category": "овощи",
+    "gender": "ср"
+  },
+  {
+    "ru": "оливковое масло",
+    "el": "το ελαιόλαδο",
+    "transcription": "элэо́ладо",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "оливки",
+    "el": "οι ελιές",
+    "transcription": "элье́с",
+    "category": "еда",
+    "gender": "мн"
+  },
+  {
+    "ru": "фета",
+    "el": "η φέτα",
+    "transcription": "фэ́та",
+    "category": "сыр",
+    "gender": "ж"
+  },
+  {
+    "ru": "йогурт",
+    "el": "το γιαούρτι",
+    "transcription": "яу́рти",
+    "category": "молочные продукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "мед",
+    "el": "το μέλι",
+    "transcription": "мэ́ли",
+    "category": "еда",
+    "gender": "ср"
+  },
+  {
+    "ru": "курица",
+    "el": "το κοτόπουλο",
+    "transcription": "кото́пуло",
+    "category": "мясо",
+    "gender": "ср"
+  },
+  {
+    "ru": "свинина",
+    "el": "το χοιρινό",
+    "transcription": "хирино́",
+    "category": "мясо",
+    "gender": "ср"
+  },
+  {
+    "ru": "баранина",
+    "el": "το αρνί",
+    "transcription": "арни́",
+    "category": "мясо",
+    "gender": "ср"
+  },
+  {
+    "ru": "креветки",
+    "el": "οι γαρίδες",
+    "transcription": "гари́дэс",
+    "category": "морепродукты",
+    "gender": "мн"
+  },
+  {
+    "ru": "осьминог",
+    "el": "το χταπόδι",
+    "transcription": "хтапо́ди",
+    "category": "морепродукты",
+    "gender": "ср"
+  },
+  {
+    "ru": "хлебные палочки",
+    "el": "τα παξιμάδια",
+    "transcription": "паксима́дья",
+    "category": "еда",
+    "gender": "мн"
+  },
+  {
+    "ru": "пирог",
+    "el": "η πίτα",
+    "transcription": "пи́та",
+    "category": "еда",
+    "gender": "ж"
+  },
+  {
+    "ru": "кунжут",
+    "el": "το σουσάμι",
+    "transcription": "суса́ми",
+    "category": "семена",
+    "gender": "ср"
+  },
+  {
+    "ru": "орехи",
+    "el": "οι ξηροί καρποί",
+    "transcription": "ксири́ карпи́",
+    "category": "еда",
+    "gender": "мн"
+  },
+  {
+    "ru": "миндаль",
+    "el": "το αμύγδαλο",
+    "transcription": "ами́гдало",
+    "category": "орехи",
+    "gender": "ср"
+  },
+  {
+    "ru": "фисташки",
+    "el": "το φιστίκι",
+    "transcription": "фисти́ки",
+    "category": "орехи",
+    "gender": "ср"
+  },
+  {
+    "ru": "бобы/фасоль",
+    "el": "τα όσπρια",
+    "transcription": "о́сприя",
+    "category": "бобовые",
+    "gender": "мн"
+  },
+  {
+    "ru": "чечевица",
+    "el": "οι φακές",
+    "transcription": "факе́с",
+    "category": "бобовые",
+    "gender": "ж"
   }
 ]
