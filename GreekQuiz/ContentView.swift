@@ -1,7 +1,7 @@
 import SwiftUI
 import AVFoundation
 
-struct Word: Codable, Equatable { // Добавлено Equatable
+struct Word: Codable, Equatable {
     let ru: String
     let el: String
     let transcription: String
@@ -20,7 +20,6 @@ struct DictionaryInfo: Codable, Identifiable, Hashable {
 
 struct ContentView: View {
 
-    
     @State private var allDictionaries: [DictionaryInfo] = []
     @State private var selectedDictionaries: Set<String> = []
     @State private var allWords: [Word] = []
@@ -43,6 +42,7 @@ struct ContentView: View {
     @State private var showingDictionarySelection = false
 
     @AppStorage("showTranscription") private var showTranscription: Bool = true
+    @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true // По умолчанию звук включен
     
     private let synthesizer = AVSpeechSynthesizer()
 
@@ -109,6 +109,20 @@ struct ContentView: View {
                                 )
                             }
 
+                            // НОВАЯ КНОПКА: Включение/выключение автоматического произношения
+                            Button(action: {
+                                autoPlaySound.toggle() // Переключаем состояние автоматического произношения
+                            }) {
+                                Image(autoPlaySound ? "sound_on" : "sound_off") // Имена ваших SVG файлов
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 30, height: 30)
+                                    .padding(8)
+                                    .background(Color.gray.opacity(0.3))
+                                    .cornerRadius(8)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+
                             // Кнопка "Транскрипция"
                             Button(action: {
                                 showTranscription.toggle() // Переключаем видимость транскрипции
@@ -125,39 +139,32 @@ struct ContentView: View {
                         }
                         .padding(.horizontal)
                         .padding(.top, 10)
-                        // Удаляем старый FlowLayout
-                        // FlowLayout(allDictionaries, spacing: 10) { dictionary in ... }
 
                         Spacer() // Возвращаем Spacer, чтобы контент был по центру
 
-                        VStack(spacing: 0) {
+                        VStack(spacing: 0) { // Используем 0, чтобы контролировать отступы явно
                             if !activeWords.isEmpty {
                                 HStack(spacing: 10) { // Отступ между словом и иконкой
-                                    // УДАЛЕН .frame(maxWidth: .infinity, alignment: .center) С ТЕКСТА
                                     Text(activeWords[currentWordIndex].el)
                                         .font(.system(size: 40, weight: .bold))
-                                        // .padding(.bottom, 8) // Этот padding перемещен ниже на HStack
-
+                                        
                                     Button(action: {
                                         speakWord(activeWords[currentWordIndex].el, language: "el-GR")
                                     }) {
                                         Image(systemName: "speaker.wave.3.fill")
                                             .font(.title)
                                             .foregroundColor(.blue)
-                                            // .padding(.bottom, 8) // Этот padding перемещен ниже на HStack
                                     }
-                                    // УДАЛЕН .frame(maxWidth: .infinity, alignment: .center) С КНОПКИ
                                 }
-                                .frame(maxWidth: .infinity, alignment: .center) // ВОТ ГЛАВНОЕ ИЗМЕНЕНИЕ ДЛЯ ЦЕНТРИРОВАНИЯ ВСЕГО HStack
-                                .padding(.bottom, 8) 
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .padding(.bottom, 8) //
+                                .frame(maxWidth: .infinity, alignment: .center) // Центрируем весь HStack
+                                .padding(.bottom, 8)
+
                                 HStack(spacing: 5) {
                                     Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
                                         .font(.system(size: 28))
                                         .foregroundColor(.gray)
                                         .padding(.leading, 10)
-                                        .frame(maxWidth: .infinity, alignment: .center) // Центрируем транскрипцию
+                                        .frame(maxWidth: .infinity, alignment: .center)
                                 }
                                 .padding(.bottom, 16)
                                 
@@ -169,17 +176,16 @@ struct ContentView: View {
                                         .focused($isTextFieldFocused)
                                         .padding(.bottom, 18)
                                 } else { // quizMode == .cards
-                                    // Grid для кнопок-карточек
                                     LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 10) {
                                         ForEach(cardOptions, id: \.self) { option in
                                             Button(action: {
-                                                selectedAnswer = option // Выбираем ответ
+                                                selectedAnswer = option
                                             }) {
                                                 Text(option)
                                                     .font(.headline)
                                                     .padding()
                                                     .frame(maxWidth: .infinity)
-                                                    .background(selectedAnswer == option ? Color.orange.opacity(0.8) : Color.gray.opacity(0.3)) // Выделяем выбранный ответ
+                                                    .background(selectedAnswer == option ? Color.orange.opacity(0.8) : Color.gray.opacity(0.3))
                                                     .foregroundColor(.white)
                                                     .cornerRadius(10)
                                             }
@@ -187,90 +193,81 @@ struct ContentView: View {
                                         }
                                     }
                                     .padding(.horizontal)
-                                    .padding(.bottom, 18) // Отступ после карточек
+                                    .padding(.bottom, 18)
                                 }
 
-                                Button("Проверить") {
-                                    // Логика проверки будет отличаться в зависимости от режима
-                                    if quizMode == .keyboard {
-                                        checkAnswer() // Используем существующую логику для клавиатуры
-                                    } else { // quizMode == .cards
-                                        checkCardAnswer() // Новая логика для карточек
-                                    }
-                                }
-                                // Вот эти строки добавляют стилизацию кнопки "Проверить"
-                                .padding() // Добавляет внутренние отступы
-                                .frame(maxWidth: .infinity) // Растягивает кнопку на всю ширину
-                                .background(Color.blue) // Фоновый цвет
-                                .foregroundColor(.white) // Цвет текста
-                                .cornerRadius(10) // Скругленные углы
-                                .padding(.horizontal) // Горизонтальные отступы от краев экрана
-                                .padding(.bottom, 20) // Отступ после кнопки "Проверить"
-
-                                VStack(spacing: 0) {
-                                    Text("Правильный перевод: \(activeWords[currentWordIndex].ru)")
-                                        .foregroundColor(.white)
-                                        .padding(.vertical, 9)
-                                        .padding(.horizontal)
-                                        .frame(maxWidth: .infinity)
-
-                                    Button("Дальше") {
-                                        showAnswer = false
+                                // Объединенная кнопка "Проверить" / "Дальше"
+                                Button(action: {
+                                    if showAnswer {
                                         nextWord()
-                                        // При переходе к следующему слову, если режим "Карточки",
-                                        // нужно сбросить выбранный ответ и сгенерировать новые опции.
                                         if quizMode == .cards {
                                             selectedAnswer = nil
                                             generateCardOptions()
                                         }
+                                    } else {
+                                        if quizMode == .keyboard {
+                                            checkAnswer()
+                                        } else {
+                                            checkCardAnswer()
+                                        }
                                     }
-                                    .padding()
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
-                                    .padding(.top, 10)
+                                }) {
+                                    Text(showAnswer ? "Дальше" : "Проверить")
+                                        .padding()
+                                        .frame(maxWidth: .infinity)
+                                        .background(Color.blue)
+                                        .foregroundColor(.white)
+                                        .cornerRadius(10)
                                 }
-                                .frame(height: 100)
-                                .opacity(showAnswer ? 1 : 0)
-                                .animation(.easeIn, value: showAnswer)
+                                .buttonStyle(PlainButtonStyle())
+                                .padding(.horizontal)
+                                .padding(.bottom, 20)
 
+                                // Блок с правильным переводом
+                                Text(showAnswer ? "Правильный перевод: \(activeWords[currentWordIndex].ru)" : " ")
+                                    .foregroundColor(showAnswer ? .white : .clear)
+                                    .padding(.vertical, 9)
+                                    .padding(.horizontal)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .frame(height: 55) // Фиксируем высоту
+                                
                             } else {
                                 Text("Выберите хотя бы один словарь.")
                                     .foregroundColor(.gray)
                             }
                         }
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 30) // Оставляем этот padding для общей компоновки
 
                         Spacer()
                     }
                 }
                 .onAppear {
                     loadDictionaries()
-                    loadSelectedWords() // Убедимся, что слова загружены при старте
-                    if quizMode == .cards { // Если режим - карточки, генерируем опции
+                    loadSelectedWords()
+                    if quizMode == .cards {
                         generateCardOptions()
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                        // Фокусировка только если режим клавиатуры
                         if quizMode == .keyboard {
                             isTextFieldFocused = true
+                        }
+                        // НОВОЕ: Автоматическое произношение при первом появлении слова
+                        if autoPlaySound && !activeWords.isEmpty {
+                            speakWord(activeWords[currentWordIndex].el, language: "el-GR")
                         }
                     }
                 }
                 .onChange(of: userInput) { _ in
-                    // Фокусировка только если режим клавиатуры
                     if quizMode == .keyboard && !isTextFieldFocused {
                         isTextFieldFocused = true
                     }
                 }
-                // Добавляем onChange для quizMode для сброса состояния
                 .onChange(of: quizMode) { oldMode, newMode in
                     if oldMode != newMode {
                         resetQuizState()
                         if newMode == .cards {
                             generateCardOptions()
                         } else if newMode == .keyboard {
-                            // Фокусировка на TextField, если перешли в режим клавиатуры
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                                  isTextFieldFocused = true
                             }
@@ -288,25 +285,27 @@ struct ContentView: View {
             let input = userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
             let corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
 
-            if corrects.contains(input) {
-                isCorrect = true
-                score += 1
-                UserDefaults.standard.set(score, forKey: "score")
-                userInput = ""
-                isShowingFeedback = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                    isShowingFeedback = false
-                    nextWord()
+            withAnimation(nil) { // ОБЕРТЫВАЕМ ИЗМЕНЕНИЯ showAnswer В withAnimation(nil)
+                if corrects.contains(input) {
+                    isCorrect = true
+                    showAnswer = true
+                    score += 1
+                    UserDefaults.standard.set(score, forKey: "score")
+                    userInput = ""
+                    isShowingFeedback = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                        isShowingFeedback = false
+                    }
+                } else {
+                    isCorrect = false
+                    showAnswer = true
                 }
-            } else {
-                isCorrect = false
-                showAnswer = true
             }
         }
 
         func resetQuizState() {
             userInput = ""
-            showAnswer = false
+            showAnswer = false // Важно сбросить showAnswer, чтобы кнопка стала "Проверить"
             isCorrect = false
             isShowingFeedback = false
             selectedAnswer = nil // Сброс выбранного ответа для карточек
@@ -316,7 +315,6 @@ struct ContentView: View {
             }
         }
 
-        // Новая функция для генерации вариантов ответов для режима карточек
         func generateCardOptions() {
             guard !activeWords.isEmpty else {
                 cardOptions = []
@@ -326,81 +324,72 @@ struct ContentView: View {
             var options: [String] = []
             let currentCorrectAnswer = activeWords[currentWordIndex].ru
 
-            // Добавляем правильный ответ
             options.append(parseAcceptedAnswers(from: currentCorrectAnswer).first ?? currentCorrectAnswer)
 
-            // Генерируем 5 случайных неправильных ответов
             var shuffledAllWords = allWords.shuffled()
             var incorrectCount = 0
-            while options.count < 6 && incorrectCount < allWords.count * 2 { // Ограничиваем попытки, чтобы избежать бесконечного цикла
-                if let randomWord = shuffledAllWords.popLast() { // Берем слово и удаляем его из временного массива
+            while options.count < 6 && incorrectCount < allWords.count * 2 {
+                if let randomWord = shuffledAllWords.popLast() {
                     let possibleIncorrectAnswer = parseAcceptedAnswers(from: randomWord.ru).first ?? randomWord.ru
                     if possibleIncorrectAnswer.lowercased() != currentCorrectAnswer.lowercased() && !options.contains(possibleIncorrectAnswer) {
                         options.append(possibleIncorrectAnswer)
                     }
                 } else {
-                    // Если shuffledAllWords закончился, и мы еще не набрали 6 опций,
-                    // можно начать повторно использовать слова, если это приемлемо
-                    // Для простоты, пока просто выйдем или добавим что-то еще.
-                    break // Выходим, если слов для уникальных неправильных ответов не хватает
+                    break
                 }
                 incorrectCount += 1
             }
             
-            // Перемешиваем варианты
             cardOptions = options.shuffled()
             
-            // Убедимся, что у нас всегда 6 вариантов, если это возможно
             while cardOptions.count < 6 {
-                // Если не хватило уникальных неправильных ответов,
-                // можно продублировать существующие или добавить заглушки.
-                // В данном случае, если мало слов в словаре, просто добавим пустые строки.
                 cardOptions.append("-----")
             }
         }
         
-        // Новая функция для проверки ответа в режиме карточек
         func checkCardAnswer() {
-            // Если ответ не выбран, это неправильный ответ.
-            if selectedAnswer == nil {
-                isCorrect = false // Устанавливаем, что ответ неправильный
-                showAnswer = true // Показываем блок ответа (красный фон, правильный перевод)
-                // Не устанавливаем isShowingFeedback, потому что это не "быстрая" обратная связь,
-                // а скорее отображение правильного ответа, требующее действия "Дальше".
-                print("Ошибка: Ответ не выбран. Показ правильного ответа.")
-                return
-            }
-
-            let correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
-            
-            if correctAnswers.contains(selectedAnswer!.lowercased()) { // Теперь мы уверены, что selectedAnswer не nil
-                isCorrect = true
-                score += 1
-                UserDefaults.standard.set(score, forKey: "score")
-                isShowingFeedback = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                    isShowingFeedback = false
-                    nextWord()
-                    self.selectedAnswer = nil
-                    generateCardOptions()
+            withAnimation(nil) { // ОБЕРТЫВАЕМ ИЗМЕНЕНИЯ showAnswer В withAnimation(nil)
+                if selectedAnswer == nil {
+                    isCorrect = false
+                    showAnswer = true
+                    print("Ошибка: Ответ не выбран. Показ правильного ответа.")
+                    return
                 }
-            } else {
-                isCorrect = false
-                showAnswer = true
+
+                let correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
+                
+                if correctAnswers.contains(selectedAnswer!.lowercased()) {
+                    isCorrect = true
+                    showAnswer = true
+                    score += 1
+                    UserDefaults.standard.set(score, forKey: "score")
+                    isShowingFeedback = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                        isShowingFeedback = false
+                    }
+                } else {
+                    isCorrect = false
+                    showAnswer = true
+                }
             }
         }
 
-        // Модифицируем nextWord, чтобы он сбрасывал selectedAnswer и генерировал cardOptions
         func nextWord() {
-            userInput = ""
-            showAnswer = false
-            isCorrect = false
-            isTextFieldFocused = true
-            selectedAnswer = nil // Сброс выбранного ответа
-            if !activeWords.isEmpty {
-                currentWordIndex = Int.random(in: 0..<activeWords.count)
-                if quizMode == .cards {
-                    generateCardOptions() // Генерируем новые опции для карточек
+            withAnimation(nil) { // ОБЕРТЫВАЕМ ИЗМЕНЕНИЯ showAnswer В withAnimation(nil)
+                userInput = ""
+                showAnswer = false // Сбрасываем showAnswer, чтобы кнопка снова стала "Проверить"
+                isCorrect = false
+                isTextFieldFocused = true
+                selectedAnswer = nil
+                if !activeWords.isEmpty {
+                    currentWordIndex = Int.random(in: 0..<activeWords.count)
+                    if quizMode == .cards {
+                        generateCardOptions()
+                    }
+                    // НОВОЕ: Автоматическое произношение при переходе к следующему слову
+                    if autoPlaySound {
+                        speakWord(activeWords[currentWordIndex].el, language: "el-GR")
+                    }
                 }
             }
         }
@@ -452,39 +441,34 @@ struct ContentView: View {
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
             return parts
         }
-    
-    func speakWord(_ text: String, language: String) {
-        // Убедимся, что синтезатор не занят
-        if synthesizer.isSpeaking {
-            synthesizer.stopSpeaking(at: .immediate) // Останавливаем немедленно, если что-то уже говорится
-        }
-
-        let utterance = AVSpeechUtterance(string: text)
         
-        // Попытка найти голос для указанного языка
-        if let voice = AVSpeechSynthesisVoice(language: language) {
-            utterance.voice = voice
-            print("Используется голос для языка: \(language) - \(voice.identifier)")
-        } else {
-            // Если голос для указанного языка не найден, попробуем найти любой греческий голос
-            print("Голос для языка '\(language)' не найден. Попытка найти альтернативный греческий голос.")
-            let availableGreekVoices = AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("el") }
-            if let firstGreekVoice = availableGreekVoices.first {
-                utterance.voice = firstGreekVoice
-                print("Используется доступный греческий голос: \(firstGreekVoice.identifier)")
-            } else {
-                // Если греческий голос не найден вообще, используем системный голос по умолчанию.
-                // В этом случае произношение будет не на греческом, но хотя бы будет звук.
-                utterance.voice = AVSpeechSynthesisVoice(language: Locale.current.identifier)
-                print("Греческий голос не найден. Используется системный голос по умолчанию: \(Locale.current.identifier)")
+        func speakWord(_ text: String, language: String) {
+            if synthesizer.isSpeaking {
+                synthesizer.stopSpeaking(at: .immediate)
             }
-        }
-        
-        utterance.rate = 0.5 // Можно попробовать немного увеличить для лучшей слышимости
-        utterance.pitchMultiplier = 1.0
 
-        synthesizer.speak(utterance)
-    }
+            let utterance = AVSpeechUtterance(string: text)
+            
+            if let voice = AVSpeechSynthesisVoice(language: language) {
+                utterance.voice = voice
+                print("Используется голос для языка: \(language) - \(voice.identifier)")
+            } else {
+                print("Голос для языка '\(language)' не найден. Попытка найти альтернативный греческий голос.")
+                let availableGreekVoices = AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("el") }
+                if let firstGreekVoice = availableGreekVoices.first {
+                    utterance.voice = firstGreekVoice
+                    print("Используется доступный греческий голос: \(firstGreekVoice.identifier)")
+                } else {
+                    utterance.voice = AVSpeechSynthesisVoice(language: Locale.current.identifier)
+                    print("Греческий голос не найден. Используется системный голос по умолчанию: \(Locale.current.identifier)")
+                }
+            }
+            
+            utterance.rate = 0.5
+            utterance.pitchMultiplier = 1.0
+
+            synthesizer.speak(utterance)
+        }
     }
     #Preview {
         ContentView()
