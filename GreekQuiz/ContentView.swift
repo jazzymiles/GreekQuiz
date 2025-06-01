@@ -6,10 +6,8 @@ struct Word: Codable, Equatable {
     let ru: String
     let el: String
     let transcription: String
-    // ОЧЕНЬ ВАЖНО: Добавьте эти поля, если они есть в вашем JSON!
-    // JSONDecoder выдаст ошибку, если в файле есть поля, которых нет в struct Word.
-    let category: String? // Сделаем опциональным, если не всегда есть
-    let gender: String?   // Сделаем опциональным, если не всегда есть
+    let category: String?
+    let gender: String?
 }
 
 enum QuizMode: String, CaseIterable, Identifiable {
@@ -22,7 +20,7 @@ enum QuizMode: String, CaseIterable, Identifiable {
 struct DictionaryInfo: Codable, Identifiable, Hashable {
     let id = UUID()
     let name: String
-    var filename: String
+    var filename: String // This will now store the Google Drive File ID
 }
 
 enum DictionarySource: String, CaseIterable, Identifiable, Codable {
@@ -69,6 +67,7 @@ struct ContentView: View {
     @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true
     @AppStorage("colorSchemePreference") private var colorSchemePreference: String = "system"
 
+    // Эти переменные теперь точно объявлены в ContentView
     @AppStorage("dictionarySourcePreference") private var dictionarySource: DictionarySource = .standard
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
 
@@ -174,8 +173,8 @@ struct ContentView: View {
                             showTranscription: $showTranscription,
                             autoPlaySound: $autoPlaySound,
                             colorSchemePreference: $colorSchemePreference,
-                            dictionarySource: $dictionarySource,
-                            customDictionaryURL: $customDictionaryURL,
+                            dictionarySource: $dictionarySource, // Доступ к @AppStorage
+                            customDictionaryURL: $customDictionaryURL, // Доступ к @AppStorage
                             onDownloadDictionaries: {
                                 Task {
                                     await downloadAndSaveDictionariesBasedOnSource()
@@ -194,7 +193,7 @@ struct ContentView: View {
                         HStack(spacing: 10) {
                             Text(activeWords[currentWordIndex].el)
                                 .font(.system(size: 40, weight: .bold))
-                                
+                            
                             Button(action: {
                                 speakWord(activeWords[currentWordIndex].el, language: "el-GR")
                             }) {
@@ -292,11 +291,11 @@ struct ContentView: View {
                 generateCardOptions()
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                if quizMode == .keyboard {
-                    isTextFieldFocused = true
-                }
                 if autoPlaySound && !activeWords.isEmpty {
                     speakWord(activeWords[currentWordIndex].el, language: "el-GR")
+                }
+                if quizMode == .keyboard {
+                    isTextFieldFocused = true
                 }
             }
         }
@@ -312,7 +311,7 @@ struct ContentView: View {
                     generateCardOptions()
                 } else if newMode == .keyboard {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                         isTextFieldFocused = true
+                        isTextFieldFocused = true
                     }
                 }
             }
@@ -435,7 +434,6 @@ struct ContentView: View {
         }
     }
     
-    // ИЗМЕНЕНО: Новая функция для загрузки словарей в зависимости от источника
     func downloadAndSaveDictionariesBasedOnSource() async {
         allDictionaries = []
         selectedDictionaries = [] // Сбрасываем выбранные словари при новой загрузке
@@ -443,102 +441,109 @@ struct ContentView: View {
         activeWords = []
         currentWordIndex = 0
 
-        // Очищаем предыдущие скачанные словари перед новой загрузкой
         await clearDownloadedDictionaries()
 
-        let sourceURL: String
+        let dictionariesListSourceURL: String
+        let googleAPIKey = "AIzaSyAMQLdTGms_tFhL6rD_nJWmA1uXileQxi8" // <--- ВСТАВЬТЕ ВАШ API KEY СЮДА!
+
         if dictionarySource == .standard {
-            // ИЗМЕНЕНО: ИСПОЛЬЗУЕМ ВАШ НОВЫЙ URL НА REDINGER.CC ДЛЯ dictionaries.txt
-            sourceURL = "https://redinger.cc/GreekQuiz/dictionaries.txt" // <--- ИЗМЕНИТЬ ЗДЕСЬ!
-            print("Начинаем скачивание стандартных словарей с URL: \(sourceURL)")
+            let dictionariesFileID = "1W4HA8vG3nUQQy415ok4H6-gb8JJ0eDE1" // ID файла dictionaries.txt
+            dictionariesListSourceURL = "https://www.googleapis.com/drive/v3/files/\(dictionariesFileID)?alt=media&key=\(googleAPIKey)"
+            print("Начинаем скачивание стандартных словарей с URL: \(dictionariesListSourceURL)")
         } else if dictionarySource == .customURL {
             guard !customDictionaryURL.isEmpty else {
                 print("Некорректный источник словарей или пустой URL для скачивания.")
                 return
             }
-            sourceURL = customDictionaryURL
-            print("Начинаем скачивание пользовательских словарей с URL: \(sourceURL)")
+            // customDictionaryURL теперь должен быть ID файла или полной ссылкой,
+            // но для простоты, если он уже является полной URL, будем использовать его.
+            // Если вы ожидаете ТОЛЬКО ID здесь, вам потребуется дополнительная проверка.
+            dictionariesListSourceURL = customDictionaryURL.hasPrefix("http") ? customDictionaryURL : "https://www.googleapis.com/drive/v3/files/\(customDictionaryURL)?alt=media&key=\(googleAPIKey)"
+            print("Начинаем скачивание пользовательских словарей с URL: \(dictionariesListSourceURL)")
         } else {
             print("Неизвестный источник словарей.")
             return
         }
 
-        guard let remoteDictionariesURL = URL(string: sourceURL) else {
-            print("Некорректный URL для списка словарей: \(sourceURL)")
+        guard let remoteDictionariesURL = URL(string: dictionariesListSourceURL) else {
+            print("Некорректный URL для списка словарей: \(dictionariesListSourceURL)")
             return
         }
 
         var downloadedMetadata: [DictionaryInfo] = []
-
+        var mainData: Data?
+        
         do {
-            let (data, response) = try await URLSession.shared.data(from: remoteDictionariesURL) // Получаем ответ для проверки HTTP Status
+            let (data, response) = try await URLSession.shared.data(from: remoteDictionariesURL)
+            mainData = data
             
-            // **ДОБАВЛЕНО: Проверка HTTP статуса и типа содержимого**
             if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
                 print("Ошибка HTTP при загрузке списка словарей: Статус \(httpResponse.statusCode)")
                 if let responseString = String(data: data, encoding: .utf8) {
                     print("Ответ сервера (HTML/Ошибка):\n\(responseString.prefix(500))...")
                 }
-                throw URLError(.badServerResponse) // Выбрасываем ошибку для дальнейшей обработки
+                throw URLError(.badServerResponse)
             }
 
-            // **ДОБАВЛЕНО: Дополнительная проверка, что данные выглядят как JSON**
             guard let responseString = String(data: data, encoding: .utf8), responseString.trimmingCharacters(in: .whitespacesAndNewlines).hasPrefix("[") else {
                 print("Полученные данные не похожи на JSON-массив для списка словарей. Возможно, это HTML-страница ошибки или перенаправления.")
                 if let responseString = String(data: data, encoding: .utf8) {
                     print("Содержимое (не JSON):\n\(responseString.prefix(500))...")
                 }
-                throw URLError(.cannotDecodeContentData) // Выбрасываем ошибку
+                throw URLError(.cannotDecodeContentData)
             }
 
+            // Декодируем список метаданных словарей
             let remoteDictsInfo = try JSONDecoder().decode([DictionaryInfo].self, from: data)
 
             try FileManager.default.createDirectory(at: downloadedDictionariesDirectory, withIntermediateDirectories: true, attributes: nil)
 
             for var dictInfo in remoteDictsInfo {
-                guard let remoteWordListURL = URL(string: dictInfo.filename) else {
-                    print("Некорректный URL для словаря: \(dictInfo.name) - \(dictInfo.filename)")
+                // Здесь filename уже является ID файла, если ваш JSON-файл 'dictionaries.txt'
+                // содержит только ID, как в вашем примере: `filename": "140ddpUTIANzQ2CYDJfW4R5lUHdZIr735"`
+                let fileID = dictInfo.filename
+                let wordListURLString = "https://www.googleapis.com/drive/v3/files/\(fileID)?alt=media&key=\(googleAPIKey)"
+                print("URL для загрузки словаря '\(dictInfo.name)': \(wordListURLString)")
+
+                guard let remoteWordListURL = URL(string: wordListURLString) else {
+                    print("Некорректный URL для словаря: \(dictInfo.name) - \(wordListURLString)")
                     continue
                 }
 
+                var wordListData: Data?
                 do {
-                    let (wordListData, wordListResponse) = try await URLSession.shared.data(from: remoteWordListURL) // Получаем ответ
+                    let (dataFromWordList, wordListResponse) = try await URLSession.shared.data(from: remoteWordListURL)
+                    wordListData = dataFromWordList
                     
-                    // **ДОБАВЛЕНО: Проверка HTTP статуса и типа содержимого для каждого словаря**
                     if let httpResponse = wordListResponse as? HTTPURLResponse, httpResponse.statusCode != 200 {
                         print("Ошибка HTTP при загрузке словаря '\(dictInfo.name)': Статус \(httpResponse.statusCode)")
-                        if let responseString = String(data: wordListData, encoding: .utf8) {
+                        if let responseString = String(data: dataFromWordList, encoding: .utf8) {
                             print("Ответ сервера (HTML/Ошибка):\n\(responseString.prefix(500))...")
                         }
                         throw URLError(.badServerResponse)
                     }
 
-                    // **ДОБАВЛЕНО: Дополнительная проверка, что данные выглядят как JSON для каждого словаря**
-                    guard let wordListContentString = String(data: wordListData, encoding: .utf8), wordListContentString.trimmingCharacters(in: .whitespacesAndNewlines).hasPrefix("[") else {
+                    guard let wordListContentString = String(data: dataFromWordList, encoding: .utf8), wordListContentString.trimmingCharacters(in: .whitespacesAndNewlines).hasPrefix("[") else {
                         print("Полученные данные для словаря '\(dictInfo.name)' не похожи на JSON-массив. Возможно, это HTML-страница ошибки или перенаправления.")
-                        if let responseString = String(data: wordListData, encoding: .utf8) {
+                        if let responseString = String(data: dataFromWordList, encoding: .utf8) {
                             print("Содержимое (не JSON) для '\(dictInfo.name)':\n\(responseString.prefix(500))...")
                         }
                         throw URLError(.cannotDecodeContentData)
                     }
 
-                    // **ВНИМАНИЕ: Проверьте вашу структуру Word на соответствие файлу numbers.txt**
-                    // Ваш файл numbers.txt содержит поля "category" и "gender",
-                    // которых нет в текущей struct Word. Это ВЫЗОВЕТ ОШИБКУ ДЕКОДИРОВАНИЯ.
-                    // Я временно добавлю их в struct Word выше как опциональные.
-
                     let localFileName = UUID().uuidString + ".txt"
                     let localFileURL = downloadedDictionariesDirectory.appendingPathComponent(localFileName)
                     
-                    try wordListData.write(to: localFileURL)
+                    try dataFromWordList.write(to: localFileURL)
                     print("Словарь '\(dictInfo.name)' успешно скачан и сохранен как: \(localFileURL.lastPathComponent)")
 
-                    if let fileContent = String(data: wordListData, encoding: .utf8) {
+                    if let fileContent = String(data: dataFromWordList, encoding: .utf8) {
                         print("Содержимое скачанного файла '\(dictInfo.name)':\n\(fileContent.prefix(500))...")
                     } else {
                         print("Не удалось декодировать содержимое скачанного файла '\(dictInfo.name)' как UTF-8 строку.")
                     }
 
+                    // Сохраняем имя локального файла, а не Google Drive ID, для загрузки позже
                     dictInfo.filename = localFileURL.lastPathComponent
                     downloadedMetadata.append(dictInfo)
 
@@ -552,6 +557,9 @@ struct ContentView: View {
                             print("Key '\(key.stringValue)' not found at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
                         case .typeMismatch(let type, let context):
                             print("Type mismatch for \(type) at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
+                            if let dataString = String(data: wordListData ?? Data(), encoding: .utf8) {
+                                print("Некорректные данные для типа: \(dataString.prefix(200))...")
+                            }
                         case .valueNotFound(let type, let context):
                             print("Value not found for \(type) at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
                         @unknown default:
@@ -572,6 +580,12 @@ struct ContentView: View {
 
         } catch {
             print("Ошибка загрузки списка словарей или парсинга: \(error.localizedDescription)")
+            if let urlError = error as? URLError {
+                print("URL Error Code: \(urlError.code.rawValue)")
+                if urlError.code == .badServerResponse, let data = mainData, let responseString = String(data: data, encoding: .utf8) {
+                    print("Содержимое ответа при ошибке сервера:\n\(responseString.prefix(500))...")
+                }
+            }
             await MainActor.run {
                 self.allDictionaries = []
                 self.downloadedDictionaryMetadataData = Data()
@@ -579,7 +593,6 @@ struct ContentView: View {
         }
     }
 
-    // НОВАЯ ФУНКЦИЯ: Загрузка метаданных словарей (используется при запуске)
     func loadDictionariesMetadataAndWords() {
         allDictionaries = []
         selectedDictionaries = []
@@ -609,8 +622,7 @@ struct ContentView: View {
         }
     }
 
-    // НОВАЯ ФУНКЦИЯ: Очистка скачанных словарей
-    private func clearDownloadedDictionaries() async {
+    func clearDownloadedDictionaries() async {
         let fileManager = FileManager.default
         do {
             if fileManager.fileExists(atPath: downloadedDictionariesDirectory.path) {
@@ -627,7 +639,6 @@ struct ContentView: View {
         }
     }
 
-    // НОВАЯ ФУНКЦИЯ: Загрузка выбранных слов (теперь учитывает локальные пути)
     func loadSelectedWords() {
         var combinedWords: [Word] = []
 
@@ -651,8 +662,10 @@ struct ContentView: View {
                         continue
                     }
 
+                    var localFileData: Data?
                     do {
                         let data = try Data(contentsOf: filePath)
+                        localFileData = data
                         print("Размер данных локального файла: \(data.count) байт")
 
                         if let fileContent = String(data: data, encoding: .utf8) {
@@ -674,6 +687,9 @@ struct ContentView: View {
                                 print("Key '\(key.stringValue)' not found at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
                             case .typeMismatch(let type, let context):
                                 print("Type mismatch for \(type) at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
+                                if let dataString = String(data: localFileData ?? Data(), encoding: .utf8) {
+                                    print("Некорректные данные для типа: \(dataString.prefix(200))...")
+                                }
                             case .valueNotFound(let type, let context):
                                 print("Value not found for \(type) at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
                             @unknown default:

@@ -1,50 +1,50 @@
 [
   {
     "name": "я/ты",
-    "filename": "my_words_1.txt"
+    "filename": "1NakC8SKk75O9ceb2SFU7ku8gIY0vsiki"
   },
   {
     "name": "мамы/папы",
-    "filename": "my_words_2.txt"
+    "filename": "1KprVLlYdVlKWhVJiRimavlGSTG5E3I5S"
   },
   {
     "name": "глаголы",
-    "filename": "my_words_3.txt"
+    "filename": "1CUhloxrSMeS7CTZ9JXrQm49SAbUOKz7p"
   },
   {
     "name": "числа",
-    "filename": "numbers.txt"
+    "filename": "1lYVpc_dk_xgJ0mYcYz6kHTxHrtnxHom8"
   },
   {
     "name": "дни",
-    "filename": "days.txt"
+    "filename": "1CP684Hoezwel4mrUM187o80rPg4_MD7C"
   },
   {
     "name": "цвета",
-    "filename": "colors.txt"
+    "filename": "1HCIUMTlArLGZ9hYUlNpkLRX325OQBZwE"
   },
   {
     "name": "еда",
-    "filename": "food.txt"
+    "filename": "1Blph5mSdQNXaj-9IJ3WSZEAKZ0xa2MWu"
   },
   {
     "name": "о людях",
-    "filename": "p_adv.txt"
+    "filename": "140ddpUTIANzQ2CYDJfW4R5lUHdZIr735"
   },
   {
     "name": "общие",
-    "filename": "objects.txt"
+    "filename": "1ic20JOzws__UgGkvKocQYAoUnH6oCJDv"
   },
   {
     "name": "одежда",
-    "filename": "wear.txt"
+    "filename": "1Psc_a7wuRC1CsjQ3k8jpodoLmw3ODy4_"
   },
   {
     "name": "тело",
-    "filename": "body.txt"
+    "filename": "1MSaEKHwid7hUV3YetxUXSxM0pMGBUzlX"
   },
   {
     "name": "разное",
-    "filename": "diff.txt"
+    "filename": "1X7AmkbBS6cCs9MG06M9itwWssgIz9tvZ"
   }
 ]
