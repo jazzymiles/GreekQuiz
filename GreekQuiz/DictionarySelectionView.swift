@@ -1,11 +1,16 @@
 import SwiftUI
+import AVFoundation
 
 struct DictionarySelectionView: View {
     @Binding var allDictionaries: [DictionaryInfo]
     @Binding var selectedDictionaries: Set<String>
-    let loadSelectedWords: () -> Void // Функция обратного вызова для загрузки слов
+    let loadSelectedWords: () -> Void
+    @Binding var allWords: [Word]
+    @Binding var activeWords: [Word]
+    let speakWord: (String, String) -> Void
 
-    @Environment(\.dismiss) var dismiss // Для закрытия листа
+    @Environment(\.dismiss) var dismiss
+    @State private var showingWordsList = false
 
     var body: some View {
         NavigationView {
@@ -14,7 +19,6 @@ struct DictionarySelectionView: View {
                     .font(.largeTitle)
                     .padding(.bottom, 20)
 
-                // Использование FlowLayout для выбора словарей
                 FlowLayout(allDictionaries, spacing: 10) { dictionary in
                     Toggle(dictionary.name, isOn: Binding(
                         get: { selectedDictionaries.contains(dictionary.filename) },
@@ -24,7 +28,7 @@ struct DictionarySelectionView: View {
                             } else {
                                 selectedDictionaries.remove(dictionary.filename)
                             }
-                            loadSelectedWords() // Вызываем функцию из ContentView
+                            loadSelectedWords()
                         }
                     ))
                     .toggleStyle(.button)
@@ -34,11 +38,25 @@ struct DictionarySelectionView: View {
                 .padding(.horizontal)
                 
                 Spacer()
+
+                Button("Показать слова") {
+                    showingWordsList = true
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .padding(.horizontal)
+                .padding(.bottom, 20)
+                .sheet(isPresented: $showingWordsList) {
+                    WordsListView(words: activeWords.isEmpty ? allWords : activeWords, speakWord: speakWord)
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Готово") {
-                        dismiss() // Закрываем лист
+                        dismiss()
                     }
                 }
             }

@@ -1,0 +1,359 @@
+[
+  {
+    "ru": "животное",
+    "el": "το ζώο",
+    "transcription": "зо́о",
+    "category": "общее",
+    "gender": "ср"
+  },
+  {
+    "ru": "птица",
+    "el": "το πουλί",
+    "transcription": "пули́",
+    "category": "общее",
+    "gender": "ср"
+  },
+  {
+    "ru": "собака",
+    "el": "ο σκύλος",
+    "transcription": "ски́лос",
+    "category": "млекопитающие",
+    "gender": "м"
+  },
+  {
+    "ru": "кошка",
+    "el": "η γάτα",
+    "transcription": "га́та",
+    "category": "млекопитающие",
+    "gender": "ж"
+  },
+  {
+    "ru": "лошадь",
+    "el": "το άλογο",
+    "transcription": "а́лого",
+    "category": "млекопитающие",
+    "gender": "ср"
+  },
+  {
+    "ru": "корова",
+    "el": "η αγελάδα",
+    "transcription": "агэла́да",
+    "category": "млекопитающие",
+    "gender": "ж"
+  },
+  {
+    "ru": "свинья",
+    "el": "το γουρούνι",
+    "transcription": "гуру́ни",
+    "category": "млекопитающие",
+    "gender": "ср"
+  },
+  {
+    "ru": "овца",
+    "el": "το πρόβατο",
+    "transcription": "про́вато",
+    "category": "млекопитающие",
+    "gender": "ср"
+  },
+  {
+    "ru": "коза",
+    "el": "η κατσίκα",
+    "transcription": "катси́ка",
+    "category": "млекопитающие",
+    "gender": "ж"
+  },
+  {
+    "ru": "курица",
+    "el": "η κότα",
+    "transcription": "ко́та",
+    "category": "птицы",
+    "gender": "ж"
+  },
+  {
+    "ru": "петух",
+    "el": "ο κόκορας",
+    "transcription": "ко́корас",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "утка",
+    "el": "η πάπια",
+    "transcription": "па́пья",
+    "category": "птицы",
+    "gender": "ж"
+  },
+  {
+    "ru": "гусь",
+    "el": "η χήνα",
+    "transcription": "хи́на",
+    "category": "птицы",
+    "gender": "ж"
+  },
+  {
+    "ru": "индейка",
+    "el": "η γαλοπούλα",
+    "transcription": "галопу́ла",
+    "category": "птицы",
+    "gender": "ж"
+  },
+  {
+    "ru": "голубь",
+    "el": "το περιστέρι",
+    "transcription": "пэристэ́ри",
+    "category": "птицы",
+    "gender": "ср"
+  },
+  {
+    "ru": "воробей",
+    "el": "το σπουργίτι",
+    "transcription": "спурги́ти",
+    "category": "птицы",
+    "gender": "ср"
+  },
+  {
+    "ru": "орёл",
+    "el": "ο αετός",
+    "transcription": "аэто́с",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "сова",
+    "el": "η κουκουβάγια",
+    "transcription": "кукува́гья",
+    "category": "птицы",
+    "gender": "ж"
+  },
+  {
+    "ru": "дельфин",
+    "el": "το δελφίνι",
+    "transcription": "дэлфи́ни",
+    "category": "морские животные",
+    "gender": "ср"
+  },
+  {
+    "ru": "рыба",
+    "el": "το ψάρι",
+    "transcription": "пса́ри",
+    "category": "рыбы",
+    "gender": "ср"
+  },
+  {
+    "ru": "медведь",
+    "el": "η αρκούδα",
+    "transcription": "арку́да",
+    "category": "млекопитающие",
+    "gender": "ж"
+  },
+  {
+    "ru": "волк",
+    "el": "ο λύκος",
+    "transcription": "ли́кос",
+    "category": "млекопитающие",
+    "gender": "м"
+  },
+  {
+    "ru": "лиса",
+    "el": "η αλεπού",
+    "transcription": "алэпу́",
+    "category": "млекопитающие",
+    "gender": "ж"
+  },
+  {
+    "ru": "заяц",
+    "el": "ο λαγός",
+    "transcription": "лаго́с",
+    "category": "млекопитающие",
+    "gender": "м"
+  },
+  {
+    "ru": "кролик",
+    "el": "το κουνέλι",
+    "transcription": "кунэ́ли",
+    "category": "млекопитающие",
+    "gender": "ср"
+  },
+  {
+    "ru": "мышь",
+    "el": "το ποντίκι",
+    "transcription": "понди́ки",
+    "category": "млекопитающие",
+    "gender": "ср"
+  },
+  {
+    "ru": "змея",
+    "el": "το φίδι",
+    "transcription": "фи́ди",
+    "category": "рептилии",
+    "gender": "ср"
+  },
+  {
+    "ru": "черепаха",
+    "el": "η χελώνα",
+    "transcription": "хело́на",
+    "category": "рептилии",
+    "gender": "ж"
+  },
+  {
+    "ru": "лягушка",
+    "el": "ο βάτραχος",
+    "transcription": "ва́трахос",
+    "category": "земноводные",
+    "gender": "м"
+  },
+  {
+    "ru": "пчела",
+    "el": "η μέλισσα",
+    "transcription": "мэ́лиса",
+    "category": "насекомые",
+    "gender": "ж"
+  },
+  {
+    "ru": "муха",
+    "el": "η μύγα",
+    "transcription": "ми́га",
+    "category": "насекомые",
+    "gender": "ж"
+  },
+  {
+    "ru": "комар",
+    "el": "το κουνούπι",
+    "transcription": "куну́пи",
+    "category": "насекомые",
+    "gender": "ср"
+  },
+  {
+    "ru": "бабочка",
+    "el": "η πεταλούδα",
+    "transcription": "пэталу́да",
+    "category": "насекомые",
+    "gender": "ж"
+  },
+  {
+    "ru": "муравей",
+    "el": "το μυρμήγκι",
+    "transcription": "мирми́ги",
+    "category": "насекомые",
+    "gender": "ср"
+  },
+  {
+    "ru": "паук",
+    "el": "η αράχνη",
+    "transcription": "ара́хни",
+    "category": "насекомые",
+    "gender": "ж"
+  },
+  {
+    "ru": "осьминог",
+    "el": "το χταπόδι",
+    "transcription": "хтапо́ди",
+    "category": "морские животные",
+    "gender": "ср"
+  },
+  {
+    "ru": "кальмар",
+    "el": "το καλαμάρι",
+    "transcription": "калама́ри",
+    "category": "морские животные",
+    "gender": "ср"
+  },
+  {
+    "ru": "краб",
+    "el": "ο κάβουρας",
+    "transcription": "ка́вурас",
+    "category": "морские животные",
+    "gender": "м"
+  },
+  {
+    "ru": "дельфин",
+    "el": "το δελφίνι",
+    "transcription": "дэлфи́ни",
+    "category": "морские животные",
+    "gender": "ср"
+  },
+  {
+    "ru": "акула",
+    "el": "ο καρχαρίας",
+    "transcription": "кархари́ас",
+    "category": "рыбы",
+    "gender": "м"
+  },
+  {
+    "ru": "кит",
+    "el": "η φάλαινα",
+    "transcription": "фа́лэна",
+    "category": "морские животные",
+    "gender": "ж"
+  },
+  {
+    "ru": "чайка",
+    "el": "ο γλάρος",
+    "transcription": "гла́рос",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "пеликан",
+    "el": "ο πελεκάνος",
+    "transcription": "пэлэка́нос",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "цапля",
+    "el": "ο ερωδιός",
+    "transcription": "эродио́с",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "аист",
+    "el": "ο πελαργός",
+    "transcription": "пэларга́с",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "лебедь",
+    "el": "ο κύκνος",
+    "transcription": "ки́кнос",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "попугай",
+    "el": "ο παπαγάλος",
+    "transcription": "папага́лос",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "канарейка",
+    "el": "το καναρίνι",
+    "transcription": "канари́ни",
+    "category": "птицы",
+    "gender": "ср"
+  },
+  {
+    "ru": "сова (филин)",
+    "el": "ο μπούφος",
+    "transcription": "бу́фос",
+    "category": "птицы",
+    "gender": "м"
+  },
+  {
+    "ru": "ласточка",
+    "el": "το χελιδόνι",
+    "transcription": "хелидо́ни",
+    "category": "птицы",
+    "gender": "ср"
+  },
+  {
+    "ru": "сокол",
+    "el": "το γεράκι",
+    "transcription": "гэра́ки",
+    "category": "птицы",
+    "gender": "ср"
+  }
+]

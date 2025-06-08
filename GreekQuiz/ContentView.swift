@@ -42,8 +42,8 @@ struct ContentView: View {
 
     @State private var allDictionaries: [DictionaryInfo] = []
     @State private var selectedDictionaries: Set<String> = []
-    @State private var allWords: [Word] = []
-    @State private var activeWords: [Word] = []
+    @State private var allWords: [Word] = [] // Все слова из всех загруженных файлов
+    @State private var activeWords: [Word] = [] // Слова, выбранные для квиза (отфильтрованные)
     @State private var currentWordIndex = 0
 
     @State private var userInput = ""
@@ -67,7 +67,6 @@ struct ContentView: View {
     @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true
     @AppStorage("colorSchemePreference") private var colorSchemePreference: String = "system"
 
-    // Эти переменные теперь точно объявлены в ContentView
     @AppStorage("dictionarySourcePreference") private var dictionarySource: DictionarySource = .standard
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
 
@@ -149,10 +148,14 @@ struct ContentView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     .sheet(isPresented: $showingDictionarySelection) {
+                        // Обновленная инициализация DictionarySelectionView
                         DictionarySelectionView(
                             allDictionaries: $allDictionaries,
                             selectedDictionaries: $selectedDictionaries,
-                            loadSelectedWords: loadSelectedWords
+                            loadSelectedWords: loadSelectedWords,
+                            allWords: $allWords, // Передаем все загруженные слова
+                            activeWords: $activeWords, // Передаем активные слова для отображения в WordsListView
+                            speakWord: speakWord // Передаем функцию воспроизведения звука
                         )
                     }
 
@@ -173,8 +176,8 @@ struct ContentView: View {
                             showTranscription: $showTranscription,
                             autoPlaySound: $autoPlaySound,
                             colorSchemePreference: $colorSchemePreference,
-                            dictionarySource: $dictionarySource, // Доступ к @AppStorage
-                            customDictionaryURL: $customDictionaryURL, // Доступ к @AppStorage
+                            dictionarySource: $dictionarySource,
+                            customDictionaryURL: $customDictionaryURL,
                             onDownloadDictionaries: {
                                 Task {
                                     await downloadAndSaveDictionariesBasedOnSource()
@@ -455,9 +458,6 @@ struct ContentView: View {
                 print("Некорректный источник словарей или пустой URL для скачивания.")
                 return
             }
-            // customDictionaryURL теперь должен быть ID файла или полной ссылкой,
-            // но для простоты, если он уже является полной URL, будем использовать его.
-            // Если вы ожидаете ТОЛЬКО ID здесь, вам потребуется дополнительная проверка.
             dictionariesListSourceURL = customDictionaryURL.hasPrefix("http") ? customDictionaryURL : "https://www.googleapis.com/drive/v3/files/\(customDictionaryURL)?alt=media&key=\(googleAPIKey)"
             print("Начинаем скачивание пользовательских словарей с URL: \(dictionariesListSourceURL)")
         } else {
@@ -493,14 +493,11 @@ struct ContentView: View {
                 throw URLError(.cannotDecodeContentData)
             }
 
-            // Декодируем список метаданных словарей
             let remoteDictsInfo = try JSONDecoder().decode([DictionaryInfo].self, from: data)
 
             try FileManager.default.createDirectory(at: downloadedDictionariesDirectory, withIntermediateDirectories: true, attributes: nil)
 
             for var dictInfo in remoteDictsInfo {
-                // Здесь filename уже является ID файла, если ваш JSON-файл 'dictionaries.txt'
-                // содержит только ID, как в вашем примере: `filename": "140ddpUTIANzQ2CYDJfW4R5lUHdZIr735"`
                 let fileID = dictInfo.filename
                 let wordListURLString = "https://www.googleapis.com/drive/v3/files/\(fileID)?alt=media&key=\(googleAPIKey)"
                 print("URL для загрузки словаря '\(dictInfo.name)': \(wordListURLString)")
@@ -639,9 +636,7 @@ struct ContentView: View {
         }
     }
 
-    func loadSelectedWords() {
-        var combinedWords: [Word] = []
-
+    func loadSelectedWords() { // Обновленная функция loadSelectedWords
         Task {
             guard FileManager.default.fileExists(atPath: downloadedDictionariesDirectory.path) else {
                 print("Директория скачанных словарей не существует: \(downloadedDictionariesDirectory.path)")
@@ -652,61 +647,71 @@ struct ContentView: View {
                 return
             }
 
+            var tempAllWords: [Word] = []
+            var tempActiveWords: [Word] = []
+
             for dictInfo in allDictionaries {
-                if selectedDictionaries.contains(dictInfo.filename) {
-                    let filePath = downloadedDictionariesDirectory.appendingPathComponent(dictInfo.filename)
-                    
-                    print("Попытка загрузить локальный файл словаря: \(filePath.path)")
-                    if !FileManager.default.fileExists(atPath: filePath.path) {
-                        print("Ошибка: Локальный файл словаря не найден по пути: \(filePath.path)")
-                        continue
+                let filePath = downloadedDictionariesDirectory.appendingPathComponent(dictInfo.filename)
+                
+                print("Попытка загрузить локальный файл словаря: \(filePath.path)")
+                if !FileManager.default.fileExists(atPath: filePath.path) {
+                    print("Ошибка: Локальный файл словаря не найден по пути: \(filePath.path)")
+                    continue
+                }
+
+                var localFileData: Data?
+                do {
+                    let data = try Data(contentsOf: filePath)
+                    localFileData = data
+                    print("Размер данных локального файла: \(data.count) байт")
+
+                    if let fileContent = String(data: data, encoding: .utf8) {
+                        print("Содержимое локального файла '\(dictInfo.name)':\n\(fileContent.prefix(500))...")
+                    } else {
+                        print("Не удалось декодировать содержимое локального файла '\(dictInfo.name)' как UTF-8 строку.")
                     }
 
-                    var localFileData: Data?
-                    do {
-                        let data = try Data(contentsOf: filePath)
-                        localFileData = data
-                        print("Размер данных локального файла: \(data.count) байт")
+                    let decoded = try JSONDecoder().decode([Word].self, from: data)
+                    
+                    tempAllWords.append(contentsOf: decoded) // Добавьте слова в общий список всех слов
 
-                        if let fileContent = String(data: data, encoding: .utf8) {
-                            print("Содержимое локального файла '\(dictInfo.name)':\n\(fileContent.prefix(500))...")
-                        } else {
-                            print("Не удалось декодировать содержимое локального файла '\(dictInfo.name)' как UTF-8 строку.")
-                        }
+                    if selectedDictionaries.contains(dictInfo.filename) { // Если этот словарь выбран
+                        tempActiveWords.append(contentsOf: decoded) // Добавьте его слова в activeWords
+                        print("Словарь загружен для активного использования: \(dictInfo.name) из \(filePath.lastPathComponent)")
+                    } else {
+                        print("Словарь загружен (но не активен): \(dictInfo.name) из \(filePath.lastPathComponent)")
+                    }
 
-                        let decoded = try JSONDecoder().decode([Word].self, from: data)
-                        combinedWords.append(contentsOf: decoded)
-                        print("Словарь загружен: \(dictInfo.name) из \(filePath.lastPathComponent)")
-                    } catch {
-                        print("Ошибка загрузки или парсинга локального словаря \(dictInfo.name) по пути \(filePath.lastPathComponent): \(error.localizedDescription)")
-                        if let decodingError = error as? DecodingError {
-                            switch decodingError {
-                            case .dataCorrupted(let context):
-                                print("Data corrupted at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
-                            case .keyNotFound(let key, let context):
-                                print("Key '\(key.stringValue)' not found at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
-                            case .typeMismatch(let type, let context):
-                                print("Type mismatch for \(type) at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
-                                if let dataString = String(data: localFileData ?? Data(), encoding: .utf8) {
-                                    print("Некорректные данные для типа: \(dataString.prefix(200))...")
-                                }
-                            case .valueNotFound(let type, let context):
-                                print("Value not found for \(type) at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
-                            @unknown default:
-                                print("Unknown decoding error.")
+                } catch {
+                    print("Ошибка загрузки или парсинга локального словаря \(dictInfo.name) по пути \(filePath.lastPathComponent): \(error.localizedDescription)")
+                    if let decodingError = error as? DecodingError {
+                        switch decodingError {
+                        case .dataCorrupted(let context):
+                            print("Data corrupted at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
+                        case .keyNotFound(let key, let context):
+                            print("Key '\(key.stringValue)' not found at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
+                        case .typeMismatch(let type, let context):
+                            print("Type mismatch for \(type) at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
+                            if let dataString = String(data: localFileData ?? Data(), encoding: .utf8) {
+                                print("Некорректные данные для типа: \(dataString.prefix(200))...")
                             }
+                        case .valueNotFound(let type, let context):
+                            print("Value not found for \(type) at key path: \(context.codingPath.map { $0.stringValue }.joined(separator: ".")) - \(context.debugDescription)")
+                        @unknown default:
+                            print("Unknown decoding error.")
                         }
                     }
                 }
             }
             
             await MainActor.run {
-                self.allWords = combinedWords
-                self.activeWords = self.allWords.shuffled()
+                self.allWords = tempAllWords // Все слова из всех файлов
+                self.activeWords = tempActiveWords.shuffled() // Только слова из выбранных файлов, перемешанные для квиза
                 if !self.activeWords.isEmpty {
                     self.currentWordIndex = 0
                 }
-                print("Загружено \(self.allWords.count) активных слов.")
+                print("Загружено \(self.allWords.count) всех слов.")
+                print("Загружено \(self.activeWords.count) активных слов для квиза.")
                 if self.allWords.isEmpty && self.selectedDictionaries.isEmpty {
                     print("Подсказка: Слова не загружены, возможно, ни один словарь не выбран в окне выбора словарей.")
                 }
