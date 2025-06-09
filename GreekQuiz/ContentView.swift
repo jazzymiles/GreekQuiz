@@ -243,6 +243,9 @@ struct ContentView: View {
                                 ForEach(cardOptions, id: \.self) { option in
                                     Button(action: {
                                         selectedAnswer = option
+                                        if quizLanguage == "el" {
+                                            speakWord(option, language: "el-GR")
+                                        }
                                     }) {
                                         Text(option)
                                             .font(.headline)
