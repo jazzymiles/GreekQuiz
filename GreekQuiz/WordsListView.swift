@@ -2,11 +2,22 @@ import SwiftUI
 import AVFoundation
 
 struct WordsListView: View {
-    let words: [Word] // Это массив всех слов, которые могут быть показаны (allWords или activeWords из ContentView)
+    let words: [Word] // Это массив всех слов
     let speakWord: (String, String) -> Void
 
     @Environment(\.dismiss) var dismiss
-    @State private var searchQuery: String = "" // Состояние для текста поиска
+    @State private var searchQuery: String = ""
+
+    // NEW: Grouped words by dictionary name
+    var groupedFilteredWords: [String: [Word]] {
+        let filtered = filteredWords // Use already filtered words
+        return Dictionary(grouping: filtered, by: { $0.dictionaryName ?? "Без словаря" })
+    }
+
+    // NEW: Sorted dictionary names for consistent order
+    var sortedDictionaryNames: [String] {
+        groupedFilteredWords.keys.sorted()
+    }
 
     var filteredWords: [Word] {
         if searchQuery.isEmpty {
@@ -44,29 +55,35 @@ struct WordsListView: View {
                 .padding(.top, 8)
 
                 List {
-                    ForEach(filteredWords, id: \.el) { word in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(word.el)
-                                    .font(.headline)
-                                Text(word.ru)
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
-                                Text(word.transcription)
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
+                                ForEach(sortedDictionaryNames, id: \.self) { dictionaryName in
+                                    Section(header: Text(dictionaryName).font(.title2).bold()) { // Header for dictionary name
+                                        if let wordsInDictionary = groupedFilteredWords[dictionaryName] {
+                                            ForEach(wordsInDictionary, id: \.id) { word in // Use .id now
+                                                HStack {
+                                                    VStack(alignment: .leading) {
+                                                        Text(word.el)
+                                                            .font(.headline)
+                                                        Text(word.ru)
+                                                            .font(.subheadline)
+                                                            .foregroundColor(.gray)
+                                                        Text(word.transcription)
+                                                            .font(.caption)
+                                                            .foregroundColor(.secondary)
+                                                    }
+                                                    Spacer()
+                                                    Button(action: {
+                                                        speakWord(word.el, "el-GR")
+                                                    }) {
+                                                        Image(systemName: "speaker.wave.3.fill")
+                                                            .foregroundColor(.blue)
+                                                    }
+                                                }
+                                                .padding(.vertical, 2)
+                                            }
+                                        }
+                                    }
+                                }
                             }
-                            Spacer()
-                            Button(action: {
-                                speakWord(word.el, "el-GR")
-                            }) {
-                                Image(systemName: "speaker.wave.3.fill")
-                                    .foregroundColor(.blue)
-                            }
-                        }
-                        .padding(.vertical, 4)
-                    }
-                }
             }
             .navigationTitle("Слова")
             .navigationBarTitleDisplayMode(.inline)

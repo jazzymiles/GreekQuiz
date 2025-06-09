@@ -2,12 +2,14 @@ import SwiftUI
 import AVFoundation
 import WebKit
 
-struct Word: Codable, Equatable {
+struct Word: Codable, Equatable, Identifiable { // Added Identifiable for ForEach
+    let id = UUID() // Unique identifier for each word
     let ru: String
     let el: String
     let transcription: String
     let category: String?
     let gender: String?
+    var dictionaryName: String? // NEW: To store the name of the dictionary it came from
 }
 
 enum QuizMode: String, CaseIterable, Identifiable {
@@ -739,16 +741,21 @@ struct ContentView: View {
                         print("Не удалось декодировать содержимое локального файла '\(dictInfo.name)' как UTF-8 строку.")
                     }
 
-                    let decoded = try JSONDecoder().decode([Word].self, from: data)
-                    
-                    tempAllWords.append(contentsOf: decoded)
+                    var decodedWords = try JSONDecoder().decode([Word].self, from: data)
+                                    
+                                    // Assign dictionaryName to each word in this dictionary
+                                    for i in 0..<decodedWords.count {
+                                        decodedWords[i].dictionaryName = dictInfo.name
+                                    }
 
-                    if selectedDictionaries.contains(dictInfo.filePath) {
-                        tempActiveWords.append(contentsOf: decoded)
-                        print("Словарь загружен для активного использования: \(dictInfo.name) из \(filePath.lastPathComponent)")
-                    } else {
-                        print("Словарь загружен (но не активен): \(dictInfo.name) из \(filePath.lastPathComponent)")
-                    }
+                                    tempAllWords.append(contentsOf: decodedWords) // Use decodedWords with dictionaryName
+
+                                    if selectedDictionaries.contains(dictInfo.filePath) {
+                                        tempActiveWords.append(contentsOf: decodedWords) // Use decodedWords with dictionaryName
+                                        print("Словарь загружен для активного использования: \(dictInfo.name) из \(filePath.lastPathComponent)")
+                                    } else {
+                                        print("Словарь загружен (но не активен): \(dictInfo.name) из \(filePath.lastPathComponent)")
+                                    }
 
                 } catch {
                     print("Ошибка загрузки или парсинга локального словаря \(dictInfo.name) по пути \(filePath.lastPathComponent): \(error.localizedDescription)")
