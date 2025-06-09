@@ -21,12 +21,12 @@ struct DictionarySelectionView: View {
 
                 FlowLayout(allDictionaries, spacing: 10) { dictionary in
                     Toggle(dictionary.name, isOn: Binding(
-                        get: { selectedDictionaries.contains(dictionary.filename) },
+                        get: { selectedDictionaries.contains(dictionary.filePath) }, // Changed .filename to .filePath
                         set: { isSelected in
                             if isSelected {
-                                selectedDictionaries.insert(dictionary.filename)
+                                selectedDictionaries.insert(dictionary.filePath) // Changed .filename to .filePath
                             } else {
-                                selectedDictionaries.remove(dictionary.filename)
+                                selectedDictionaries.remove(dictionary.filePath) // Changed .filename to .filePath
                             }
                             loadSelectedWords()
                         }

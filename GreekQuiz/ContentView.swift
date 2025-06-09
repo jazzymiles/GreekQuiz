@@ -20,7 +20,7 @@ enum QuizMode: String, CaseIterable, Identifiable {
 struct DictionaryInfo: Codable, Identifiable, Hashable {
     let id = UUID()
     let name: String
-    var filename: String // This will now store the Google Drive File ID
+    var filePath: String // Changed from filename to filePath
 }
 
 enum DictionarySource: String, CaseIterable, Identifiable, Codable {
@@ -41,7 +41,7 @@ enum DictionarySource: String, CaseIterable, Identifiable, Codable {
 struct ContentView: View {
 
     @State private var allDictionaries: [DictionaryInfo] = []
-    @State private var selectedDictionaries: Set<String> = []
+    @State private var selectedDictionaries: Set<String> = [] // Still stores file paths
     @State private var allWords: [Word] = [] // Все слова из всех загруженных файлов
     @State private var activeWords: [Word] = [] // Слова, выбранные для квиза (отфильтрованные)
     @State private var currentWordIndex = 0
@@ -148,14 +148,13 @@ struct ContentView: View {
                     }
                     .buttonStyle(PlainButtonStyle())
                     .sheet(isPresented: $showingDictionarySelection) {
-                        // Обновленная инициализация DictionarySelectionView
                         DictionarySelectionView(
                             allDictionaries: $allDictionaries,
                             selectedDictionaries: $selectedDictionaries,
                             loadSelectedWords: loadSelectedWords,
-                            allWords: $allWords, // Передаем все загруженные слова
-                            activeWords: $activeWords, // Передаем активные слова для отображения в WordsListView
-                            speakWord: speakWord // Передаем функцию воспроизведения звука
+                            allWords: $allWords,
+                            activeWords: $activeWords,
+                            speakWord: speakWord
                         )
                     }
 
@@ -439,34 +438,55 @@ struct ContentView: View {
     
     func downloadAndSaveDictionariesBasedOnSource() async {
         allDictionaries = []
-        selectedDictionaries = [] // Сбрасываем выбранные словари при новой загрузке
+        selectedDictionaries = []
         allWords = []
         activeWords = []
         currentWordIndex = 0
 
         await clearDownloadedDictionaries()
 
-        let dictionariesListSourceURL: String
-        let googleAPIKey = "AIzaSyAMQLdTGms_tFhL6rD_nJWmA1uXileQxi8" // <--- ВСТАВЬТЕ ВАШ API KEY СЮДА!
+        let dictionariesListSourceURLString: String
+        
+        // Base URL for individual dictionary files if using custom URL
+        // This will be determined by the customDictionaryURL itself, or be empty
+        // if using standard source.
+        var determinedBaseURLForFiles: String = ""
+
+        let dictionariesListFileName = "dictionaries.txt" // Имя файла со списком словарей
 
         if dictionarySource == .standard {
-            let dictionariesFileID = "1W4HA8vG3nUQQy415ok4H6-gb8JJ0eDE1" // ID файла dictionaries.txt
-            dictionariesListSourceURL = "https://www.googleapis.com/drive/v3/files/\(dictionariesFileID)?alt=media&key=\(googleAPIKey)"
-            print("Начинаем скачивание стандартных словарей с URL: \(dictionariesListSourceURL)")
+            determinedBaseURLForFiles = "https://www.dropbox.com/scl/fi/z9avztiil4v150g0h58i8/"
+            dictionariesListSourceURLString = "\(determinedBaseURLForFiles)\(dictionariesListFileName)?rlkey=k5mrqfwgdgwz2wt8q1wu3ernj&st=peuf016l&raw=1"
+            print("Начинаем скачивание стандартных словарей с URL: \(dictionariesListSourceURLString)")
         } else if dictionarySource == .customURL {
             guard !customDictionaryURL.isEmpty else {
                 print("Некорректный источник словарей или пустой URL для скачивания.")
                 return
             }
-            dictionariesListSourceURL = customDictionaryURL.hasPrefix("http") ? customDictionaryURL : "https://www.googleapis.com/drive/v3/files/\(customDictionaryURL)?alt=media&key=\(googleAPIKey)"
-            print("Начинаем скачивание пользовательских словарей с URL: \(dictionariesListSourceURL)")
+            // Assume customDictionaryURL is the full URL to dictionaries.txt
+            dictionariesListSourceURLString = customDictionaryURL.hasSuffix("raw=1") ? customDictionaryURL : "\(customDictionaryURL)&raw=1"
+            
+            // Try to derive the base URL for other files from customDictionaryURL
+            if let url = URL(string: customDictionaryURL),
+               let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+               let host = components.host,
+               let scheme = components.scheme {
+                
+                // Remove the dictionariesListFileName from the path to get the base path
+                let path = components.path.replacingOccurrences(of: dictionariesListFileName, with: "")
+                determinedBaseURLForFiles = "\(scheme)://\(host)\(path)"
+            } else {
+                print("Не удалось определить базовый URL для дополнительных файлов из пользовательского URL. Используем пустую строку.")
+                determinedBaseURLForFiles = ""
+            }
+            print("Начинаем скачивание пользовательских словарей с URL: \(dictionariesListSourceURLString)")
         } else {
             print("Неизвестный источник словарей.")
             return
         }
 
-        guard let remoteDictionariesURL = URL(string: dictionariesListSourceURL) else {
-            print("Некорректный URL для списка словарей: \(dictionariesListSourceURL)")
+        guard let remoteDictionariesURL = URL(string: dictionariesListSourceURLString) else {
+            print("Некорректный URL для списка словарей: \(dictionariesListSourceURLString)")
             return
         }
 
@@ -498,12 +518,16 @@ struct ContentView: View {
             try FileManager.default.createDirectory(at: downloadedDictionariesDirectory, withIntermediateDirectories: true, attributes: nil)
 
             for var dictInfo in remoteDictsInfo {
-                let fileID = dictInfo.filename
-                let wordListURLString = "https://www.googleapis.com/drive/v3/files/\(fileID)?alt=media&key=\(googleAPIKey)"
-                print("URL для загрузки словаря '\(dictInfo.name)': \(wordListURLString)")
+                // Now dictInfo.filePath should contain the full URL to the dictionary file
+                let wordListSourceURLString = dictInfo.filePath
 
-                guard let remoteWordListURL = URL(string: wordListURLString) else {
-                    print("Некорректный URL для словаря: \(dictInfo.name) - \(wordListURLString)")
+                // Ensure the URL ends with &raw=1 if it's a Dropbox URL, for direct content access
+                let finalWordListURLString = wordListSourceURLString.contains("dropbox.com") && !wordListSourceURLString.hasSuffix("raw=1") ? "\(wordListSourceURLString)&raw=1" : wordListSourceURLString
+
+                print("URL для загрузки словаря '\(dictInfo.name)': \(finalWordListURLString)")
+
+                guard let remoteWordListURL = URL(string: finalWordListURLString) else {
+                    print("Некорректный URL для словаря: \(dictInfo.name) - \(finalWordListURLString)")
                     continue
                 }
 
@@ -540,8 +564,8 @@ struct ContentView: View {
                         print("Не удалось декодировать содержимое скачанного файла '\(dictInfo.name)' как UTF-8 строку.")
                     }
 
-                    // Сохраняем имя локального файла, а не Google Drive ID, для загрузки позже
-                    dictInfo.filename = localFileURL.lastPathComponent
+                    // Store the local file path for later loading
+                    dictInfo.filePath = localFileURL.lastPathComponent
                     downloadedMetadata.append(dictInfo)
 
                 } catch {
@@ -636,7 +660,7 @@ struct ContentView: View {
         }
     }
 
-    func loadSelectedWords() { // Обновленная функция loadSelectedWords
+    func loadSelectedWords() {
         Task {
             guard FileManager.default.fileExists(atPath: downloadedDictionariesDirectory.path) else {
                 print("Директория скачанных словарей не существует: \(downloadedDictionariesDirectory.path)")
@@ -651,7 +675,7 @@ struct ContentView: View {
             var tempActiveWords: [Word] = []
 
             for dictInfo in allDictionaries {
-                let filePath = downloadedDictionariesDirectory.appendingPathComponent(dictInfo.filename)
+                let filePath = downloadedDictionariesDirectory.appendingPathComponent(dictInfo.filePath) // Use filePath here
                 
                 print("Попытка загрузить локальный файл словаря: \(filePath.path)")
                 if !FileManager.default.fileExists(atPath: filePath.path) {
@@ -673,10 +697,10 @@ struct ContentView: View {
 
                     let decoded = try JSONDecoder().decode([Word].self, from: data)
                     
-                    tempAllWords.append(contentsOf: decoded) // Добавьте слова в общий список всех слов
+                    tempAllWords.append(contentsOf: decoded)
 
-                    if selectedDictionaries.contains(dictInfo.filename) { // Если этот словарь выбран
-                        tempActiveWords.append(contentsOf: decoded) // Добавьте его слова в activeWords
+                    if selectedDictionaries.contains(dictInfo.filePath) { // Use filePath here
+                        tempActiveWords.append(contentsOf: decoded)
                         print("Словарь загружен для активного использования: \(dictInfo.name) из \(filePath.lastPathComponent)")
                     } else {
                         print("Словарь загружен (но не активен): \(dictInfo.name) из \(filePath.lastPathComponent)")
@@ -705,8 +729,8 @@ struct ContentView: View {
             }
             
             await MainActor.run {
-                self.allWords = tempAllWords // Все слова из всех файлов
-                self.activeWords = tempActiveWords.shuffled() // Только слова из выбранных файлов, перемешанные для квиза
+                self.allWords = tempAllWords
+                self.activeWords = tempActiveWords.shuffled()
                 if !self.activeWords.isEmpty {
                     self.currentWordIndex = 0
                 }
