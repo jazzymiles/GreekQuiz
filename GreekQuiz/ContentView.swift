@@ -20,7 +20,7 @@ enum QuizMode: String, CaseIterable, Identifiable {
 struct DictionaryInfo: Codable, Identifiable, Hashable {
     let id = UUID()
     let name: String
-    var filePath: String // Changed from filename to filePath
+    var filePath: String
 }
 
 enum DictionarySource: String, CaseIterable, Identifiable, Codable {
@@ -41,9 +41,9 @@ enum DictionarySource: String, CaseIterable, Identifiable, Codable {
 struct ContentView: View {
 
     @State private var allDictionaries: [DictionaryInfo] = []
-    @State private var selectedDictionaries: Set<String> = [] // Still stores file paths
-    @State private var allWords: [Word] = [] // Все слова из всех загруженных файлов
-    @State private var activeWords: [Word] = [] // Слова, выбранные для квиза (отфильтрованные)
+    @State private var selectedDictionaries: Set<String> = []
+    @State private var allWords: [Word] = []
+    @State private var activeWords: [Word] = []
     @State private var currentWordIndex = 0
 
     @State private var userInput = ""
@@ -71,6 +71,7 @@ struct ContentView: View {
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
 
     @AppStorage("downloadedDictionaryMetadata") private var downloadedDictionaryMetadataData: Data = Data()
+    @AppStorage("quizLanguage") private var quizLanguage: String = "ru" // "ru" for Russian, "el" for Greek
     
     private let synthesizer = AVSpeechSynthesizer()
 
@@ -177,6 +178,7 @@ struct ContentView: View {
                             colorSchemePreference: $colorSchemePreference,
                             dictionarySource: $dictionarySource,
                             customDictionaryURL: $customDictionaryURL,
+                            quizLanguage: $quizLanguage, // NEW: Pass quizLanguage binding
                             onDownloadDictionaries: {
                                 Task {
                                     await downloadAndSaveDictionariesBasedOnSource()
@@ -193,11 +195,15 @@ struct ContentView: View {
                 VStack(spacing: 0) {
                     if !activeWords.isEmpty {
                         HStack(spacing: 10) {
-                            Text(activeWords[currentWordIndex].el)
+                            // Display the word to translate based on quizLanguage
+                            Text(quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru)
                                 .font(.system(size: 40, weight: .bold))
                             
                             Button(action: {
-                                speakWord(activeWords[currentWordIndex].el, language: "el-GR")
+                                // Speak the word that is currently displayed for translation
+                                let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
+                                let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                                speakWord(wordToSpeak, language: languageCode)
                             }) {
                                 Image(systemName: "speaker.wave.3.fill")
                                     .font(.title)
@@ -208,16 +214,26 @@ struct ContentView: View {
                         .padding(.bottom, 8)
 
                         HStack(spacing: 5) {
-                            Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
-                                .font(.system(size: 28))
-                                .foregroundColor(.gray)
-                                .padding(.leading, 10)
-                                .frame(maxWidth: .infinity, alignment: .center)
+                            // Display transcription only if the original word is Greek and showTranscription is true
+                            if quizLanguage == "ru" {
+                                Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
+                                    .font(.system(size: 28))
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 10)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                            } else {
+                                // If translating from Russian, no transcription is needed or available in this context
+                                Text(" ") // Keep space for consistent layout or remove if not desired
+                                    .font(.system(size: 28))
+                                    .foregroundColor(.gray)
+                                    .padding(.leading, 10)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                            }
                         }
                         .padding(.bottom, 16)
                         
                         if quizMode == .keyboard {
-                            TextField("Ваш перевод", text: $userInput)
+                            TextField(quizLanguage == "ru" ? "Ваш перевод" : "Your translation", text: $userInput) // Updated placeholder
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding(.horizontal)
                                 .focused($isTextFieldFocused)
@@ -269,7 +285,7 @@ struct ContentView: View {
                         .padding(.horizontal)
                         .padding(.bottom, 20)
 
-                        Text(showAnswer ? "Правильный перевод: \(activeWords[currentWordIndex].ru)" : " ")
+                        Text(showAnswer ? "Правильный перевод: \(quizLanguage == "ru" ? activeWords[currentWordIndex].ru : activeWords[currentWordIndex].el)" : " ") // Updated correct answer display
                             .foregroundColor(showAnswer ? (getPreferredColorScheme() == .light ? .black : .white) : .clear)
                             .padding(.vertical, 9)
                             .padding(.horizontal)
@@ -294,7 +310,10 @@ struct ContentView: View {
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 if autoPlaySound && !activeWords.isEmpty {
-                    speakWord(activeWords[currentWordIndex].el, language: "el-GR")
+                    // Update this line to speak the word that is currently displayed for translation
+                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
+                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                    speakWord(wordToSpeak, language: languageCode)
                 }
                 if quizMode == .keyboard {
                     isTextFieldFocused = true
@@ -327,7 +346,12 @@ struct ContentView: View {
 
     func checkAnswer() {
         let input = userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        let corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
+        let corrects: [String]
+        if quizLanguage == "ru" {
+            corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru) // User inputs Russian, compare with Russian
+        } else {
+            corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].el) // User inputs Greek, compare with Greek
+        }
 
         withAnimation(nil) {
             if corrects.contains(input) {
@@ -365,15 +389,24 @@ struct ContentView: View {
         }
 
         var options: [String] = []
-        let currentCorrectAnswer = activeWords[currentWordIndex].ru
+        let currentCorrectAnswer: String
+        let allPossibleAnswers: [String]
+
+        if quizLanguage == "ru" {
+            currentCorrectAnswer = activeWords[currentWordIndex].ru // User inputs Russian, so Greek is displayed, options are Russian
+            allPossibleAnswers = allWords.map { $0.ru }
+        } else {
+            currentCorrectAnswer = activeWords[currentWordIndex].el // User inputs Greek, so Russian is displayed, options are Greek
+            allPossibleAnswers = allWords.map { $0.el }
+        }
 
         options.append(parseAcceptedAnswers(from: currentCorrectAnswer).first ?? currentCorrectAnswer)
 
-        var shuffledAllWords = allWords.shuffled()
+        var shuffledAllWordsForOptions = allPossibleAnswers.shuffled()
         var incorrectCount = 0
-        while options.count < 6 && incorrectCount < allWords.count * 2 {
-            if let randomWord = shuffledAllWords.popLast() {
-                let possibleIncorrectAnswer = parseAcceptedAnswers(from: randomWord.ru).first ?? randomWord.ru
+        while options.count < 6 && incorrectCount < allPossibleAnswers.count * 2 {
+            if let randomOption = shuffledAllWordsForOptions.popLast() {
+                let possibleIncorrectAnswer = parseAcceptedAnswers(from: randomOption).first ?? randomOption
                 if possibleIncorrectAnswer.lowercased() != currentCorrectAnswer.lowercased() && !options.contains(possibleIncorrectAnswer) {
                     options.append(possibleIncorrectAnswer)
                 }
@@ -399,7 +432,12 @@ struct ContentView: View {
                 return
             }
 
-            let correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
+            let correctAnswers: [String]
+            if quizLanguage == "ru" {
+                correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru) // User chose Russian option
+            } else {
+                correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].el) // User chose Greek option
+            }
             
             if correctAnswers.contains(selectedAnswer!.lowercased()) {
                 isCorrect = true
@@ -430,7 +468,10 @@ struct ContentView: View {
                     generateCardOptions()
                 }
                 if autoPlaySound {
-                    speakWord(activeWords[currentWordIndex].el, language: "el-GR")
+                    // Update this line to speak the word that is currently displayed for translation
+                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
+                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                    speakWord(wordToSpeak, language: languageCode)
                 }
             }
         }
@@ -452,7 +493,7 @@ struct ContentView: View {
         // if using standard source.
         var determinedBaseURLForFiles: String = ""
 
-        let dictionariesListFileName = "dictionaries.txt" // Имя файла со списком словарей
+        let dictionariesListFileName = "dictionaries.txt"
 
         if dictionarySource == .standard {
             determinedBaseURLForFiles = "https://www.dropbox.com/scl/fi/z9avztiil4v150g0h58i8/"
@@ -675,7 +716,7 @@ struct ContentView: View {
             var tempActiveWords: [Word] = []
 
             for dictInfo in allDictionaries {
-                let filePath = downloadedDictionariesDirectory.appendingPathComponent(dictInfo.filePath) // Use filePath here
+                let filePath = downloadedDictionariesDirectory.appendingPathComponent(dictInfo.filePath)
                 
                 print("Попытка загрузить локальный файл словаря: \(filePath.path)")
                 if !FileManager.default.fileExists(atPath: filePath.path) {
@@ -699,7 +740,7 @@ struct ContentView: View {
                     
                     tempAllWords.append(contentsOf: decoded)
 
-                    if selectedDictionaries.contains(dictInfo.filePath) { // Use filePath here
+                    if selectedDictionaries.contains(dictInfo.filePath) {
                         tempActiveWords.append(contentsOf: decoded)
                         print("Словарь загружен для активного использования: \(dictInfo.name) из \(filePath.lastPathComponent)")
                     } else {

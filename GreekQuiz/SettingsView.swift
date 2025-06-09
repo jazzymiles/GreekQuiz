@@ -9,6 +9,7 @@ struct SettingsView: View {
     @Binding var colorSchemePreference: String
     @Binding var dictionarySource: DictionarySource
     @Binding var customDictionaryURL: String
+    @Binding var quizLanguage: String // NEW: Binding for quiz language
     @Environment(\.dismiss) var dismiss
 
     // Callback для уведомления ContentView о необходимости загрузки словарей
@@ -26,6 +27,15 @@ struct SettingsView: View {
                     Toggle(isOn: $autoPlaySound) {
                         Text("Автоматически озвучивать слова")
                     }
+                }
+
+                // NEW: Section for Quiz Language
+                Section(header: Text("Язык квиза")) {
+                    Picker("Отвечать на языке", selection: $quizLanguage) {
+                        Text("Русский").tag("ru")
+                        Text("Греческий").tag("el")
+                    }
+                    .pickerStyle(.segmented)
                 }
 
                 Section(header: Text("Настройки внешнего вида")) {
