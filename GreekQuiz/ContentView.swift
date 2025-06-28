@@ -98,7 +98,6 @@ struct CardView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.white.opacity(0.1))
         .cornerRadius(20)
-        .shadow(radius: 5)
         .padding()
         .onTapGesture {
             withAnimation {
@@ -144,6 +143,11 @@ struct ContentView: View {
     @AppStorage("quizLanguage") private var quizLanguage: String = "ru"
     
     @State private var showCardTranslation: Bool = false
+
+    // NEW: State for download status display
+    @State private var isDownloadingDictionaries: Bool = false
+    @State private var downloadStatusMessage: String = ""
+
 
     private let synthesizer = AVSpeechSynthesizer()
 
@@ -465,6 +469,33 @@ struct ContentView: View {
 
                 Spacer()
             }
+            // NEW: Overlay for download status
+            if isDownloadingDictionaries {
+                ProgressView(downloadStatusMessage)
+                    .padding()
+                    .background(Color.black.opacity(0.7))
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea()
+            } else if !downloadStatusMessage.isEmpty {
+                Text(downloadStatusMessage)
+                    .padding()
+                    .background(Color.black.opacity(0.7))
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+                    .transition(.opacity) // Smooth appearance/disappearance
+                    .onAppear {
+                        // Dismiss message after a short delay
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            withAnimation {
+                                downloadStatusMessage = ""
+                            }
+                        }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea()
+            }
         }
         .preferredColorScheme(getPreferredColorScheme())
         .onAppear {
@@ -674,6 +705,11 @@ struct ContentView: View {
 
         let dictionariesListFileName = "dictionaries.txt"
 
+        await MainActor.run {
+            self.isDownloadingDictionaries = true
+            self.downloadStatusMessage = "Загрузка списка словарей..."
+        }
+
         if dictionarySource == .standard {
             determinedBaseURLForFiles = "https://www.dropbox.com/scl/fi/z9avztiil4v150g0h58i8/"
             dictionariesListSourceURLString = "\(determinedBaseURLForFiles)\(dictionariesListFileName)?rlkey=k5mrqfwgdgwz2wt8q1wu3ernj&st=peuf016l&raw=1"
@@ -681,6 +717,10 @@ struct ContentView: View {
         } else if dictionarySource == .customURL {
             guard !customDictionaryURL.isEmpty else {
                 print("Некорректный источник словарей или пустой URL для скачивания.")
+                await MainActor.run {
+                    self.isDownloadingDictionaries = false
+                    self.downloadStatusMessage = "Ошибка: Некорректный URL для скачивания."
+                }
                 return
             }
             dictionariesListSourceURLString = customDictionaryURL.hasSuffix("raw=1") ? customDictionaryURL : "\(customDictionaryURL)&raw=1"
@@ -699,11 +739,19 @@ struct ContentView: View {
             print("Начинаем скачивание пользовательских словарей с URL: \(dictionariesListSourceURLString)")
         } else {
             print("Неизвестный источник словарей.")
+            await MainActor.run {
+                self.isDownloadingDictionaries = false
+                self.downloadStatusMessage = "Ошибка: Неизвестный источник словарей."
+            }
             return
         }
 
         guard let remoteDictionariesURL = URL(string: dictionariesListSourceURLString) else {
             print("Некорректный URL для списка словарей: \(dictionariesListSourceURLString)")
+            await MainActor.run {
+                self.isDownloadingDictionaries = false
+                self.downloadStatusMessage = "Ошибка: Некорректный URL списка словарей."
+            }
             return
         }
 
@@ -734,7 +782,11 @@ struct ContentView: View {
 
             try FileManager.default.createDirectory(at: downloadedDictionariesDirectory, withIntermediateDirectories: true, attributes: nil)
 
-            for var dictInfo in remoteDictsInfo {
+            for (index, var dictInfo) in remoteDictsInfo.enumerated() {
+                await MainActor.run {
+                    self.downloadStatusMessage = "Загрузка словаря: \(dictInfo.name) (\(index + 1) из \(remoteDictsInfo.count))..."
+                }
+                
                 let wordListSourceURLString = dictInfo.filePath
 
                 let finalWordListURLString = wordListSourceURLString.contains("dropbox.com") && !wordListSourceURLString.hasSuffix("raw=1") ? "\(wordListSourceURLString)&raw=1" : wordListSourceURLString
@@ -776,7 +828,7 @@ struct ContentView: View {
                     if let fileContent = String(data: dataFromWordList, encoding: .utf8) {
                         print("Содержимое скачанного файла '\(dictInfo.name)':\n\(fileContent.prefix(500))...")
                     } else {
-                        print("Не удалось декодировать содержимое скачанного файла '\(dictInfo.name)' как UTF-8 строку.")
+                        print("Не удалось декодировать содержимое локального файла '\(dictInfo.name)' как UTF-8 строку.")
                     }
 
                     dictInfo.filePath = localFileURL.lastPathComponent
@@ -811,6 +863,8 @@ struct ContentView: View {
                 self.selectedDictionaries = []
                 print("Метаданные скачанных словарей сохранены.")
                 self.loadSelectedWords()
+                self.isDownloadingDictionaries = false
+                self.downloadStatusMessage = "Все словари обновлены!"
             }
 
         } catch {
@@ -824,18 +878,20 @@ struct ContentView: View {
             await MainActor.run {
                 self.allDictionaries = []
                 self.downloadedDictionaryMetadataData = Data()
+                self.isDownloadingDictionaries = false
+                self.downloadStatusMessage = "Ошибка загрузки словарей: \(error.localizedDescription)"
             }
         }
     }
 
     func loadDictionariesMetadataAndWords() {
-        allDictionaries = []
-        selectedDictionaries = []
-        allWords = []
-        activeWords = []
-        currentWordIndex = 0
-
         Task {
+            allDictionaries = []
+            selectedDictionaries = []
+            allWords = []
+            activeWords = []
+            currentWordIndex = 0
+
             guard !downloadedDictionaryMetadataData.isEmpty else {
                 print("Нет сохраненных метаданных для словарей. Ожидание скачивания.")
                 return
@@ -897,11 +953,11 @@ struct ContentView: View {
                     continue
                 }
 
-                var localFileData: Data? = nil // Declared outside do-catch block
+                var localFileData: Data? = nil
 
                 do {
                     let data = try Data(contentsOf: filePath)
-                    localFileData = data // Assigned value inside do block
+                    localFileData = data
                     print("Размер данных локального файла: \(data.count) байт")
 
                     if let fileContent = String(data: data, encoding: .utf8) {
