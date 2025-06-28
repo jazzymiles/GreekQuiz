@@ -2,21 +2,30 @@ import SwiftUI
 import AVFoundation
 import WebKit
 
-struct Word: Codable, Equatable, Identifiable { // Added Identifiable for ForEach
-    let id = UUID() // Unique identifier for each word
+struct Word: Codable, Equatable, Identifiable {
+    let id = UUID()
     let ru: String
     let el: String
     let transcription: String
     let category: String?
     let gender: String?
-    var dictionaryName: String? // NEW: To store the name of the dictionary it came from
+    var dictionaryName: String?
 }
 
 enum QuizMode: String, CaseIterable, Identifiable {
     case keyboard
-    case cards
+    case quiz
+    case cards // NEW: Added cards mode
 
     var id: String { self.rawValue }
+
+    var displayName: String {
+        switch self {
+        case .keyboard: return "Ввод"
+        case .quiz: return "Тест"
+        case .cards: return "Карточки"
+        }
+    }
 }
 
 struct DictionaryInfo: Codable, Identifiable, Hashable {
@@ -39,6 +48,67 @@ enum DictionarySource: String, CaseIterable, Identifiable, Codable {
     }
 }
 
+// NEW: CardView for the new cards mode
+struct CardView: View {
+    let word: Word
+    let quizLanguage: String
+    let showTranscription: Bool
+    let speakWord: (String, String) -> Void
+    @Binding var showTranslation: Bool // Use Binding to control translation visibility from parent
+
+    var body: some View {
+        VStack {
+            Spacer()
+            
+            Text(quizLanguage == "ru" ? word.el : word.ru) // Display Greek if quizLanguage is Russian, else Russian
+                .font(.system(size: 40, weight: .bold))
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+            
+            if quizLanguage == "ru" { // Only show transcription for Greek words
+                Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
+                    .font(.system(size: 28))
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+            }
+            
+            Button(action: {
+                // Speak the word that is currently displayed for translation
+                let wordToSpeak = quizLanguage == "ru" ? word.el : word.ru
+                let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                speakWord(wordToSpeak, languageCode)
+            }) {
+                Image(systemName: "speaker.wave.3.fill")
+                    .font(.title)
+                    .foregroundColor(.blue)
+            }
+            .padding(.top, 10)
+            
+            Spacer()
+            
+            if showTranslation {
+                Text(quizLanguage == "ru" ? word.ru : word.el) // Display Russian if quizLanguage is Russian, else Greek
+                    .font(.system(size: 32))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                    .transition(.opacity) // Smooth transition for showing translation
+            }
+            
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.white.opacity(0.1)) // Subtle background for the card
+        .cornerRadius(20)
+        .shadow(radius: 5)
+        .padding()
+        .onTapGesture {
+            withAnimation {
+                showTranslation.toggle()
+            }
+        }
+    }
+}
 
 struct ContentView: View {
 
@@ -75,6 +145,9 @@ struct ContentView: View {
     @AppStorage("downloadedDictionaryMetadata") private var downloadedDictionaryMetadataData: Data = Data()
     @AppStorage("quizLanguage") private var quizLanguage: String = "ru" // "ru" for Russian, "el" for Greek
     
+    // NEW: State for Card mode specific translation visibility
+    @State private var showCardTranslation: Bool = false
+
     private let synthesizer = AVSpeechSynthesizer()
 
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
@@ -90,36 +163,38 @@ struct ContentView: View {
                 .ignoresSafeArea()
 
             VStack(spacing: 0) {
+                // NEW: Mode Picker
+                Picker("Режим", selection: $quizMode) {
+                    ForEach(QuizMode.allCases) { mode in
+                        Text(mode.displayName)
+                            .tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .padding(.horizontal)
+                .padding(.top, 10)
+                .onChange(of: quizMode) { oldMode, newMode in
+                    if oldMode != newMode {
+                        resetQuizState()
+                        if newMode == .quiz {
+                            generateCardOptions()
+                        } else if newMode == .cards { // NEW: Reset card translation when entering cards mode
+                            showCardTranslation = false
+                            // Speak the word when entering cards mode
+                            if autoPlaySound && !activeWords.isEmpty {
+                                let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
+                                let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                                speakWord(wordToSpeak, language: languageCode)
+                            }
+                        } else if newMode == .keyboard {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                isTextFieldFocused = true
+                            }
+                        }
+                    }
+                }
+
                 HStack(spacing: 8) {
-                    Button(action: {
-                        quizMode = .cards
-                        resetQuizState()
-                        generateCardOptions()
-                    }) {
-                        Image("cards")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(8)
-                            .background(quizMode == .cards ? Color.blue.opacity(0.7) : Color.gray.opacity(0.3))
-                            .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-
-                    Button(action: {
-                        quizMode = .keyboard
-                        resetQuizState()
-                    }) {
-                        Image("keyboard")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(8)
-                            .background(quizMode == .keyboard ? Color.blue.opacity(0.7) : Color.gray.opacity(0.3))
-                            .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-
                     Spacer()
 
                     Button(action: {
@@ -180,7 +255,7 @@ struct ContentView: View {
                             colorSchemePreference: $colorSchemePreference,
                             dictionarySource: $dictionarySource,
                             customDictionaryURL: $customDictionaryURL,
-                            quizLanguage: $quizLanguage, // NEW: Pass quizLanguage binding
+                            quizLanguage: $quizLanguage,
                             onDownloadDictionaries: {
                                 Task {
                                     await downloadAndSaveDictionariesBasedOnSource()
@@ -196,51 +271,107 @@ struct ContentView: View {
 
                 VStack(spacing: 0) {
                     if !activeWords.isEmpty {
-                        HStack(spacing: 10) {
-                            // Display the word to translate based on quizLanguage
-                            Text(quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru)
-                                .font(.system(size: 40, weight: .bold))
-                            
-                            Button(action: {
-                                // Speak the word that is currently displayed for translation
-                                let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
-                                let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                                speakWord(wordToSpeak, language: languageCode)
-                            }) {
-                                Image(systemName: "speaker.wave.3.fill")
-                                    .font(.title)
-                                    .foregroundColor(.blue)
-                            }
-                        }
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .padding(.bottom, 8)
-
-                        HStack(spacing: 5) {
-                            // Display transcription only if the original word is Greek and showTranscription is true
-                            if quizLanguage == "ru" {
-                                Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
-                                    .font(.system(size: 28))
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 10)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                            } else {
-                                // If translating from Russian, no transcription is needed or available in this context
-                                Text(" ") // Keep space for consistent layout or remove if not desired
-                                    .font(.system(size: 28))
-                                    .foregroundColor(.gray)
-                                    .padding(.leading, 10)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                            }
-                        }
-                        .padding(.bottom, 16)
-                        
                         if quizMode == .keyboard {
-                            TextField(quizLanguage == "ru" ? "Ваш перевод" : "Your translation", text: $userInput) // Updated placeholder
+                            HStack(spacing: 10) {
+                                Text(quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru)
+                                    .font(.system(size: 40, weight: .bold))
+                                
+                                Button(action: {
+                                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
+                                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                                    speakWord(wordToSpeak, language: languageCode)
+                                }) {
+                                    Image(systemName: "speaker.wave.3.fill")
+                                        .font(.title)
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .padding(.bottom, 8)
+
+                            HStack(spacing: 5) {
+                                if quizLanguage == "ru" {
+                                    Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
+                                        .font(.system(size: 28))
+                                        .foregroundColor(.gray)
+                                        .padding(.leading, 10)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                } else {
+                                    Text(" ")
+                                        .font(.system(size: 28))
+                                        .foregroundColor(.gray)
+                                        .padding(.leading, 10)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                }
+                            }
+                            .padding(.bottom, 16)
+                            
+                            TextField(quizLanguage == "ru" ? "Ваш перевод" : "Your translation", text: $userInput)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding(.horizontal)
                                 .focused($isTextFieldFocused)
                                 .padding(.bottom, 18)
-                        } else {
+
+                            Button(action: {
+                                if showAnswer {
+                                    nextWord()
+                                } else {
+                                    checkAnswer()
+                                }
+                            }) {
+                                Text(showAnswer ? "Дальше" : "Проверить")
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .padding(.horizontal)
+                            .padding(.bottom, 20)
+
+                            Text(showAnswer ? "Правильный перевод: \(quizLanguage == "ru" ? activeWords[currentWordIndex].ru : activeWords[currentWordIndex].el)" : " ")
+                                .foregroundColor(showAnswer ? (getPreferredColorScheme() == .light ? .black : .white) : .clear)
+                                .padding(.vertical, 9)
+                                .padding(.horizontal)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .frame(height: 55)
+                            
+                        } else if quizMode == .quiz {
+                            HStack(spacing: 10) {
+                                Text(quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru)
+                                    .font(.system(size: 40, weight: .bold))
+                                
+                                Button(action: {
+                                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
+                                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                                    speakWord(wordToSpeak, language: languageCode)
+                                }) {
+                                    Image(systemName: "speaker.wave.3.fill")
+                                        .font(.title)
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .padding(.bottom, 8)
+
+                            HStack(spacing: 5) {
+                                if quizLanguage == "ru" {
+                                    Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
+                                        .font(.system(size: 28))
+                                        .foregroundColor(.gray)
+                                        .padding(.leading, 10)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                } else {
+                                    Text(" ")
+                                        .font(.system(size: 28))
+                                        .foregroundColor(.gray)
+                                        .padding(.leading, 10)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                }
+                            }
+                            .padding(.bottom, 16)
+                            
                             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 10) {
                                 ForEach(cardOptions, id: \.self) { option in
                                     Button(action: {
@@ -262,41 +393,76 @@ struct ContentView: View {
                             }
                             .padding(.horizontal)
                             .padding(.bottom, 18)
-                        }
 
-                        Button(action: {
-                            if showAnswer {
-                                nextWord()
-                                if quizMode == .cards {
+                            Button(action: {
+                                if showAnswer {
+                                    nextWord()
                                     selectedAnswer = nil
                                     generateCardOptions()
-                                }
-                            } else {
-                                if quizMode == .keyboard {
-                                    checkAnswer()
                                 } else {
                                     checkCardAnswer()
                                 }
+                            }) {
+                                Text(showAnswer ? "Дальше" : "Проверить")
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
                             }
-                        }) {
-                            Text(showAnswer ? "Дальше" : "Проверить")
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        .padding(.horizontal)
-                        .padding(.bottom, 20)
-
-                        Text(showAnswer ? "Правильный перевод: \(quizLanguage == "ru" ? activeWords[currentWordIndex].ru : activeWords[currentWordIndex].el)" : " ") // Updated correct answer display
-                            .foregroundColor(showAnswer ? (getPreferredColorScheme() == .light ? .black : .white) : .clear)
-                            .padding(.vertical, 9)
+                            .buttonStyle(PlainButtonStyle())
                             .padding(.horizontal)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .frame(height: 55)
-                        
+                            .padding(.bottom, 20)
+
+                            Text(showAnswer ? "Правильный перевод: \(quizLanguage == "ru" ? activeWords[currentWordIndex].ru : activeWords[currentWordIndex].el)" : " ")
+                                .foregroundColor(showAnswer ? (getPreferredColorScheme() == .light ? .black : .white) : .clear)
+                                .padding(.vertical, 9)
+                                .padding(.horizontal)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .frame(height: 55)
+
+                        } else if quizMode == .cards { // NEW: Cards mode UI
+                            CardView(
+                                word: activeWords[currentWordIndex],
+                                quizLanguage: quizLanguage,
+                                showTranscription: showTranscription,
+                                speakWord: speakWord,
+                                showTranslation: $showCardTranslation // Pass binding
+                            )
+                            .gesture(
+                                DragGesture()
+                                    .onEnded { gesture in
+                                        if gesture.translation.width < -50 {
+                                            // Swipe left
+                                            nextWord()
+                                        } else if gesture.translation.width > 50 {
+                                            // Swipe right
+                                            previousWord()
+                                        }
+                                    }
+                            )
+                            Spacer() // Push card to center
+                            
+                            HStack {
+                                Button(action: {
+                                    previousWord()
+                                }) {
+                                    Image(systemName: "arrow.left.circle.fill")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.blue)
+                                }
+                                Spacer()
+                                Button(action: {
+                                    nextWord()
+                                }) {
+                                    Image(systemName: "arrow.right.circle.fill")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                            .padding(.horizontal, 40)
+                            .padding(.bottom, 20)
+                        }
                     } else {
                         Text("Выберите хотя бы один словарь.")
                             .foregroundColor(.gray)
@@ -310,12 +476,13 @@ struct ContentView: View {
         .preferredColorScheme(getPreferredColorScheme())
         .onAppear {
             loadDictionariesMetadataAndWords()
-            if quizMode == .cards {
+            if quizMode == .quiz {
                 generateCardOptions()
+            } else if quizMode == .cards { // NEW: Initialize for cards mode
+                showCardTranslation = false // Ensure translation is hidden initially
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 if autoPlaySound && !activeWords.isEmpty {
-                    // Update this line to speak the word that is currently displayed for translation
                     let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
                     let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
                     speakWord(wordToSpeak, language: languageCode)
@@ -330,21 +497,13 @@ struct ContentView: View {
                 isTextFieldFocused = true
             }
         }
-        .onChange(of: quizMode) { oldMode, newMode in
-            if oldMode != newMode {
-                resetQuizState()
-                if newMode == .cards {
-                    generateCardOptions()
-                } else if newMode == .keyboard {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                        isTextFieldFocused = true
-                    }
-                }
-            }
-        }
         .onChange(of: activeWords) { oldWords, newWords in
-            if oldWords.count != newWords.count && quizMode == .cards {
-                generateCardOptions()
+            if oldWords.count != newWords.count {
+                if quizMode == .quiz {
+                    generateCardOptions()
+                } else if quizMode == .cards { // NEW: Reset card translation if active words change
+                    showCardTranslation = false
+                }
             }
         }
     }
@@ -353,9 +512,9 @@ struct ContentView: View {
         let input = userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
         let corrects: [String]
         if quizLanguage == "ru" {
-            corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru) // User inputs Russian, compare with Russian
+            corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
         } else {
-            corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].el) // User inputs Greek, compare with Greek
+            corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].el)
         }
 
         withAnimation(nil) {
@@ -381,6 +540,7 @@ struct ContentView: View {
         isCorrect = false
         isShowingFeedback = false
         selectedAnswer = nil
+        showCardTranslation = false // NEW: Reset for cards mode
         isTextFieldFocused = true
         if !activeWords.isEmpty {
             currentWordIndex = Int.random(in: 0..<activeWords.count)
@@ -398,10 +558,10 @@ struct ContentView: View {
         let allPossibleAnswers: [String]
 
         if quizLanguage == "ru" {
-            currentCorrectAnswer = activeWords[currentWordIndex].ru // User inputs Russian, so Greek is displayed, options are Russian
+            currentCorrectAnswer = activeWords[currentWordIndex].ru
             allPossibleAnswers = allWords.map { $0.ru }
         } else {
-            currentCorrectAnswer = activeWords[currentWordIndex].el // User inputs Greek, so Russian is displayed, options are Greek
+            currentCorrectAnswer = activeWords[currentWordIndex].el
             allPossibleAnswers = allWords.map { $0.el }
         }
 
@@ -439,9 +599,9 @@ struct ContentView: View {
 
             let correctAnswers: [String]
             if quizLanguage == "ru" {
-                correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru) // User chose Russian option
+                correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
             } else {
-                correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].el) // User chose Greek option
+                correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].el)
             }
             
             if correctAnswers.contains(selectedAnswer!.lowercased()) {
@@ -467,13 +627,38 @@ struct ContentView: View {
             isCorrect = false
             isTextFieldFocused = true
             selectedAnswer = nil
+            showCardTranslation = false // NEW: Hide translation for next card
+
             if !activeWords.isEmpty {
-                currentWordIndex = Int.random(in: 0..<activeWords.count)
-                if quizMode == .cards {
+                currentWordIndex = (currentWordIndex + 1) % activeWords.count
+                if quizMode == .quiz {
                     generateCardOptions()
                 }
                 if autoPlaySound {
-                    // Update this line to speak the word that is currently displayed for translation
+                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
+                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                    speakWord(wordToSpeak, language: languageCode)
+                }
+            }
+        }
+    }
+
+    // NEW: Function to go to the previous word in cards mode
+    func previousWord() {
+        withAnimation(nil) {
+            userInput = ""
+            showAnswer = false
+            isCorrect = false
+            isTextFieldFocused = true
+            selectedAnswer = nil
+            showCardTranslation = false // NEW: Hide translation for previous card
+
+            if !activeWords.isEmpty {
+                currentWordIndex = (currentWordIndex - 1 + activeWords.count) % activeWords.count
+                if quizMode == .quiz {
+                    generateCardOptions()
+                }
+                if autoPlaySound {
                     let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
                     let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
                     speakWord(wordToSpeak, language: languageCode)
@@ -493,9 +678,6 @@ struct ContentView: View {
 
         let dictionariesListSourceURLString: String
         
-        // Base URL for individual dictionary files if using custom URL
-        // This will be determined by the customDictionaryURL itself, or be empty
-        // if using standard source.
         var determinedBaseURLForFiles: String = ""
 
         let dictionariesListFileName = "dictionaries.txt"
@@ -509,16 +691,13 @@ struct ContentView: View {
                 print("Некорректный источник словарей или пустой URL для скачивания.")
                 return
             }
-            // Assume customDictionaryURL is the full URL to dictionaries.txt
             dictionariesListSourceURLString = customDictionaryURL.hasSuffix("raw=1") ? customDictionaryURL : "\(customDictionaryURL)&raw=1"
             
-            // Try to derive the base URL for other files from customDictionaryURL
             if let url = URL(string: customDictionaryURL),
                let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
                let host = components.host,
                let scheme = components.scheme {
                 
-                // Remove the dictionariesListFileName from the path to get the base path
                 let path = components.path.replacingOccurrences(of: dictionariesListFileName, with: "")
                 determinedBaseURLForFiles = "\(scheme)://\(host)\(path)"
             } else {
@@ -564,10 +743,8 @@ struct ContentView: View {
             try FileManager.default.createDirectory(at: downloadedDictionariesDirectory, withIntermediateDirectories: true, attributes: nil)
 
             for var dictInfo in remoteDictsInfo {
-                // Now dictInfo.filePath should contain the full URL to the dictionary file
                 let wordListSourceURLString = dictInfo.filePath
 
-                // Ensure the URL ends with &raw=1 if it's a Dropbox URL, for direct content access
                 let finalWordListURLString = wordListSourceURLString.contains("dropbox.com") && !wordListSourceURLString.hasSuffix("raw=1") ? "\(wordListSourceURLString)&raw=1" : wordListSourceURLString
 
                 print("URL для загрузки словаря '\(dictInfo.name)': \(finalWordListURLString)")
@@ -610,7 +787,6 @@ struct ContentView: View {
                         print("Не удалось декодировать содержимое скачанного файла '\(dictInfo.name)' как UTF-8 строку.")
                     }
 
-                    // Store the local file path for later loading
                     dictInfo.filePath = localFileURL.lastPathComponent
                     downloadedMetadata.append(dictInfo)
 
@@ -743,15 +919,14 @@ struct ContentView: View {
 
                     var decodedWords = try JSONDecoder().decode([Word].self, from: data)
                                     
-                                    // Assign dictionaryName to each word in this dictionary
                                     for i in 0..<decodedWords.count {
                                         decodedWords[i].dictionaryName = dictInfo.name
                                     }
 
-                                    tempAllWords.append(contentsOf: decodedWords) // Use decodedWords with dictionaryName
+                                    tempAllWords.append(contentsOf: decodedWords)
 
                                     if selectedDictionaries.contains(dictInfo.filePath) {
-                                        tempActiveWords.append(contentsOf: decodedWords) // Use decodedWords with dictionaryName
+                                        tempActiveWords.append(contentsOf: decodedWords)
                                         print("Словарь загружен для активного использования: \(dictInfo.name) из \(filePath.lastPathComponent)")
                                     } else {
                                         print("Словарь загружен (но не активен): \(dictInfo.name) из \(filePath.lastPathComponent)")
