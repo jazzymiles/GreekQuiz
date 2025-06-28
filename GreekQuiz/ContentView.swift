@@ -15,7 +15,7 @@ struct Word: Codable, Equatable, Identifiable {
 enum QuizMode: String, CaseIterable, Identifiable {
     case keyboard
     case quiz
-    case cards // NEW: Added cards mode
+    case cards
 
     var id: String { self.rawValue }
 
@@ -48,24 +48,23 @@ enum DictionarySource: String, CaseIterable, Identifiable, Codable {
     }
 }
 
-// NEW: CardView for the new cards mode
 struct CardView: View {
     let word: Word
     let quizLanguage: String
     let showTranscription: Bool
     let speakWord: (String, String) -> Void
-    @Binding var showTranslation: Bool // Use Binding to control translation visibility from parent
+    @Binding var showTranslation: Bool
 
     var body: some View {
         VStack {
             Spacer()
             
-            Text(quizLanguage == "ru" ? word.el : word.ru) // Display Greek if quizLanguage is Russian, else Russian
+            Text(quizLanguage == "ru" ? word.el : word.ru)
                 .font(.system(size: 40, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             
-            if quizLanguage == "ru" { // Only show transcription for Greek words
+            if quizLanguage == "ru" {
                 Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
                     .font(.system(size: 28))
                     .foregroundColor(.gray)
@@ -74,7 +73,6 @@ struct CardView: View {
             }
             
             Button(action: {
-                // Speak the word that is currently displayed for translation
                 let wordToSpeak = quizLanguage == "ru" ? word.el : word.ru
                 let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
                 speakWord(wordToSpeak, languageCode)
@@ -88,17 +86,17 @@ struct CardView: View {
             Spacer()
             
             if showTranslation {
-                Text(quizLanguage == "ru" ? word.ru : word.el) // Display Russian if quizLanguage is Russian, else Greek
+                Text(quizLanguage == "ru" ? word.ru : word.el)
                     .font(.system(size: 32))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
-                    .transition(.opacity) // Smooth transition for showing translation
+                    .transition(.opacity)
             }
             
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white.opacity(0.1)) // Subtle background for the card
+        .background(Color.white.opacity(0.1))
         .cornerRadius(20)
         .shadow(radius: 5)
         .padding()
@@ -143,9 +141,8 @@ struct ContentView: View {
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
 
     @AppStorage("downloadedDictionaryMetadata") private var downloadedDictionaryMetadataData: Data = Data()
-    @AppStorage("quizLanguage") private var quizLanguage: String = "ru" // "ru" for Russian, "el" for Greek
+    @AppStorage("quizLanguage") private var quizLanguage: String = "ru"
     
-    // NEW: State for Card mode specific translation visibility
     @State private var showCardTranslation: Bool = false
 
     private let synthesizer = AVSpeechSynthesizer()
@@ -163,37 +160,6 @@ struct ContentView: View {
                 .ignoresSafeArea()
 
             VStack(spacing: 0) {
-                // NEW: Mode Picker
-                Picker("Режим", selection: $quizMode) {
-                    ForEach(QuizMode.allCases) { mode in
-                        Text(mode.displayName)
-                            .tag(mode)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding(.horizontal)
-                .padding(.top, 10)
-                .onChange(of: quizMode) { oldMode, newMode in
-                    if oldMode != newMode {
-                        resetQuizState()
-                        if newMode == .quiz {
-                            generateCardOptions()
-                        } else if newMode == .cards { // NEW: Reset card translation when entering cards mode
-                            showCardTranslation = false
-                            // Speak the word when entering cards mode
-                            if autoPlaySound && !activeWords.isEmpty {
-                                let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
-                                let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                                speakWord(wordToSpeak, language: languageCode)
-                            }
-                        } else if newMode == .keyboard {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                isTextFieldFocused = true
-                            }
-                        }
-                    }
-                }
-
                 HStack(spacing: 8) {
                     Spacer()
 
@@ -203,9 +169,9 @@ struct ContentView: View {
                         Image("rules")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(8)
-                            .background(Color.gray.opacity(0.3))
+                            .frame(width: 24, height: 24)
+                            .padding(6)
+                            .background(Color.gray.opacity(0.2))
                             .cornerRadius(8)
                     }
                     .buttonStyle(PlainButtonStyle())
@@ -219,9 +185,9 @@ struct ContentView: View {
                         Image("dic")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(8)
-                            .background(Color.gray.opacity(0.3))
+                            .frame(width: 24, height: 24)
+                            .padding(6)
+                            .background(Color.gray.opacity(0.2))
                             .cornerRadius(8)
                     }
                     .buttonStyle(PlainButtonStyle())
@@ -242,9 +208,9 @@ struct ContentView: View {
                         Image("settings")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .padding(8)
-                            .background(Color.gray.opacity(0.3))
+                            .frame(width: 24, height: 24)
+                            .padding(6)
+                            .background(Color.gray.opacity(0.2))
                             .cornerRadius(8)
                     }
                     .buttonStyle(PlainButtonStyle())
@@ -267,6 +233,35 @@ struct ContentView: View {
                 .padding(.horizontal)
                 .padding(.top, 10)
 
+                Picker("Режим", selection: $quizMode) {
+                    ForEach(QuizMode.allCases) { mode in
+                        Text(mode.displayName)
+                            .tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .padding(.horizontal)
+                .padding(.top, 10)
+                .onChange(of: quizMode) { oldMode, newMode in
+                    if oldMode != newMode {
+                        resetQuizState()
+                        if newMode == .quiz {
+                            generateCardOptions()
+                        } else if newMode == .cards {
+                            showCardTranslation = false
+                            if autoPlaySound && !activeWords.isEmpty {
+                                let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
+                                let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                                speakWord(wordToSpeak, languageCode)
+                            }
+                        } else if newMode == .keyboard {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                isTextFieldFocused = true
+                            }
+                        }
+                    }
+                }
+
                 Spacer()
 
                 VStack(spacing: 0) {
@@ -279,7 +274,7 @@ struct ContentView: View {
                                 Button(action: {
                                     let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
                                     let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                                    speakWord(wordToSpeak, language: languageCode)
+                                    speakWord(wordToSpeak, languageCode)
                                 }) {
                                     Image(systemName: "speaker.wave.3.fill")
                                         .font(.title)
@@ -345,7 +340,7 @@ struct ContentView: View {
                                 Button(action: {
                                     let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
                                     let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                                    speakWord(wordToSpeak, language: languageCode)
+                                    speakWord(wordToSpeak, languageCode)
                                 }) {
                                     Image(systemName: "speaker.wave.3.fill")
                                         .font(.title)
@@ -377,7 +372,7 @@ struct ContentView: View {
                                     Button(action: {
                                         selectedAnswer = option
                                         if quizLanguage == "el" {
-                                            speakWord(option, language: "el-GR")
+                                            speakWord(option, "el-GR")
                                         }
                                     }) {
                                         Text(option)
@@ -421,27 +416,25 @@ struct ContentView: View {
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .frame(height: 55)
 
-                        } else if quizMode == .cards { // NEW: Cards mode UI
+                        } else if quizMode == .cards {
                             CardView(
                                 word: activeWords[currentWordIndex],
                                 quizLanguage: quizLanguage,
                                 showTranscription: showTranscription,
                                 speakWord: speakWord,
-                                showTranslation: $showCardTranslation // Pass binding
+                                showTranslation: $showCardTranslation
                             )
                             .gesture(
                                 DragGesture()
                                     .onEnded { gesture in
                                         if gesture.translation.width < -50 {
-                                            // Swipe left
                                             nextWord()
                                         } else if gesture.translation.width > 50 {
-                                            // Swipe right
                                             previousWord()
                                         }
                                     }
                             )
-                            Spacer() // Push card to center
+                            Spacer()
                             
                             HStack {
                                 Button(action: {
@@ -478,14 +471,14 @@ struct ContentView: View {
             loadDictionariesMetadataAndWords()
             if quizMode == .quiz {
                 generateCardOptions()
-            } else if quizMode == .cards { // NEW: Initialize for cards mode
-                showCardTranslation = false // Ensure translation is hidden initially
+            } else if quizMode == .cards {
+                showCardTranslation = false
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 if autoPlaySound && !activeWords.isEmpty {
                     let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
                     let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                    speakWord(wordToSpeak, language: languageCode)
+                    speakWord(wordToSpeak, languageCode)
                 }
                 if quizMode == .keyboard {
                     isTextFieldFocused = true
@@ -501,7 +494,7 @@ struct ContentView: View {
             if oldWords.count != newWords.count {
                 if quizMode == .quiz {
                     generateCardOptions()
-                } else if quizMode == .cards { // NEW: Reset card translation if active words change
+                } else if quizMode == .cards {
                     showCardTranslation = false
                 }
             }
@@ -540,7 +533,7 @@ struct ContentView: View {
         isCorrect = false
         isShowingFeedback = false
         selectedAnswer = nil
-        showCardTranslation = false // NEW: Reset for cards mode
+        showCardTranslation = false
         isTextFieldFocused = true
         if !activeWords.isEmpty {
             currentWordIndex = Int.random(in: 0..<activeWords.count)
@@ -627,7 +620,7 @@ struct ContentView: View {
             isCorrect = false
             isTextFieldFocused = true
             selectedAnswer = nil
-            showCardTranslation = false // NEW: Hide translation for next card
+            showCardTranslation = false
 
             if !activeWords.isEmpty {
                 currentWordIndex = (currentWordIndex + 1) % activeWords.count
@@ -637,13 +630,12 @@ struct ContentView: View {
                 if autoPlaySound {
                     let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
                     let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                    speakWord(wordToSpeak, language: languageCode)
+                    speakWord(wordToSpeak, languageCode)
                 }
             }
         }
     }
 
-    // NEW: Function to go to the previous word in cards mode
     func previousWord() {
         withAnimation(nil) {
             userInput = ""
@@ -651,7 +643,7 @@ struct ContentView: View {
             isCorrect = false
             isTextFieldFocused = true
             selectedAnswer = nil
-            showCardTranslation = false // NEW: Hide translation for previous card
+            showCardTranslation = false
 
             if !activeWords.isEmpty {
                 currentWordIndex = (currentWordIndex - 1 + activeWords.count) % activeWords.count
@@ -661,7 +653,7 @@ struct ContentView: View {
                 if autoPlaySound {
                     let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
                     let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                    speakWord(wordToSpeak, language: languageCode)
+                    speakWord(wordToSpeak, languageCode)
                 }
             }
         }
@@ -905,10 +897,11 @@ struct ContentView: View {
                     continue
                 }
 
-                var localFileData: Data?
+                var localFileData: Data? = nil // Declared outside do-catch block
+
                 do {
                     let data = try Data(contentsOf: filePath)
-                    localFileData = data
+                    localFileData = data // Assigned value inside do block
                     print("Размер данных локального файла: \(data.count) байт")
 
                     if let fileContent = String(data: data, encoding: .utf8) {
@@ -1020,7 +1013,7 @@ struct ContentView: View {
         return parts
     }
     
-    func speakWord(_ text: String, language: String) {
+    func speakWord(_ text: String, _ language: String) {
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
         }
