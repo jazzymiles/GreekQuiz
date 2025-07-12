@@ -1,120 +1,154 @@
 [
   {
     "ru": "быть",
+    "en": "to be",
     "el": "είμαι",
     "transcription": "и́ме",
+    "el_transcription_en": "ímai",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "иметь",
+    "en": "to have",
     "el": "έχω",
     "transcription": "э́хо",
+    "el_transcription_en": "écho",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "идти",
+    "en": "to go",
     "el": "πηγαίνω",
     "transcription": "пигэ́но",
+    "el_transcription_en": "pigéno",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "приходить",
+    "en": "to come",
     "el": "έρχομαι",
     "transcription": "э́рхомэ",
+    "el_transcription_en": "érchomai",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "ехать",
+    "en": "to drive",
     "el": "οδηγώ",
     "transcription": "одигó",
+    "el_transcription_en": "odigó",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "есть (принимать пищу)",
+    "en": "to eat",
     "el": "τρώω",
     "transcription": "тро́о",
+    "el_transcription_en": "tróo",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "пить",
+    "en": "to drink",
     "el": "πίνω",
     "transcription": "пи́но",
+    "el_transcription_en": "píno",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "спать",
+    "en": "to sleep",
     "el": "κοιμάμαι",
     "transcription": "кимáмэ",
+    "el_transcription_en": "kimámai",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "читать",
+    "en": "to read",
     "el": "διαβάζω",
     "transcription": "дьявáзо",
+    "el_transcription_en": "diavázo",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "писать",
+    "en": "to write",
     "el": "γράφω",
     "transcription": "гра́фо",
+    "el_transcription_en": "gráfo",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "говорить",
+    "en": "to speak",
     "el": "μιλάω",
     "transcription": "мила́о",
+    "el_transcription_en": "miláo",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "слышать",
+    "en": "to hear",
     "el": "ακούω",
     "transcription": "аку́о",
+    "el_transcription_en": "akúo",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "видеть",
+    "en": "to see",
     "el": "βλέπω",
     "transcription": "вле́по",
+    "el_transcription_en": "vlépo",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "давать",
+    "en": "to give",
     "el": "δίνω",
     "transcription": "ди́но",
+    "el_transcription_en": "díno",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "брать",
+    "en": "to take",
     "el": "παίρνω",
     "transcription": "пе́рно",
+    "el_transcription_en": "pérno",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "жить",
+    "en": "to live",
     "el": "ζω",
     "transcription": "зо",
+    "el_transcription_en": "zo",
     "category": "глагол",
     "gender": "-"
   },
   {
     "ru": "работать",
+    "en": "to work",
     "el": "δουλεύω",
     "transcription": "дулéво",
+    "el_transcription_en": "douiévo",
     "category": "глагол",
     "gender": "-"
   }

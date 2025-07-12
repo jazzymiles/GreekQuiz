@@ -1,278 +1,370 @@
 [
   {
     "ru": "человек",
+    "en": "person",
     "el": "ο άνθρωπος",
     "transcription": "о а́нтропос",
+    "el_transcription_en": "o ánthropos",
     "gender": "мужской"
   },
   {
     "ru": "женщина",
+    "en": "woman",
     "el": "η γυναίκα",
     "transcription": "и йинэ́ка",
+    "el_transcription_en": "i yinéka",
     "gender": "женский"
   },
   {
     "ru": "мужчина",
+    "en": "man",
     "el": "ο άνδρας",
     "transcription": "о а́ндрас",
+    "el_transcription_en": "o ándras",
     "gender": "мужской"
   },
   {
     "ru": "ребенок",
+    "en": "child",
     "el": "το παιδί",
     "transcription": "то пэди́",
+    "el_transcription_en": "to paidí",
     "gender": "средний"
   },
   {
     "ru": "дом",
+    "en": "house",
     "el": "το σπίτι",
     "transcription": "то спи́ти",
+    "el_transcription_en": "to spíti",
     "gender": "средний"
   },
   {
     "ru": "семья",
+    "en": "family",
     "el": "η οικογένεια",
     "transcription": "и икогэ́ниа",
+    "el_transcription_en": "i ikoyénia",
     "gender": "женский"
   },
   {
     "ru": "друг",
+    "en": "friend (male)",
     "el": "ο φίλος",
     "transcription": "о фи́лос",
+    "el_transcription_en": "o fílos",
     "gender": "мужской"
   },
   {
     "ru": "подруга",
+    "en": "friend (female)",
     "el": "η φίλη",
     "transcription": "и фи́ли",
+    "el_transcription_en": "i fíli",
     "gender": "женский"
   },
   {
     "ru": "работа",
+    "en": "work",
     "el": "η δουλειά",
     "transcription": "и дулья́",
+    "el_transcription_en": "i douliá",
     "gender": "женский"
   },
   {
     "ru": "деньги",
+    "en": "money",
     "el": "τα χρήματα",
     "transcription": "та хри́мата",
+    "el_transcription_en": "ta chrímata",
     "gender": "средний (мн.ч.)"
   },
   {
     "ru": "вода",
+    "en": "water",
     "el": "το νερό",
     "transcription": "то нэро́",
+    "el_transcription_en": "to neró",
     "gender": "средний"
   },
   {
     "ru": "машина",
+    "en": "car",
     "el": "το αυτοκίνητο",
     "transcription": "то автоки́нито",
+    "el_transcription_en": "to aftokínito",
     "gender": "средний"
   },
   {
     "ru": "телефон",
+    "en": "telephone",
     "el": "το τηλέφωνο",
     "transcription": "то тиле́фоно",
+    "el_transcription_en": "to tiléfono",
     "gender": "средний"
   },
   {
     "ru": "книга",
+    "en": "book",
     "el": "το βιβλίο",
     "transcription": "то вивли́о",
+    "el_transcription_en": "to vivlío",
     "gender": "средний"
   },
   {
     "ru": "стол",
+    "en": "table",
     "el": "το τραπέζι",
     "transcription": "то трапэ́зи",
+    "el_transcription_en": "to trapézi",
     "gender": "средний"
   },
   {
     "ru": "стул",
+    "en": "chair",
     "el": "η καρέκλα",
     "transcription": "и карэ́кла",
+    "el_transcription_en": "i karékla",
     "gender": "женский"
   },
   {
     "ru": "дверь",
+    "en": "door",
     "el": "η πόρτα",
     "transcription": "и по́рта",
+    "el_transcription_en": "i párta",
     "gender": "женский"
   },
   {
     "ru": "окно",
+    "en": "window",
     "el": "το παράθυρο",
     "transcription": "то пара́тиро",
+    "el_transcription_en": "to paráthyro",
     "gender": "средний"
   },
   {
     "ru": "свет",
+    "en": "light",
     "el": "το φως",
     "transcription": "то фос",
+    "el_transcription_en": "to fos",
     "gender": "средний"
   },
   {
     "ru": "город",
+    "en": "city",
     "el": "η πόλη",
     "transcription": "и по́ли",
+    "el_transcription_en": "i póli",
     "gender": "женский"
   },
   {
     "ru": "деревня",
+    "en": "village",
     "el": "το χωριό",
     "transcription": "то хорьо́",
+    "el_transcription_en": "to chorió",
     "gender": "средний"
   },
   {
     "ru": "улица",
+    "en": "street",
     "el": "ο δρόμος",
     "transcription": "о дро́мос",
+    "el_transcription_en": "o drómos",
     "gender": "мужской"
   },
   {
     "ru": "море",
+    "en": "sea",
     "el": "η θάλασσα",
     "transcription": "и та́ласа",
+    "el_transcription_en": "i thálassa",
     "gender": "женский"
   },
   {
     "ru": "пляж",
+    "en": "beach",
     "el": "η παραλία",
     "transcription": "и парали́а",
+    "el_transcription_en": "i paralía",
     "gender": "женский"
   },
   {
     "ru": "солнце",
+    "en": "sun",
     "el": "ο ήλιος",
     "transcription": "о и́лиос",
+    "el_transcription_en": "o ílios",
     "gender": "мужской"
   },
   {
     "ru": "дождь",
+    "en": "rain",
     "el": "η βροχή",
     "transcription": "и врохи́",
+    "el_transcription_en": "i vrochí",
     "gender": "женский"
   },
   {
     "ru": "воздух",
+    "en": "air",
     "el": "ο αέρας",
     "transcription": "о аэ́рас",
+    "el_transcription_en": "o aéras",
     "gender": "мужской"
   },
   {
     "ru": "небо",
+    "en": "sky",
     "el": "ο ουρανός",
     "transcription": "о урано́с",
+    "el_transcription_en": "o ouranós",
     "gender": "мужской"
   },
   {
     "ru": "земля",
+    "en": "earth",
     "el": "η γη",
     "transcription": "и йи",
+    "el_transcription_en": "i yi",
     "gender": "женский"
   },
   {
     "ru": "жизнь",
+    "en": "life",
     "el": "η ζωή",
     "transcription": "и зои́",
+    "el_transcription_en": "i zoí",
     "gender": "женский"
   },
   {
     "ru": "любовь",
+    "en": "love",
     "el": "η αγάπη",
     "transcription": "и ага́пи",
+    "el_transcription_en": "i agápi",
     "gender": "женский"
   },
   {
     "ru": "счастье",
+    "en": "happiness",
     "el": "η ευτυχία",
     "transcription": "и эфтихи́а",
+    "el_transcription_en": "i eftychía",
     "gender": "женский"
   },
   {
     "ru": "мир",
+    "en": "peace",
     "el": "η ειρήνη",
     "transcription": "и ири́ни",
+    "el_transcription_en": "i iríni",
     "gender": "женский"
   },
   {
     "ru": "проблема",
+    "en": "problem",
     "el": "το πρόβλημα",
     "transcription": "то про́влима",
+    "el_transcription_en": "to próvlima",
     "gender": "средний"
   },
   {
     "ru": "решение",
+    "en": "solution",
     "el": "η λύση",
     "transcription": "и ли́си",
+    "el_transcription_en": "i lýsi",
     "gender": "женский"
   },
   {
     "ru": "мысль",
+    "en": "thought",
     "el": "η σκέψη",
     "transcription": "и ске́пси",
+    "el_transcription_en": "i sképsi",
     "gender": "женский"
   },
   {
     "ru": "чувство",
+    "en": "feeling",
     "el": "το συναίσθημα",
     "transcription": "то сине́стима",
+    "el_transcription_en": "to synaísthima",
     "gender": "средний"
   },
   {
     "ru": "сердце",
+    "en": "heart",
     "el": "η καρδιά",
     "transcription": "и кардья́",
+    "el_transcription_en": "i kardiá",
     "gender": "женский"
   },
   {
     "ru": "разум",
+    "en": "mind",
     "el": "το μυαλό",
     "transcription": "то мьяло́",
+    "el_transcription_en": "to myaló",
     "gender": "средний"
   },
   {
     "ru": "голос",
+    "en": "voice",
     "el": "η φωνή",
     "transcription": "и фони́",
+    "el_transcription_en": "i foní",
     "gender": "женский"
   },
   {
     "ru": "мир (вселенная)",
+    "en": "world (universe)",
     "el": "ο κόσμος",
     "transcription": "о ко́змос",
+    "el_transcription_en": "o kósmos",
     "gender": "мужской"
   },
   {
     "ru": "страна",
+    "en": "country",
     "el": "η χώρα",
     "transcription": "и хо́ра",
+    "el_transcription_en": "i chóra",
     "gender": "женский"
   },
   {
     "ru": "школа",
+    "en": "school",
     "el": "το σχολείο",
     "transcription": "то схоли́о",
+    "el_transcription_en": "to scholío",
     "gender": "средний"
   },
   {
     "ru": "учитель",
+    "en": "teacher",
     "el": "ο δάσκαλος",
     "transcription": "о да́скалос",
+    "el_transcription_en": "o dáskalos",
     "gender": "мужской"
   },
   {
     "ru": "ученик",
+    "en": "student",
     "el": "ο μαθητής",
     "transcription": "о матити́с",
+    "el_transcription_en": "o mathitís",
     "gender": "мужской"
   },
   {
     "ru": "музыка",
+    "en": "music",
     "el": "η μουσική",
     "transcription": "и музики́",
+    "el_transcription_en": "i mousikí",
     "gender": "женский"
   }
 ]

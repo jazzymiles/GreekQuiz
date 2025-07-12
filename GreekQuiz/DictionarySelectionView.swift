@@ -8,6 +8,9 @@ struct DictionarySelectionView: View {
     @Binding var allWords: [Word]
     @Binding var activeWords: [Word]
     let speakWord: (String, String) -> Void
+    
+    // ✨ ИЗМЕНЕНИЕ №5: Добавляем свойство для языка ✨
+    let interfaceLanguage: String
 
     @Environment(\.dismiss) var dismiss
     @State private var showingWordsList = false
@@ -15,12 +18,13 @@ struct DictionarySelectionView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Выберите словари")
+                Text("title_select_dictionaries")
                     .font(.largeTitle)
                     .padding(.bottom, 20)
 
                 FlowLayout(allDictionaries, spacing: 10) { dictionary in
-                    Toggle(dictionary.name, isOn: Binding(
+                    // ✨ ИЗМЕНЕНИЕ №6: Используем новый метод для получения имени ✨
+                    Toggle(dictionary.localizedName(for: interfaceLanguage), isOn: Binding(
                         get: { selectedDictionaries.contains(dictionary.filePath) },
                         set: { isSelected in
                             if isSelected {
@@ -39,7 +43,7 @@ struct DictionarySelectionView: View {
                 
                 Spacer()
 
-                Button("Показать слова") {
+                Button("button_show_words") {
                     showingWordsList = true
                 }
                 .padding()
@@ -55,7 +59,7 @@ struct DictionarySelectionView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Готово") {
+                    Button("button_done") {
                         dismiss()
                     }
                 }

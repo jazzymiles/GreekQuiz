@@ -36,7 +36,7 @@ struct WordsListView: View {
         NavigationView {
             VStack {
                 HStack {
-                    TextField("Поиск...", text: $searchQuery)
+                    TextField("palce_holder_search", text: $searchQuery)
                         .padding(8)
                         .background(Color(.systemGray6))
                         .cornerRadius(8)
@@ -85,11 +85,11 @@ struct WordsListView: View {
                                 }
                             }
             }
-            .navigationTitle("Слова")
+            .navigationTitle("words_list_title")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Закрыть") {
+                    Button("button_close") {
                         dismiss()
                     }
                 }

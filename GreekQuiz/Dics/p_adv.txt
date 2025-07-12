@@ -1,191 +1,245 @@
 [
-    {
-        "ru": "толстый",
-        "el": "χοντρός",
-        "transcription": "хондро́с",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "худой",
-        "el": "αδύνατος",
-        "transcription": "ади́натос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "высокий",
-        "el": "ψηλός",
-        "transcription": "псило́с",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "низкий",
-        "el": "κοντός",
-        "transcription": "кондо́с",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "красивый",
-        "el": "όμορφος",
-        "transcription": "о́морфос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "некрасивый",
-        "el": "άσχημος",
-        "transcription": "а́схимос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "старый",
-        "el": "γέρος",
-        "transcription": "ге́рос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "молодой",
-        "el": "νέος",
-        "transcription": "нэ́ос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "добрый",
-        "el": "καλός",
-        "transcription": "кало́с",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "злой",
-        "el": "κακός",
-        "transcription": "како́с",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "умный",
-        "el": "έξυπνος",
-        "transcription": "э́ксипнос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "глупый",
-        "el": "χαζός",
-        "transcription": "хазо́с",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "сильный",
-        "el": "δυνατός",
-        "transcription": "динато́с",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "слабый",
-        "el": "αδύναμος",
-        "transcription": "ади́намос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "богатый",
-        "el": "πλούσιος",
-        "transcription": "плу́сиос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "бедный",
-        "el": "φτωχός",
-        "transcription": "фтохо́с",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "весёлый",
-        "el": "χαρούμενος",
-        "transcription": "хару́менос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "грустный",
-        "el": "λυπημένος",
-        "transcription": "липимэ́нос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "здоровый",
-        "el": "υγιής",
-        "transcription": "иги́ис",
-        "category": "прилагательное",
-        "gender": "муж./жен."
-    },
-    {
-        "ru": "больной",
-        "el": "άρρωστος",
-        "transcription": "а́ростос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "честный",
-        "el": "τίμιος",
-        "transcription": "ти́миос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "ленивый",
-        "el": "τεμπέλης",
-        "transcription": "тэмпэ́лис",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "активный",
-        "el": "δραστήριος",
-        "transcription": "драсти́риос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "известный",
-        "el": "διάσημος",
-        "transcription": "диа́симос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "неизвестный",
-        "el": "άγνωστος",
-        "transcription": "а́гностос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "щедрый",
-        "el": "γενναιόδωρος",
-        "transcription": "генэо́дорос",
-        "category": "прилагательное",
-        "gender": "муж."
-    },
-    {
-        "ru": "жадный",
-        "el": "τσιγκούνης",
-        "transcription": "цингу́нис",
-        "category": "прилагательное",
-        "gender": "муж."
-    }
+  {
+    "ru": "толстый",
+    "en": "fat",
+    "el": "χοντρός",
+    "transcription": "хондро́с",
+    "el_transcription_en": "chondrós",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "худой",
+    "en": "thin",
+    "el": "αδύνατος",
+    "transcription": "ади́натос",
+    "el_transcription_en": "adýnatos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "высокий",
+    "en": "tall",
+    "el": "ψηλός",
+    "transcription": "псило́с",
+    "el_transcription_en": "psilós",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "низкий",
+    "en": "short",
+    "el": "κοντός",
+    "transcription": "кондо́с",
+    "el_transcription_en": "kontós",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "красивый",
+    "en": "beautiful",
+    "el": "όμορφος",
+    "transcription": "о́морфос",
+    "el_transcription_en": "ómorfos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "некрасивый",
+    "en": "ugly",
+    "el": "άσχημος",
+    "transcription": "а́схимос",
+    "el_transcription_en": "áschimos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "старый",
+    "en": "old",
+    "el": "γέρος",
+    "transcription": "ге́рос",
+    "el_transcription_en": "yéros",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "молодой",
+    "en": "young",
+    "el": "νέος",
+    "transcription": "нэ́ос",
+    "el_transcription_en": "néos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "добрый",
+    "en": "kind",
+    "el": "καλός",
+    "transcription": "кало́с",
+    "el_transcription_en": "kalós",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "злой",
+    "en": "evil",
+    "el": "κακός",
+    "transcription": "како́с",
+    "el_transcription_en": "kakós",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "умный",
+    "en": "smart",
+    "el": "έξυπνος",
+    "transcription": "э́ксипнос",
+    "el_transcription_en": "éxypnos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "глупый",
+    "en": "stupid",
+    "el": "χαζός",
+    "transcription": "хазо́с",
+    "el_transcription_en": "chazós",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "сильный",
+    "en": "strong",
+    "el": "δυνατός",
+    "transcription": "динато́с",
+    "el_transcription_en": "dynatós",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "слабый",
+    "en": "weak",
+    "el": "αδύναμος",
+    "transcription": "ади́намос",
+    "el_transcription_en": "adýnamos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "богатый",
+    "en": "rich",
+    "el": "πλούσιος",
+    "transcription": "плу́сиос",
+    "el_transcription_en": "ploúsios",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "бедный",
+    "en": "poor",
+    "el": "φτωχός",
+    "transcription": "фтохо́с",
+    "el_transcription_en": "ftochós",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "весёлый",
+    "en": "cheerful",
+    "el": "χαρούμενος",
+    "transcription": "хару́менос",
+    "el_transcription_en": "charoúmenos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "грустный",
+    "en": "sad",
+    "el": "λυπημένος",
+    "transcription": "липимэ́нос",
+    "el_transcription_en": "lypiménos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "здоровый",
+    "en": "healthy",
+    "el": "υγιής",
+    "transcription": "иги́ис",
+    "el_transcription_en": "ygiís",
+    "category": "прилагательное",
+    "gender": "муж./жен."
+  },
+  {
+    "ru": "больной",
+    "en": "sick",
+    "el": "άρρωστος",
+    "transcription": "а́ростос",
+    "el_transcription_en": "árrostos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "честный",
+    "en": "honest",
+    "el": "τίμιος",
+    "transcription": "ти́миос",
+    "el_transcription_en": "tímios",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "ленивый",
+    "en": "lazy",
+    "el": "τεμπέλης",
+    "transcription": "тэмпэ́лис",
+    "el_transcription_en": "tempélis",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "активный",
+    "en": "active",
+    "el": "δραστήριος",
+    "transcription": "драсти́риос",
+    "el_transcription_en": "drastírios",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "известный",
+    "en": "famous",
+    "el": "διάσημος",
+    "transcription": "диа́симос",
+    "el_transcription_en": "diásimos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "неизвестный",
+    "en": "unknown",
+    "el": "άγνωστος",
+    "transcription": "а́гностос",
+    "el_transcription_en": "ágnostos",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "щедрый",
+    "en": "generous",
+    "el": "γενναιόδωρος",
+    "transcription": "генэо́дорос",
+    "el_transcription_en": "gennaiódoros",
+    "category": "прилагательное",
+    "gender": "муж."
+  },
+  {
+    "ru": "жадный",
+    "en": "greedy",
+    "el": "τσιγκούνης",
+    "transcription": "цингу́нис",
+    "el_transcription_en": "tsingoúnis",
+    "category": "прилагательное",
+    "gender": "муж."
+  }
 ]

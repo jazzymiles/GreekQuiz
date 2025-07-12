@@ -1,302 +1,506 @@
 [
   {
     "ru": "одежда",
+    "en": "clothes",
     "el": "τα ρούχα",
     "transcription": "та ру́ха",
+    "el_transcription_en": "ta roúcha",
     "gender": "средний (мн.ч.)"
   },
   {
     "ru": "обувь",
+    "en": "shoes, footwear",
     "el": "τα παπούτσια",
     "transcription": "та папу́цйа",
+    "el_transcription_en": "ta papoútsia",
     "gender": "средний (мн.ч.)"
   },
   {
     "ru": "рубашка",
+    "en": "shirt",
     "el": "το πουκάμισο",
     "transcription": "то пука́мисо",
+    "el_transcription_en": "to poukámiso",
     "gender": "средний"
   },
   {
     "ru": "футболка",
+    "en": "T-shirt",
     "el": "το μπλουζάκι",
     "transcription": "то блуза́ки",
+    "el_transcription_en": "to blouzáki",
     "gender": "средний"
   },
   {
     "ru": "брюки",
+    "en": "trousers, pants",
     "el": "το παντελόνι",
     "transcription": "то пантэло́ни",
+    "el_transcription_en": "to pantelóni",
     "gender": "средний"
   },
   {
     "ru": "джинсы",
+    "en": "jeans",
     "el": "το τζιν",
     "transcription": "то дзин",
+    "el_transcription_en": "to tzin",
     "gender": "средний"
   },
   {
     "ru": "юбка",
+    "en": "skirt",
     "el": "η φούστα",
     "transcription": "и фу́ста",
+    "el_transcription_en": "i foústa",
     "gender": "женский"
   },
   {
     "ru": "платье",
+    "en": "dress",
     "el": "το φόρεμα",
     "transcription": "то фо́рэма",
+    "el_transcription_en": "to fórema",
     "gender": "средний"
   },
   {
     "ru": "пальто",
+    "en": "coat",
     "el": "το παλτό",
     "transcription": "то палто́",
+    "el_transcription_en": "to paltó",
     "gender": "средний"
   },
   {
     "ru": "куртка",
+    "en": "jacket",
     "el": "το μπουφάν",
     "transcription": "то буфа́н",
+    "el_transcription_en": "to boufán",
     "gender": "средний"
   },
   {
     "ru": "свитер",
+    "en": "sweater",
     "el": "το πουλόβερ",
     "transcription": "то пуло́вэр",
+    "el_transcription_en": "to poulóver",
     "gender": "средний"
   },
   {
     "ru": "пиджак",
+    "en": "jacket, blazer",
     "el": "το σακάκι",
     "transcription": "то сака́ки",
+    "el_transcription_en": "to sakáki",
     "gender": "средний"
   },
   {
     "ru": "костюм",
+    "en": "suit",
     "el": "το κοστούμι",
     "transcription": "то косту́ми",
+    "el_transcription_en": "to kostoúmi",
     "gender": "средний"
   },
   {
     "ru": "галстук",
+    "en": "tie",
     "el": "η γραβάτα",
     "transcription": "и грава́та",
+    "el_transcription_en": "i graváta",
     "gender": "женский"
   },
   {
     "ru": "носки",
+    "en": "socks",
     "el": "οι κάλτσες",
     "transcription": "и ка́лцэс",
+    "el_transcription_en": "i káltses",
     "gender": "женский (мн.ч.)"
   },
   {
     "ru": "нижнее белье",
+    "en": "underwear",
     "el": "τα εσώρουχα",
     "transcription": "та эсо́руха",
+    "el_transcription_en": "ta esóroucha",
     "gender": "средний (мн.ч.)"
   },
   {
     "ru": "шапка",
+    "en": "hat, cap (winter)",
     "el": "το σκούφο",
     "transcription": "то ску́фо",
+    "el_transcription_en": "to skoúfo",
     "gender": "средний"
   },
   {
     "ru": "шарф",
+    "en": "scarf",
     "el": "το κασκόλ",
     "transcription": "то каско́л",
+    "el_transcription_en": "to kaskól",
     "gender": "средний"
   },
   {
     "ru": "перчатки",
+    "en": "gloves",
     "el": "τα γάντια",
     "transcription": "та га́нтья",
+    "el_transcription_en": "ta gántia",
     "gender": "средний (мн.ч.)"
   },
   {
     "ru": "купальник",
+    "en": "swimsuit",
     "el": "το μαγιό",
     "transcription": "то маё́",
+    "el_transcription_en": "to mayió",
     "gender": "средний"
   },
   {
     "ru": "шорты",
+    "en": "shorts",
     "el": "το σορτς",
     "transcription": "то сортс",
+    "el_transcription_en": "to sorts",
     "gender": "средний"
   },
   {
     "ru": "пижама",
+    "en": "pajamas",
     "el": "οι πιτζάμες",
     "transcription": "и пидза́мэс",
+    "el_transcription_en": "i pitzámes",
     "gender": "женский (мн.ч.)"
   },
   {
     "ru": "халат",
+    "en": "robe",
     "el": "η ρόμπα",
     "transcription": "и ро́ба",
+    "el_transcription_en": "i róba",
     "gender": "женский"
   },
   {
-    "ru": "ремнь",
+    "ru": "ремень",
+    "en": "belt",
     "el": "η ζώνη",
     "transcription": "и зо́ни",
+    "el_transcription_en": "i zóni",
     "gender": "женский"
   },
   {
     "ru": "кроссовки",
+    "en": "sneakers, athletic shoes",
     "el": "τα αθλητικά παπούτσια",
     "transcription": "та атлитика́ папу́цйа",
+    "el_transcription_en": "ta athlitiká papoútsia",
     "gender": "средний (мн.ч.)"
   },
   {
     "ru": "туфли",
+    "en": "heels, formal shoes",
     "el": "οι γόβες",
     "transcription": "и го́вэс",
+    "el_transcription_en": "i góves",
     "gender": "женский (мн.ч.)"
   },
   {
     "ru": "ботинки",
+    "en": "boots",
     "el": "οι μπότες",
     "transcription": "и бо́тэс",
+    "el_transcription_en": "i bótes",
     "gender": "женский (мн.ч.)"
   },
   {
     "ru": "сандалии",
+    "en": "sandals",
     "el": "τα σανδάλια",
     "transcription": "та санда́лья",
+    "el_transcription_en": "ta sandália",
     "gender": "средний (мн.ч.)"
   },
   {
     "ru": "шлепанцы",
+    "en": "flip-flops",
     "el": "οι σαγιονάρες",
     "transcription": "и саёна́рэс",
+    "el_transcription_en": "i sayionáres",
     "gender": "женский (мн.ч.)"
   },
   {
     "ru": "тапочки",
+    "en": "slippers",
     "el": "οι παντόφλες",
     "transcription": "и панто́флэс",
+    "el_transcription_en": "i pantófles",
     "gender": "женский (мн.ч.)"
   },
   {
     "ru": "ночная рубашка",
+    "en": "nightgown",
     "el": "η νυχτικιά",
     "transcription": "и нихтикья́",
+    "el_transcription_en": "i nychtikiá",
     "gender": "женский"
   },
   {
     "ru": "чулки",
+    "en": "stockings",
     "el": "οι κάλτσες",
     "transcription": "и ка́лцэс",
+    "el_transcription_en": "i káltses",
     "gender": "женский (мн.ч.)"
   },
   {
     "ru": "колготки",
+    "en": "tights",
     "el": "το καλσόν",
     "transcription": "то калсо́н",
+    "el_transcription_en": "to kalsón",
     "gender": "средний"
   },
   {
     "ru": "жилет",
+    "en": "vest",
     "el": "το γιλέκο",
     "transcription": "то йилэ́ко",
+    "el_transcription_en": "to yiléko",
     "gender": "средний"
   },
   {
     "ru": "блузка",
+    "en": "blouse",
     "el": "η μπλούζα",
     "transcription": "и блу́за",
+    "el_transcription_en": "i bloúza",
     "gender": "женский"
   },
   {
     "ru": "топ",
+    "en": "top",
     "el": "το τοπ",
     "transcription": "то топ",
+    "el_transcription_en": "to top",
     "gender": "средний"
   },
   {
     "ru": "капюшон",
+    "en": "hood",
     "el": "η κουκούλα",
     "transcription": "и куку́ла",
+    "el_transcription_en": "i koukoúla",
     "gender": "женский"
   },
   {
     "ru": "кардиган",
+    "en": "cardigan",
     "el": "η ζακέτα",
     "transcription": "и закэ́та",
+    "el_transcription_en": "i zakéta",
     "gender": "женский"
   },
   {
     "ru": "толстовка",
+    "en": "hoodie, sweatshirt",
     "el": "η φούτερ",
     "transcription": "и фу́тэр",
+    "el_transcription_en": "i foúter",
     "gender": "женский"
   },
   {
     "ru": "леггинсы",
+    "en": "leggings",
     "el": "το κολάν",
     "transcription": "то кола́н",
+    "el_transcription_en": "to kolán",
     "gender": "средний"
   },
   {
     "ru": "плащ",
+    "en": "raincoat, trench coat",
     "el": "η καμπαρντίνα",
     "transcription": "и кабарди́на",
+    "el_transcription_en": "i kampardína",
     "gender": "женский"
   },
   {
     "ru": "пиджак",
+    "en": "jacket, blazer",
     "el": "το σακάκι",
     "transcription": "то сака́ки",
+    "el_transcription_en": "to sakáki",
     "gender": "средний"
   },
   {
     "ru": "воротник",
+    "en": "collar",
     "el": "ο γιακάς",
     "transcription": "о яка́с",
+    "el_transcription_en": "o yakás",
     "gender": "мужской"
   },
   {
     "ru": "рукав",
+    "en": "sleeve",
     "el": "το μανίκι",
     "transcription": "то мани́ки",
+    "el_transcription_en": "to maníki",
     "gender": "средний"
   },
   {
     "ru": "пуговица",
+    "en": "button",
     "el": "το κουμπί",
     "transcription": "то кумби́",
+    "el_transcription_en": "to koumbí",
     "gender": "средний"
   },
   {
     "ru": "молния",
+    "en": "zipper, lightning",
     "el": "το φερμουάρ",
     "transcription": "то фэрмуа́р",
+    "el_transcription_en": "to fermouár",
     "gender": "средний"
   },
   {
     "ru": "карман",
+    "en": "pocket",
     "el": "η τσέπη",
     "transcription": "и це́пи",
+    "el_transcription_en": "i tsépi",
     "gender": "женский"
   },
   {
     "ru": "шнурки",
+    "en": "laces (shoelaces)",
     "el": "τα κορδόνια",
     "transcription": "та кордо́нья",
+    "el_transcription_en": "ta kordónia",
     "gender": "средний (мн.ч.)"
   },
   {
     "ru": "каблук",
+    "en": "heel (of shoe)",
     "el": "το τακούνι",
     "transcription": "то таку́ни",
+    "el_transcription_en": "to takoúni",
     "gender": "средний"
   },
   {
     "ru": "подошва",
+    "en": "sole (of shoe)",
     "el": "η σόλα",
     "transcription": "и со́ла",
+    "el_transcription_en": "i sóla",
     "gender": "женский"
+  },
+  {
+    "ru": "носок",
+    "en": "sock",
+    "el": "η κάλτσα",
+    "transcription": "и ка́лца",
+    "el_transcription_en": "i káltsa",
+    "gender": "женский"
+  },
+  {
+    "ru": "фартук",
+    "en": "apron",
+    "el": "η ποδιά",
+    "transcription": "и подья́",
+    "el_transcription_en": "i podiá",
+    "gender": "женский"
+  },
+  {
+    "ru": "кожаный",
+    "en": "leather (adj.)",
+    "el": "δερμάτινος",
+    "transcription": "дэрма́тинос",
+    "el_transcription_en": "dermátinos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "шерстяной",
+    "en": "woolen",
+    "el": "μάλλινος",
+    "transcription": "ма́ллинос",
+    "el_transcription_en": "mállinos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "носить (одежду)",
+    "en": "to wear (clothes)",
+    "el": "φοράω",
+    "transcription": "фора́о",
+    "el_transcription_en": "foráo",
+    "gender": "глагол"
+  },
+  {
+    "ru": "кошелек",
+    "en": "wallet, purse",
+    "el": "το πορτοφόλι",
+    "transcription": "то портофо́ли",
+    "el_transcription_en": "to portofóli",
+    "gender": "средний"
+  },
+  {
+    "ru": "трусы",
+    "en": "briefs, underwear (male)",
+    "el": "το σλιπ",
+    "transcription": "то слип",
+    "el_transcription_en": "to slip",
+    "gender": "средний"
+  },
+  {
+    "ru": "перчатка",
+    "en": "glove",
+    "el": "το γάντι",
+    "transcription": "то га́нти",
+    "el_transcription_en": "to gánti",
+    "gender": "средний"
+  },
+  {
+    "ru": "униформа",
+    "en": "uniform",
+    "el": "η στολή",
+    "transcription": "и столи́",
+    "el_transcription_en": "i stolí",
+    "gender": "женский"
+  },
+  {
+    "ru": "шляпа",
+    "en": "hat",
+    "el": "το καπέλο",
+    "transcription": "то капэ́ло",
+    "el_transcription_en": "to kapélo",
+    "gender": "средний"
+  },
+  {
+    "ru": "блуза",
+    "en": "blouse",
+    "el": "η μπλούζα",
+    "transcription": "и блу́за",
+    "el_transcription_en": "i bloúza",
+    "gender": "женский"
+  },
+  {
+    "ru": "предмет одежды",
+    "en": "item of clothing",
+    "el": "το ρούχο",
+    "transcription": "то ру́хо",
+    "el_transcription_en": "to roúcho",
+    "gender": "средний"
+  },
+  {
+    "ru": "очки",
+    "en": "glasses",
+    "el": "τα γυαλιά",
+    "transcription": "та гьялья́",
+    "el_transcription_en": "ta gyaliá",
+    "gender": "средний (мн.ч.)"
   }
 ]

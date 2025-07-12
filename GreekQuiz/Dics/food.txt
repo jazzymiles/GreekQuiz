@@ -1,547 +1,703 @@
 [
   {
     "ru": "еда",
+    "en": "food",
     "el": "το φαγητό",
     "transcription": "фагито́",
+    "el_transcription_en": "fagitó",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "хлеб",
+    "en": "bread",
     "el": "το ψωμί",
     "transcription": "псоми́",
+    "el_transcription_en": "psomí",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "вода",
+    "en": "water",
     "el": "το νερό",
     "transcription": "неро́",
+    "el_transcription_en": "neró",
     "category": "напитки",
     "gender": "ср"
   },
   {
     "ru": "мясо",
+    "en": "meat",
     "el": "το κρέας",
     "transcription": "крэас",
+    "el_transcription_en": "kréas",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "рыба",
+    "en": "fish",
     "el": "το ψάρι",
     "transcription": "пса́ри",
+    "el_transcription_en": "psári",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "суп",
+    "en": "soup",
     "el": "η σούπα",
     "transcription": "су́па",
+    "el_transcription_en": "soúpa",
     "category": "еда",
     "gender": "ж"
   },
   {
     "ru": "сыр",
+    "en": "cheese",
     "el": "το τυρί",
     "transcription": "тири́",
+    "el_transcription_en": "tyrí",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "масло",
+    "en": "butter",
     "el": "το βούτυρο",
     "transcription": "ву́тиро",
+    "el_transcription_en": "voútyro",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "молоко",
+    "en": "milk",
     "el": "το γάλα",
     "transcription": "га́ла",
+    "el_transcription_en": "gála",
     "category": "напитки",
     "gender": "ср"
   },
   {
     "ru": "яйцо",
+    "en": "egg",
     "el": "το αυγό",
     "transcription": "авго́",
+    "el_transcription_en": "avgó",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "овощи",
+    "en": "vegetables",
     "el": "τα λαχανικά",
     "transcription": "лаханика́",
+    "el_transcription_en": "lachaniká",
     "category": "еда",
     "gender": "мн"
   },
   {
     "ru": "фрукты",
+    "en": "fruits",
     "el": "τα φρούτα",
     "transcription": "фру́та",
+    "el_transcription_en": "froúta",
     "category": "еда",
     "gender": "мн"
   },
   {
     "ru": "яблоко",
+    "en": "apple",
     "el": "το μήλο",
     "transcription": "ми́ло",
+    "el_transcription_en": "mílo",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "апельсин",
+    "en": "orange",
     "el": "το πορτοκάλι",
     "transcription": "портока́ли",
+    "el_transcription_en": "portokáli",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "картошка",
+    "en": "potato",
     "el": "η πατάτα",
     "transcription": "пата́та",
+    "el_transcription_en": "patáta",
     "category": "овощи",
     "gender": "ж"
   },
   {
     "ru": "рис",
+    "en": "rice",
     "el": "το ρύζι",
     "transcription": "ри́зи",
+    "el_transcription_en": "rízi",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "салат",
+    "en": "salad, lettuce",
     "el": "η σαλάτα",
     "transcription": "сала́та",
+    "el_transcription_en": "saláta",
     "category": "овощи",
     "gender": "ж"
   },
   {
     "ru": "кофе",
+    "en": "coffee",
     "el": "ο καφές",
     "transcription": "кафэ́с",
+    "el_transcription_en": "kafés",
     "category": "напитки",
     "gender": "м"
   },
   {
     "ru": "чай",
+    "en": "tea",
     "el": "το τσάι",
     "transcription": "ца́и",
+    "el_transcription_en": "tsái",
     "category": "напитки",
     "gender": "ср"
   },
   {
     "ru": "вино",
+    "en": "wine",
     "el": "το κρασί",
     "transcription": "краси́",
+    "el_transcription_en": "krasí",
     "category": "напитки",
     "gender": "ср"
   },
   {
     "ru": "банан",
+    "en": "banana",
     "el": "η μπανάνα",
     "transcription": "бана́на",
+    "el_transcription_en": "banána",
     "category": "фрукты",
     "gender": "ж"
   },
   {
     "ru": "помидор",
+    "en": "tomato",
     "el": "η ντομάτα",
     "transcription": "ндома́та",
+    "el_transcription_en": "ntomáta",
     "category": "овощи",
     "gender": "ж"
   },
   {
     "ru": "огурец",
+    "en": "cucumber",
     "el": "το αγγούρι",
     "transcription": "ангу́ри",
+    "el_transcription_en": "angoúri",
     "category": "овощи",
     "gender": "ср"
   },
   {
     "ru": "виноград",
+    "en": "grapes",
     "el": "το σταφύλι",
     "transcription": "стафи́ли",
+    "el_transcription_en": "stafýli",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "соль",
+    "en": "salt",
     "el": "το αλάτι",
     "transcription": "ала́ти",
+    "el_transcription_en": "aláti",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "перец",
+    "en": "pepper (spice)",
     "el": "το πιπέρι",
     "transcription": "пипэ́ри",
+    "el_transcription_en": "pipéri",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "уксус",
+    "en": "vinegar",
     "el": "το ξύδι",
     "transcription": "кси́ди",
+    "el_transcription_en": "xýdi",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "чеснок",
+    "en": "garlic",
     "el": "το σκόρδο",
     "transcription": "ско́рдо",
+    "el_transcription_en": "skórdo",
     "category": "овощи",
     "gender": "ср"
   },
   {
     "ru": "лук",
+    "en": "onion",
     "el": "το κρεμμύδι",
     "transcription": "крэмми́ди",
+    "el_transcription_en": "kremmýdi",
     "category": "овощи",
     "gender": "ср"
   },
   {
     "ru": "морковь",
+    "en": "carrot",
     "el": "το καρότο",
     "transcription": "каро́то",
+    "el_transcription_en": "karóto",
     "category": "овощи",
     "gender": "ср"
   },
   {
     "ru": "арбуз",
+    "en": "watermelon",
     "el": "το καρπούζι",
     "transcription": "карпу́зи",
+    "el_transcription_en": "karpoúzi",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "персик",
+    "en": "peach",
     "el": "το ροδάκινο",
     "transcription": "рода́кино",
+    "el_transcription_en": "rodákino",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "груша",
+    "en": "pear",
     "el": "το αχλάδι",
     "transcription": "ахла́ди",
+    "el_transcription_en": "achládi",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "клубника",
+    "en": "strawberry",
     "el": "η φράουλα",
     "transcription": "фра́ула",
+    "el_transcription_en": "fráoula",
     "category": "фрукты",
     "gender": "ж"
   },
   {
     "ru": "лимон",
+    "en": "lemon",
     "el": "το λεμόνι",
     "transcription": "лемо́ни",
+    "el_transcription_en": "lemóni",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "маслина",
+    "en": "olive",
     "el": "η ελιά",
     "transcription": "элья́",
+    "el_transcription_en": "eliá",
     "category": "овощи",
     "gender": "ж"
   },
   {
     "ru": "инжир",
+    "en": "fig",
     "el": "το σύκο",
     "transcription": "си́ко",
+    "el_transcription_en": "sýko",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "дыня",
+    "en": "melon",
     "el": "το πεπόνι",
     "transcription": "пепо́ни",
+    "el_transcription_en": "pepóni",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "черешня",
+    "en": "cherry",
     "el": "το κεράσι",
     "transcription": "кера́си",
+    "el_transcription_en": "kerási",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "абрикос",
+    "en": "apricot",
     "el": "το βερίκοκο",
     "transcription": "вери́коко",
+    "el_transcription_en": "veríkoko",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "гранат",
+    "en": "pomegranate",
     "el": "το ρόδι",
     "transcription": "ро́ди",
+    "el_transcription_en": "ródi",
     "category": "фрукты",
     "gender": "ср"
   },
   {
     "ru": "баклажан",
-    "el": "η μελιτζάна",
+    "en": "eggplant",
+    "el": "η μελιτζάνα",
     "transcription": "мелидза́на",
+    "el_transcription_en": "melitzána",
     "category": "овощи",
     "gender": "ж"
   },
   {
     "ru": "перец (сладкий)",
+    "en": "bell pepper",
     "el": "η πιπεριά",
     "transcription": "пиперья́",
+    "el_transcription_en": "piperiá",
     "category": "овощи",
     "gender": "ж"
   },
   {
     "ru": "фасоль",
+    "en": "beans",
     "el": "τα φασόλια",
     "transcription": "фасо́ля",
+    "el_transcription_en": "fasólia",
     "category": "овощи",
     "gender": "мн"
   },
   {
     "ru": "капуста",
+    "en": "cabbage",
     "el": "το λάχανο",
     "transcription": "ла́хано",
+    "el_transcription_en": "láchano",
     "category": "овощи",
     "gender": "ср"
   },
   {
     "ru": "шпинат",
+    "en": "spinach",
     "el": "το σπανάκι",
     "transcription": "спана́ки",
+    "el_transcription_en": "spanáki",
     "category": "овощи",
     "gender": "ср"
   },
   {
     "ru": "цукини",
+    "en": "zucchini",
     "el": "το κολοκυθάκι",
     "transcription": "колокита́ки",
+    "el_transcription_en": "kolokytháki",
     "category": "овощи",
     "gender": "ср"
   },
   {
     "ru": "оливковое масло",
+    "en": "olive oil",
     "el": "το ελαιόλαδο",
     "transcription": "элэо́ладо",
+    "el_transcription_en": "elaiólado",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "оливки",
+    "en": "olives",
     "el": "οι ελιές",
     "transcription": "элье́с",
+    "el_transcription_en": "eliés",
     "category": "еда",
     "gender": "мн"
   },
   {
     "ru": "фета",
+    "en": "feta (cheese)",
     "el": "η φέτα",
     "transcription": "фэ́та",
+    "el_transcription_en": "féta",
     "category": "сыр",
     "gender": "ж"
   },
   {
     "ru": "йогурт",
+    "en": "yogurt",
     "el": "το γιαούρτι",
     "transcription": "яу́рти",
+    "el_transcription_en": "yaoúrti",
     "category": "молочные продукты",
     "gender": "ср"
   },
   {
     "ru": "мед",
+    "en": "honey",
     "el": "το μέλι",
     "transcription": "мэ́ли",
+    "el_transcription_en": "méli",
     "category": "еда",
     "gender": "ср"
   },
   {
     "ru": "курица",
+    "en": "chicken",
     "el": "το κοτόπουλο",
     "transcription": "кото́пуло",
+    "el_transcription_en": "kotópoulo",
     "category": "мясо",
     "gender": "ср"
   },
   {
     "ru": "свинина",
+    "en": "pork",
     "el": "το χοιρινό",
     "transcription": "хирино́",
+    "el_transcription_en": "choirinó",
     "category": "мясо",
     "gender": "ср"
   },
   {
     "ru": "баранина",
+    "en": "lamb",
     "el": "το αρνί",
     "transcription": "арни́",
+    "el_transcription_en": "arní",
     "category": "мясо",
     "gender": "ср"
   },
   {
     "ru": "креветки",
+    "en": "shrimp",
     "el": "οι γαρίδες",
     "transcription": "гари́дэс",
+    "el_transcription_en": "garídes",
     "category": "морепродукты",
     "gender": "мн"
   },
   {
     "ru": "осьминог",
+    "en": "octopus",
     "el": "το χταπόδι",
     "transcription": "хтапо́ди",
+    "el_transcription_en": "chtapódi",
     "category": "морепродукты",
     "gender": "ср"
   },
   {
     "ru": "хлебные палочки",
+    "en": "rusks, breadsticks",
     "el": "τα παξιμάδια",
     "transcription": "паксима́дья",
+    "el_transcription_en": "paximádia",
     "category": "еда",
     "gender": "мн"
   },
   {
     "ru": "пирог",
+    "en": "pie, savory pastry",
     "el": "η πίτα",
     "transcription": "пи́та",
+    "el_transcription_en": "píta",
     "category": "еда",
     "gender": "ж"
   },
   {
     "ru": "кунжут",
+    "en": "sesame",
     "el": "το σουσάμι",
     "transcription": "суса́ми",
+    "el_transcription_en": "sousámi",
     "category": "семена",
     "gender": "ср"
   },
   {
     "ru": "орехи",
+    "en": "nuts",
     "el": "οι ξηροί καρποί",
     "transcription": "ксири́ карпи́",
+    "el_transcription_en": "xirí karpí",
     "category": "еда",
     "gender": "мн"
   },
   {
     "ru": "миндаль",
+    "en": "almond",
     "el": "το αμύγδαλο",
     "transcription": "ами́гдало",
+    "el_transcription_en": "amýgdalo",
     "category": "орехи",
     "gender": "ср"
   },
   {
     "ru": "фисташки",
+    "en": "pistachio",
     "el": "το φιστίκι",
     "transcription": "фисти́ки",
+    "el_transcription_en": "fistíki",
     "category": "орехи",
     "gender": "ср"
   },
   {
     "ru": "бобы/фасоль",
+    "en": "legumes/beans",
     "el": "τα όσπρια",
     "transcription": "о́сприя",
+    "el_transcription_en": "óspria",
     "category": "бобовые",
     "gender": "мн"
   },
   {
     "ru": "чечевица",
+    "en": "lentils",
     "el": "οι φακές",
     "transcription": "факе́с",
+    "el_transcription_en": "fakés",
     "category": "бобовые",
     "gender": "ж"
   },
   {
     "ru": "мороженое",
+    "en": "ice cream",
     "el": "το παγωτό",
     "transcription": "пагото́",
+    "el_transcription_en": "pagotó",
     "category": "десерт",
     "gender": "ср"
   },
   {
     "ru": "лёд",
+    "en": "ice",
     "el": "ο πάγος",
     "transcription": "па́гос",
+    "el_transcription_en": "págos",
     "category": "разное",
     "gender": "м"
   },
   {
     "ru": "тефтельки",
+    "en": "meatballs",
     "el": "τα κεφτεδάκια",
     "transcription": "кефтэда́кья",
+    "el_transcription_en": "keftedákia",
     "category": "мясо",
     "gender": "мн"
   },
   {
     "ru": "колбаса",
+    "en": "sausage",
     "el": "το λουκάνικο",
     "transcription": "лука́нико",
+    "el_transcription_en": "loukániko",
     "category": "мясо",
     "gender": "ср"
   },
   {
     "ru": "сосиски",
+    "en": "sausages, wieners",
     "el": "τα λουκάνικα",
     "transcription": "лука́ника",
+    "el_transcription_en": "loukánika",
     "category": "мясо",
     "gender": "мн"
   },
   {
     "ru": "стейк",
+    "en": "steak, chop",
     "el": "η μπριζόλα",
     "transcription": "бризо́ла",
+    "el_transcription_en": "brizóla",
     "category": "мясо",
     "gender": "ж"
   },
   {
     "ru": "десерт",
+    "en": "dessert",
     "el": "το επιδόρπιο",
     "transcription": "эпидо́рпио",
+    "el_transcription_en": "epidórpio",
     "category": "десерт",
     "gender": "ср"
   },
   {
     "ru": "говядина",
+    "en": "beef",
     "el": "το μοσχάρι",
     "transcription": "мосха́ри",
+    "el_transcription_en": "moschári",
     "category": "мясо",
     "gender": "ср"
   },
   {
     "ru": "вкусно",
+    "en": "tasty, delicious",
     "el": "νόστιμο",
     "transcription": "но́стимо",
+    "el_transcription_en": "nóstimo",
     "category": "прилагательное",
     "gender": "ср"
   },
   {
     "ru": "завтрак",
+    "en": "breakfast",
     "el": "το πρωινό",
     "transcription": "проино́",
+    "el_transcription_en": "proinó",
     "category": "приемы пищи",
     "gender": "ср"
   },
   {
     "ru": "обед",
+    "en": "lunch",
     "el": "το μεσημεριανό",
     "transcription": "месимериано́",
+    "el_transcription_en": "mesimerianó",
     "category": "приемы пищи",
     "gender": "ср"
   },
   {
     "ru": "ужин",
+    "en": "dinner",
     "el": "το βραδινό",
     "transcription": "врадино́",
+    "el_transcription_en": "vradinó",
     "category": "приемы пищи",
     "gender": "ср"
   },
   {
     "ru": "перекус",
+    "en": "snack",
     "el": "το σνακ",
     "transcription": "снак",
+    "el_transcription_en": "snak",
     "category": "приемы пищи",
     "gender": "ср"
   }

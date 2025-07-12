@@ -68,11 +68,11 @@ struct RulesSheetView: View {
     var body: some View {
         NavigationView {
             RulesView(htmlFileName: htmlFileName, localHtmlURL: $localHtmlURL) // Передаем localHtmlURL в RulesView
-                .navigationTitle("Правила")
+                .navigationTitle("rules_view_title")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button("Обновить") {
+                        Button("button_refresh") {
                             Task {
                                 await downloadAndSaveHtmlFile()
                             }
@@ -80,7 +80,7 @@ struct RulesSheetView: View {
                         .disabled(isLoadingUpdate) // Отключаем кнопку во время загрузки
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Закрыть") {
+                        Button("button_close") {
                             dismiss()
                         }
                     }
@@ -88,7 +88,7 @@ struct RulesSheetView: View {
                 .overlay(
                     Group {
                         if isLoadingUpdate {
-                            ProgressView("Загрузка...")
+                            ProgressView("download_status_1")
                                 .padding()
                                 .background(Color.black.opacity(0.7))
                                 .cornerRadius(10)
@@ -140,7 +140,7 @@ struct RulesSheetView: View {
             print("Некорректный URL: \(remoteURLString)")
             await MainActor.run {
                 self.isLoadingUpdate = false
-                self.updateMessage = "Ошибка: Некорректный URL."
+                self.updateMessage = "error_incorrect_download_url"
             }
             return
         }

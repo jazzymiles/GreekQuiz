@@ -1,212 +1,272 @@
 [
-   {
+  {
     "ru": "внутри",
+    "en": "inside",
     "el": "μέσα",
     "transcription": "ме́са",
+    "el_transcription_en": "mésa",
     "category": "расположение",
     "gender": "-"
   },
   {
     "ru": "впереди",
+    "en": "in front",
     "el": "μπροστά",
     "transcription": "броста́",
+    "el_transcription_en": "brostá",
     "category": "расположение",
     "gender": "-"
   },
   {
     "ru": "сверху",
+    "en": "on top",
     "el": "πάνω",
     "transcription": "па́но",
+    "el_transcription_en": "páno",
     "category": "расположение",
     "gender": "-"
   },
   {
     "ru": "сзади",
+    "en": "behind",
     "el": "πίσω",
     "transcription": "пи́со",
+    "el_transcription_en": "píso",
     "category": "расположение",
     "gender": "-"
   },
   {
     "ru": "снаружи",
+    "en": "outside",
     "el": "έξω",
     "transcription": "э́ксо",
+    "el_transcription_en": "ékso",
     "category": "расположение",
     "gender": "-"
   },
   {
     "ru": "снизу",
+    "en": "below",
     "el": "κάτω",
     "transcription": "ка́то",
+    "el_transcription_en": "káto",
     "category": "расположение",
     "gender": "-"
   },
   {
     "ru": "город",
+    "en": "city, town",
     "el": "πόλη",
     "transcription": "пóли",
+    "el_transcription_en": "póli",
     "category": "места",
     "gender": "женский"
   },
   {
     "ru": "аэропорт",
+    "en": "airport",
     "el": "αεροδρόμιο",
     "transcription": "аэродрóмио",
+    "el_transcription_en": "aerodrómio",
     "category": "места",
     "gender": "средний"
   },
   {
     "ru": "кофе",
+    "en": "coffee",
     "el": "καφές",
     "transcription": "кафэ́с",
+    "el_transcription_en": "kafés",
     "category": "напитки",
     "gender": "мужской"
   },
   {
     "ru": "спасибо",
+    "en": "thank you",
     "el": "ευχαριστώ",
     "transcription": "эфхаристó",
+    "el_transcription_en": "efcharistó",
     "category": "фразы",
     "gender": "-"
   },
   {
     "ru": "пожалуйста",
+    "en": "please",
     "el": "παρακαλώ",
     "transcription": "паракалó",
+    "el_transcription_en": "parakaló",
     "category": "фразы",
     "gender": "-"
   },
   {
     "ru": "солнце",
+    "en": "sun",
     "el": "ήλιος",
     "transcription": "úлиос",
+    "el_transcription_en": "ílios",
     "category": "природа",
     "gender": "мужской"
   },
   {
     "ru": "дождь",
+    "en": "rain",
     "el": "βροχή",
     "transcription": "врохú",
+    "el_transcription_en": "vrochí",
     "category": "природа",
     "gender": "женский"
   },
   {
     "ru": "врач",
+    "en": "doctor",
     "el": "γιατρός",
     "transcription": "ятрóс",
+    "el_transcription_en": "yatrós",
     "category": "профессии",
     "gender": "мужской/женский"
   },
   {
     "ru": "учитель",
+    "en": "teacher",
     "el": "δάσκαλος",
     "transcription": "дáскалос",
+    "el_transcription_en": "dáskalos",
     "category": "профессии",
     "gender": "мужской"
   },
   {
     "ru": "друг",
+    "en": "friend",
     "el": "φίλος",
     "transcription": "фúлос",
+    "el_transcription_en": "fílos",
     "category": "люди",
     "gender": "мужской"
   },
   {
     "ru": "семья",
+    "en": "family",
     "el": "οικογένεια",
     "transcription": "икогéния",
+    "el_transcription_en": "oikogéneia",
     "category": "люди",
     "gender": "женский"
   },
   {
     "ru": "время",
+    "en": "time, hour",
     "el": "ώρα",
     "transcription": "óра",
+    "el_transcription_en": "óra",
     "category": "время",
     "gender": "женский"
   },
   {
     "ru": "большой",
+    "en": "big, large",
     "el": "μεγάλος",
     "transcription": "мэгáлос",
+    "el_transcription_en": "megálos",
     "category": "прилагательные",
     "gender": "мужской"
   },
   {
     "ru": "маленький",
+    "en": "small, little",
     "el": "μικρός",
     "transcription": "микрóс",
+    "el_transcription_en": "mikrós",
     "category": "прилагательные",
     "gender": "мужской"
   },
   {
-      "ru": "от, из, с",
-      "el": "από",
-      "transcription": "апо́",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "в, на, к",
-      "el": "σε",
-      "transcription": "се",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "с (совместно, посредством)",
-      "el": "με",
-      "transcription": "ме",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "для, за, ради",
-      "el": "για",
-      "transcription": "йа",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "без",
-      "el": "χωρίς",
-      "transcription": "хорíс",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "над",
-      "el": "πάνω από",
-      "transcription": "па́но апо́",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "под",
-      "el": "κάτω από",
-      "transcription": "ка́то апо́",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "перед",
-      "el": "μπροστά από",
-      "transcription": "броста́ апо́",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "позади",
-      "el": "πίσω από",
-      "transcription": "пи́со апо́",
-      "category": "предлог",
-      "gender": "-"
-    },
-    {
-      "ru": "между",
-      "el": "ανάμεσα σε",
-      "transcription": "ана́меса се",
-      "category": "предлог",
-      "gender": "-"
-    }
+    "ru": "от, из, с",
+    "en": "from, out of, with",
+    "el": "από",
+    "transcription": "апо́",
+    "el_transcription_en": "apó",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "в, на, к",
+    "en": "in, on, to",
+    "el": "σε",
+    "transcription": "се",
+    "el_transcription_en": "se",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "с (совместно, посредством)",
+    "en": "with (together, by means of)",
+    "el": "με",
+    "transcription": "ме",
+    "el_transcription_en": "me",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "для, за, ради",
+    "en": "for",
+    "el": "για",
+    "transcription": "йа",
+    "el_transcription_en": "gia",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "без",
+    "en": "without",
+    "el": "χωρίς",
+    "transcription": "хорíс",
+    "el_transcription_en": "chorís",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "над",
+    "en": "above, over",
+    "el": "πάνω από",
+    "transcription": "па́но апо́",
+    "el_transcription_en": "páno apó",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "под",
+    "en": "under, below",
+    "el": "κάτω από",
+    "transcription": "ка́то апо́",
+    "el_transcription_en": "káto apó",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "перед",
+    "en": "in front of",
+    "el": "μπροστά από",
+    "transcription": "броста́ апо́",
+    "el_transcription_en": "brostá apó",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "позади",
+    "en": "behind (of)",
+    "el": "πίσω από",
+    "transcription": "пи́со апо́",
+    "el_transcription_en": "píso apó",
+    "category": "предлог",
+    "gender": "-"
+  },
+  {
+    "ru": "между",
+    "en": "between",
+    "el": "ανάμεσα σε",
+    "transcription": "ана́меса се",
+    "el_transcription_en": "anámesa se",
+    "category": "предлог",
+    "gender": "-"
+  }
 ]

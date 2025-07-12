@@ -1,0 +1,850 @@
+[
+  {
+    "ru": "доктор",
+    "en": "doctor",
+    "el": "ο γιατρός",
+    "transcription": "о йятро́с",
+    "el_transcription_en": "o yatrós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "безработный",
+    "en": "unemployed (male)",
+    "el": "ο άνεργος",
+    "transcription": "о а́нэрьгос",
+    "el_transcription_en": "o áneryos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "безработная",
+    "en": "unemployed (female)",
+    "el": "η άνεργη",
+    "transcription": "и а́нэрьги",
+    "el_transcription_en": "i áneryi",
+    "gender": "женский"
+  },
+  {
+    "ru": "не занятый",
+    "en": "unoccupied (male)",
+    "el": "ο μη απασχολούμενος",
+    "transcription": "о ми апсхолу́мэнос",
+    "el_transcription_en": "o mi apascholóumenos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "не занятая",
+    "en": "unoccupied (female)",
+    "el": "η μη απασχολούμενη",
+    "transcription": "и ми апсхолу́мэни",
+    "el_transcription_en": "i mi apascholoumeni",
+    "gender": "женский"
+  },
+  {
+    "ru": "водитель",
+    "en": "driver",
+    "el": "ο οδηγός",
+    "transcription": "о одиго́с",
+    "el_transcription_en": "o odigós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "секретарь",
+    "en": "secretary (male)",
+    "el": "ο γραμματέας",
+    "transcription": "о грамматэ́ас",
+    "el_transcription_en": "o grammatéas",
+    "gender": "мужской"
+  },
+  {
+    "ru": "секретарша",
+    "en": "secretary (female)",
+    "el": "η γραμματέας",
+    "transcription": "и грамматэ́ас",
+    "el_transcription_en": "i grammatéas",
+    "gender": "женский"
+  },
+  {
+    "ru": "певец",
+    "en": "singer (male)",
+    "el": "ο τραγουδιστής",
+    "transcription": "о трагудисти́с",
+    "el_transcription_en": "o tragoudistís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "певица",
+    "en": "singer (female)",
+    "el": "η τραγουδίστρια",
+    "transcription": "и трагуди́стрия",
+    "el_transcription_en": "i tragoudístria",
+    "gender": "женский"
+  },
+  {
+    "ru": "музыкант",
+    "en": "musician (male)",
+    "el": "ο μουσικός",
+    "transcription": "о назико́с",
+    "el_transcription_en": "o mousikós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "музыкантка",
+    "en": "musician (female)",
+    "el": "η μουσικός",
+    "transcription": "и назико́с",
+    "el_transcription_en": "i mousikós",
+    "gender": "женский"
+  },
+  {
+    "ru": "повар",
+    "en": "cook (male)",
+    "el": "ο μάγειρας",
+    "transcription": "о ма́йирас",
+    "el_transcription_en": "o máyiras",
+    "gender": "мужской"
+  },
+  {
+    "ru": "повариха",
+    "en": "cook (female)",
+    "el": "η μαγείρισσα",
+    "transcription": "и майи́риса",
+    "el_transcription_en": "i mayírisa",
+    "gender": "женский"
+  },
+  {
+    "ru": "шеф-повар",
+    "en": "chef (male)",
+    "el": "ο αρχιμάγειρας",
+    "transcription": "о архима́йирас",
+    "el_transcription_en": "o archimáyiras",
+    "gender": "мужской"
+  },
+  {
+    "ru": "продавец",
+    "en": "salesperson (male)",
+    "el": "ο πωλητής",
+    "transcription": "о полити́с",
+    "el_transcription_en": "o politís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "продавщица",
+    "en": "salesperson (female)",
+    "el": "η πωλήτρια",
+    "transcription": "и поли́трия",
+    "el_transcription_en": "i polítria",
+    "gender": "женский"
+  },
+  {
+    "ru": "официант",
+    "en": "waiter",
+    "el": "ο σερβιτόρος",
+    "transcription": "о сэрвито́рос",
+    "el_transcription_en": "o servitóros",
+    "gender": "мужской"
+  },
+  {
+    "ru": "официантка",
+    "en": "waitress",
+    "el": "η σερβιτόρα",
+    "transcription": "и сэрвито́ра",
+    "el_transcription_en": "i servitóra",
+    "gender": "женский"
+  },
+  {
+    "ru": "медсестра",
+    "en": "nurse (female)",
+    "el": "η νοσοκόμα",
+    "transcription": "и носоко́ма",
+    "el_transcription_en": "i nosokóma",
+    "gender": "женский"
+  },
+  {
+    "ru": "медбрат",
+    "en": "nurse (male)",
+    "el": "ο νοσοκόμος",
+    "transcription": "о носоко́мос",
+    "el_transcription_en": "o nosokómos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "строитель",
+    "en": "builder",
+    "el": "ο οικοδόμος",
+    "transcription": "о икодо́мос",
+    "el_transcription_en": "o oikodómos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "рабочий",
+    "en": "worker (male)",
+    "el": "ο εργάτης",
+    "transcription": "о эрга́тис",
+    "el_transcription_en": "o ergátis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "работница",
+    "en": "worker (female)",
+    "el": "η εργάτρια",
+    "transcription": "и эрга́трия",
+    "el_transcription_en": "i ergátria",
+    "gender": "женский"
+  },
+  {
+    "ru": "учитель",
+    "en": "teacher (male)",
+    "el": "ο δάσκαλος",
+    "transcription": "о да́скалос",
+    "el_transcription_en": "o dáskalos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "учительница",
+    "en": "teacher (female)",
+    "el": "η δασκάλα",
+    "transcription": "и даска́ла",
+    "el_transcription_en": "i daskála",
+    "gender": "женский"
+  },
+  {
+    "ru": "инженер",
+    "en": "engineer",
+    "el": "ο μηχανικός",
+    "transcription": "о миханико́с",
+    "el_transcription_en": "o michanikós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "архитектор",
+    "en": "architect",
+    "el": "ο αρχιτέκτονας",
+    "transcription": "о архитэ́ктонас",
+    "el_transcription_en": "o architéktonas",
+    "gender": "мужской"
+  },
+  {
+    "ru": "художник",
+    "en": "painter, artist (male)",
+    "el": "ο ζωγράφος",
+    "transcription": "о зогра́фос",
+    "el_transcription_en": "o zográfos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "художница",
+    "en": "painter, artist (female)",
+    "el": "η ζωγράφος",
+    "transcription": "и зогра́фос",
+    "el_transcription_en": "i zográfos",
+    "gender": "женский"
+  },
+  {
+    "ru": "писатель",
+    "en": "writer (male)",
+    "el": "ο συγγραφέας",
+    "transcription": "о сиграфэ́ас",
+    "el_transcription_en": "o syngraféas",
+    "gender": "мужской"
+  },
+  {
+    "ru": "писательница",
+    "en": "writer (female)",
+    "el": "η συγγραφέας",
+    "transcription": "и сиграфэ́ас",
+    "el_transcription_en": "i syngraféas",
+    "gender": "женский"
+  },
+  {
+    "ru": "адвокат",
+    "en": "lawyer (male)",
+    "el": "ο δικηγόρος",
+    "transcription": "о дикиго́рос",
+    "el_transcription_en": "o dikigóros",
+    "gender": "мужской"
+  },
+  {
+    "ru": "адвокатесса",
+    "en": "lawyer (female)",
+    "el": "η δικηγόρος",
+    "transcription": "и дикиго́ros",
+    "el_transcription_en": "i dikigóros",
+    "gender": "женский"
+  },
+  {
+    "ru": "полицейский",
+    "en": "policeman",
+    "el": "ο αστυνομικός",
+    "transcription": "о астиномико́с",
+    "el_transcription_en": "o astynomikós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "пожарный",
+    "en": "firefighter",
+    "el": "ο πυροσβέστης",
+    "transcription": "о пиросвэ́стис",
+    "el_transcription_en": "o pyrosvéstis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "фермер",
+    "en": "farmer",
+    "el": "ο αγρότης",
+    "transcription": "о агро́тис",
+    "el_transcription_en": "o agrótis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "рыбак",
+    "en": "fisherman",
+    "el": "ο ψαράς",
+    "transcription": "о псара́с",
+    "el_transcription_en": "o psarás",
+    "gender": "мужской"
+  },
+  {
+    "ru": "пекарь",
+    "en": "baker",
+    "el": "ο αρτοποιός",
+    "transcription": "о артопио́с",
+    "el_transcription_en": "o artopoiós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "мясник",
+    "en": "butcher",
+    "el": "ο χασάπης",
+    "transcription": "о хаса́пис",
+    "el_transcription_en": "o chasápis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "парикмахер",
+    "en": "hairdresser (male)",
+    "el": "ο κομμωτής",
+    "transcription": "о коммоти́с",
+    "el_transcription_en": "o kommotís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "парикмахерша",
+    "en": "hairdresser (female)",
+    "el": "η κομμώτρια",
+    "transcription": "и коммо́трия",
+    "el_transcription_en": "i kommótria",
+    "gender": "женский"
+  },
+  {
+    "ru": "портной",
+    "en": "tailor",
+    "el": "ο ράφτης",
+    "transcription": "о ра́фтис",
+    "el_transcription_en": "o ráftis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "портниха",
+    "en": "seamstress",
+    "el": "η ράφτρα",
+    "transcription": "и ра́фтра",
+    "el_transcription_en": "i ráftra",
+    "gender": "женский"
+  },
+  {
+    "ru": "сапожник",
+    "en": "cobbler, shoemaker",
+    "el": "ο τσαγκάρης",
+    "transcription": "о цанга́рис",
+    "el_transcription_en": "o tsangáris",
+    "gender": "мужской"
+  },
+  {
+    "ru": "сантехник",
+    "en": "plumber",
+    "el": "ο υδραυλικός",
+    "transcription": "о идравлико́с",
+    "el_transcription_en": "o ydravlikós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "электрик",
+    "en": "electrician",
+    "el": "ο ηλεκτρολόγος",
+    "transcription": "о илектрло́гос",
+    "el_transcription_en": "o ilektrológos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "столяр",
+    "en": "carpenter (woodworker)",
+    "el": "ο ξυλουργός",
+    "transcription": "о ксилурго́с",
+    "el_transcription_en": "o xilourgós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "плотник",
+    "en": "carpenter",
+    "el": "ο μαραγκός",
+    "transcription": "о маранго́с",
+    "el_transcription_en": "o marangós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "каменщик",
+    "en": "mason, bricklayer",
+    "el": "ο χτίστης",
+    "transcription": "о хти́стис",
+    "el_transcription_en": "o chtístis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "маляр",
+    "en": "painter (house painter)",
+    "el": "ο ελαιοχρωματιστής",
+    "transcription": "о элэохроматисти́с",
+    "el_transcription_en": "o elaiochromatistís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "уборщик",
+    "en": "cleaner (male)",
+    "el": "ο καθαριστής",
+    "transcription": "о кадаристи́с",
+    "el_transcription_en": "o katharistís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "уборщица",
+    "en": "cleaner (female)",
+    "el": "η καθαρίστρια",
+    "transcription": "и кадари́стрия",
+    "el_transcription_en": "i katharístria",
+    "gender": "женский"
+  },
+  {
+    "ru": "почтальон",
+    "en": "postman",
+    "el": "ο ταχυδρόμος",
+    "transcription": "о тахидро́мос",
+    "el_transcription_en": "o tachydrómos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "библиотекарь",
+    "en": "librarian",
+    "el": "ο βιβλιοθηκάριος",
+    "transcription": "о вивлиотика́рьос",
+    "el_transcription_en": "o vivliothikários",
+    "gender": "мужской"
+  },
+  {
+    "ru": "журналист",
+    "en": "journalist (male)",
+    "el": "ο δημοσιογράφος",
+    "transcription": "о димосьогра́фос",
+    "el_transcription_en": "o dimosiográfos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "журналистка",
+    "en": "journalist (female)",
+    "el": "η δημοσιογράφος",
+    "transcription": "и димосьогра́фос",
+    "el_transcription_en": "i dimosiográfos",
+    "gender": "женский"
+  },
+  {
+    "ru": "фотограф",
+    "en": "photographer",
+    "el": "ο φωτογράφος",
+    "transcription": "о фотогра́фос",
+    "el_transcription_en": "o fotográfos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "актёр",
+    "en": "actor",
+    "el": "ο ηθοποιός",
+    "transcription": "о ифопио́с",
+    "el_transcription_en": "o ithopoiós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "актриса",
+    "en": "actress",
+    "el": "η ηθοποιός",
+    "transcription": "и ифопио́с",
+    "el_transcription_en": "i ithopoiós",
+    "gender": "женский"
+  },
+  {
+    "ru": "режиссёр",
+    "en": "director",
+    "el": "ο σκηνοθέτης",
+    "transcription": "о скинофе́тис",
+    "el_transcription_en": "o skinothétis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "танцор",
+    "en": "dancer (male)",
+    "el": "ο χορευτής",
+    "transcription": "о хорэфти́с",
+    "el_transcription_en": "o choreftís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "танцовщица",
+    "en": "dancer (female)",
+    "el": "η χορεύτρια",
+    "transcription": "и хорэ́фтрия",
+    "el_transcription_en": "i choréftria",
+    "gender": "женский"
+  },
+  {
+    "ru": "спортсмен",
+    "en": "athlete (male)",
+    "el": "ο αθλητής",
+    "transcription": "о атлити́с",
+    "el_transcription_en": "o athlitís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "спортсменка",
+    "en": "athlete (female)",
+    "el": "η αθλήτρια",
+    "transcription": "и атли́трия",
+    "el_transcription_en": "i athlítria",
+    "gender": "женский"
+  },
+  {
+    "ru": "продавец цветов",
+    "en": "florist (male)",
+    "el": "ο ανθοπώλης",
+    "transcription": "о анфопо́лис",
+    "el_transcription_en": "o anthopólis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "бухгалтер",
+    "en": "accountant",
+    "el": "ο λογιστής",
+    "transcription": "о логисти́с",
+    "el_transcription_en": "o logistís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "пасечник",
+    "en": "beekeeper",
+    "el": "ο μελισσοκόμος",
+    "transcription": "о мэлиссоко́мос",
+    "el_transcription_en": "o melissokómos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "стеклодув",
+    "en": "glassblower",
+    "el": "ο φυσητής γυαλιού",
+    "transcription": "о фисити́с йялью́",
+    "el_transcription_en": "o fysitís gyalioú",
+    "gender": "мужской"
+  },
+  {
+    "ru": "гончар",
+    "en": "potter",
+    "el": "ο αγγειοπλάστης",
+    "transcription": "о ангиопла́стис",
+    "el_transcription_en": "o angeioplástis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ткач",
+    "en": "weaver (male)",
+    "el": "ο υφαντουργός",
+    "transcription": "о ифантурго́с",
+    "el_transcription_en": "o yfantourgós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ювелир",
+    "en": "jeweler",
+    "el": "ο χρυσοχόος",
+    "transcription": "о хрисохо́ос",
+    "el_transcription_en": "o chrysochóos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "оружейник",
+    "en": "gunsmith, armorer",
+    "el": "ο οπλουργός",
+    "transcription": "о оплурго́с",
+    "el_transcription_en": "o oplourgós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "кузнец",
+    "en": "blacksmith",
+    "el": "ο σιδηρουργός",
+    "transcription": "о сидирурго́с",
+    "el_transcription_en": "o sidirourgós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "печник",
+    "en": "stove maker, oven builder",
+    "el": "ο καμινοποιός",
+    "transcription": "о каминопио́с",
+    "el_transcription_en": "o kaminopoiós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "кровельщик",
+    "en": "roofer",
+    "el": "ο στεγοποιός",
+    "transcription": "о стэгопио́с",
+    "el_transcription_en": "o stegopoiós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "стекольщик",
+    "en": "glazier",
+    "el": "ο υαλουργός",
+    "transcription": "о йялурго́с",
+    "el_transcription_en": "o yfalourgós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "каменотес",
+    "en": "stonecutter",
+    "el": "ο λιθοξόος",
+    "transcription": "о лифоксо́ос",
+    "el_transcription_en": "o lithoxóos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "штукатур",
+    "en": "plasterer",
+    "el": "ο σοβατζής",
+    "transcription": "о совадзи́с",
+    "el_transcription_en": "o sovatís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "облицовщик",
+    "en": "tiler",
+    "el": "ο πλακάς",
+    "transcription": "о плака́с",
+    "el_transcription_en": "o plakás",
+    "gender": "мужской"
+  },
+  {
+    "ru": "сварщик",
+    "en": "welder",
+    "el": "ο συγκολλητής",
+    "transcription": "о сиголлити́с",
+    "el_transcription_en": "o syngollitís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "слесарь",
+    "en": "locksmith, fitter",
+    "el": "ο κλειδαράς",
+    "transcription": "о клидара́с",
+    "el_transcription_en": "o kleidarákas",
+    "gender": "мужской"
+  },
+  {
+    "ru": "машинист",
+    "en": "engine driver, machinist",
+    "el": "ο μηχανοδηγός",
+    "transcription": "о миханодиго́с",
+    "el_transcription_en": "o michanodigós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "тракторист",
+    "en": "tractor driver",
+    "el": "ο χειριστής γεωργικών μηχανημάτων",
+    "transcription": "о хиристи́с йеоргико́н миханима́тон",
+    "el_transcription_en": "o cheiristís georgikón michanimáton",
+    "gender": "мужской"
+  },
+  {
+    "ru": "лесоруб",
+    "en": "lumberjack",
+    "el": "ο υλοτόμος",
+    "transcription": "о илото́мос",
+    "el_transcription_en": "o ylotómos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "пастух",
+    "en": "shepherd",
+    "el": "ο βοσκός",
+    "transcription": "о воско́с",
+    "el_transcription_en": "o voskós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "виноградарь",
+    "en": "viticulturist",
+    "el": "ο αμπελουργός",
+    "transcription": "о ампэлурго́с",
+    "el_transcription_en": "o ampelourgós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "сыровар",
+    "en": "cheesemaker",
+    "el": "ο τυροκόμος",
+    "transcription": "о тироко́мос",
+    "el_transcription_en": "o tyrokómos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "маслодел",
+    "en": "butter maker",
+    "el": "ο βουτυροποιός",
+    "transcription": "о вутиропио́с",
+    "el_transcription_en": "o voutyropoiós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "садовод",
+    "en": "gardener",
+    "el": "ο κηπουρός",
+    "transcription": "о кипуро́с",
+    "el_transcription_en": "o kipourós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "цветовод",
+    "en": "floriculturist",
+    "el": "ο ανθοκόμος",
+    "transcription": "о анфоко́мос",
+    "el_transcription_en": "o anthokómos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "агроном",
+    "en": "agronomist",
+    "el": "ο γεωπόνος",
+    "transcription": "о йеопо́nos",
+    "el_transcription_en": "o geóponos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ветеринар",
+    "en": "veterinarian",
+    "el": "ο κτηνίατρος",
+    "transcription": "о ктинья́трос",
+    "el_transcription_en": "o ktiníatros",
+    "gender": "мужской"
+  },
+  {
+    "ru": "переводчик",
+    "en": "translator (male)",
+    "el": "ο μεταφραστής",
+    "transcription": "о мэтафрасти́с",
+    "el_transcription_en": "o metafrastís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "переводчица",
+    "en": "translator (female)",
+    "el": "η μεταφράστρια",
+    "transcription": "и мэтафра́стрия",
+    "el_transcription_en": "i metafrástria",
+    "gender": "женский"
+  },
+  {
+    "ru": "редактор",
+    "en": "editor (male)",
+    "el": "ο επιμελητής",
+    "transcription": "о эпимэлити́с",
+    "el_transcription_en": "o epimelitís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "редактор (жен)",
+    "en": "editor (female)",
+    "el": "η επιμελήτρια",
+    "transcription": "и эпимэли́трия",
+    "el_transcription_en": "i epimelítria",
+    "gender": "женский"
+  },
+  {
+    "ru": "издатель",
+    "en": "publisher",
+    "el": "ο εκδότης",
+    "transcription": "о экдо́тис",
+    "el_transcription_en": "o ekdótis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "печатник",
+    "en": "printer",
+    "el": "ο τυπογράφος",
+    "transcription": "о типогра́фос",
+    "el_transcription_en": "o typográfos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "гравер",
+    "en": "engraver",
+    "el": "ο χαράκτης",
+    "transcription": "о хара́ктис",
+    "el_transcription_en": "o charáktis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "реставратор",
+    "en": "restorer",
+    "el": "ο συντηρητής",
+    "transcription": "о синдирити́с",
+    "el_transcription_en": "o syntiritís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "скульптор",
+    "en": "sculptor",
+    "el": "ο γλύπτης",
+    "transcription": "о гли́птис",
+    "el_transcription_en": "o glýptis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "гончар",
+    "en": "potter",
+    "el": "ο κεραμίστας",
+    "transcription": "о кэрами́стас",
+    "el_transcription_en": "o keramístas",
+    "gender": "мужской"
+  },
+  {
+    "ru": "стекловар",
+    "en": "glassmaker",
+    "el": "ο υαλουργός",
+    "transcription": "о йялурго́с",
+    "el_transcription_en": "o yfalourgós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ткачиха",
+    "en": "weaver (female)",
+    "el": "η υφάντρια",
+    "transcription": "и ифа́ндрия",
+    "el_transcription_en": "i yfántria",
+    "gender": "женский"
+  },
+  {
+    "ru": "ковровщик",
+    "en": "carpet maker",
+    "el": "ο ταπητουργός",
+    "transcription": "о тапитурго́с",
+    "el_transcription_en": "o tapitourgós",
+    "gender": "мужской"
+  }
+]

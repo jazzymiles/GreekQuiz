@@ -1,302 +1,452 @@
 [
   {
     "ru": "тело",
+    "en": "body",
     "el": "το σώμα",
     "transcription": "то со́ма",
-    "gender": "средний"
+    "el_transcription_en": "to sóma",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "голова",
+    "en": "head",
     "el": "το κεφάλι",
     "transcription": "то кэфа́ли",
-    "gender": "средний"
+    "el_transcription_en": "to kefáli",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "волосы",
+    "en": "hair",
     "el": "τα μαλλιά",
     "transcription": "та малья́",
-    "gender": "средний (мн.ч.)"
+    "el_transcription_en": "ta maliá",
+    "gender": "средний (мн.ч.)",
+    "category": "части тела"
   },
   {
     "ru": "лицо",
+    "en": "face",
     "el": "το πρόσωπο",
     "transcription": "то про́сопо",
-    "gender": "средний"
+    "el_transcription_en": "to prósopo",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "глаз",
+    "en": "eye",
     "el": "το μάτι",
     "transcription": "то ма́ти",
-    "gender": "средний"
+    "el_transcription_en": "to máti",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "нос",
+    "en": "nose",
     "el": "η μύτη",
     "transcription": "и ми́ти",
-    "gender": "женский"
+    "el_transcription_en": "i míti",
+    "gender": "женский",
+    "category": "части тела"
   },
   {
     "ru": "рот",
+    "en": "mouth",
     "el": "το στόμα",
     "transcription": "то сто́ма",
-    "gender": "средний"
+    "el_transcription_en": "to stóma",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "зуб",
+    "en": "tooth",
     "el": "το δόντι",
     "transcription": "то до́нди",
-    "gender": "средний"
+    "el_transcription_en": "to dónti",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "язык",
+    "en": "tongue",
     "el": "η γλώσσα",
     "transcription": "и гло́са",
-    "gender": "женский"
+    "el_transcription_en": "i glóssa",
+    "gender": "женский",
+    "category": "части тела"
   },
   {
     "ru": "ухо",
+    "en": "ear",
     "el": "το αυτί",
     "transcription": "то авти́",
-    "gender": "средний"
+    "el_transcription_en": "to aftí",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "шея",
+    "en": "neck",
     "el": "ο λαιμός",
     "transcription": "о лэмо́с",
-    "gender": "мужской"
+    "el_transcription_en": "o laimós",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "плечо",
+    "en": "shoulder",
     "el": "ο ώμος",
     "transcription": "о о́мос",
-    "gender": "мужской"
+    "el_transcription_en": "o ómos",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "рука (вся)",
+    "en": "arm, hand",
     "el": "το χέρι",
     "transcription": "то хэ́ри",
-    "gender": "средний"
+    "el_transcription_en": "to chéri",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "локоть",
+    "en": "elbow",
     "el": "ο αγκώνας",
     "transcription": "о ангко́нас",
-    "gender": "мужской"
+    "el_transcription_en": "o angónas",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "запястье",
+    "en": "wrist",
     "el": "ο καρπός",
     "transcription": "о карпо́с",
-    "gender": "мужской"
+    "el_transcription_en": "o karpós",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "кисть руки",
+    "en": "palm (of hand)",
     "el": "η παλάμη",
     "transcription": "и пала́ми",
-    "gender": "женский"
+    "el_transcription_en": "i palámi",
+    "gender": "женский",
+    "category": "части тела"
   },
   {
     "ru": "палец",
+    "en": "finger",
     "el": "το δάχτυλο",
     "transcription": "то да́хтило",
-    "gender": "средний"
+    "el_transcription_en": "to dáchtylo",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "ноготь",
+    "en": "nail (fingernail/toenail)",
     "el": "το νύχι",
     "transcription": "то ни́хи",
-    "gender": "средний"
+    "el_transcription_en": "to nýchy",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "грудь",
+    "en": "chest, breast",
     "el": "το στήθος",
     "transcription": "то сти́тос",
-    "gender": "средний"
+    "el_transcription_en": "to stíthos",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "живот",
+    "en": "stomach, belly",
     "el": "η κοιλιά",
     "transcription": "и килья́",
-    "gender": "женский"
+    "el_transcription_en": "i kiliá",
+    "gender": "женский",
+    "category": "части тела"
   },
   {
     "ru": "спина",
+    "en": "back",
     "el": "η πλάτη",
     "transcription": "и пла́ти",
-    "gender": "женский"
+    "el_transcription_en": "i pláti",
+    "gender": "женский",
+    "category": "части тела"
   },
   {
     "ru": "нога (вся)",
+    "en": "leg, foot",
     "el": "το πόδι",
     "transcription": "то по́ди",
-    "gender": "средний"
+    "el_transcription_en": "to pódi",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "бедро",
+    "en": "thigh, hip",
     "el": "ο μηρός",
     "transcription": "о миро́с",
-    "gender": "мужской"
+    "el_transcription_en": "o mirós",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "колено",
+    "en": "knee",
     "el": "το γόνατο",
     "transcription": "то го́нато",
-    "gender": "средний"
+    "el_transcription_en": "to gónato",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "голень",
+    "en": "shin",
     "el": "η κνήμη",
     "transcription": "и кни́ми",
-    "gender": "женский"
+    "el_transcription_en": "i kními",
+    "gender": "женский",
+    "category": "части тела"
   },
   {
     "ru": "лодыжка",
+    "en": "ankle",
     "el": "ο αστράγαλος",
     "transcription": "о астра́галос",
-    "gender": "мужской"
+    "el_transcription_en": "o astrágalos",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "стопа",
+    "en": "sole (of foot)",
     "el": "το πέλμα",
     "transcription": "то пэ́лма",
-    "gender": "средний"
+    "el_transcription_en": "to pélma",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "палец ноги",
+    "en": "toe",
     "el": "το δάχτυλο του ποδιού",
     "transcription": "то да́хтило ту подью́",
-    "gender": "средний"
+    "el_transcription_en": "to dáchtylo tou podioú",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "кожа",
+    "en": "skin",
     "el": "το δέρμα",
     "transcription": "то дэ́рма",
-    "gender": "средний"
+    "el_transcription_en": "to dérma",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "кость",
+    "en": "bone",
     "el": "το κόκαλο",
     "transcription": "то ко́кало",
-    "gender": "средний"
+    "el_transcription_en": "to kókalo",
+    "gender": "средний",
+    "category": "части тела"
   },
   {
     "ru": "мышца",
+    "en": "muscle",
     "el": "ο μυς",
     "transcription": "о мис",
-    "gender": "мужской"
+    "el_transcription_en": "o mys",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "кровь",
+    "en": "blood",
     "el": "το αίμα",
     "transcription": "то э́ма",
-    "gender": "средний"
+    "el_transcription_en": "to aíma",
+    "gender": "средний",
+    "category": "внутренние органы"
   },
   {
     "ru": "сердце",
+    "en": "heart",
     "el": "η καρδιά",
     "transcription": "и кардья́",
-    "gender": "женский"
+    "el_transcription_en": "i kardiá",
+    "gender": "женский",
+    "category": "внутренние органы"
   },
   {
     "ru": "легкие",
+    "en": "lungs",
     "el": "οι πνεύμονες",
     "transcription": "и пне́вмонэс",
-    "gender": "мужской (мн.ч.)"
+    "el_transcription_en": "i pnévmones",
+    "gender": "мужской (мн.ч.)",
+    "category": "внутренние органы"
   },
   {
     "ru": "желудок",
+    "en": "stomach",
     "el": "το στομάχι",
     "transcription": "то стома́хи",
-    "gender": "средний"
+    "el_transcription_en": "to stomáchi",
+    "gender": "средний",
+    "category": "внутренние органы"
   },
   {
     "ru": "печень",
+    "en": "liver",
     "el": "το συκώτι",
     "transcription": "то сико́ти",
-    "gender": "средний"
+    "el_transcription_en": "to sykóti",
+    "gender": "средний",
+    "category": "внутренние органы"
   },
   {
     "ru": "почки",
+    "en": "kidneys",
     "el": "τα νεφρά",
     "transcription": "та нэвра́",
-    "gender": "средний (мн.ч.)"
+    "el_transcription_en": "ta nefrá",
+    "gender": "средний (мн.ч.)",
+    "category": "внутренние органы"
   },
   {
     "ru": "мозг",
+    "en": "brain",
     "el": "ο εγκέφαλος",
     "transcription": "о энгэ́фалос",
-    "gender": "мужской"
+    "el_transcription_en": "o engéfalos",
+    "gender": "мужской",
+    "category": "внутренние органы"
   },
   {
     "ru": "кишечник",
+    "en": "intestine, gut",
     "el": "το έντερο",
     "transcription": "то э́ндэро",
-    "gender": "средний"
+    "el_transcription_en": "to éndero",
+    "gender": "средний",
+    "category": "внутренние органы"
   },
   {
     "ru": "нерв",
+    "en": "nerve",
     "el": "το νεύρο",
     "transcription": "то нэ́вро",
-    "gender": "средний"
+    "el_transcription_en": "to névro",
+    "gender": "средний",
+    "category": "внутренние органы"
   },
   {
     "ru": "вена",
+    "en": "vein",
     "el": "η φλέβα",
     "transcription": "и флэ́ва",
-    "gender": "женский"
+    "el_transcription_en": "i fléva",
+    "gender": "женский",
+    "category": "внутренние органы"
   },
   {
     "ru": "артерия",
+    "en": "artery",
     "el": "η αρτηρία",
     "transcription": "и артири́а",
-    "gender": "женский"
+    "el_transcription_en": "i artiría",
+    "gender": "женский",
+    "category": "внутренние органы"
   },
   {
     "ru": "горло",
+    "en": "throat",
     "el": "ο λαιμός",
     "transcription": "о лэмо́с",
-    "gender": "мужской"
+    "el_transcription_en": "o laimós",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "скелет",
+    "en": "skeleton",
     "el": "ο σκελετός",
     "transcription": "о скелэто́с",
-    "gender": "мужской"
+    "el_transcription_en": "o skeletós",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "спинной мозг",
+    "en": "spinal cord",
     "el": "ο νωτιαίος μυελός",
     "transcription": "о нотиэ́ос мьэло́с",
-    "gender": "мужской"
+    "el_transcription_en": "o notiaíos myelós",
+    "gender": "мужской",
+    "category": "внутренние органы"
   },
   {
     "ru": "ребро",
+    "en": "rib",
     "el": "η πλευρά",
     "transcription": "и плэвра́",
-    "gender": "женский"
+    "el_transcription_en": "i plevrá",
+    "gender": "женский",
+    "category": "части тела"
   },
   {
     "ru": "сустав",
+    "en": "joint",
     "el": "η άρθρωση",
     "transcription": "и а́ртроси",
-    "gender": "женский"
+    "el_transcription_en": "i árthrosi",
+    "gender": "женский",
+    "category": "части тела"
   },
   {
     "ru": "сухожилие",
+    "en": "tendon",
     "el": "ο τένοντας",
     "transcription": "о тэ́нондас",
-    "gender": "мужской"
+    "el_transcription_en": "o ténontas",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "хрящ",
+    "en": "cartilage",
     "el": "ο χόνδρος",
     "transcription": "о хо́ндрос",
-    "gender": "мужской"
+    "el_transcription_en": "o chóndros",
+    "gender": "мужской",
+    "category": "части тела"
   },
   {
     "ru": "диафрагма",
+    "en": "diaphragm",
     "el": "το διάφραγμα",
     "transcription": "то дья́фрагма",
-    "gender": "средний"
+    "el_transcription_en": "to diáfragma",
+    "gender": "средний",
+    "category": "внутренние органы"
   }
 ]

@@ -1,177 +1,227 @@
 [
-    {
-        "ru": "1",
-        "el": "ένα",
-        "transcription": "э́на",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "2",
-        "el": "δύο",
-        "transcription": "ди́о",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "3",
-        "el": "τρία",
-        "transcription": "три́а",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "4",
-        "el": "τέσσερα",
-        "transcription": "тэ́ссера",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "5",
-        "el": "πέντε",
-        "transcription": "пэ́нде",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "6",
-        "el": "έξι",
-        "transcription": "э́кси",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "7",
-        "el": "επτά",
-        "transcription": "эпта́",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "8",
-        "el": "οκτώ",
-        "transcription": "окто́",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "9",
-        "el": "εννέα",
-        "transcription": "энэ́а",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "0",
-        "el": "μηδέν",
-        "transcription": "мидэ́н",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "11",
-        "el": "έντεκα",
-        "transcription": "э́ндэка",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "12",
-        "el": "δώδεκα",
-        "transcription": "до́дэка",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "13",
-        "el": "δεκατρία",
-        "transcription": "дека́триа",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "14",
-        "el": "δεκατέσσερα",
-        "transcription": "декате́ссера",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "15",
-        "el": "δεκαπέντε",
-        "transcription": "декапэ́нде",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "16",
-        "el": "δεκαέξι",
-        "transcription": "декаэ́кси",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "20",
-        "el": "είκοσι",
-        "transcription": "и́коси",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "30",
-        "el": "τριάντα",
-        "transcription": "триа́нда",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "40",
-        "el": "σαράντα",
-        "transcription": "сара́нда",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "50",
-        "el": "πενήντα",
-        "transcription": "пэни́нда",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "60",
-        "el": "εξήντα",
-        "transcription": "экси́нда",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "70",
-        "el": "εβδομήντα",
-        "transcription": "эвдоми́нда",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "80",
-        "el": "ογδόντα",
-        "transcription": "огдо́нда",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "90",
-        "el": "ενενήντα",
-        "transcription": "энэни́нда",
-        "category": "число",
-        "gender": "-"
-    },
-    {
-        "ru": "100",
-        "el": "εκατό",
-        "transcription": "экато́",
-        "category": "число",
-        "gender": "-"
-    }
+  {
+    "ru": "1",
+    "en": "one",
+    "el": "ένα",
+    "transcription": "э́на",
+    "el_transcription_en": "éna",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "2",
+    "en": "two",
+    "el": "δύο",
+    "transcription": "ди́о",
+    "el_transcription_en": "dýo",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "3",
+    "en": "three",
+    "el": "τρία",
+    "transcription": "три́а",
+    "el_transcription_en": "tría",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "4",
+    "en": "four",
+    "el": "τέσσερα",
+    "transcription": "тэ́ссера",
+    "el_transcription_en": "téssera",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "5",
+    "en": "five",
+    "el": "πέντε",
+    "transcription": "пэ́нде",
+    "el_transcription_en": "pénde",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "6",
+    "en": "six",
+    "el": "έξι",
+    "transcription": "э́кси",
+    "el_transcription_en": "éxi",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "7",
+    "en": "seven",
+    "el": "επτά",
+    "transcription": "эпта́",
+    "el_transcription_en": "eptá",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "8",
+    "en": "eight",
+    "el": "οκτώ",
+    "transcription": "окто́",
+    "el_transcription_en": "októ",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "9",
+    "en": "nine",
+    "el": "εννέα",
+    "transcription": "энэ́а",
+    "el_transcription_en": "ennéa",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "0",
+    "en": "zero",
+    "el": "μηδέν",
+    "transcription": "мидэ́н",
+    "el_transcription_en": "midén",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "11",
+    "en": "eleven",
+    "el": "έντεκα",
+    "transcription": "э́ндэка",
+    "el_transcription_en": "éndeka",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "12",
+    "en": "twelve",
+    "el": "δώδεκα",
+    "transcription": "до́дэка",
+    "el_transcription_en": "dódeka",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "13",
+    "en": "thirteen",
+    "el": "δεκατρία",
+    "transcription": "дека́триа",
+    "el_transcription_en": "dekatría",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "14",
+    "en": "fourteen",
+    "el": "δεκατέσσερα",
+    "transcription": "декате́ссера",
+    "el_transcription_en": "dekatéssera",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "15",
+    "en": "fifteen",
+    "el": "δεκαπέντε",
+    "transcription": "декапэ́нде",
+    "el_transcription_en": "dekapénde",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "16",
+    "en": "sixteen",
+    "el": "δεκαέξι",
+    "transcription": "декаэ́кси",
+    "el_transcription_en": "dekaéxi",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "20",
+    "en": "twenty",
+    "el": "είκοσι",
+    "transcription": "и́коси",
+    "el_transcription_en": "íkosi",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "30",
+    "en": "thirty",
+    "el": "τριάντα",
+    "transcription": "триа́нда",
+    "el_transcription_en": "triánda",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "40",
+    "en": "forty",
+    "el": "σαράντα",
+    "transcription": "сара́нда",
+    "el_transcription_en": "saránda",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "50",
+    "en": "fifty",
+    "el": "πενήντα",
+    "transcription": "пэни́нда",
+    "el_transcription_en": "penínda",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "60",
+    "en": "sixty",
+    "el": "εξήντα",
+    "transcription": "экси́нда",
+    "el_transcription_en": "exínda",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "70",
+    "en": "seventy",
+    "el": "εβδομήντα",
+    "transcription": "эвдоми́нда",
+    "el_transcription_en": "evdomínda",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "80",
+    "en": "eighty",
+    "el": "ογδόντα",
+    "transcription": "огдо́нда",
+    "el_transcription_en": "ogdónda",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "90",
+    "en": "ninety",
+    "el": "ενενήντα",
+    "transcription": "энэни́нда",
+    "el_transcription_en": "enenínda",
+    "category": "число",
+    "gender": "-"
+  },
+  {
+    "ru": "100",
+    "en": "one hundred",
+    "el": "εκατό",
+    "transcription": "экато́",
+    "el_transcription_en": "ekató",
+    "category": "число",
+    "gender": "-"
+  }
 ]

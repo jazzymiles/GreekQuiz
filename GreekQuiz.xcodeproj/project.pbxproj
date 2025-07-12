@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		028354D82E1003F0007B34C7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 028354D72E1003F0007B34C7 /* Localizable.xcstrings */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0279D9B02DD1022600288BB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		0279D99F2DD1022500288BB2 /* GreekQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0279D9AF2DD1022600288BB2 /* GreekQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreekQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0279D9B92DD1022600288BB2 /* GreekQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreekQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		028354D72E1003F0007B34C7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		0279D9962DD1022500288BB2 = {
 			isa = PBXGroup;
 			children = (
+				028354D72E1003F0007B34C7 /* Localizable.xcstrings */,
 				0279D9A12DD1022500288BB2 /* GreekQuiz */,
 				0279D9B22DD1022600288BB2 /* GreekQuizTests */,
 				0279D9BC2DD1022600288BB2 /* GreekQuizUITests */,
@@ -192,6 +198,8 @@
 			knownRegions = (
 				en,
 				Base,
+				el,
+				ru,
 			);
 			mainGroup = 0279D9962DD1022500288BB2;
 			minimizedProjectReferenceProxies = 1;
@@ -212,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028354D82E1003F0007B34C7 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +337,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -384,6 +394,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

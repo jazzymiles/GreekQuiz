@@ -1,142 +1,182 @@
 [
-    {
-      "ru": "я",
-      "el": "εγώ",
-      "transcription": "эго́",
-      "category": "местоимение",
-      "gender": "-"
-    },
-    {
-      "ru": "ты",
-      "el": "εσύ",
-      "transcription": "эси́",
-      "category": "местоимение",
-      "gender": "-"
-    },
-    {
-      "ru": "он",
-      "el": "αυτός",
-      "transcription": "афтóс",
-      "category": "местоимение",
-      "gender": "м"
-    },
-    {
-      "ru": "она",
-      "el": "αυτή",
-      "transcription": "афтí",
-      "category": "местоимение",
-      "gender": "ж"
-    },
-    {
-      "ru": "оно",
-      "el": "αυτό",
-      "transcription": "афтó",
-      "category": "местоимение",
-      "gender": "ср"
-    },
-    {
-      "ru": "мы",
-      "el": "εμείς",
-      "transcription": "эмис",
-      "category": "местоимение",
-      "gender": "-"
-    },
-    {
-      "ru": "вы",
-      "el": "εσείς",
-      "transcription": "эсис",
-      "category": "местоимение",
-      "gender": "-"
-    },
-    {
-      "ru": "они (муж.)",
-      "el": "αυτοί",
-      "transcription": "афтí",
-      "category": "местоимение",
-      "gender": "м"
-    },
-    {
-      "ru": "они (жен.)",
-      "el": "αυτές",
-      "transcription": "афтéс",
-      "category": "местоимение",
-      "gender": "ж"
-    },
-    {
-      "ru": "они (ср.)",
-      "el": "αυτά",
-      "transcription": "афта́",
-      "category": "местоимение",
-      "gender": "ср"
-    },
-    {
-        "ru": "мой",
-        "el": "μου",
-        "transcription": "му",
-        "category": "притяжательное местоимение",
-        "gender": "-"
-      },
-      {
-        "ru": "твой",
-        "el": "σου",
-        "transcription": "су",
-        "category": "притяжательное местоимение",
-        "gender": "-"
-      },
-      {
-        "ru": "его",
-        "el": "του",
-        "transcription": "ту",
-        "category": "притяжательное местоимение",
-        "gender": "м"
-      },
-      {
-        "ru": "её",
-        "el": "της",
-        "transcription": "тис",
-        "category": "притяжательное местоимение",
-        "gender": "ж"
-      },
-      {
-        "ru": "его (средний род)",
-        "el": "του",
-        "transcription": "ту",
-        "category": "притяжательное местоимение",
-        "gender": "ср"
-      },
-      {
-        "ru": "наш",
-        "el": "μας",
-        "transcription": "мас",
-        "category": "притяжательное местоимение",
-        "gender": "-"
-      },
-      {
-        "ru": "ваш",
-        "el": "σας",
-        "transcription": "сас",
-        "category": "притяжательное местоимение",
-        "gender": "-"
-      },
-      {
-        "ru": "их (м.р.)",
-        "el": "τους",
-        "transcription": "тус",
-        "category": "притяжательное местоимение",
-        "gender": "м"
-      },
-      {
-        "ru": "их (ж.р.)",
-        "el": "τους",
-        "transcription": "тус",
-        "category": "притяжательное местоимение",
-        "gender": "ж"
-      },
-      {
-        "ru": "их (ср.р.)",
-        "el": "τους",
-        "transcription": "тус",
-        "category": "притяжательное местоимение",
-        "gender": "ср"
-      }
+  {
+    "ru": "я",
+    "el": "εγώ",
+    "transcription": "эго́",
+    "category": "местоимение",
+    "gender": "-",
+    "en": "I",
+    "el_transcription_en": "egó"
+  },
+  {
+    "ru": "ты",
+    "el": "εσύ",
+    "transcription": "эси́",
+    "category": "местоимение",
+    "gender": "-",
+    "en": "you (singular)",
+    "el_transcription_en": "esý"
+  },
+  {
+    "ru": "он",
+    "el": "αυτός",
+    "transcription": "афтóс",
+    "category": "местоимение",
+    "gender": "м",
+    "en": "he",
+    "el_transcription_en": "aftós"
+  },
+  {
+    "ru": "она",
+    "el": "αυτή",
+    "transcription": "афтí",
+    "category": "местоимение",
+    "gender": "ж",
+    "en": "she",
+    "el_transcription_en": "aftí"
+  },
+  {
+    "ru": "оно",
+    "el": "αυτό",
+    "transcription": "афтó",
+    "category": "местоимение",
+    "gender": "ср",
+    "en": "it",
+    "el_transcription_en": "aftó"
+  },
+  {
+    "ru": "мы",
+    "el": "εμείς",
+    "transcription": "эмис",
+    "category": "местоимение",
+    "gender": "-",
+    "en": "we",
+    "el_transcription_en": "emeís"
+  },
+  {
+    "ru": "вы",
+    "el": "εσείς",
+    "transcription": "эсис",
+    "category": "местоимение",
+    "gender": "-",
+    "en": "you (plural/formal)",
+    "el_transcription_en": "eseís"
+  },
+  {
+    "ru": "они (муж.)",
+    "el": "αυτοί",
+    "transcription": "афтí",
+    "category": "местоимение",
+    "gender": "м",
+    "en": "they (masc.)",
+    "el_transcription_en": "aftí"
+  },
+  {
+    "ru": "они (жен.)",
+    "el": "αυτές",
+    "transcription": "афтéс",
+    "category": "местоимение",
+    "gender": "ж",
+    "en": "they (fem.)",
+    "el_transcription_en": "aftés"
+  },
+  {
+    "ru": "они (ср.)",
+    "el": "αυτά",
+    "transcription": "афта́",
+    "category": "местоимение",
+    "gender": "ср",
+    "en": "they (neut.)",
+    "el_transcription_en": "aftá"
+  },
+  {
+    "ru": "мой",
+    "el": "μου",
+    "transcription": "му",
+    "category": "притяжательное местоимение",
+    "gender": "-",
+    "en": "my",
+    "el_transcription_en": "mou"
+  },
+  {
+    "ru": "твой",
+    "el": "σου",
+    "transcription": "су",
+    "category": "притяжательное местоимение",
+    "gender": "-",
+    "en": "your (singular)",
+    "el_transcription_en": "sou"
+  },
+  {
+    "ru": "его",
+    "el": "του",
+    "transcription": "ту",
+    "category": "притяжательное местоимение",
+    "gender": "м",
+    "en": "his",
+    "el_transcription_en": "tou"
+  },
+  {
+    "ru": "её",
+    "el": "της",
+    "transcription": "тис",
+    "category": "притяжательное местоимение",
+    "gender": "ж",
+    "en": "her",
+    "el_transcription_en": "tis"
+  },
+  {
+    "ru": "его (средний род)",
+    "el": "του",
+    "transcription": "ту",
+    "category": "притяжательное местоимение",
+    "gender": "ср",
+    "en": "its",
+    "el_transcription_en": "tou"
+  },
+  {
+    "ru": "наш",
+    "el": "μας",
+    "transcription": "мас",
+    "category": "притяжательное местоимение",
+    "gender": "-",
+    "en": "our",
+    "el_transcription_en": "mas"
+  },
+  {
+    "ru": "ваш",
+    "el": "σας",
+    "transcription": "сас",
+    "category": "притяжательное местоимение",
+    "gender": "-",
+    "en": "your (plural/formal)",
+    "el_transcription_en": "sas"
+  },
+  {
+    "ru": "их (м.р.)",
+    "el": "τους",
+    "transcription": "тус",
+    "category": "притяжательное местоимение",
+    "gender": "м",
+    "en": "their (masc.)",
+    "el_transcription_en": "tous"
+  },
+  {
+    "ru": "их (ж.р.)",
+    "el": "τους",
+    "transcription": "тус",
+    "category": "притяжательное местоимение",
+    "gender": "ж",
+    "en": "their (fem.)",
+    "el_transcription_en": "tous"
+  },
+  {
+    "ru": "их (ср.р.)",
+    "el": "τους",
+    "transcription": "тус",
+    "category": "притяжательное местоимение",
+    "gender": "ср",
+    "en": "their (neut.)",
+    "el_transcription_en": "tous"
+  }
 ]
