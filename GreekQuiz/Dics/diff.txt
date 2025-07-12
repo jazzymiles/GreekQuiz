@@ -261,6 +261,384 @@
     "gender": "-"
   },
   {
+    "ru": "дорогой",
+    "en": "expensive",
+    "el": "ακριβός",
+    "transcription": "акриво́с",
+    "el_transcription_en": "akrivós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "быстрый",
+    "en": "fast",
+    "el": "γρήγορος",
+    "transcription": "гри́горос",
+    "el_transcription_en": "grígoros",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "живой",
+    "en": "alive",
+    "el": "ζωντανός",
+    "transcription": "зондано́с",
+    "el_transcription_en": "zontanós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "деревянный",
+    "en": "wooden",
+    "el": "ξύλινος",
+    "transcription": "кси́линос",
+    "el_transcription_en": "xýlinos",
+    "gender": "мужской",
+    "category": "материал"
+  },
+  {
+    "ru": "известный",
+    "en": "famous",
+    "el": "διάσημος",
+    "transcription": "диа́симос",
+    "el_transcription_en": "diásimos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "отличный",
+    "en": "excellent",
+    "el": "εξαιρετικός",
+    "transcription": "эксерэтико́с",
+    "el_transcription_en": "exairetikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "лучший",
+    "en": "best",
+    "el": "καλύτερος",
+    "transcription": "кали́терос",
+    "el_transcription_en": "kalýteros",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "великолепный",
+    "en": "magnificent",
+    "el": "υπέροχος",
+    "transcription": "ипе́рохос",
+    "el_transcription_en": "ypérochos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "военный",
+    "en": "military",
+    "el": "στρατιωτικός",
+    "transcription": "стратётико́с",
+    "el_transcription_en": "stratiotikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "весь",
+    "en": "all",
+    "el": "όλος",
+    "transcription": "о́лос",
+    "el_transcription_en": "ólos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "целиком",
+    "en": "entirely",
+    "el": "ολόκληρα",
+    "transcription": "оло́клира",
+    "el_transcription_en": "olóklira",
+    "gender": "наречие",
+    "category": "наречия"
+  },
+  {
+    "ru": "последний",
+    "en": "last",
+    "el": "τελευταίος",
+    "transcription": "тэлефтэ́ос",
+    "el_transcription_en": "teleftaíos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "важный",
+    "en": "important",
+    "el": "σημαντικός",
+    "transcription": "симантико́с",
+    "el_transcription_en": "simantikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "горячий",
+    "en": "hot",
+    "el": "ζεστός",
+    "transcription": "зэсто́с",
+    "el_transcription_en": "zestós",
+    "gender": "мужской",
+    "category": "температура"
+  },
+  {
+    "ru": "легальный",
+    "en": "legal",
+    "el": "νόμιμος",
+    "transcription": "но́мимос",
+    "el_transcription_en": "nómimos",
+    "gender": "мужской",
+    "category": "право"
+  },
+  {
+    "ru": "красивый",
+    "en": "beautiful",
+    "el": "όμορφος",
+    "transcription": "о́морфос",
+    "el_transcription_en": "ómorfos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "милый",
+    "en": "cute",
+    "el": "γλυκός",
+    "transcription": "глико́с",
+    "el_transcription_en": "glykós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "закрытый",
+    "en": "closed",
+    "el": "κλειστός",
+    "transcription": "клисто́с",
+    "el_transcription_en": "kleistós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "официальный",
+    "en": "official",
+    "el": "επίσημος",
+    "transcription": "эпи́симос",
+    "el_transcription_en": "epísimos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "нормальный",
+    "en": "normal",
+    "el": "κανονικός",
+    "transcription": "канонико́с",
+    "el_transcription_en": "kanonikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "сложный",
+    "en": "complex",
+    "el": "πολύπλοκος",
+    "transcription": "поли́плокос",
+    "el_transcription_en": "polýplokos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "потенциальный",
+    "en": "potential",
+    "el": "πιθανός",
+    "transcription": "питанόс",
+    "el_transcription_en": "pithanós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "основной",
+    "en": "main",
+    "el": "κύριος",
+    "transcription": "ки́риос",
+    "el_transcription_en": "kýrios",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "личный",
+    "en": "personal",
+    "el": "προσωπικός",
+    "transcription": "просопико́с",
+    "el_transcription_en": "prosopikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "персональный",
+    "en": "personal",
+    "el": "προσωπικός",
+    "transcription": "просопико́с",
+    "el_transcription_en": "prosopikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "легко",
+    "en": "easily",
+    "el": "εύκολα",
+    "transcription": "э́вкола",
+    "el_transcription_en": "éf kola",
+    "gender": "наречие",
+    "category": "наречия"
+  },
+  {
+    "ru": "легкий",
+    "en": "easy",
+    "el": "εύκολος",
+    "transcription": "э́вколос",
+    "el_transcription_en": "éfkolos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "предпоследний",
+    "en": "penultimate",
+    "el": "προτελευταίος",
+    "transcription": "протэлефтэ́ос",
+    "el_transcription_en": "proteleftaíos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "другой",
+    "en": "other",
+    "el": "άλλος",
+    "transcription": "а́лос",
+    "el_transcription_en": "állos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "разный",
+    "en": "different",
+    "el": "διαφορετικός",
+    "transcription": "диафорэтико́с",
+    "el_transcription_en": "diaforetikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "непохожий",
+    "en": "unlike",
+    "el": "ανόμοιος",
+    "transcription": "ано́миос",
+    "el_transcription_en": "anómios",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "плоский",
+    "en": "flat",
+    "el": "επίπεδος",
+    "transcription": "эпи́педос",
+    "el_transcription_en": "epípedos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "обычный",
+    "en": "usual",
+    "el": "συνηθισμένος",
+    "transcription": "синитизмэ́нос",
+    "el_transcription_en": "synithisménos",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "уставший",
+    "en": "tired",
+    "el": "κουρασμένος",
+    "transcription": "курасме́нос",
+    "el_transcription_en": "kourasménos",
+    "gender": "мужской",
+    "category": "состояния"
+  },
+  {
+    "ru": "особенный",
+    "en": "special",
+    "el": "ειδικός",
+    "transcription": "идико́с",
+    "el_transcription_en": "idikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "следующий",
+    "en": "next",
+    "el": "επόμενος",
+    "transcription": "эпόменос",
+    "el_transcription_en": "epómenos",
+    "gender": "мужской",
+    "category": "время"
+  },
+  {
+    "ru": "реальный",
+    "en": "real",
+    "el": "πραγματικός",
+    "transcription": "прагматико́с",
+    "el_transcription_en": "pragmatikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "настоящий",
+    "en": "genuine",
+    "el": "αληθινός",
+    "transcription": "алитино́с",
+    "el_transcription_en": "alithinós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "местный",
+    "en": "local",
+    "el": "τοπικός",
+    "transcription": "топико́с",
+    "el_transcription_en": "topikós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "главный",
+    "en": "main",
+    "el": "κύριος",
+    "transcription": "ки́риос",
+    "el_transcription_en": "kýrios",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "чистый",
+    "en": "clean",
+    "el": "καθαρός",
+    "transcription": "катаоро́с",
+    "el_transcription_en": "katharós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
+    "ru": "сильный",
+    "en": "strong",
+    "el": "δυνατός",
+    "transcription": "динато́с",
+    "el_transcription_en": "dynatós",
+    "gender": "мужской",
+    "category": "качества"
+  },
+  {
     "ru": "между",
     "en": "between",
     "el": "ανάμεσα σε",
