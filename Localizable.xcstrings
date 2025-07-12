@@ -50,6 +50,28 @@
         }
       }
     },
+    "answer_language_picker" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γλώσσα απάντησης"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answer language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Язык ответа"
+          }
+        }
+      }
+    },
     "appearance_settings_section" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -303,7 +325,26 @@
       }
     },
     "clearing_old_dictionaries" : {
-
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Διαγραφή παλιών λεξικών"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clearing old dictionaries"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удаление старых словарей"
+          }
+        }
+      }
     },
     "correct_translation" : {
       "extractionState" : "manual",
@@ -553,6 +594,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скачивается словарь: %@ (%@ of %@)..."
+          }
+        }
+      }
+    },
+    "english_language" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Αγγλικά"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Английский"
           }
         }
       }
@@ -877,6 +940,28 @@
         }
       }
     },
+    "language_settings_section" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Γλώσσες"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Languages"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Языки"
+          }
+        }
+      }
+    },
     "learning_settings_section" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1175,25 +1260,24 @@
         }
       }
     },
-    "system_language_option" : {
-      "extractionState" : "stale",
+    "studied_language_picker" : {
       "localizations" : {
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Σύστημα"
+            "value" : "Γλώσσα εκμάθησης"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "System"
+            "value" : "Studied language"
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Системная"
+            "state" : "needs_review",
+            "value" : "Изучаемый язык"
           }
         }
       }

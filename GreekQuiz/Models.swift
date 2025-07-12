@@ -2,10 +2,12 @@ import Foundation
 import SwiftUI
 
 // Модель для одного слова
+// Модель для одного слова
 struct Word: Codable, Equatable, Identifiable {
     let id = UUID()
     let ru: String
     let el: String
+    let en: String? // ✨ НОВОЕ ПОЛЕ: для английского языка
     let transcription: String
     let category: String?
     let gender: String?

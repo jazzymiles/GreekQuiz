@@ -2,9 +2,12 @@ import SwiftUI
 import AVFoundation
 import WebKit
 
+// CardView теперь использует новые настройки через параметры
 struct CardView: View {
-    let word: Word
-    let quizLanguage: String
+    let questionWord: String
+    let answerWord: String
+    let studiedLanguage: String
+    let transcription: String?
     let showTranscription: Bool
     let speakWord: (String, String) -> Void
     @Binding var showTranslation: Bool
@@ -13,13 +16,14 @@ struct CardView: View {
         VStack {
             Spacer()
             
-            Text(quizLanguage == "ru" ? word.el : word.ru)
+            Text(questionWord)
                 .font(.system(size: 40, weight: .bold))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             
-            if quizLanguage == "ru" {
-                Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
+            // Показываем транскрипцию только для греческого языка
+            if let trans = transcription, studiedLanguage == "el" {
+                Text(showTranscription ? trans : String(repeating: "*", count: trans.count))
                     .font(.system(size: 28))
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
@@ -27,9 +31,7 @@ struct CardView: View {
             }
             
             Button(action: {
-                let wordToSpeak = quizLanguage == "ru" ? word.el : word.ru
-                let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                speakWord(wordToSpeak, languageCode)
+                speakWord(questionWord, studiedLanguage)
             }) {
                 Image(systemName: "speaker.wave.3.fill")
                     .font(.title)
@@ -40,7 +42,7 @@ struct CardView: View {
             Spacer()
             
             if showTranslation {
-                Text(quizLanguage == "ru" ? word.ru : word.el)
+                Text(answerWord)
                     .font(.system(size: 32))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
@@ -84,13 +86,47 @@ struct ContentView: View {
     @AppStorage("colorSchemePreference") private var colorSchemePreference: String = "system"
     @AppStorage("dictionarySourcePreference") private var dictionarySource: DictionarySource = .standard
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
-    @AppStorage("quizLanguage") private var quizLanguage: String = "ru"
+    
+    // ✨ ИЗМЕНЕНИЕ: Новые настройки для языков с дефолтными значениями
+    @AppStorage("studiedLanguage") private var studiedLanguage: String = "el"
+    @AppStorage("answerLanguage") private var answerLanguage: String = "ru"
+    
     @AppStorage("interfaceLanguage") private var interfaceLanguage: String = "en"
     
     @FocusState private var isTextFieldFocused: Bool
     
     private let synthesizer = AVSpeechSynthesizer()
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
+
+    // MARK: - Вспомогательные функции для языка
+    
+    // Получает нужное слово (ru, el, en) из объекта Word
+    private func getWord(for word: Word, langCode: String) -> String {
+        switch langCode {
+        case "ru":
+            return word.ru
+        case "el":
+            return word.el
+        case "en":
+            return word.en ?? "N/A" // Возвращаем "N/A" если перевод на английский отсутствует
+        default:
+            return ""
+        }
+    }
+
+    // Возвращает текущее слово для вопроса
+    private func currentQuestionWord() -> String {
+        guard !dictionaryService.activeWords.isEmpty else { return "" }
+        let word = dictionaryService.activeWords[currentWordIndex]
+        return getWord(for: word, langCode: studiedLanguage)
+    }
+    
+    // Возвращает текущее слово для ответа
+    private func currentAnswerWord() -> String {
+        guard !dictionaryService.activeWords.isEmpty else { return "" }
+        let word = dictionaryService.activeWords[currentWordIndex]
+        return getWord(for: word, langCode: answerLanguage)
+    }
 
     var body: some View {
         ZStack {
@@ -123,7 +159,6 @@ struct ContentView: View {
         }
         .preferredColorScheme(getPreferredColorScheme())
         .onAppear {
-            // Загружаем слова при первом появлении View
             if dictionaryService.activeWords.isEmpty {
                  dictionaryService.loadSelectedWords(interfaceLanguage: interfaceLanguage)
             }
@@ -145,7 +180,6 @@ struct ContentView: View {
             
             HeaderButton(imageName: "dic", action: { showingDictionarySelection = true })
                 .sheet(isPresented: $showingDictionarySelection) {
-                    // ✨ ИСПРАВЛЕННЫЙ ВЫЗОВ ✨
                     DictionarySelectionView(
                         dictionaryService: dictionaryService,
                         speakWord: speakWord,
@@ -155,13 +189,15 @@ struct ContentView: View {
 
             HeaderButton(imageName: "settings", action: { showingSettings = true })
                 .sheet(isPresented: $showingSettings) {
+                    // ✨ ИЗМЕНЕНИЕ: Передаем новые привязки в SettingsView
                     SettingsView(
                         showTranscription: $showTranscription,
                         autoPlaySound: $autoPlaySound,
                         colorSchemePreference: $colorSchemePreference,
                         dictionarySource: $dictionarySource,
                         customDictionaryURL: $customDictionaryURL,
-                        quizLanguage: $quizLanguage,
+                        studiedLanguage: $studiedLanguage,
+                        answerLanguage: $answerLanguage,
                         interfaceLanguage: $interfaceLanguage,
                         onDownloadDictionaries: {
                             Task {
@@ -220,10 +256,16 @@ struct ContentView: View {
     
     // MARK: - Quiz Views
     private func keyboardQuizView(for word: Word) -> some View {
-        let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + (quizLanguage == "ru" ? word.ru : word.el)
+        let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + currentAnswerWord()
         
         return VStack {
-            WordDisplay(word: word, quizLanguage: quizLanguage, showTranscription: showTranscription, speakWord: speakWord)
+            WordDisplay(
+                questionWord: currentQuestionWord(),
+                transcription: word.transcription,
+                studiedLanguage: studiedLanguage,
+                showTranscription: showTranscription,
+                speakWord: speakWord
+            )
             
             TextField("your_translation_placeholder", text: $userInput)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -240,16 +282,22 @@ struct ContentView: View {
     }
 
     private func multipleChoiceQuizView(for word: Word) -> some View {
-        let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + (quizLanguage == "ru" ? word.ru : word.el)
+        let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + currentAnswerWord()
         
         return VStack {
-            WordDisplay(word: word, quizLanguage: quizLanguage, showTranscription: showTranscription, speakWord: speakWord)
+            WordDisplay(
+                questionWord: currentQuestionWord(),
+                transcription: word.transcription,
+                studiedLanguage: studiedLanguage,
+                showTranscription: showTranscription,
+                speakWord: speakWord
+            )
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 10) {
                 ForEach(cardOptions, id: \.self) { option in
                     Button(action: {
                         selectedAnswer = option
-                        if quizLanguage == "el" { speakWord(option, "el-GR") }
+                        speakWord(option, answerLanguage)
                     }) {
                         Text(option)
                             .font(.headline)
@@ -275,13 +323,21 @@ struct ContentView: View {
 
     private func cardModeView(for word: Word) -> some View {
         VStack {
-            CardView(word: word, quizLanguage: quizLanguage, showTranscription: showTranscription, speakWord: speakWord, showTranslation: $showCardTranslation)
-                .gesture(
-                    DragGesture().onEnded { gesture in
-                        if gesture.translation.width < -50 { nextWord() }
-                        else if gesture.translation.width > 50 { previousWord() }
-                    }
-                )
+            CardView(
+                questionWord: currentQuestionWord(),
+                answerWord: currentAnswerWord(),
+                studiedLanguage: studiedLanguage,
+                transcription: word.transcription,
+                showTranscription: showTranscription,
+                speakWord: speakWord,
+                showTranslation: $showCardTranslation
+            )
+            .gesture(
+                DragGesture().onEnded { gesture in
+                    if gesture.translation.width < -50 { nextWord() }
+                    else if gesture.translation.width > 50 { previousWord() }
+                }
+            )
             Spacer()
             
             HStack {
@@ -296,10 +352,7 @@ struct ContentView: View {
     
     // MARK: - Quiz Logic
     private func checkAnswer() {
-        guard !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else { return }
-        let currentWord = dictionaryService.activeWords[currentWordIndex]
-        let correctAnswers = parseAcceptedAnswers(from: quizLanguage == "ru" ? currentWord.ru : currentWord.el)
-        
+        let correctAnswers = parseAcceptedAnswers(from: currentAnswerWord())
         if correctAnswers.contains(userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()) {
             handleCorrectAnswer()
         } else {
@@ -308,13 +361,11 @@ struct ContentView: View {
     }
     
     private func checkCardAnswer() {
-        guard let selected = selectedAnswer, !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else {
+        guard let selected = selectedAnswer else {
             handleIncorrectAnswer()
             return
         }
-        let currentWord = dictionaryService.activeWords[currentWordIndex]
-        let correctAnswers = parseAcceptedAnswers(from: quizLanguage == "ru" ? currentWord.ru : currentWord.el)
-
+        let correctAnswers = parseAcceptedAnswers(from: currentAnswerWord())
         if correctAnswers.contains(selected.lowercased()) {
             handleCorrectAnswer()
         } else {
@@ -363,10 +414,8 @@ struct ContentView: View {
             generateCardOptions()
         }
         
-        if autoPlaySound && !dictionaryService.activeWords.isEmpty && currentWordIndex < dictionaryService.activeWords.count {
-            let wordToSpeak = quizLanguage == "ru" ? dictionaryService.activeWords[currentWordIndex].el : dictionaryService.activeWords[currentWordIndex].ru
-            let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-            speakWord(wordToSpeak, languageCode)
+        if autoPlaySound && !dictionaryService.activeWords.isEmpty {
+            speakWord(currentQuestionWord(), studiedLanguage)
         }
     }
 
@@ -376,19 +425,19 @@ struct ContentView: View {
     }
 
     private func generateCardOptions() {
-        guard !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else {
+        guard !dictionaryService.activeWords.isEmpty else {
             cardOptions = []
             return
         }
         
-        let currentWord = dictionaryService.activeWords[currentWordIndex]
-        let correctAnswer = parseAcceptedAnswers(from: quizLanguage == "ru" ? currentWord.ru : currentWord.el).first ?? (quizLanguage == "ru" ? currentWord.ru : currentWord.el)
+        let correctAnswer = parseAcceptedAnswers(from: currentAnswerWord()).first ?? currentAnswerWord()
         
         var options = Set([correctAnswer])
-        let allPossibleAnswers = dictionaryService.allWords.map { quizLanguage == "ru" ? $0.ru : $0.el }
+        // Собираем все возможные варианты ответов на нужном языке
+        let allPossibleAnswers = dictionaryService.allWords.map { getWord(for: $0, langCode: answerLanguage) }
         
         while options.count < 4 && options.count < allPossibleAnswers.count {
-            if let randomWord = allPossibleAnswers.randomElement(), let parsed = parseAcceptedAnswers(from: randomWord).first {
+            if let randomAnswer = allPossibleAnswers.randomElement(), let parsed = parseAcceptedAnswers(from: randomAnswer).first, !parsed.isEmpty {
                 options.insert(parsed)
             }
         }
@@ -418,22 +467,20 @@ struct ContentView: View {
         default: return nil
         }
     }
-
-    private func getIconTintColor() -> Color {
-        let effectiveScheme = getPreferredColorScheme() ?? currentSystemColorScheme
-        return effectiveScheme == .dark ? .white : .black
-    }
-
+    
     private func parseAcceptedAnswers(from raw: String) -> [String] {
         raw.replacingOccurrences(of: "\\(.*?\\)", with: "", options: .regularExpression)
            .split(separator: ",")
            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
     }
     
-    func speakWord(_ text: String, _ language: String) {
+    func speakWord(_ text: String, _ langCode: String) {
         if synthesizer.isSpeaking { synthesizer.stopSpeaking(at: .immediate) }
+        
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: language)
+        // Преобразуем код языка в формат, понятный AVSpeechSynthesisVoice
+        let voiceLanguageCode = langCode == "el" ? "el-GR" : (langCode == "ru" ? "ru-RU" : "en-US")
+        utterance.voice = AVSpeechSynthesisVoice(language: voiceLanguageCode)
         utterance.rate = 0.5
         synthesizer.speak(utterance)
     }
@@ -478,7 +525,6 @@ struct ActionButton: View {
     }
 }
 
-
 struct FeedbackText: View {
     let text: String
     let isVisible: Bool
@@ -497,21 +543,20 @@ struct FeedbackText: View {
 
 
 struct WordDisplay: View {
-    let word: Word
-    let quizLanguage: String
+    let questionWord: String
+    let transcription: String?
+    let studiedLanguage: String
     let showTranscription: Bool
     let speakWord: (String, String) -> Void
 
     var body: some View {
         VStack {
             HStack(spacing: 10) {
-                Text(quizLanguage == "ru" ? word.el : word.ru)
+                Text(questionWord)
                     .font(.system(size: 40, weight: .bold))
                 
                 Button(action: {
-                    let wordToSpeak = quizLanguage == "ru" ? word.el : word.ru
-                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                    speakWord(wordToSpeak, languageCode)
+                    speakWord(questionWord, studiedLanguage)
                 }) {
                     Image(systemName: "speaker.wave.3.fill")
                         .font(.title).foregroundColor(.blue)
@@ -520,12 +565,13 @@ struct WordDisplay: View {
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.bottom, 8)
 
-            if quizLanguage == "ru" {
-                Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
+            // Показываем транскрипцию только если изучаемый язык греческий
+            if let trans = transcription, studiedLanguage == "el" {
+                Text(showTranscription ? trans : String(repeating: "*", count: trans.count))
                     .font(.system(size: 28)).foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
             } else {
-                 Text(" ").font(.system(size: 28))
+                 Text(" ").font(.system(size: 28)) // Пустое место для сохранения верстки
             }
         }
         .padding(.bottom, 16)

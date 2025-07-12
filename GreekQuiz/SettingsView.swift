@@ -6,10 +6,12 @@ struct SettingsView: View {
     @Binding var colorSchemePreference: String
     @Binding var dictionarySource: DictionarySource
     @Binding var customDictionaryURL: String
-    @Binding var quizLanguage: String
-    @Environment(\.dismiss) var dismiss
+    
+    @Binding var studiedLanguage: String
+    @Binding var answerLanguage: String
 
-    // Язык интерфейса
+    @Environment(\.dismiss) var dismiss
+    
     @Binding var interfaceLanguage: String
 
     var onDownloadDictionaries: () -> Void
@@ -28,19 +30,35 @@ struct SettingsView: View {
                     }
                 }
 
-                Section(header: Text("quiz_language_section")) {
-                    Picker("answer_in_language", selection: $quizLanguage) {
+                Section(header: Text("language_settings_section")) {
+                    // ✨ ИЗМЕНЕНИЕ: Добавлена надпись "Язык обучения"
+                    Text("studied_language_picker")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    
+                    Picker("studied_language_picker", selection: $studiedLanguage) {
+                        Text("greek_language").tag("el")
+                        Text("russian_language").tag("ru")
+                        Text("english_language").tag("en")
+                    }
+                    .pickerStyle(.segmented)
+
+                    // ✨ ИЗМЕНЕНИЕ: Добавлена надпись "Язык ответа"
+                    Text("answer_language_picker")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                        .padding(.top) // Добавляем отступ сверху для визуального разделения
+
+                    Picker("answer_language_picker", selection: $answerLanguage) {
                         Text("russian_language").tag("ru")
                         Text("greek_language").tag("el")
+                        Text("english_language").tag("en")
                     }
                     .pickerStyle(.segmented)
                 }
 
-                // ✨ ИЗМЕНЕНИЕ ЗДЕСЬ ✨
-                // Секция выбора языка интерфейса без "системного" варианта
                 Section(header: Text("interface_language_section")) {
                     Picker("interface_language_section", selection: $interfaceLanguage) {
-                        // Text("system_language_option").tag("system") // <-- Эта строка удалена
                         Text("language_option_russian").tag("ru")
                         Text("language_option_english").tag("en")
                         Text("language_option_greek").tag("el")
