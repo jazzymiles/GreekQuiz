@@ -2,69 +2,6 @@ import SwiftUI
 import AVFoundation
 import WebKit
 
-struct Word: Codable, Equatable, Identifiable {
-    let id = UUID()
-    let ru: String
-    let el: String
-    let transcription: String
-    let category: String?
-    let gender: String?
-    var dictionaryName: String?
-}
-
-enum QuizMode: String, CaseIterable, Identifiable {
-    case keyboard
-    case quiz
-    case cards
-
-    var id: String { self.rawValue }
-
-    var displayName: LocalizedStringKey {
-        switch self {
-        case .keyboard: return "mode_keyboard_display_name"
-        case .quiz: return "mode_quiz_display_name"
-        case .cards: return "mode_cards_display_name"
-        }
-    }
-}
-
-// ✨ ИЗМЕНЕНИЕ №1: Убираем вычисляемое свойство и добавляем метод ✨
-struct DictionaryInfo: Codable, Identifiable, Hashable {
-    let id = UUID()
-    let name_ru: String
-    let name_en: String
-    let name_el: String
-    var filePath: String
-
-    // Вместо вычисляемого свойства `name` теперь метод,
-    // который принимает язык в качестве аргумента.
-    // Это делает получение имени более предсказуемым.
-    func localizedName(for language: String) -> String {
-        switch language {
-        case "ru":
-            return name_ru
-        case "el":
-            return name_el
-        default:
-            return name_en
-        }
-    }
-}
-
-
-enum DictionarySource: String, CaseIterable, Identifiable, Codable {
-    case standard
-    case customURL
-
-    var id: String { self.rawValue }
-
-    var displayName: LocalizedStringKey {
-        switch self {
-        case .standard: return "dictionary_download_option_1"
-        case .customURL: return "dictionary_download_option_2"
-        }
-    }
-}
 struct CardView: View {
     let word: Word
     let quizLanguage: String
@@ -125,55 +62,35 @@ struct CardView: View {
 }
 
 struct ContentView: View {
-
-    @State private var allDictionaries: [DictionaryInfo] = []
-    @State private var selectedDictionaries: Set<String> = []
-    @State private var allWords: [Word] = []
-    @State private var activeWords: [Word] = []
+    @StateObject private var dictionaryService = DictionaryService()
+    
     @State private var currentWordIndex = 0
-
     @State private var userInput = ""
     @State private var showAnswer = false
     @State private var isCorrect = false
     @State private var isShowingFeedback = false
-    @State private var score = UserDefaults.standard.integer(forKey: "score")
-    @FocusState private var isTextFieldFocused: Bool
-            
-    @AppStorage("currentQuizMode") private var quizMode: QuizMode = .keyboard
-            
     @State private var selectedAnswer: String? = nil
-            
     @State private var cardOptions: [String] = []
+    @State private var showCardTranslation: Bool = false
 
     @State private var showingDictionarySelection = false
     @State private var showingRules = false
     @State private var showingSettings = false
 
+    @AppStorage("score") private var score = 0
+    @AppStorage("currentQuizMode") private var quizMode: QuizMode = .keyboard
     @AppStorage("showTranscription") private var showTranscription: Bool = true
     @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true
     @AppStorage("colorSchemePreference") private var colorSchemePreference: String = "system"
-
     @AppStorage("dictionarySourcePreference") private var dictionarySource: DictionarySource = .standard
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
-
-    @AppStorage("downloadedDictionaryMetadata") private var downloadedDictionaryMetadataData: Data = Data()
     @AppStorage("quizLanguage") private var quizLanguage: String = "ru"
     @AppStorage("interfaceLanguage") private var interfaceLanguage: String = "en"
     
-    @State private var showCardTranslation: Bool = false
-
-    @State private var isDownloadingDictionaries: Bool = false
-    @State private var downloadStatusMessage: String = ""
-
-
+    @FocusState private var isTextFieldFocused: Bool
+    
     private let synthesizer = AVSpeechSynthesizer()
-
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
-
-    private var downloadedDictionariesDirectory: URL {
-        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("DownloadedDictionaries")
-    }
 
     var body: some View {
         ZStack {
@@ -181,902 +98,450 @@ struct ContentView: View {
                 .ignoresSafeArea()
 
             VStack(spacing: 0) {
-                HStack(spacing: 8) {
-                    Spacer()
-
-                    Button(action: {
-                        showingRules = true
-                    }) {
-                        Image("rules")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                            .padding(6)
-                            .foregroundColor(getIconTintColor())
-                            .background(Color.gray.opacity(0.2))
-                            .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .sheet(isPresented: $showingRules) {
-                        RulesSheetView(htmlFileName: "rules-el")
-                    }
-
-                    Button(action: {
-                        showingDictionarySelection = true
-                    }) {
-                        Image("dic")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                            .padding(6)
-                            .foregroundColor(getIconTintColor())
-                            .background(Color.gray.opacity(0.2))
-                            .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    // ✨ ИЗМЕНЕНИЕ №2: Передаем язык в DictionarySelectionView ✨
-                    .sheet(isPresented: $showingDictionarySelection) {
-                        DictionarySelectionView(
-                            allDictionaries: $allDictionaries,
-                            selectedDictionaries: $selectedDictionaries,
-                            loadSelectedWords: loadSelectedWords,
-                            allWords: $allWords,
-                            activeWords: $activeWords,
-                            speakWord: speakWord,
-                            interfaceLanguage: self.interfaceLanguage // Добавлена передача языка
-                        )
-                    }
-
-                    Button(action: {
-                        showingSettings = true
-                    }) {
-                        Image("settings")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                            .padding(6)
-                            .foregroundColor(getIconTintColor())
-                            .background(Color.gray.opacity(0.2))
-                            .cornerRadius(8)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .sheet(isPresented: $showingSettings) {
-                        SettingsView(
-                            showTranscription: $showTranscription,
-                            autoPlaySound: $autoPlaySound,
-                            colorSchemePreference: $colorSchemePreference,
-                            dictionarySource: $dictionarySource,
-                            customDictionaryURL: $customDictionaryURL,
-                            quizLanguage: $quizLanguage,
-                            interfaceLanguage: $interfaceLanguage,
-                            onDownloadDictionaries: {
-                                Task {
-                                    await downloadAndSaveDictionariesBasedOnSource()
-                                }
-                            }
-                        )
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.top, 10)
+                headerButtons
+                    .padding(.horizontal)
+                    .padding(.top, 10)
 
                 Picker("title_quiz_mode", selection: $quizMode) {
                     ForEach(QuizMode.allCases) { mode in
-                        Text(mode.displayName)
-                            .tag(mode)
+                        Text(mode.displayName).tag(mode)
                     }
                 }
                 .pickerStyle(.segmented)
                 .padding(.horizontal)
                 .padding(.top, 10)
-                .onChange(of: quizMode) { oldMode, newMode in
-                    if oldMode != newMode {
-                        resetQuizState()
-                        if newMode == .quiz {
-                            generateCardOptions()
-                        } else if newMode == .cards {
-                            showCardTranslation = false
-                            if autoPlaySound && !activeWords.isEmpty {
-                                let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
-                                let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                                speakWord(wordToSpeak, languageCode)
-                            }
-                        } else if newMode == .keyboard {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                isTextFieldFocused = true
-                            }
-                        }
-                    }
-                }
+                .onChange(of: quizMode, perform: handleModeChange)
 
                 Spacer()
 
-                // ... (остальной код VStack без изменений) ...
-                VStack(spacing: 0) {
-                    if !activeWords.isEmpty {
-                        if quizMode == .keyboard {
-                            HStack(spacing: 10) {
-                                Text(quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru)
-                                    .font(.system(size: 40, weight: .bold))
-                                
-                                Button(action: {
-                                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
-                                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                                    speakWord(wordToSpeak, languageCode)
-                                }) {
-                                    Image(systemName: "speaker.wave.3.fill")
-                                        .font(.title)
-                                        .foregroundColor(.blue)
-                                }
-                            }
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .padding(.bottom, 8)
-
-                            HStack(spacing: 5) {
-                                if quizLanguage == "ru" {
-                                    Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
-                                        .font(.system(size: 28))
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 10)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-                                } else {
-                                    Text(" ")
-                                        .font(.system(size: 28))
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 10)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-                                }
-                            }
-                            .padding(.bottom, 16)
-                            
-                            TextField(quizLanguage == "ru" ? "your_translation_placeholder" : "your_translation_placeholder", text: $userInput)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .padding(.horizontal)
-                                .focused($isTextFieldFocused)
-                                .padding(.bottom, 18)
-
-                            Button(action: {
-                                if showAnswer {
-                                    nextWord()
-                                } else {
-                                    checkAnswer()
-                                }
-                            }) {
-                                Text(showAnswer ? "button_next" : "button_check")
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                            .padding(.horizontal)
-                            .padding(.bottom, 20)
-
-                            Text(showAnswer ? "correct_translation \(quizLanguage == "ru" ? activeWords[currentWordIndex].ru : activeWords[currentWordIndex].el)" : " ")
-                                .foregroundColor(showAnswer ? (getPreferredColorScheme() == .light ? .black : .white) : .clear)
-                                .padding(.vertical, 9)
-                                .padding(.horizontal)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .frame(height: 55)
-
-                        } else if quizMode == .quiz {
-                            HStack(spacing: 10) {
-                                Text(quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru)
-                                    .font(.system(size: 40, weight: .bold))
-                                
-                                Button(action: {
-                                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
-                                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                                    speakWord(wordToSpeak, languageCode)
-                                }) {
-                                    Image(systemName: "speaker.wave.3.fill")
-                                        .font(.title)
-                                        .foregroundColor(.blue)
-                                }
-                            }
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .padding(.bottom, 8)
-
-                            HStack(spacing: 5) {
-                                if quizLanguage == "ru" {
-                                    Text(showTranscription ? activeWords[currentWordIndex].transcription : String(repeating: "*", count: activeWords[currentWordIndex].transcription.count))
-                                        .font(.system(size: 28))
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 10)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-                                } else {
-                                    Text(" ")
-                                        .font(.system(size: 28))
-                                        .foregroundColor(.gray)
-                                        .padding(.leading, 10)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-                                }
-                            }
-                            .padding(.bottom, 16)
-                            
-                            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 10) {
-                                ForEach(cardOptions, id: \.self) { option in
-                                    Button(action: {
-                                        selectedAnswer = option
-                                        if quizLanguage == "el" {
-                                            speakWord(option, "el-GR")
-                                        }
-                                    }) {
-                                        Text(option)
-                                            .font(.headline)
-                                            .padding()
-                                            .frame(maxWidth: .infinity)
-                                            .background(selectedAnswer == option ? Color.orange.opacity(0.8) : Color.gray.opacity(0.3))
-                                            .foregroundColor(getPreferredColorScheme() == .light ? .black : .white)
-                                            .cornerRadius(10)
-                                    }
-                                    .buttonStyle(PlainButtonStyle())
-                                }
-                            }
-                            .padding(.horizontal)
-                            .padding(.bottom, 18)
-
-                            Button(action: {
-                                if showAnswer {
-                                    nextWord()
-                                    selectedAnswer = nil
-                                    generateCardOptions()
-                                } else {
-                                    checkCardAnswer()
-                                }
-                            }) {
-                                Text(showAnswer ? "button_next" : "button_check")
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
-                            }
-                            .buttonStyle(PlainButtonStyle())
-                            .padding(.horizontal)
-                            .padding(.bottom, 20)
-
-                            Text(showAnswer ? "correct_translation \(quizLanguage == "ru" ? activeWords[currentWordIndex].ru : activeWords[currentWordIndex].el)" : " ")
-                                .foregroundColor(showAnswer ? (getPreferredColorScheme() == .light ? .black : .white) : .clear)
-                                .padding(.vertical, 9)
-                                .padding(.horizontal)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                                .frame(height: 55)
-
-                        } else if quizMode == .cards {
-                            CardView(
-                                word: activeWords[currentWordIndex],
-                                quizLanguage: quizLanguage,
-                                showTranscription: showTranscription,
-                                speakWord: speakWord,
-                                showTranslation: $showCardTranslation
-                            )
-                            .gesture(
-                                DragGesture()
-                                    .onEnded { gesture in
-                                        if gesture.translation.width < -50 {
-                                            nextWord()
-                                        } else if gesture.translation.width > 50 {
-                                            previousWord()
-                                        }
-                                    }
-                            )
-                            Spacer()
-                            
-                            HStack {
-                                Button(action: {
-                                    previousWord()
-                                }) {
-                                    Image(systemName: "arrow.left.circle.fill")
-                                        .font(.largeTitle)
-                                        .foregroundColor(.blue)
-                                    .background(Color.white.opacity(0.1))
-                                        .cornerRadius(8)
-                                }
-                                Spacer()
-                                Button(action: {
-                                    nextWord()
-                                }) {
-                                    Image(systemName: "arrow.right.circle.fill")
-                                        .font(.largeTitle)
-                                        .foregroundColor(.blue)
-                                        .background(Color.white.opacity(0.1))
-                                        .cornerRadius(8)
-                                }
-                            }
-                            .padding(.horizontal, 40)
-                            .padding(.bottom, 20)
-                        }
-                    } else {
-                        Text("select_at_least_one_dictionary")
-                            .foregroundColor(.gray)
-                    }
-                }
-                .padding(.bottom, 30)
-
+                quizContainer
+                    .padding(.bottom, 30)
+                
                 Spacer()
             }
-            if isDownloadingDictionaries {
-                ProgressView(downloadStatusMessage)
-                    .padding()
-                    .background(Color.black.opacity(0.7))
-                    .cornerRadius(10)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .ignoresSafeArea()
-            } else if !downloadStatusMessage.isEmpty {
-                Text(downloadStatusMessage)
-                    .padding()
-                    .background(Color.black.opacity(0.7))
-                    .cornerRadius(10)
-                    .foregroundColor(.white)
-                    .transition(.opacity)
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            withAnimation {
-                                downloadStatusMessage = ""
-                            }
-                        }
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .ignoresSafeArea()
-            }
+            .overlay(statusOverlay)
         }
         .preferredColorScheme(getPreferredColorScheme())
         .onAppear {
-            loadDictionariesMetadataAndWords()
-            if quizMode == .quiz {
-                generateCardOptions()
-            } else if quizMode == .cards {
-                showCardTranslation = false
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                if autoPlaySound && !activeWords.isEmpty {
-                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
-                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                    speakWord(wordToSpeak, languageCode)
-                }
-                if quizMode == .keyboard {
-                    isTextFieldFocused = true
-                }
+            // Загружаем слова при первом появлении View
+            if dictionaryService.activeWords.isEmpty {
+                 dictionaryService.loadSelectedWords(interfaceLanguage: interfaceLanguage)
             }
         }
-        .onChange(of: userInput) { _ in
-            if quizMode == .keyboard && !isTextFieldFocused {
-                isTextFieldFocused = true
-            }
+        .onChange(of: dictionaryService.activeWords) { _ in
+            resetAfterDictionaryChange()
         }
-        .onChange(of: activeWords) { oldWords, newWords in
-            if oldWords.count != newWords.count {
-                if quizMode == .quiz {
-                    generateCardOptions()
-                } else if quizMode == .cards {
-                    showCardTranslation = false
-                }
-            }
+        .onChange(of: interfaceLanguage) { newLanguage in
+            dictionaryService.loadSelectedWords(interfaceLanguage: newLanguage)
         }
     }
+    
+    // MARK: - Subviews
+    private var headerButtons: some View {
+        HStack(spacing: 8) {
+            Spacer()
+            HeaderButton(imageName: "rules", action: { showingRules = true })
+                .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileName: "rules-el") }
+            
+            HeaderButton(imageName: "dic", action: { showingDictionarySelection = true })
+                .sheet(isPresented: $showingDictionarySelection) {
+                    // ✨ ИСПРАВЛЕННЫЙ ВЫЗОВ ✨
+                    DictionarySelectionView(
+                        dictionaryService: dictionaryService,
+                        speakWord: speakWord,
+                        interfaceLanguage: interfaceLanguage
+                    )
+                }
 
-    func checkAnswer() {
-        let input = userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        let corrects: [String]
-        if quizLanguage == "ru" {
-            corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
+            HeaderButton(imageName: "settings", action: { showingSettings = true })
+                .sheet(isPresented: $showingSettings) {
+                    SettingsView(
+                        showTranscription: $showTranscription,
+                        autoPlaySound: $autoPlaySound,
+                        colorSchemePreference: $colorSchemePreference,
+                        dictionarySource: $dictionarySource,
+                        customDictionaryURL: $customDictionaryURL,
+                        quizLanguage: $quizLanguage,
+                        interfaceLanguage: $interfaceLanguage,
+                        onDownloadDictionaries: {
+                            Task {
+                                await dictionaryService.downloadAndSaveDictionaries(
+                                    source: dictionarySource,
+                                    customURL: customDictionaryURL,
+                                    interfaceLanguage: interfaceLanguage
+                                )
+                            }
+                        }
+                    )
+                }
+        }
+    }
+    
+    @ViewBuilder
+    private var quizContainer: some View {
+        if !dictionaryService.activeWords.isEmpty && currentWordIndex < dictionaryService.activeWords.count {
+            let currentWord = dictionaryService.activeWords[currentWordIndex]
+            
+            switch quizMode {
+            case .keyboard:
+                keyboardQuizView(for: currentWord)
+            case .quiz:
+                multipleChoiceQuizView(for: currentWord)
+            case .cards:
+                cardModeView(for: currentWord)
+            }
         } else {
-            corrects = parseAcceptedAnswers(from: activeWords[currentWordIndex].el)
-        }
-
-        withAnimation(nil) {
-            if corrects.contains(input) {
-                isCorrect = true
-                showAnswer = true
-                score += 1
-                UserDefaults.standard.set(score, forKey: "score")
-                isShowingFeedback = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                    isShowingFeedback = false
-                }
-            } else {
-                isCorrect = false
-                showAnswer = true
-            }
+            Text("select_at_least_one_dictionary").foregroundColor(.gray)
         }
     }
 
-    func resetQuizState() {
+    @ViewBuilder
+    private var statusOverlay: some View {
+        if dictionaryService.isDownloading {
+            ProgressView(dictionaryService.statusMessage)
+                .padding()
+                .background(Color.black.opacity(0.7))
+                .cornerRadius(10)
+                .foregroundColor(.white)
+        } else if !dictionaryService.statusMessage.isEmpty {
+            Text(dictionaryService.statusMessage)
+                .padding()
+                .background(Color.black.opacity(0.7))
+                .cornerRadius(10)
+                .foregroundColor(.white)
+                .transition(.opacity)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        dictionaryService.statusMessage = ""
+                    }
+                }
+        }
+    }
+    
+    // MARK: - Quiz Views
+    private func keyboardQuizView(for word: Word) -> some View {
+        let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + (quizLanguage == "ru" ? word.ru : word.el)
+        
+        return VStack {
+            WordDisplay(word: word, quizLanguage: quizLanguage, showTranscription: showTranscription, speakWord: speakWord)
+            
+            TextField("your_translation_placeholder", text: $userInput)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal)
+                .focused($isTextFieldFocused)
+                .padding(.bottom, 18)
+
+            ActionButton(title: showAnswer ? "button_next" : "button_check") {
+                if showAnswer { nextWord() } else { checkAnswer() }
+            }
+            
+            FeedbackText(text: feedbackString, isVisible: showAnswer)
+        }
+    }
+
+    private func multipleChoiceQuizView(for word: Word) -> some View {
+        let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + (quizLanguage == "ru" ? word.ru : word.el)
+        
+        return VStack {
+            WordDisplay(word: word, quizLanguage: quizLanguage, showTranscription: showTranscription, speakWord: speakWord)
+            
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 10) {
+                ForEach(cardOptions, id: \.self) { option in
+                    Button(action: {
+                        selectedAnswer = option
+                        if quizLanguage == "el" { speakWord(option, "el-GR") }
+                    }) {
+                        Text(option)
+                            .font(.headline)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(selectedAnswer == option ? Color.orange.opacity(0.8) : Color.gray.opacity(0.3))
+                            .foregroundColor(getPreferredColorScheme() == .light ? .black : .white)
+                            .cornerRadius(10)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            .padding(.horizontal)
+            .padding(.bottom, 18)
+
+            ActionButton(title: showAnswer ? "button_next" : "button_check") {
+                if showAnswer { nextWord() } else { checkCardAnswer() }
+            }
+            
+            FeedbackText(text: feedbackString, isVisible: showAnswer)
+        }
+    }
+
+    private func cardModeView(for word: Word) -> some View {
+        VStack {
+            CardView(word: word, quizLanguage: quizLanguage, showTranscription: showTranscription, speakWord: speakWord, showTranslation: $showCardTranslation)
+                .gesture(
+                    DragGesture().onEnded { gesture in
+                        if gesture.translation.width < -50 { nextWord() }
+                        else if gesture.translation.width > 50 { previousWord() }
+                    }
+                )
+            Spacer()
+            
+            HStack {
+                NavButton(systemName: "arrow.left.circle.fill", action: previousWord)
+                Spacer()
+                NavButton(systemName: "arrow.right.circle.fill", action: nextWord)
+            }
+            .padding(.horizontal, 40)
+            .padding(.bottom, 20)
+        }
+    }
+    
+    // MARK: - Quiz Logic
+    private func checkAnswer() {
+        guard !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else { return }
+        let currentWord = dictionaryService.activeWords[currentWordIndex]
+        let correctAnswers = parseAcceptedAnswers(from: quizLanguage == "ru" ? currentWord.ru : currentWord.el)
+        
+        if correctAnswers.contains(userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()) {
+            handleCorrectAnswer()
+        } else {
+            handleIncorrectAnswer()
+        }
+    }
+    
+    private func checkCardAnswer() {
+        guard let selected = selectedAnswer, !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else {
+            handleIncorrectAnswer()
+            return
+        }
+        let currentWord = dictionaryService.activeWords[currentWordIndex]
+        let correctAnswers = parseAcceptedAnswers(from: quizLanguage == "ru" ? currentWord.ru : currentWord.el)
+
+        if correctAnswers.contains(selected.lowercased()) {
+            handleCorrectAnswer()
+        } else {
+            handleIncorrectAnswer()
+        }
+    }
+    
+    private func handleCorrectAnswer() {
+        isCorrect = true
+        showAnswer = true
+        score += 1
+        isShowingFeedback = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            isShowingFeedback = false
+        }
+    }
+    
+    private func handleIncorrectAnswer() {
+        isCorrect = false
+        showAnswer = true
+    }
+
+    private func nextWord() {
+        if !dictionaryService.activeWords.isEmpty {
+            currentWordIndex = (currentWordIndex + 1) % dictionaryService.activeWords.count
+            resetForNewWord()
+        }
+    }
+
+    private func previousWord() {
+        if !dictionaryService.activeWords.isEmpty {
+            currentWordIndex = (currentWordIndex - 1 + dictionaryService.activeWords.count) % dictionaryService.activeWords.count
+            resetForNewWord()
+        }
+    }
+    
+    private func resetForNewWord() {
         userInput = ""
         showAnswer = false
         isCorrect = false
-        isShowingFeedback = false
         selectedAnswer = nil
         showCardTranslation = false
         isTextFieldFocused = true
-        if !activeWords.isEmpty {
-            currentWordIndex = Int.random(in: 0..<activeWords.count)
+        
+        if quizMode == .quiz {
+            generateCardOptions()
+        }
+        
+        if autoPlaySound && !dictionaryService.activeWords.isEmpty && currentWordIndex < dictionaryService.activeWords.count {
+            let wordToSpeak = quizLanguage == "ru" ? dictionaryService.activeWords[currentWordIndex].el : dictionaryService.activeWords[currentWordIndex].ru
+            let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+            speakWord(wordToSpeak, languageCode)
         }
     }
 
-    func generateCardOptions() {
-        guard !activeWords.isEmpty else {
+    private func resetAfterDictionaryChange() {
+        currentWordIndex = 0
+        resetForNewWord()
+    }
+
+    private func generateCardOptions() {
+        guard !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else {
             cardOptions = []
             return
         }
-
-        var options: [String] = []
-        let currentCorrectAnswer: String
-        let allPossibleAnswers: [String]
-
-        if quizLanguage == "ru" {
-            currentCorrectAnswer = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru).first ?? activeWords[currentWordIndex].ru
-            allPossibleAnswers = allWords.map { $0.ru }
-        } else {
-            currentCorrectAnswer = parseAcceptedAnswers(from: activeWords[currentWordIndex].el).first ?? activeWords[currentWordIndex].el
-            allPossibleAnswers = allWords.map { $0.el }
-        }
-
-        options.append(currentCorrectAnswer)
-
-        var shuffledAllWordsForOptions = allPossibleAnswers.shuffled()
-        var incorrectCount = 0
-        while options.count < 6 && incorrectCount < allPossibleAnswers.count * 2 {
-            if let randomOption = shuffledAllWordsForOptions.popLast() {
-                let possibleIncorrectAnswer = parseAcceptedAnswers(from: randomOption).first ?? randomOption
-                if possibleIncorrectAnswer.lowercased() != currentCorrectAnswer.lowercased() && !options.contains(possibleIncorrectAnswer) {
-                    options.append(possibleIncorrectAnswer)
-                }
-            } else {
-                break
+        
+        let currentWord = dictionaryService.activeWords[currentWordIndex]
+        let correctAnswer = parseAcceptedAnswers(from: quizLanguage == "ru" ? currentWord.ru : currentWord.el).first ?? (quizLanguage == "ru" ? currentWord.ru : currentWord.el)
+        
+        var options = Set([correctAnswer])
+        let allPossibleAnswers = dictionaryService.allWords.map { quizLanguage == "ru" ? $0.ru : $0.el }
+        
+        while options.count < 4 && options.count < allPossibleAnswers.count {
+            if let randomWord = allPossibleAnswers.randomElement(), let parsed = parseAcceptedAnswers(from: randomWord).first {
+                options.insert(parsed)
             }
-            incorrectCount += 1
         }
         
-        cardOptions = options.shuffled()
-        
-        while cardOptions.count < 6 {
-            cardOptions.append("-----")
-        }
+        cardOptions = Array(options).shuffled()
     }
     
-    func checkCardAnswer() {
-        withAnimation(nil) {
-            if selectedAnswer == nil {
-                isCorrect = false
-                showAnswer = true
-                print(NSLocalizedString("no_answer_selected_feedback", comment: "")) // Localized
-                return
-            }
-
-            let correctAnswers: [String]
-            if quizLanguage == "ru" {
-                correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].ru)
-            } else {
-                correctAnswers = parseAcceptedAnswers(from: activeWords[currentWordIndex].el)
-            }
-            
-            if correctAnswers.contains(selectedAnswer!.lowercased()) {
-                isCorrect = true
-                showAnswer = true
-                score += 1
-                UserDefaults.standard.set(score, forKey: "score")
-                isShowingFeedback = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                    isShowingFeedback = false
-                }
-            } else {
-                isCorrect = false
-                showAnswer = true
-            }
-        }
-    }
-
-    func nextWord() {
-        withAnimation(nil) {
-            userInput = ""
-            showAnswer = false
-            isCorrect = false
+    private func handleModeChange(_ newMode: QuizMode) {
+        resetForNewWord()
+        if newMode == .keyboard {
             isTextFieldFocused = true
-            selectedAnswer = nil
-            showCardTranslation = false
-
-            if !activeWords.isEmpty {
-                currentWordIndex = (currentWordIndex + 1) % activeWords.count
-                if quizMode == .quiz {
-                    generateCardOptions()
-                }
-                if autoPlaySound {
-                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
-                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                    speakWord(wordToSpeak, languageCode)
-                }
-            }
-        }
-    }
-
-    func previousWord() {
-        withAnimation(nil) {
-            userInput = ""
-            showAnswer = false
-            isCorrect = false
-            isTextFieldFocused = true
-            selectedAnswer = nil
-            showCardTranslation = false
-
-            if !activeWords.isEmpty {
-                currentWordIndex = (currentWordIndex - 1 + activeWords.count) % activeWords.count
-                if quizMode == .quiz {
-                    generateCardOptions()
-                }
-                if autoPlaySound {
-                    let wordToSpeak = quizLanguage == "ru" ? activeWords[currentWordIndex].el : activeWords[currentWordIndex].ru
-                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
-                    speakWord(wordToSpeak, languageCode)
-                }
-            }
         }
     }
     
-    func downloadAndSaveDictionariesBasedOnSource() async {
-        allDictionaries = []
-        selectedDictionaries = []
-        allWords = []
-        activeWords = []
-        currentWordIndex = 0
-
-        await clearDownloadedDictionaries()
-
-        let dictionariesListSourceURLString: String
-        
-        var determinedBaseURLForFiles: String = ""
-
-        let dictionariesListFileName = "dictionaries.txt"
-
-        await MainActor.run {
-            self.isDownloadingDictionaries = true
-            self.downloadStatusMessage = NSLocalizedString("downloading_dictionaries_list", comment: "")
-        }
-
-        if dictionarySource == .standard {
-            determinedBaseURLForFiles = "https://www.dropbox.com/scl/fi/z9avztiil4v150g0h58i8/"
-            dictionariesListSourceURLString = "\(determinedBaseURLForFiles)\(dictionariesListFileName)?rlkey=k5mrqfwgdgwz2wt8q1wu3ernj&st=peuf016l&raw=1"
-            print("Начинаем скачивание стандартных словарей с URL: \(dictionariesListSourceURLString)")
-        } else if dictionarySource == .customURL {
-            guard !customDictionaryURL.isEmpty else {
-                print("Некорректный источник словарей или пустой URL для скачивания.")
-                await MainActor.run {
-                    self.isDownloadingDictionaries = false
-                    self.downloadStatusMessage = NSLocalizedString("error_incorrect_download_url", comment: "")
-                }
-                return
-            }
-            dictionariesListSourceURLString = customDictionaryURL.hasSuffix("raw=1") ? customDictionaryURL : "\(customDictionaryURL)&raw=1"
-            
-            if let url = URL(string: customDictionaryURL),
-               let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
-               let host = components.host,
-               let scheme = components.scheme {
-                
-                let path = components.path.replacingOccurrences(of: dictionariesListFileName, with: "")
-                determinedBaseURLForFiles = "\(scheme)://\(host)\(path)"
-            } else {
-                print("Не удалось определить базовый URL для дополнительных файлов из пользовательского URL. Используем пустую строку.")
-                determinedBaseURLForFiles = ""
-            }
-            print("Начинаем скачивание пользовательских словарей с URL: \(dictionariesListSourceURLString)")
-        } else {
-            print("Неизвестный источник словарей.")
-            await MainActor.run {
-                self.isDownloadingDictionaries = false
-                self.downloadStatusMessage = NSLocalizedString("error_unknown_dictionary_source", comment: "")
-            }
-            return
-        }
-
-        guard let remoteDictionariesURL = URL(string: dictionariesListSourceURLString) else {
-            print("Некорректный URL для списка словарей: \(dictionariesListSourceURLString)")
-            await MainActor.run {
-                self.isDownloadingDictionaries = false
-                self.downloadStatusMessage = NSLocalizedString("error_invalid_dictionaries_list_url", comment: "")
-            }
-            return
-        }
-
-        var downloadedMetadata: [DictionaryInfo] = []
-        var mainData: Data?
-        
-        do {
-            let (data, response) = try await URLSession.shared.data(from: remoteDictionariesURL)
-            mainData = data
-            
-            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
-                print("Ошибка HTTP при загрузке списка словарей: Статус \(httpResponse.statusCode)")
-                if let responseString = String(data: data, encoding: .utf8) {
-                    print("Ответ сервера (HTML/Ошибка):\n\(responseString.prefix(500))...")
-                }
-                throw URLError(.badServerResponse)
-            }
-
-            guard let responseString = String(data: data, encoding: .utf8), responseString.trimmingCharacters(in: .whitespacesAndNewlines).hasPrefix("[") else {
-                print("Полученные данные не похожи на JSON-массив для списка словарей. Возможно, это HTML-страница ошибки или перенаправления.")
-                if let responseString = String(data: data, encoding: .utf8) {
-                    print("Содержимое (не JSON):\n\(responseString.prefix(500))...")
-                }
-                throw URLError(.cannotDecodeContentData)
-            }
-
-            let remoteDictsInfo = try JSONDecoder().decode([DictionaryInfo].self, from: data)
-
-            try FileManager.default.createDirectory(at: downloadedDictionariesDirectory, withIntermediateDirectories: true, attributes: nil)
-
-            for (index, var dictInfo) in remoteDictsInfo.enumerated() {
-                await MainActor.run {
-                    // ✨ ИЗМЕНЕНИЕ №3: Явно передаем язык для отображения статуса ✨
-                    let localizedDictName = dictInfo.localizedName(for: self.interfaceLanguage)
-                    self.downloadStatusMessage = String(format: NSLocalizedString("downloading_dictionary", comment: ""), localizedDictName, "\(index + 1)", "\(remoteDictsInfo.count)")
-                }
-                
-                let wordListSourceURLString = dictInfo.filePath
-
-                let finalWordListURLString = wordListSourceURLString.contains("dropbox.com") && !wordListSourceURLString.hasSuffix("raw=1") ? "\(wordListSourceURLString)&raw=1" : wordListSourceURLString
-                
-                let localizedName = dictInfo.localizedName(for: self.interfaceLanguage)
-                print("URL для загрузки словаря '\(localizedName)': \(finalWordListURLString)")
-
-                guard let remoteWordListURL = URL(string: finalWordListURLString) else {
-                    print("Некорректный URL для словаря: \(localizedName) - \(finalWordListURLString)")
-                    continue
-                }
-
-                var wordListData: Data?
-                do {
-                    let (dataFromWordList, wordListResponse) = try await URLSession.shared.data(from: remoteWordListURL)
-                    wordListData = dataFromWordList
-                    
-                    if let httpResponse = wordListResponse as? HTTPURLResponse, httpResponse.statusCode != 200 {
-                        print("Ошибка HTTP при загрузке словаря '\(localizedName)': Статус \(httpResponse.statusCode)")
-                        if let responseString = String(data: dataFromWordList, encoding: .utf8) {
-                            print("Ответ сервера (HTML/Ошибка):\n\(responseString.prefix(500))...")
-                        }
-                        throw URLError(.badServerResponse)
-                    }
-
-                    guard let wordListContentString = String(data: dataFromWordList, encoding: .utf8), wordListContentString.trimmingCharacters(in: .whitespacesAndNewlines).hasPrefix("[") else {
-                        print("Полученные данные для словаря '\(localizedName)' не похожи на JSON-массив.")
-                        if let responseString = String(data: dataFromWordList, encoding: .utf8) {
-                            print("Содержимое (не JSON) для '\(localizedName)':\n\(responseString.prefix(500))...")
-                        }
-                        throw URLError(.cannotDecodeContentData)
-                    }
-
-                    let localFileName = UUID().uuidString + ".txt"
-                    let localFileURL = downloadedDictionariesDirectory.appendingPathComponent(localFileName)
-                    
-                    try dataFromWordList.write(to: localFileURL)
-                    print("Словарь '\(localizedName)' успешно скачан и сохранен как: \(localFileURL.lastPathComponent)")
-
-                    dictInfo.filePath = localFileURL.lastPathComponent
-                    downloadedMetadata.append(dictInfo)
-
-                } catch {
-                    print("Ошибка скачивания или сохранения словаря '\(localizedName)': \(error.localizedDescription)")
-                    // ... (обработка ошибок без изменений) ...
-                }
-            }
-
-            let encodedMetadata = try JSONEncoder().encode(downloadedMetadata)
-            await MainActor.run {
-                self.downloadedDictionaryMetadataData = encodedMetadata
-                self.allDictionaries = downloadedMetadata
-                self.selectedDictionaries = []
-                print("Метаданные скачанных словарей сохранены.")
-                self.loadSelectedWords()
-                self.isDownloadingDictionaries = false
-                self.downloadStatusMessage = NSLocalizedString("all_dictionaries_updated", comment: "")
-            }
-
-        } catch {
-            print("Ошибка загрузки списка словарей или парсинга: \(error.localizedDescription)")
-            // ... (обработка ошибок без изменений) ...
-            await MainActor.run {
-                self.allDictionaries = []
-                self.downloadedDictionaryMetadataData = Data()
-                self.isDownloadingDictionaries = false
-                self.downloadStatusMessage = String(format: NSLocalizedString("error_downloading_dictionaries", comment: ""), error.localizedDescription)
-            }
-        }
+    // MARK: - UI Helpers
+    private func backgroundColor() -> Color {
+        if isShowingFeedback { return .green.opacity(0.6) }
+        if showAnswer { return isCorrect ? .green.opacity(0.6) : .red.opacity(0.6) }
+        if colorSchemePreference == "dark" { return Color(red: 0.15, green: 0.15, blue: 0.15) }
+        return .clear
     }
 
-    func loadDictionariesMetadataAndWords() {
-        Task {
-            allDictionaries = []
-            selectedDictionaries = []
-            allWords = []
-            activeWords = []
-            currentWordIndex = 0
-
-            guard !downloadedDictionaryMetadataData.isEmpty else {
-                print("Нет сохраненных метаданных для словарей.")
-                return
-            }
-            
-            do {
-                let decodedMetadata = try JSONDecoder().decode([DictionaryInfo].self, from: downloadedDictionaryMetadataData)
-                await MainActor.run {
-                    self.allDictionaries = decodedMetadata
-                    print("Загружены метаданные сохраненных словарей.")
-                    self.loadSelectedWords()
-                }
-            } catch {
-                print("Ошибка декодирования сохраненных метаданных словарей: \(error.localizedDescription)")
-            }
-        }
-    }
-
-    func clearDownloadedDictionaries() async {
-        let fileManager = FileManager.default
-        do {
-            if fileManager.fileExists(atPath: downloadedDictionariesDirectory.path) {
-                try fileManager.removeItem(at: downloadedDictionariesDirectory)
-                print("Папка с скачанными словарями очищена.")
-            }
-        } catch {
-            print("Ошибка при очистке папки скачанных словарей: \(error.localizedDescription)")
-        }
-        await MainActor.run {
-            self.downloadedDictionaryMetadataData = Data()
-            self.allDictionaries = []
-            self.selectedDictionaries = []
-        }
-    }
-
-    func loadSelectedWords() {
-        Task {
-            guard FileManager.default.fileExists(atPath: downloadedDictionariesDirectory.path) else {
-                print("Директория скачанных словарей не существует.")
-                await MainActor.run {
-                    self.allWords = []
-                    self.activeWords = []
-                }
-                return
-            }
-
-            var tempAllWords: [Word] = []
-            var tempActiveWords: [Word] = []
-
-            for dictInfo in allDictionaries {
-                let filePath = downloadedDictionariesDirectory.appendingPathComponent(dictInfo.filePath)
-                
-                if !FileManager.default.fileExists(atPath: filePath.path) {
-                    print("Ошибка: Локальный файл словаря не найден: \(filePath.path)")
-                    continue
-                }
-
-                do {
-                    let data = try Data(contentsOf: filePath)
-                    var decodedWords = try JSONDecoder().decode([Word].self, from: data)
-                    
-                    // ✨ ИЗМЕНЕНИЕ №4: Явно передаем язык для установки имени словаря у каждого слова ✨
-                    let localizedDictName = dictInfo.localizedName(for: self.interfaceLanguage)
-                    
-                    for i in 0..<decodedWords.count {
-                        decodedWords[i].dictionaryName = localizedDictName
-                    }
-
-                    tempAllWords.append(contentsOf: decodedWords)
-
-                    if selectedDictionaries.contains(dictInfo.filePath) {
-                        tempActiveWords.append(contentsOf: decodedWords)
-                    }
-                } catch {
-                     let localizedName = dictInfo.localizedName(for: self.interfaceLanguage)
-                     print("Ошибка загрузки или парсинга словаря \(localizedName): \(error.localizedDescription)")
-                }
-            }
-            
-            await MainActor.run {
-                self.allWords = tempAllWords
-                self.activeWords = tempActiveWords.shuffled()
-                if !self.activeWords.isEmpty {
-                    self.currentWordIndex = 0
-                }
-                print("Загружено \(self.allWords.count) всех слов и \(self.activeWords.count) активных слов.")
-            }
-        }
-    }
-
-    // ... (остальные функции backgroundColor, getThemeIconName и т.д. без изменений) ...
-
-    func backgroundColor() -> Color {
-        if isShowingFeedback {
-            return Color.green.opacity(0.6)
-        }
-        if showAnswer {
-            return isCorrect ? Color.green.opacity(0.6) : Color.red.opacity(0.6)
-        }
-        
-        if colorSchemePreference == "dark" {
-            return Color(red: 0.15, green: 0.15, blue: 0.15)
-        } else if colorSchemePreference == "light" {
-            return Color(.systemBackground)
-        } else {
-            return Color(.systemBackground)
-        }
-    }
-
-    func getThemeIconName() -> String {
+    private func getPreferredColorScheme() -> ColorScheme? {
         switch colorSchemePreference {
-        case "system":
-            return currentSystemColorScheme == .dark ? "dark" : "bright"
-        case "light":
-            return "bright"
-        case "dark":
-            return "dark"
-        default:
-            return "bright"
-        }
-    }
-    
-    func getPreferredColorScheme() -> ColorScheme? {
-        switch colorSchemePreference {
-        case "light":
-            return ColorScheme.light
-        case "dark":
-            return ColorScheme.dark
-        case "system":
-            return nil
-        default:
-            return nil
+        case "light": return .light
+        case "dark": return .dark
+        default: return nil
         }
     }
 
     private func getIconTintColor() -> Color {
-        let effectiveColorScheme: ColorScheme?
-        switch colorSchemePreference {
-        case "light":
-            effectiveColorScheme = .light
-        case "dark":
-            effectiveColorScheme = .dark
-        case "system":
-            effectiveColorScheme = currentSystemColorScheme
-        default:
-            effectiveColorScheme = currentSystemColorScheme
-        }
-
-        return effectiveColorScheme == .dark ? .white : .black
+        let effectiveScheme = getPreferredColorScheme() ?? currentSystemColorScheme
+        return effectiveScheme == .dark ? .white : .black
     }
-    
-    func parseAcceptedAnswers(from raw: String) -> [String] {
-        let withoutParentheses = raw.replacingOccurrences(of: "\\(.*?\\)", with: "", options: .regularExpression)
-        let parts = withoutParentheses
-            .split(separator: ",")
-            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
-        return parts
+
+    private func parseAcceptedAnswers(from raw: String) -> [String] {
+        raw.replacingOccurrences(of: "\\(.*?\\)", with: "", options: .regularExpression)
+           .split(separator: ",")
+           .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
     }
     
     func speakWord(_ text: String, _ language: String) {
-        if synthesizer.isSpeaking {
-            synthesizer.stopSpeaking(at: .immediate)
-        }
-
+        if synthesizer.isSpeaking { synthesizer.stopSpeaking(at: .immediate) }
         let utterance = AVSpeechUtterance(string: text)
-        
-        if let voice = AVSpeechSynthesisVoice(language: language) {
-            utterance.voice = voice
-        } else {
-            print("Голос для языка '\(language)' не найден.")
-            let availableGreekVoices = AVSpeechSynthesisVoice.speechVoices().filter { $0.language.hasPrefix("el") }
-            if let firstGreekVoice = availableGreekVoices.first {
-                utterance.voice = firstGreekVoice
-                print("Используется доступный греческий голос: \(firstGreekVoice.identifier)")
+        utterance.voice = AVSpeechSynthesisVoice(language: language)
+        utterance.rate = 0.5
+        synthesizer.speak(utterance)
+    }
+}
+
+// MARK: - Reusable Components
+struct HeaderButton: View {
+    let imageName: String
+    let action: () -> Void
+    
+    @Environment(\.colorScheme) private var colorScheme
+    
+    private var iconTintColor: Color {
+        colorScheme == .dark ? .white : .black
+    }
+
+    var body: some View {
+        Button(action: action) {
+            Image(imageName)
+                .resizable().scaledToFit().frame(width: 24, height: 24)
+                .padding(6).foregroundColor(iconTintColor)
+                .background(Color.gray.opacity(0.2)).cornerRadius(8)
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+}
+
+struct ActionButton: View {
+    let title: LocalizedStringKey
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .padding().frame(maxWidth: .infinity)
+                .background(Color.blue).foregroundColor(.white)
+                .cornerRadius(10)
+        }
+        .buttonStyle(PlainButtonStyle())
+        .padding(.horizontal)
+        .padding(.bottom, 20)
+    }
+}
+
+
+struct FeedbackText: View {
+    let text: String
+    let isVisible: Bool
+    
+    @Environment(\.colorScheme) private var colorScheme
+    private var textColor: Color { colorScheme == .dark ? .white : .black }
+
+    var body: some View {
+        Text(isVisible ? text : " ")
+            .foregroundColor(isVisible ? textColor : .clear)
+            .padding(.vertical, 9).padding(.horizontal)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .frame(height: 55)
+    }
+}
+
+
+struct WordDisplay: View {
+    let word: Word
+    let quizLanguage: String
+    let showTranscription: Bool
+    let speakWord: (String, String) -> Void
+
+    var body: some View {
+        VStack {
+            HStack(spacing: 10) {
+                Text(quizLanguage == "ru" ? word.el : word.ru)
+                    .font(.system(size: 40, weight: .bold))
+                
+                Button(action: {
+                    let wordToSpeak = quizLanguage == "ru" ? word.el : word.ru
+                    let languageCode = quizLanguage == "ru" ? "el-GR" : "ru-RU"
+                    speakWord(wordToSpeak, languageCode)
+                }) {
+                    Image(systemName: "speaker.wave.3.fill")
+                        .font(.title).foregroundColor(.blue)
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(.bottom, 8)
+
+            if quizLanguage == "ru" {
+                Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
+                    .font(.system(size: 28)).foregroundColor(.gray)
+                    .frame(maxWidth: .infinity, alignment: .center)
             } else {
-                utterance.voice = AVSpeechSynthesisVoice(language: Locale.current.identifier)
+                 Text(" ").font(.system(size: 28))
             }
         }
-        
-        utterance.rate = 0.5
-        utterance.pitchMultiplier = 1.0
+        .padding(.bottom, 16)
+    }
+}
 
-        synthesizer.speak(utterance)
+struct NavButton: View {
+    let systemName: String
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: systemName)
+                .font(.largeTitle).foregroundColor(.blue)
+                .background(Color.white.opacity(0.1)).cornerRadius(8)
+        }
     }
 }
 

@@ -302,6 +302,9 @@
         }
       }
     },
+    "clearing_old_dictionaries" : {
+
+    },
     "correct_translation" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -326,6 +329,7 @@
       }
     },
     "correct_translation %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "el" : {
           "stringUnit" : {
