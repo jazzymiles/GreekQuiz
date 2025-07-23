@@ -1,0 +1,210 @@
+{
+  "fill" : {
+    "automatic-gradient" : "extended-srgb:0.00000,0.47843,1.00000,1.00000"
+  },
+  "groups" : [
+    {
+      "blend-mode" : "normal",
+      "blur-material" : 0.03,
+      "hidden" : false,
+      "layers" : [
+        {
+          "blend-mode-specializations" : [
+            {
+              "value" : "screen"
+            },
+            {
+              "appearance" : "dark",
+              "value" : "screen"
+            }
+          ],
+          "fill" : {
+            "solid" : "display-p3:0.81358,0.82713,0.96611,1.00000"
+          },
+          "image-name" : "alpha-white.svg",
+          "name" : "alpha-white",
+          "position-specializations" : [
+            {
+              "value" : {
+                "scale" : 0.63,
+                "translation-in-points" : [
+                  -65.828125,
+                  -15.171875
+                ]
+              }
+            },
+            {
+              "idiom" : "square",
+              "value" : {
+                "scale" : 0.44,
+                "translation-in-points" : [
+                  -70.234375,
+                  -69.09375
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "lighting" : "individual",
+      "position" : {
+        "scale" : 1,
+        "translation-in-points" : [
+          -96.296875,
+          -100.625
+        ]
+      },
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 1
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.94
+      }
+    },
+    {
+      "blend-mode" : "multiply",
+      "blur-material" : 0.11,
+      "hidden" : false,
+      "layers" : [
+        {
+          "blend-mode" : "normal",
+          "image-name" : "q.svg",
+          "name" : "q",
+          "position-specializations" : [
+            {
+              "idiom" : "square",
+              "value" : {
+                "scale" : 0.68,
+                "translation-in-points" : [
+                  -111.8125,
+                  -53.859375
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "position" : {
+        "scale" : 1,
+        "translation-in-points" : [
+          -79.6875,
+          -121.9609375
+        ]
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "blur-material" : null,
+      "hidden" : false,
+      "layers" : [
+        {
+          "blend-mode-specializations" : [
+            {
+              "value" : "plus-darker"
+            },
+            {
+              "appearance" : "dark",
+              "value" : "screen"
+            }
+          ],
+          "fill" : {
+            "solid" : "display-p3:0.74559,0.82528,0.96611,1.00000"
+          },
+          "image-name" : "omega-white.svg",
+          "name" : "omega-white",
+          "position-specializations" : [
+            {
+              "value" : {
+                "scale" : 0.48,
+                "translation-in-points" : [
+                  157.4921875,
+                  120.109375
+                ]
+              }
+            },
+            {
+              "idiom" : "square",
+              "value" : {
+                "scale" : 0.36,
+                "translation-in-points" : [
+                  118.203125,
+                  114.6484375
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "lighting" : "combined",
+      "position" : {
+        "scale" : 1,
+        "translation-in-points" : [
+          70.3125,
+          62.7890625
+        ]
+      },
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 1
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.9
+      }
+    },
+    {
+      "blend-mode" : "multiply",
+      "blur-material" : 0.18,
+      "hidden" : false,
+      "layers" : [
+        {
+          "image-name" : "q.svg",
+          "name" : "q",
+          "position-specializations" : [
+            {
+              "idiom" : "square",
+              "value" : {
+                "scale" : 0.72,
+                "translation-in-points" : [
+                  -38.3515625,
+                  42.7265625
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "position" : {
+        "scale" : 1,
+        "translation-in-points" : [
+          304.6484375,
+          202.3984375
+        ]
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

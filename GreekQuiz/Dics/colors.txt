@@ -1,92 +1,131 @@
 [
   {
     "ru": "белый",
+    "ru_transcription_gr": "μπέλι",
+    "en": "white",
     "el": "άσπρος",
     "transcription": "а́спрос",
+    "el_transcription_en": "áspro",
     "category": "цвет",
     "gender": "м"
   },
   {
     "ru": "чёрный",
+    "ru_transcription_gr": "τσόρνι",
+    "en": "black",
     "el": "μαύρος",
     "transcription": "ма́врос",
+    "el_transcription_en": "mávros",
     "category": "цвет",
     "gender": "м"
   },
   {
     "ru": "красный",
+    "ru_transcription_gr": "κράσνι",
+    "en": "red",
     "el": "κόκκινος",
     "transcription": "ко́кинос",
+    "el_transcription_en": "kókinos",
     "category": "цвет",
     "gender": "м"
   },
   {
     "ru": "синий",
+    "ru_transcription_gr": "σίνι",
+    "en": "blue",
     "el": "μπλε",
     "transcription": "бле",
+    "el_transcription_en": "ble",
     "category": "цвет",
     "gender": "-"
   },
   {
     "ru": "зелёный",
+    "ru_transcription_gr": "ζελόνι",
+    "en": "green",
     "el": "πράσινος",
-    "transcription": "пра́синос",
+    "transcription": "пра́σινος",
+    "el_transcription_en": "prásinos",
     "category": "цвет",
     "gender": "м"
   },
   {
     "ru": "жёлтый",
+    "ru_transcription_gr": "ζιόλτι",
+    "en": "yellow",
     "el": "κίτρινος",
-    "transcription": "ки́тринос",
+    "transcription": "ки́τρινος",
+    "el_transcription_en": "kítrinos",
     "category": "цвет",
     "gender": "м"
   },
   {
     "ru": "оранжевый",
+    "ru_transcription_gr": "αράνζεβι",
+    "en": "orange",
     "el": "πορτοκαλί",
     "transcription": "портокали́",
+    "el_transcription_en": "portokalí",
     "category": "цвет",
     "gender": "-"
   },
   {
     "ru": "фиолетовый",
+    "ru_transcription_gr": "φιολέτοβι",
+    "en": "purple",
     "el": "μωβ",
     "transcription": "мов",
+    "el_transcription_en": "mov",
     "category": "цвет",
     "gender": "-"
   },
   {
     "ru": "розовый",
+    "ru_transcription_gr": "ρόζοβι",
+    "en": "pink",
     "el": "ροζ",
     "transcription": "роз",
+    "el_transcription_en": "roz",
     "category": "цвет",
     "gender": "-"
   },
   {
     "ru": "коричневый",
+    "ru_transcription_gr": "καρίτσνεβι",
+    "en": "brown",
     "el": "καφέ",
-    "transcription": "кафе́",
+    "transcription": "καφέ",
+    "el_transcription_en": "kafé",
     "category": "цвет",
     "gender": "-"
   },
   {
     "ru": "серый",
+    "ru_transcription_gr": "σέρι",
+    "en": "gray",
     "el": "γκρι",
     "transcription": "гри",
+    "el_transcription_en": "gri",
     "category": "цвет",
     "gender": "-"
   },
   {
     "ru": "золотой",
+    "ru_transcription_gr": "ζαλατόι",
+    "en": "golden",
     "el": "χρυσός",
     "transcription": "хрисо́с",
+    "el_transcription_en": "chrysós",
     "category": "цвет",
     "gender": "м"
   },
   {
     "ru": "серебряный",
+    "ru_transcription_gr": "σερεμπριάνι",
+    "en": "silver",
     "el": "ασημένιος",
     "transcription": "асиме́ньос",
+    "el_transcription_en": "asiménios",
     "category": "цвет",
     "gender": "м"
   }

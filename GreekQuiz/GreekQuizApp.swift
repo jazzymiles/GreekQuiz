@@ -3,11 +3,25 @@ import AVFoundation
 
 @main
 struct GreekQuizApp: App {
+    @AppStorage("interfaceLanguage") var interfaceLanguage: String = "en"
+
     init() {
+        let currentLanguageSetting = UserDefaults.standard.string(forKey: "interfaceLanguage")
+        if currentLanguageSetting == "system" || currentLanguageSetting == nil {
+            // ✨ ИЗМЕНЕНИЕ: Исправлена ошибка. Используем `languageCode`, а не `languageCode.identifier`.
+            // Также используем `Locale.preferredLanguages.first` для большей надежности.
+            let systemLanguage = Locale.preferredLanguages.first?.components(separatedBy: "-").first
+            if systemLanguage == "ru" {
+                interfaceLanguage = "ru"
+            } else if systemLanguage == "el" {
+                interfaceLanguage = "el"
+            } else {
+                interfaceLanguage = "en" // По умолчанию английский
+            }
+        }
+        
+        // Настройка аудиосессии
         do {
-            // Убедимся, что опция .duckOthers не включена, если это не требуется
-            // Если .duckOthers включено, то другие аудиоисточники (например, музыка) будут приглушаться
-            // Но мы хотим просто воспроизвести звук, не влияя на другие.
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
             try AVAudioSession.sharedInstance().setActive(true)
             print("AVAudioSession настроена на .playback")
@@ -19,6 +33,7 @@ struct GreekQuizApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.locale, Locale(identifier: interfaceLanguage))
         }
     }
 }

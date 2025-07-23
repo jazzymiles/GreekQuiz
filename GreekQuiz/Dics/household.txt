@@ -1,0 +1,407 @@
+[
+  {
+    "ru": "коробка, банка",
+    "en": "box, can",
+    "el": "το κουτί",
+    "transcription": "кути́",
+    "el_transcription_en": "koutí",
+    "category": "предметы быта",
+    "gender": "средний"
+  },
+  {
+    "ru": "простыня",
+    "en": "bedsheet",
+    "el": "το σεντόνι",
+    "transcription": "сэндо́ни",
+    "el_transcription_en": "sentóni",
+    "category": "предметы быта",
+    "gender": "средний"
+  },
+  {
+    "ru": "подарок",
+    "en": "gift, present",
+    "el": "το δώρο",
+    "transcription": "до́ро",
+    "el_transcription_en": "dóro",
+    "category": "предметы быта",
+    "gender": "средний"
+  },
+  {
+    "ru": "фен",
+    "en": "hairdryer",
+    "el": "το πιστολάκι",
+    "transcription": "пистола́ки",
+    "el_transcription_en": "pistoláki",
+    "category": "предметы быта",
+    "gender": "средний"
+  },
+  {
+    "ru": "экран, монитор",
+    "en": "screen, monitor",
+    "el": "η οθόνη",
+    "transcription": "ото́ни",
+    "el_transcription_en": "othóni",
+    "category": "электроника",
+    "gender": "женский"
+  },
+  {
+    "ru": "тетрадь",
+    "en": "notebook",
+    "el": "το τετράδιο",
+    "transcription": "тэтра́дьо",
+    "el_transcription_en": "tetrádio",
+    "category": "канцелярия",
+    "gender": "средний"
+  },
+  {
+    "ru": "пистолет",
+    "en": "gun, pistol",
+    "el": "το πιστόλι",
+    "transcription": "писто́ли",
+    "el_transcription_en": "pistóli",
+    "category": "общее",
+    "gender": "средний"
+  },
+  {
+    "ru": "батарея",
+    "en": "battery",
+    "el": "η μπαταρία",
+    "transcription": "мбатари́а",
+    "el_transcription_en": "bataría",
+    "category": "электроника",
+    "gender": "женский"
+  },
+  {
+    "ru": "игрушка, игра",
+    "en": "toy, game",
+    "el": "το παιχνίδι",
+    "transcription": "пэхни́ди",
+    "el_transcription_en": "pechnídi",
+    "category": "общее",
+    "gender": "средний"
+  },
+  {
+    "ru": "веревка",
+    "en": "rope, string",
+    "el": "το σχοινί",
+    "transcription": "схини́",
+    "el_transcription_en": "schoiní",
+    "category": "общее",
+    "gender": "средний"
+  },
+  {
+    "ru": "часы",
+    "en": "watch, clock",
+    "el": "το ρολόι",
+    "transcription": "роло́и",
+    "el_transcription_en": "rolói",
+    "category": "предметы быта",
+    "gender": "средний"
+  },
+  {
+    "ru": "компьютер",
+    "en": "computer",
+    "el": "ο υπολογιστής",
+    "transcription": "ипологисти́с",
+    "el_transcription_en": "ypologistís",
+    "category": "электроника",
+    "gender": "мужской"
+  },
+  {
+    "ru": "мобильный телефон",
+    "en": "cellphone",
+    "el": "το κινητό",
+    "transcription": "кинито́",
+    "el_transcription_en": "kinitó",
+    "category": "электроника",
+    "gender": "средний"
+  },
+  {
+    "ru": "корзина",
+    "en": "basket",
+    "el": "το καλάθι",
+    "transcription": "кала́ти",
+    "el_transcription_en": "kaláthi",
+    "category": "предметы быта",
+    "gender": "средний"
+  },
+  {
+    "ru": "одеяло",
+    "en": "blanket",
+    "el": "η κουβέρτα",
+    "transcription": "кувэ́рта",
+    "el_transcription_en": "kouvérta",
+    "category": "предметы быта",
+    "gender": "женский"
+  },
+  {
+    "ru": "миска",
+    "en": "bowl",
+    "el": "το μπολ",
+    "transcription": "бол",
+    "el_transcription_en": "bol",
+    "category": "посуда",
+    "gender": "средний"
+  },
+  {
+    "ru": "телевизор",
+    "en": "television",
+    "el": "η τηλεόραση",
+    "transcription": "тилэо́раси",
+    "el_transcription_en": "tileórasi",
+    "category": "электроника",
+    "gender": "женский"
+  },
+  {
+    "ru": "машина, механизм",
+    "en": "machine, engine",
+    "el": "η μηχανή",
+    "transcription": "михани́",
+    "el_transcription_en": "michaní",
+    "category": "общее",
+    "gender": "женский"
+  },
+  {
+    "ru": "стул",
+    "en": "chair",
+    "el": "η καρέκλα",
+    "transcription": "карэ́кла",
+    "el_transcription_en": "karékla",
+    "category": "мебель",
+    "gender": "женский"
+  },
+  {
+    "ru": "журнал",
+    "en": "magazine",
+    "el": "το περιοδικό",
+    "transcription": "пэрьодико́",
+    "el_transcription_en": "periodikó",
+    "category": "чтение",
+    "gender": "средний"
+  },
+  {
+    "ru": "ложка",
+    "en": "spoon",
+    "el": "το κουτάλι",
+    "transcription": "кута́ли",
+    "el_transcription_en": "koutáli",
+    "category": "посуда",
+    "gender": "средний"
+  },
+  {
+    "ru": "бутылка",
+    "en": "bottle",
+    "el": "το μπουκάλι",
+    "transcription": "бука́ли",
+    "el_transcription_en": "boukáli",
+    "category": "посуда",
+    "gender": "средний"
+  },
+  {
+    "ru": "радио",
+    "en": "radio",
+    "el": "το ραδιόφωνο",
+    "transcription": "радьо́фоно",
+    "el_transcription_en": "radiofono",
+    "category": "электроника",
+    "gender": "средний"
+  },
+  {
+    "ru": "карандаш",
+    "en": "pencil",
+    "el": "το μολύβι",
+    "transcription": "моли́ви",
+    "el_transcription_en": "molývi",
+    "category": "канцелярия",
+    "gender": "средний"
+  },
+  {
+    "ru": "ручка",
+    "en": "pen",
+    "el": "ο στυλός",
+    "transcription": "стило́с",
+    "el_transcription_en": "stylós",
+    "category": "канцелярия",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ключ",
+    "en": "key",
+    "el": "το κλειδί",
+    "transcription": "клиди́",
+    "el_transcription_en": "kleidí",
+    "category": "предметы быта",
+    "gender": "средний"
+  },
+  {
+    "ru": "зубная щетка",
+    "en": "toothbrush",
+    "el": "η οδοντόβουρτσα",
+    "transcription": "одонто́вурца",
+    "el_transcription_en": "odontóvourtsa",
+    "category": "гигиена",
+    "gender": "женский"
+  },
+  {
+    "ru": "бритва",
+    "en": "razor",
+    "el": "το ξυράφι",
+    "transcription": "ксира́фи",
+    "el_transcription_en": "xiráfi",
+    "category": "гигиена",
+    "gender": "средний"
+  },
+  {
+    "ru": "мыло",
+    "en": "soap",
+    "el": "το σαπούνι",
+    "transcription": "сапу́ни",
+    "el_transcription_en": "sapoúni",
+    "category": "гигиена",
+    "gender": "средний"
+  },
+  {
+    "ru": "зубная паста",
+    "en": "toothpaste",
+    "el": "η οδοντόκρεμα",
+    "transcription": "одонто́крэма",
+    "el_transcription_en": "odontókrema",
+    "category": "гигиена",
+    "gender": "женский"
+  },
+  {
+    "ru": "соломинка",
+    "en": "straw",
+    "el": "το καλαμάκι",
+    "transcription": "калама́ки",
+    "el_transcription_en": "kalamáki",
+    "category": "посуда",
+    "gender": "средний"
+  },
+  {
+    "ru": "стол",
+    "en": "table",
+    "el": "το τραπέζι",
+    "transcription": "трапэ́зи",
+    "el_transcription_en": "trapézi",
+    "category": "мебель",
+    "gender": "средний"
+  },
+  {
+    "ru": "кровать",
+    "en": "bed",
+    "el": "το κρεβάτι",
+    "transcription": "крэва́ти",
+    "el_transcription_en": "kreváti",
+    "category": "мебель",
+    "gender": "средний"
+  },
+  {
+    "ru": "лампа",
+    "en": "lamp",
+    "el": "η λάμπα",
+    "transcription": "ла́мба",
+    "el_transcription_en": "lába",
+    "category": "предметы быта",
+    "gender": "женский"
+  },
+  {
+    "ru": "телефон",
+    "en": "telephone",
+    "el": "το τηλέφωνο",
+    "transcription": "тилэ́фоно",
+    "el_transcription_en": "tiléfono",
+    "category": "электроника",
+    "gender": "средний"
+  },
+  {
+    "ru": "дверь",
+    "en": "door",
+    "el": "η πόρτα",
+    "transcription": "по́рта",
+    "el_transcription_en": "pórta",
+    "category": "части дома",
+    "gender": "женский"
+  },
+  {
+    "ru": "окно",
+    "en": "window",
+    "el": "το παράθυρο",
+    "transcription": "пара́тиро",
+    "el_transcription_en": "paráthyro",
+    "category": "части дома",
+    "gender": "средний"
+  },
+  {
+    "ru": "книга",
+    "en": "book",
+    "el": "το βιβλίο",
+    "transcription": "вивли́о",
+    "el_transcription_en": "vivlío",
+    "category": "чтение",
+    "gender": "средний"
+  },
+  {
+    "ru": "вода",
+    "en": "water",
+    "el": "το νερό",
+    "transcription": "нэро́",
+    "el_transcription_en": "neró",
+    "category": "напитки",
+    "gender": "средний"
+  },
+  {
+    "ru": "хлеб",
+    "en": "bread",
+    "el": "το ψωμί",
+    "transcription": "псоми́",
+    "el_transcription_en": "psomí",
+    "category": "еда",
+    "gender": "средний"
+  },
+  {
+    "ru": "молоко",
+    "en": "milk",
+    "el": "το γάλα",
+    "transcription": "га́ла",
+    "el_transcription_en": "gála",
+    "category": "напитки",
+    "gender": "средний"
+  },
+  {
+    "ru": "яблоко",
+    "en": "apple",
+    "el": "το μήλο",
+    "transcription": "ми́ло",
+    "el_transcription_en": "mílo",
+    "category": "фрукты",
+    "gender": "средний"
+  },
+  {
+    "ru": "машина",
+    "en": "car",
+    "el": "το αυτοκίνητο",
+    "transcription": "афтоки́нито",
+    "el_transcription_en": "aftokínito",
+    "category": "транспорт",
+    "gender": "средний"
+  },
+  {
+    "ru": "деньги",
+    "en": "money",
+    "el": "τα χρήματα",
+    "transcription": "хри́мата",
+    "el_transcription_en": "chrímata",
+    "category": "финансы",
+    "gender": "средний (мн.ч.)"
+  },
+  {
+    "ru": "дом",
+    "en": "house",
+    "el": "το σπίτι",
+    "transcription": "спи́ти",
+    "el_transcription_en": "spíti",
+    "category": "здания",
+    "gender": "средний"
+  }
+]

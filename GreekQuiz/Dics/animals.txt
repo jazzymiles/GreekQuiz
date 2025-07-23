@@ -1,359 +1,560 @@
 [
   {
     "ru": "животное",
+    "en": "animal",
     "el": "το ζώο",
     "transcription": "зо́о",
+    "el_transcription_en": "zóo",
     "category": "общее",
     "gender": "ср"
   },
   {
     "ru": "птица",
+    "en": "bird",
     "el": "το πουλί",
     "transcription": "пули́",
+    "el_transcription_en": "poulí",
     "category": "общее",
     "gender": "ср"
   },
   {
     "ru": "собака",
+    "en": "dog",
     "el": "ο σκύλος",
     "transcription": "ски́лос",
+    "el_transcription_en": "skílos",
     "category": "млекопитающие",
     "gender": "м"
   },
   {
     "ru": "кошка",
+    "en": "cat",
     "el": "η γάτα",
     "transcription": "га́та",
+    "el_transcription_en": "gáta",
     "category": "млекопитающие",
     "gender": "ж"
   },
   {
     "ru": "лошадь",
+    "en": "horse",
     "el": "το άλογο",
     "transcription": "а́лого",
+    "el_transcription_en": "álogo",
     "category": "млекопитающие",
     "gender": "ср"
   },
   {
     "ru": "корова",
+    "en": "cow",
     "el": "η αγελάδα",
     "transcription": "агэла́да",
+    "el_transcription_en": "ageláda",
     "category": "млекопитающие",
     "gender": "ж"
   },
   {
     "ru": "свинья",
+    "en": "pig",
     "el": "το γουρούνι",
     "transcription": "гуру́ни",
+    "el_transcription_en": "gouroúni",
     "category": "млекопитающие",
     "gender": "ср"
   },
   {
     "ru": "овца",
+    "en": "sheep",
     "el": "το πρόβατο",
     "transcription": "про́вато",
+    "el_transcription_en": "próvato",
     "category": "млекопитающие",
     "gender": "ср"
   },
   {
     "ru": "коза",
+    "en": "goat",
     "el": "η κατσίκα",
     "transcription": "катси́ка",
+    "el_transcription_en": "katsíka",
     "category": "млекопитающие",
     "gender": "ж"
   },
   {
     "ru": "курица",
+    "en": "chicken (hen)",
     "el": "η κότα",
     "transcription": "ко́та",
+    "el_transcription_en": "kóta",
     "category": "птицы",
     "gender": "ж"
   },
   {
     "ru": "петух",
+    "en": "rooster",
     "el": "ο κόκορας",
     "transcription": "ко́корас",
+    "el_transcription_en": "kókoras",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "утка",
+    "en": "duck",
     "el": "η πάπια",
     "transcription": "па́пья",
+    "el_transcription_en": "pápia",
     "category": "птицы",
     "gender": "ж"
   },
   {
     "ru": "гусь",
+    "en": "goose",
     "el": "η χήνα",
     "transcription": "хи́на",
+    "el_transcription_en": "chína",
     "category": "птицы",
     "gender": "ж"
   },
   {
     "ru": "индейка",
+    "en": "turkey",
     "el": "η γαλοπούλα",
     "transcription": "галопу́ла",
+    "el_transcription_en": "galopoúla",
     "category": "птицы",
     "gender": "ж"
   },
   {
     "ru": "голубь",
+    "en": "pigeon, dove",
     "el": "το περιστέρι",
     "transcription": "пэристэ́ри",
+    "el_transcription_en": "peristéri",
     "category": "птицы",
     "gender": "ср"
   },
   {
     "ru": "воробей",
+    "en": "sparrow",
     "el": "το σπουργίτι",
     "transcription": "спурги́ти",
+    "el_transcription_en": "spourgíti",
     "category": "птицы",
     "gender": "ср"
   },
   {
     "ru": "орёл",
+    "en": "eagle",
     "el": "ο αετός",
     "transcription": "аэто́с",
+    "el_transcription_en": "aetós",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "сова",
+    "en": "owl",
     "el": "η κουκουβάγια",
     "transcription": "кукува́гья",
+    "el_transcription_en": "koukouvághia",
     "category": "птицы",
     "gender": "ж"
   },
   {
     "ru": "дельфин",
+    "en": "dolphin",
     "el": "το δελφίνι",
     "transcription": "дэлфи́ни",
+    "el_transcription_en": "delfíni",
     "category": "морские животные",
     "gender": "ср"
   },
   {
     "ru": "рыба",
+    "en": "fish",
     "el": "το ψάρι",
     "transcription": "пса́ри",
+    "el_transcription_en": "psári",
     "category": "рыбы",
     "gender": "ср"
   },
   {
     "ru": "медведь",
+    "en": "bear",
     "el": "η αρκούδα",
     "transcription": "арку́да",
+    "el_transcription_en": "arkoúda",
     "category": "млекопитающие",
     "gender": "ж"
   },
   {
     "ru": "волк",
+    "en": "wolf",
     "el": "ο λύκος",
     "transcription": "ли́кос",
+    "el_transcription_en": "líkos",
     "category": "млекопитающие",
     "gender": "м"
   },
   {
     "ru": "лиса",
+    "en": "fox",
     "el": "η αλεπού",
     "transcription": "алэпу́",
+    "el_transcription_en": "alepoú",
     "category": "млекопитающие",
     "gender": "ж"
   },
   {
     "ru": "заяц",
+    "en": "hare",
     "el": "ο λαγός",
     "transcription": "лаго́с",
+    "el_transcription_en": "lagós",
     "category": "млекопитающие",
     "gender": "м"
   },
   {
     "ru": "кролик",
+    "en": "rabbit",
     "el": "το κουνέλι",
     "transcription": "кунэ́ли",
+    "el_transcription_en": "kounéli",
     "category": "млекопитающие",
     "gender": "ср"
   },
   {
     "ru": "мышь",
+    "en": "mouse",
     "el": "το ποντίκι",
     "transcription": "понди́ки",
+    "el_transcription_en": "pontíki",
     "category": "млекопитающие",
     "gender": "ср"
   },
   {
     "ru": "змея",
+    "en": "snake",
     "el": "το φίδι",
     "transcription": "фи́ди",
+    "el_transcription_en": "fídi",
     "category": "рептилии",
     "gender": "ср"
   },
   {
     "ru": "черепаха",
+    "en": "turtle, tortoise",
     "el": "η χελώνα",
     "transcription": "хело́на",
+    "el_transcription_en": "chelóna",
     "category": "рептилии",
     "gender": "ж"
   },
   {
     "ru": "лягушка",
+    "en": "frog",
     "el": "ο βάτραχος",
     "transcription": "ва́трахос",
+    "el_transcription_en": "vátrachos",
     "category": "земноводные",
     "gender": "м"
   },
   {
     "ru": "пчела",
+    "en": "bee",
     "el": "η μέλισσα",
     "transcription": "мэ́лиса",
+    "el_transcription_en": "mélissa",
     "category": "насекомые",
     "gender": "ж"
   },
   {
     "ru": "муха",
+    "en": "fly",
     "el": "η μύγα",
     "transcription": "ми́га",
+    "el_transcription_en": "mýga",
     "category": "насекомые",
     "gender": "ж"
   },
   {
     "ru": "комар",
+    "en": "mosquito",
     "el": "το κουνούπι",
     "transcription": "куну́пи",
+    "el_transcription_en": "kounoúpi",
     "category": "насекомые",
     "gender": "ср"
   },
   {
     "ru": "бабочка",
+    "en": "butterfly",
     "el": "η πεταλούδα",
     "transcription": "пэталу́да",
+    "el_transcription_en": "petaloúda",
     "category": "насекомые",
     "gender": "ж"
   },
   {
     "ru": "муравей",
+    "en": "ant",
     "el": "το μυρμήγκι",
     "transcription": "мирми́ги",
+    "el_transcription_en": "myrmígki",
     "category": "насекомые",
     "gender": "ср"
   },
   {
     "ru": "паук",
+    "en": "spider",
     "el": "η αράχνη",
     "transcription": "ара́хни",
+    "el_transcription_en": "aráchni",
     "category": "насекомые",
     "gender": "ж"
   },
   {
     "ru": "осьминог",
+    "en": "octopus",
     "el": "το χταπόδι",
     "transcription": "хтапо́ди",
+    "el_transcription_en": "chtapódi",
     "category": "морские животные",
     "gender": "ср"
   },
   {
     "ru": "кальмар",
+    "en": "squid, calamari",
     "el": "το καλαμάρι",
     "transcription": "калама́ри",
+    "el_transcription_en": "kalamári",
     "category": "морские животные",
     "gender": "ср"
   },
   {
     "ru": "краб",
+    "en": "crab",
     "el": "ο κάβουρας",
     "transcription": "ка́вурас",
+    "el_transcription_en": "kávouras",
     "category": "морские животные",
     "gender": "м"
   },
   {
     "ru": "дельфин",
+    "en": "dolphin",
     "el": "το δελφίνι",
     "transcription": "дэлфи́ни",
+    "el_transcription_en": "delfíni",
     "category": "морские животные",
     "gender": "ср"
   },
   {
     "ru": "акула",
+    "en": "shark",
     "el": "ο καρχαρίας",
     "transcription": "кархари́ас",
+    "el_transcription_en": "karcharía",
     "category": "рыбы",
     "gender": "м"
   },
   {
     "ru": "кит",
+    "en": "whale",
     "el": "η φάλαινα",
     "transcription": "фа́лэна",
+    "el_transcription_en": "fálaina",
     "category": "морские животные",
     "gender": "ж"
   },
   {
     "ru": "чайка",
+    "en": "seagull",
     "el": "ο γλάρος",
     "transcription": "гла́рос",
+    "el_transcription_en": "gláros",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "пеликан",
+    "en": "pelican",
     "el": "ο πελεκάνος",
     "transcription": "пэлэка́нос",
+    "el_transcription_en": "pelekános",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "цапля",
+    "en": "heron",
     "el": "ο ερωδιός",
     "transcription": "эродио́с",
+    "el_transcription_en": "erodiós",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "аист",
+    "en": "stork",
     "el": "ο πελαργός",
-    "transcription": "пэларга́с",
+    "transcription": "пэлэрга́с",
+    "el_transcription_en": "pelargós",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "лебедь",
+    "en": "swan",
     "el": "ο κύκνος",
     "transcription": "ки́кнос",
+    "el_transcription_en": "kýknos",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "попугай",
+    "en": "parrot",
     "el": "ο παπαγάλος",
     "transcription": "папага́лос",
+    "el_transcription_en": "papagálos",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "канарейка",
+    "en": "canary",
     "el": "το καναρίνι",
     "transcription": "канари́ни",
+    "el_transcription_en": "kanaríni",
     "category": "птицы",
     "gender": "ср"
   },
   {
     "ru": "сова (филин)",
+    "en": "eagle owl",
     "el": "ο μπούφος",
     "transcription": "бу́фос",
+    "el_transcription_en": "boúfos",
     "category": "птицы",
     "gender": "м"
   },
   {
     "ru": "ласточка",
+    "en": "swallow",
     "el": "το χελιδόνι",
     "transcription": "хелидо́ни",
+    "el_transcription_en": "chelidóni",
     "category": "птицы",
     "gender": "ср"
   },
   {
     "ru": "сокол",
+    "en": "falcon, hawk",
     "el": "το γεράκι",
     "transcription": "гэра́ки",
+    "el_transcription_en": "geráki",
     "category": "птицы",
+    "gender": "ср"
+  },
+  {
+    "ru": "мех",
+    "en": "fur",
+    "el": "η γούνα",
+    "transcription": "гу́на",
+    "el_transcription_en": "goúna",
+    "category": "общее",
+    "gender": "ж"
+  },
+  {
+    "ru": "млекопитающее",
+    "en": "mammal",
+    "el": "το θηλαστικό",
+    "transcription": "филастико́",
+    "el_transcription_en": "thilastikó",
+    "category": "общее",
+    "gender": "ср"
+  },
+  {
+    "ru": "зебра",
+    "en": "zebra",
+    "el": "η ζέβρα",
+    "transcription": "зе́вра",
+    "el_transcription_en": "zévra",
+    "category": "млекопитающие",
+    "gender": "ж"
+  },
+  {
+    "ru": "тигр",
+    "en": "tiger",
+    "el": "η τίγρη",
+    "transcription": "ти́гри",
+    "el_transcription_en": "tígri",
+    "category": "млекопитающие",
+    "gender": "ж"
+  },
+  {
+    "ru": "рептилия",
+    "en": "reptile",
+    "el": "το ερπετό",
+    "transcription": "эрпэто́",
+    "el_transcription_en": "erpetó",
+    "category": "общее",
+    "gender": "ср"
+  },
+  {
+    "ru": "хомяк",
+    "en": "hamster",
+    "el": "το χάμστεр",
+    "transcription": "ха́мстэр",
+    "el_transcription_en": "chámster",
+    "category": "млекопитающие",
+    "gender": "ср"
+  },
+  {
+    "ru": "жук",
+    "en": "beetle",
+    "el": "το σκαθάρι",
+    "transcription": "ската́ри",
+    "el_transcription_en": "skathári",
+    "category": "насекомые",
+    "gender": "ср"
+  },
+  {
+    "ru": "насекомое",
+    "en": "insect",
+    "el": "το έντομο",
+    "transcription": "э́нтомо",
+    "el_transcription_en": "éntomo",
+    "category": "общее",
+    "gender": "ср"
+  },
+  {
+    "ru": "жираф",
+    "en": "giraffe",
+    "el": "η καμηλοπάρδαλη",
+    "transcription": "камилопа́рдальи",
+    "el_transcription_en": "kamilopárdali",
+    "category": "млекопитающие",
+    "gender": "ж"
+  },
+  {
+    "ru": "домашнее животное",
+    "en": "pet",
+    "el": "το κατοικίδιο ζώο",
+    "transcription": "катоики́дьо зо́о",
+    "el_transcription_en": "katoikídio zóo",
+    "category": "общее",
+    "gender": "ср"
+  },
+  {
+    "ru": "щенок",
+    "en": "puppy",
+    "el": "το κουτάβι",
+    "transcription": "кута́ви",
+    "el_transcription_en": "koutávi",
+    "category": "млекопитающие",
     "gender": "ср"
   }
 ]

@@ -2,12 +2,11 @@ import SwiftUI
 import AVFoundation
 
 struct DictionarySelectionView: View {
-    @Binding var allDictionaries: [DictionaryInfo]
-    @Binding var selectedDictionaries: Set<String>
-    let loadSelectedWords: () -> Void
-    @Binding var allWords: [Word]
-    @Binding var activeWords: [Word]
+    // ✨ ИЗМЕНЕНИЕ №1: Используем @ObservedObject для всего сервиса
+    @ObservedObject var dictionaryService: DictionaryService
+    
     let speakWord: (String, String) -> Void
+    let interfaceLanguage: String
 
     @Environment(\.dismiss) var dismiss
     @State private var showingWordsList = false
@@ -15,20 +14,23 @@ struct DictionarySelectionView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Выберите словари")
+                Text("title_select_dictionaries")
                     .font(.largeTitle)
                     .padding(.bottom, 20)
 
-                FlowLayout(allDictionaries, spacing: 10) { dictionary in
-                    Toggle(dictionary.name, isOn: Binding(
-                        get: { selectedDictionaries.contains(dictionary.filename) },
+                // ✨ ИЗМЕНЕНИЕ №2: Используем `dictionaryService.allDictionaries`
+                FlowLayout(dictionaryService.allDictionaries, spacing: 10) { dictionary in
+                    // ✨ ИЗМЕНЕНИЕ №3: Привязка теперь к `dictionaryService.selectedDictionaries`
+                    Toggle(dictionary.localizedName(for: interfaceLanguage), isOn: Binding(
+                        get: { dictionaryService.selectedDictionaries.contains(dictionary.filePath) },
                         set: { isSelected in
                             if isSelected {
-                                selectedDictionaries.insert(dictionary.filename)
+                                dictionaryService.selectedDictionaries.insert(dictionary.filePath)
                             } else {
-                                selectedDictionaries.remove(dictionary.filename)
+                                dictionaryService.selectedDictionaries.remove(dictionary.filePath)
                             }
-                            loadSelectedWords()
+                            // ✨ ИЗМЕНЕНИЕ №4: Явно вызываем загрузку слов с нужным языком
+                            dictionaryService.loadSelectedWords(interfaceLanguage: interfaceLanguage)
                         }
                     ))
                     .toggleStyle(.button)
@@ -39,7 +41,7 @@ struct DictionarySelectionView: View {
                 
                 Spacer()
 
-                Button("Показать слова") {
+                Button("button_show_words") {
                     showingWordsList = true
                 }
                 .padding()
@@ -50,12 +52,13 @@ struct DictionarySelectionView: View {
                 .padding(.horizontal)
                 .padding(.bottom, 20)
                 .sheet(isPresented: $showingWordsList) {
-                    WordsListView(words: activeWords.isEmpty ? allWords : activeWords, speakWord: speakWord)
+                    // ✨ ИЗМЕНЕНИЕ №5: Передаем слова из `dictionaryService`
+                    WordsListView(words: dictionaryService.activeWords.isEmpty ? dictionaryService.allWords : dictionaryService.activeWords, speakWord: speakWord)
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Готово") {
+                    Button("button_done") {
                         dismiss()
                     }
                 }

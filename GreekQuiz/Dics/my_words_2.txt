@@ -4,279 +4,143 @@
     "el": "μητέρα",
     "transcription": "митэ́ра",
     "category": "родственник",
-    "gender": "ж"
+    "gender": "ж",
+    "en": "mother",
+    "el_transcription_en": "mitera"
   },
   {
     "ru": "мама",
     "el": "μαμά",
     "transcription": "мама́",
     "category": "родственник",
-    "gender": "ж"
+    "gender": "ж",
+    "en": "mom",
+    "el_transcription_en": "mama"
   },
   {
     "ru": "папа",
     "el": "πατέρας",
     "transcription": "патэ́рас",
     "category": "родственник",
-    "gender": "м"
+    "gender": "м",
+    "en": "father",
+    "el_transcription_en": "pateras"
   },
   {
     "ru": "папа",
     "el": "μπαμπάς",
     "transcription": "баба́с",
     "category": "родственник",
-    "gender": "м"
+    "gender": "м",
+    "en": "dad",
+    "el_transcription_en": "babas"
   },
   {
     "ru": "брат",
     "el": "αδελφός",
     "transcription": "аделфо́с",
     "category": "родственник",
-    "gender": "м"
+    "gender": "м",
+    "en": "brother",
+    "el_transcription_en": "adelfos"
   },
   {
     "ru": "сестра",
     "el": "αδελφή",
     "transcription": "аделфи́",
     "category": "родственник",
-    "gender": "ж"
+    "gender": "ж",
+    "en": "sister",
+    "el_transcription_en": "adelfi"
   },
   {
     "ru": "дедушка",
     "el": "παππούς",
     "transcription": "папу́с",
     "category": "родственник",
-    "gender": "м"
+    "gender": "м",
+    "en": "grandfather",
+    "el_transcription_en": "pappous"
   },
   {
     "ru": "бабушка",
     "el": "γιαγιά",
     "transcription": "йяя́",
     "category": "родственник",
-    "gender": "ж"
+    "gender": "ж",
+    "en": "grandmother",
+    "el_transcription_en": "giagia"
   },
   {
     "ru": "сын",
     "el": "γιος",
     "transcription": "йос",
     "category": "родственник",
-    "gender": "м"
+    "gender": "м",
+    "en": "son",
+    "el_transcription_en": "gios"
   },
   {
     "ru": "дочь",
     "el": "κόρη",
     "transcription": "ко́ри",
     "category": "родственник",
-    "gender": "ж"
+    "gender": "ж",
+    "en": "daughter",
+    "el_transcription_en": "kori"
   },
   {
     "ru": "муж",
     "el": "σύζυγος",
     "transcription": "си́зигос",
     "category": "родственник",
-    "gender": "м"
+    "gender": "м",
+    "en": "husband",
+    "el_transcription_en": "syzygos"
   },
   {
     "ru": "жена",
     "el": "σύζυγος",
     "transcription": "си́зигос",
     "category": "родственник",
-    "gender": "ж"
+    "gender": "ж",
+    "en": "wife",
+    "el_transcription_en": "syzygos"
   },
   {
     "ru": "мальчик",
     "el": "αγόρι",
     "transcription": "аго́ри",
     "category": "человек",
-    "gender": "ср"
+    "gender": "ср",
+    "en": "boy",
+    "el_transcription_en": "agori"
   },
   {
     "ru": "девочка",
     "el": "κορίτσι",
     "transcription": "кори́ци",
     "category": "человек",
-    "gender": "ср"
+    "gender": "ср",
+    "en": "girl",
+    "el_transcription_en": "koritsi"
   },
   {
     "ru": "мужчина",
     "el": "άνδρας",
     "transcription": "а́ндрас",
     "category": "человек",
-    "gender": "м"
+    "gender": "м",
+    "en": "man",
+    "el_transcription_en": "andras"
   },
   {
     "ru": "женщина",
     "el": "γυναίκα",
     "transcription": "йине́ка",
     "category": "человек",
-    "gender": "ж"
-  },
-  {
-    "ru": "тётя",
-    "el": "θεία",
-    "transcription": "фи́я",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "дядя",
-    "el": "θείος",
-    "transcription": "фи́ос",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "племянник",
-    "el": "ανιψιός",
-    "transcription": "анипсио́с",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "племянница",
-    "el": "ανιψιά",
-    "transcription": "анипся́",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "двоюродный брат",
-    "el": "ξάδελφος",
-    "transcription": "кса́делфос",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "двоюродная сестра",
-    "el": "ξαδέλφη",
-    "transcription": "ксаде́лфи",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "свёкор / тесть",
-    "el": "πεθερός",
-    "transcription": "петэро́с",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "свекровь / тёща",
-    "el": "πεθερά",
-    "transcription": "петэра́",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "зять",
-    "el": "γαμπρός",
-    "transcription": "гамбро́с",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "невестка",
-    "el": "νύφη",
-    "transcription": "ни́фи",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "крестный отец",
-    "el": "νονός",
-    "transcription": "ноно́с",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "крестная мать",
-    "el": "νονά",
-    "transcription": "нона́",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "отчим",
-    "el": "πατριός",
-    "transcription": "патрио́с",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "мачеха",
-    "el": "μητριά",
-    "transcription": "митря́",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "сводный брат",
-    "el": "ετεροθαλής αδελφός",
-    "transcription": "этероталíс аделфо́с",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "сводная сестра",
-    "el": "ετεροθαλής αδελφή",
-    "transcription": "этероталíс аделфи́",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "приёмный сын",
-    "el": "θετός γιος",
-    "transcription": "фетóс йос",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "приёмная дочь",
-    "el": "θετή κόρη",
-    "transcription": "фети́ ко́ри",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "приёмный отец",
-    "el": "θετός πατέρας",
-    "transcription": "фетóс патэ́рас",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "приёмная мать",
-    "el": "θετή μητέρα",
-    "transcription": "фети́ митэ́ра",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "тесть (отец жены)",
-    "el": "πεθερός",
-    "transcription": "петэро́с",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "тёща (мать жены)",
-    "el": "πεθερά",
-    "transcription": "петэра́",
-    "category": "родственник",
-    "gender": "ж"
-  },
-  {
-    "ru": "деверь / шурин",
-    "el": "κουνιάδος",
-    "transcription": "куня́дос",
-    "category": "родственник",
-    "gender": "м"
-  },
-  {
-    "ru": "золовка / свояченица",
-    "el": "κουνιάδα",
-    "transcription": "куня́да",
-    "category": "родственник",
-    "gender": "ж"
+    "gender": "ж",
+    "en": "woman",
+    "el_transcription_en": "gynaika"
   }
 ]
