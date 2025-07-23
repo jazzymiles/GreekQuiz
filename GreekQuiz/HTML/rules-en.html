@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-
-<html lang="el">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Basic Rules of the Greek Language</title>
-<style>
-        /* Общие правила для устранения горизонтального скролла */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Rules of the Greek Language</title>
+    <style>
+        /* General rules to eliminate horizontal scroll */
         html, body {
-            overflow-x: hidden; /* Запрещает горизонтальный скролл */
+            overflow-x: hidden; /* Disables horizontal scroll */
         }
         * {
-            box-sizing: border-box; /* Гарантирует, что padding и border включены в общую ширину/высоту элемента */
+            box-sizing: border-box; /* Ensures padding and border are included in the element's total width/height */
         }
 
         body {
             font-family: Arial, sans-serif;
-            margin: 20px; /* Отступы от краев страницы */
+            margin: 20px; /* Margins from the edges of the page */
             line-height: 1.6;
         }
         h1, h2, h3 {
             color: #333;
         }
         table {
-            width: 100%; /* Таблица занимает 100% доступной ширины родителя */
+            width: 100%; /* Table takes up 100% of the available parent width */
             border-collapse: collapse;
             margin-bottom: 20px;
         }
@@ -37,7 +36,7 @@
         }
         .content-section {
             margin-bottom: 40px;
-            padding-top: 20px; /* Для отступа при переходе по якорю */
+            padding-top: 20px; /* For spacing when navigating via anchor link */
         }
         .toc {
             margin-bottom: 40px;
@@ -78,691 +77,709 @@
     </style>
 </head>
 <body>
-<h1 id="top">Основные правила греческого языка!</h1>
-<div class="toc">
-<h2>Table of Contents</h2>
-<ul>
-<li><a href="#alphabet">Alphabet</a></li>
-<li><a href="#sound-combinations">Sounds from multiple letters</a></li>
-<li><a href="#pronouns">Pronouns</a></li>
-<li><a href="#to-be-verb">Глагол "быть" (Είμαι)</a></li>
-<li><a href="#articles-endings">Articles and Word Endings by Gender and Number</a></li>
-<li><a href="#verb-conjugation">Спряжение глаголов (Настоящее время - Ενεστώτας)</a>
-<ul>
-<li><a href="#groupA-verbs">Глаголы 1-й группы (Α' Κλίσης)</a></li>
-<li><a href="#groupB1-verbs">Глаголы 2-й группы, подгруппа 1 (Β1' Κλίσης)</a></li>
-<li><a href="#groupB2-verbs">Глаголы 2-й группы, подгруппа 2 (Β2' Κλίσης)</a></li>
-</ul>
-</li>
-<li><a href="#possessive-adjectives">Possessive Pronouns / Adjectives</a></li>
-<li><a href="#negation">Как сказать "нет" (Отрицание)</a></li>
-<li><a href="#sentence-structure">Sentence and Question Structure</a></li>
-<li><a href="#question-words">Question Words</a></li>
-<li><a href="#numbers">Числа (Αριθμοί)</a></li>
-<li><a href="#days-months">Дни недели и Месяцы (Ημέρες της εβδομάδας &amp; Μήνες)</a></li>
-<li><a href="#seasons">Времена года (Εποχές)</a></li>
-<li><a href="#colors">Цвета (Χρώματα)</a></li>
-<li><a href="#prepositions">Основные предлоги (Βασικές Προθέσεις)</a></li>
-<li><a href="#greetings">Базовые фразы общения (Βασικές Φράσεις Εικοινωνίας)</a></li>
-</ul>
-</div>
 
-    ---
+    <h1 id="top">Basic Rules of the Greek Language!</h1>
 
-    <div class="content-section" id="alphabet">
-<h2>Alphabet</h2>
-<p>Греческий алфавит (Το Ελληνικό Αλφάβητο) состоит из 24 букв.</p>
-<table>
-<thead>
-<tr>
-<th>Буква</th>
-<th>Название</th>
-<th>Произношение (примерно)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Α α</td><td>Άλφα</td><td>[а]</td></tr>
-<tr><td>Β β</td><td>Βήτα</td><td>[в]</td></tr>
-<tr><td>Γ γ</td><td>Γάμμα</td><td>[г] или [й] (перед е, и)</td></tr>
-<tr><td>Δ δ</td><td>Δέλτα</td><td>[д] (межзубный, как th в "the")</td></tr>
-<tr><td>Ε ε</td><td>Έψιλον</td><td>[э]</td></tr>
-<tr><td>Ζ ζ</td><td>Ζήτα</td><td>[з]</td></tr>
-<tr><td>Η η</td><td>Ήτα</td><td>[и]</td></tr>
-<tr><td>Θ θ</td><td>Θήτα</td><td>[т] (межзубный, как th в "think")</td></tr>
-<tr><td>Ι ι</td><td>Ιώτα</td><td>[и]</td></tr>
-<tr><td>Κ κ</td><td>Κάππα</td><td>[к]</td></tr>
-<tr><td>Λ λ</td><td>Λάμδα</td><td>[л]</td></tr>
-<tr><td>Μ μ</td><td>Μι</td><td>[м]</td></tr>
-<tr><td>Ν ν</td><td>Νι</td><td>[н]</td></tr>
-<tr><td>Ξ ξ</td><td>Ξι</td><td>[кс]</td></tr>
-<tr><td>Ο ο</td><td>Όμικρον</td><td>[о]</td></tr>
-<tr><td>Π π</td><td>Πι</td><td>[п]</td></tr>
-<tr><td>Ρ ρ</td><td>Ρο</td><td>[р]</td></tr>
-<tr><td>Σ σ / ς</td><td>Σίγμα</td><td>[с] (ς - в конце слова)</td></tr>
-<tr><td>Τ τ</td><td>Τάφ</td><td>[т]</td></tr>
-<tr><td>Υ υ</td><td>Ύψιλον</td><td>[и]</td></tr>
-<tr><td>Φ φ</td><td>Φι</td><td>[ф]</td></tr>
-<tr><td>Χ χ</td><td>Χι</td><td>[х]</td></tr>
-<tr><td>Ψ ψ</td><td>Ψι</td><td>[пс]</td></tr>
-<tr><td>Ω ω</td><td>Ωμέγα</td><td>[о]</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
-
-    ---
-
-    <div class="content-section" id="sound-combinations">
-<h2>Sounds from multiple letters</h2>
-<p>Некоторые комбинации букв в греческом языке образуют особые звуки.</p>
-<table>
-<thead>
-<tr>
-<th>Комбинация</th>
-<th>Звук (примерно)</th>
-<th>Пример слова</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>αι</td><td>[э]</td><td>**καιρός** (погода)</td></tr>
-<tr><td>ει</td><td>[и]</td><td>**είκοσι** (двадцать)</td></tr>
-<tr><td>οι</td><td>[и]</td><td>**κοίτα** (смотри)</td></tr>
-<tr><td>ου</td><td>[у]</td><td>**που** (где)</td></tr>
-<tr><td>αυ</td><td>[ав] или [аф]</td><td>**αυτό** (это), **αύριο** (завтра)</td></tr>
-<tr><td>ευ</td><td>[эв] или [эф]</td><td>**ευχαριστώ** (спасибо), **Ευρώπη** (Европа)</td></tr>
-<tr><td>μπ</td><td>[б] или [мб]</td><td>**μπαμπάς** (папа), **λάμπα** (лампа)</td></tr>
-<tr><td>ντ</td><td>[д] или [нд]</td><td>**ντομάτα** (помидор), **άντρας** (мужчина)</td></tr>
-<tr><td>γγ</td><td>[г] или [нг]</td><td>**αγγούρι** (огурец)</td></tr>
-<tr><td>γκ</td><td>[г] или [нг]</td><td>**γκολ** (гол), **αγκάθι** (колючка)</td></tr>
-<tr><td>τσ</td><td>[ц]</td><td>**τσάι** (чай)</td></tr>
-<tr><td>τζ</td><td>[дз]</td><td>**τζάκι** (камин)</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
-
-    ---
-
-    <div class="content-section" id="pronouns">
-<h2>Местоимения (Αντωνυμίες)</h2>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Греческий</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Я</td><td>Εγώ</td></tr>
-<tr><td>Ты</td><td>Εσύ</td></tr>
-<tr><td>Он</td><td>Αυτός</td></tr>
-<tr><td>Она</td><td>Αυτή</td></tr>
-<tr><td>Оно</td><td>Αυτό</td></tr>
-<tr><td>Мы</td><td>Εμείς</td></tr>
-<tr><td>Вы</td><td>Εσείς</td></tr>
-<tr><td>Они (муж.р.)</td><td>Αυτοί</td></tr>
-<tr><td>Они (жен.р.)</td><td>Αυτές</td></tr>
-<tr><td>Они (ср.р.)</td><td>Αυτά</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
-
-    ---
-
-    <div class="content-section" id="to-be-verb">
-<h2>Глагол "быть" (Είμαι)</h2>
-<p>Спряжение глагола "быть" в настоящем времени.</p>
-<table>
-<thead>
-<tr>
-<th>Местоимение</th>
-<th>Глагол "Είμαι"</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Εγώ (Я)</td><td>Είμαι</td></tr>
-<tr><td>Εσύ (Ты)</td><td>Είσαι</td></tr>
-<tr><td>Αυτός/Αυτή/Αυτό (Он/Она/Оно)</td><td>Είναι</td></tr>
-<tr><td>Εμείς (Мы)</td><td>Είμαστε</td></tr>
-<tr><td>Εσείς (Вы)</td><td>Είστε</td></tr>
-<tr><td>Αυτοί/Αυτές/Αυτά (Они)</td><td>Είναι</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
-
-    ---
-
-    <div class="content-section" id="articles-endings">
-<h2>Articles and Word Endings by Gender and Number</h2>
-<h3>Определенные артикли (Οριστικά άρθρα)</h3>
-<table>
-<thead>
-<tr>
-<th>Род / Число</th>
-<th>Име</th>
-<th>Вин</th>
-<th>Род</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Мужской род (ед.ч.)</td><td>ο</td><td>τον</td><td>του</td></tr>
-<tr><td>Женский род (ед.ч.)</td><td>η</td><td>τη(ν)</td><td>της</td></tr>
-<tr><td>Средний род (ед.ч.)</td><td>το</td><td>το</td><td>του</td></tr>
-<tr><td>Мужской род (мн.ч.)</td><td>οι</td><td>τους</td><td>των</td></tr>
-<tr><td>Женский род (мн.ч.)</td><td>οι</td><td>τις</td><td>των</td></tr>
-<tr><td>Средний род (мн.ч.)</td><td>τα</td><td>τα</td><td>των</td></tr>
-</tbody>
-</table>
-<p>Определенные артикли используются, когда речь идет о чем-то конкретном или уже известном. Например, "το σπίτι" (дом, о котором мы оба знаем), "ο ήλιος" (солнце, единственное в своем роде), "η Ελλάδα" (Греция, конкретная страна).</p>
-<h3>Неопределенные артикли (Αόριστα άρθρα)</h3>
-<table>
-<thead>
-<tr>
-<th>Род</th>
-<th>Неопределенный артикль</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Мужской род</td><td>ένας</td></tr>
-<tr><td>Женский род</td><td>μία / μια</td></tr>
-<tr><td>Средний род</td><td>ένα</td></tr>
-</tbody>
-</table>
-<p>Неопределенные артикли используются, когда речь идет о чем-то не конкретном, о ком-то или о чем-то впервые упомянутом. Например, "ένα βιβλίο" (какая-то книга, любая книга), "μία γυναίκα" (какая-то женщина), "ένας άντρας" (какой-то мужчина).</p>
-<h3>Типичные окончания существительных (Ενδεικτικές καταλήξεις ουσιαστικών)</h3>
-<p>В греческом языке много исключений и склонений. Это лишь общие примеры.</p>
-<table>
-<thead>
-<tr>
-<th>Род</th>
-<th>Окончания</th>
-<th>Пример</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Мужской род</td><td>-ος, -ης, -ας, -έας</td><td>ο δάσκαλ**ος** (учитель), ο μαθητ**ής** (ученик)</td></tr>
-<tr><td>Женский род</td><td>-α, -η, -ού</td><td>η πόρτ**α** (дверь), η πόλ**η** (город), η μαμ**ά** (мама)</td></tr>
-<tr><td>Средний род</td><td>-ο, -ι, -μα, -ος (множ. -η)</td><td>το βιβλί**ο** (книга), το παιδ**ί** (ребенок), το όνο**μα** (имя)</td></tr>
-</tbody>
-</table>
-<h3>Множественное число (Πληθυντικός αριθμός)</h3>
-<p>Образование множественного числа существительных зависит от их рода и окончания в единственном числе. Ниже приведены наиболее распространенные правила:</p>
-<h4>Мужской род</h4>
-<table>
-<thead>
-<tr>
-<th>Ед.ч. окончание</th>
-<th>Мн.ч. окончание</th>
-<th>Пример (Ед.ч. / Мн.ч.)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>-ος</td><td>-οι</td><td>ο δάσκαλ**ος** / οι δάσκαλ**οι** (учитель/учителя)</td></tr>
-<tr><td>-ης</td><td>-ες</td><td>ο μαθητ**ής** / οι μαθητ**ές** (ученик/ученики)</td></tr>
-<tr><td>-ας</td><td>-ες</td><td>ο άντρ**ας** / οι άντρ**ες** (мужчина/мужчины)</td></tr>
-</tbody>
-</table>
-<h4>Женский род</h4>
-<table>
-<thead>
-<tr>
-<th>Ед.ч. окончание</th>
-<th>Мн.ч. окончание</th>
-<th>Пример (Ед.ч. / Мн.ч.)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>-α</td><td>-ες</td><td>η πόρτ**α** / οι πόρτ**ες** (дверь/двери)</td></tr>
-<tr><td>-η</td><td>-ες</td><td>η πόλ**η** / οι πόλ**εις** (город/города)</td></tr>
-<tr><td>-ού</td><td>-ούδες</td><td>η μαμ**ά** / οι μαμ**άδες** (мама/мамы - для некоторых слов)</td></tr>
-</tbody>
-</table>
-<h4>Средний род</h4>
-<table>
-<thead>
-<tr>
-<th>Ед.ч. окончание</th>
-<th>Мн.ч. окончание</th>
-<th>Пример (Ед.ч. / Мн.ч.)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>-ο</td><td>-α</td><td>το βιβλί**ο** / τα βιβλί**α** (книга/книги)</td></tr>
-<tr><td>-ι</td><td>-ια</td><td>το παιδ**ί** / τα παιδ**ιά** (ребенок/дети)</td></tr>
-<tr><td>-μα</td><td>-ματα</td><td>το όνο**μα** / τα ονό**ματα** (имя/имена)</td></tr>
-</tbody>
-</table>
-<p>Помните, что артикли также меняются на множественное число (см. таблицу "Определенные артикли").</p>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
-
-    ---
-
-    <div class="content-section" id="verb-conjugation">
-<h2>Спряжение глаголов (Настоящее время - Ενεστώτας)</h2>
-<p>В греческом языке глаголы делятся на группы спряжения. Вот основные из них в настоящем времени.</p>
-<div id="groupA-verbs">
-<h3>Глаголы 1-й группы (Α' Κλίσης): оканчиваются на -ω</h3>
-<p>Пример: <strong>γράφω</strong> (писать)</p>
-<table>
-<thead>
-<tr>
-<th>Местоимение</th>
-<th>Γράφω</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Εγώ</td><td>γράφω</td></tr>
-<tr><td>Εσύ</td><td>γράφεις</td></tr>
-<tr><td>Αυτός/Αυτή/Αυτό</td><td>γράφει</td></tr>
-<tr><td>Εμείς</td><td>γράφουμε</td></tr>
-<tr><td>Εσείς</td><td>γράφετε</td></tr>
-<tr><td>Αυτοί/Αυτές/Αυτά</td><td>γράφουν(ε)</td></tr>
-</tbody>
-</table>
-</div>
-<div id="groupB1-verbs">
-<h3>Глаголы 2-й группы, подгруппа 1 (Β1' Κλίσης): оканчиваются на -άω/-άω</h3>
-<p>Пример: **αγαπάω** (любить)</p>
-<table>
-<thead>
-<tr>
-<th>Местоимение</th>
-<th>Αγαπάω</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Εγώ</td><td>αγαπάω</td></tr>
-<tr><td>Εσύ</td><td>αγαπάς</td></tr>
-<tr><td>Αυτός/Αυτή/Αυτό</td><td>αγαπάει</td></tr>
-<tr><td>Εμείς</td><td>αγαπάμε</td></tr>
-<tr><td>Εσείς</td><td>αγαπάτε</td></tr>
-<tr><td>Αυτοί/Αυτές/Αυτά</td><td>αγαπάνε / αγαπούν</td></tr>
-</tbody>
-</table>
-</div>
-<div id="groupB2-verbs">
-<h3>Глаголы 2-й группы, подгруппа 2 (Β2' Κλίσης): оканчиваются на -ώ</h3>
-<p>Пример: **μπορώ** (мочь)</p>
-<table>
-<thead>
-<tr>
-<th>Местоимение</th>
-<th>Μπορώ</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Εγώ</td><td>μπορώ</td></tr>
-<tr><td>Εσύ</td><td>μπορείς</td></tr>
-<tr><td>Αυτός/Αυτή/Αυτό</td><td>μπορεί</td></tr>
-<tr><td>Εμείς</td><td>μπορούμε</td></tr>
-<tr><td>Εσείς</td><td>μπορείτε</td></tr>
-<tr><td>Αυτοί/Αυτές/Αυτά</td><td>μπορούν</td></tr>
-</tbody>
-</table>
-</div>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
-
-    ---
-
-    <div class="content-section" id="possessive-adjectives">
-<h2>Притяжательные местоимения / прилагательные (Κτητικές αντωνυμίες / επίθετα)</h2>
-<p>В греческом языке притяжательные прилагательные склоняются по родам, числам и падежам. Чаще используется конструкция **артикль + существительное + личное местоимение в родительном падеже**.</p>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Конструкция (пример: "моя книга" - το βιβλίο)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Мой/Моя/Моё/Мои</td><td>**το βιβλίο μου** (моя книга)</td></tr>
-<tr><td>Твой/Твоя/Твоё/Твои</td><td>**το βιβλίο σου** (твоя книга)</td></tr>
-<tr><td>Его/Её/Их (ед.ч.)</td><td>**το βιβλίο του** (его книга) / **το βιβλίο της** (её книга)</td></tr>
-<tr><td>Наш/Наша/Наше/Наши</td><td>**το βιβλίο μας** (наша книга)</td></tr>
-<tr><td>Ваш/Ваша/Ваше/Ваши</td><td>**το βιβλίο σας** (ваша книга)</td></tr>
-<tr><td>Их (мн.ч.)</td><td>**το βιβλίο τους** (их книга)</td></tr>
-</tbody>
-</table>
-<p>Можно также использовать слова **δικός/δική/δικό** + местоимение в родительном падеже для усиления принадлежности (например: **το δικό μου βιβλίο** - моя *собственная* книга).</p>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
-
-    ---
-
-    <div class="content-section" id="negation">
-<h2>Как сказать "нет" (Отрицание)</h2>
-<p>Для отрицания глаголов и фраз используются частицы **δεν** (перед глаголом) и **μη(ν)** (в повелительном наклонении, для запретов). **Όχι** используется как отдельное слово "нет".</p>
-<ul>
-<li>**Δεν** (для отрицания глаголов в изъявительном наклонении):
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#alphabet">Alphabet</a></li>
+            <li><a href="#sound-combinations">Sounds from multiple letters</a></li>
+            <li><a href="#pronouns">Pronouns</a></li>
+            <li><a href="#to-be-verb">The verb "to be" (Είμαι)</a></li>
+            <li><a href="#articles-endings">Articles and word endings by gender and number</a></li>
+            <li><a href="#verb-conjugation">Verb conjugation (Present tense - Ενεστώτας)</a>
                 <ul>
-<li>Εγώ **δεν** μιλάω. (Я **не** говорю.)</li>
-<li>Αυτός **δεν** είναι Έλληνας. (Он **не** грек.)</li>
-</ul>
-</li>
-<li>**Μην** (для запретов и отрицаний в повелительном/сослагательном наклонении):
+                    <li><a href="#groupA-verbs">Verbs of the 1st group (Α' Κλίσης)</a></li>
+                    <li><a href="#groupB1-verbs">Verbs of the 2nd group, subgroup 1 (Β1' Κλίσης)</a></li>
+                    <li><a href="#groupB2-verbs">Verbs of the 2nd group, subgroup 2 (Β2' Κλίσης)</a></li>
+                </ul>
+            </li>
+            <li><a href="#possessive-adjectives">Possessive pronouns / adjectives</a></li>
+            <li><a href="#negation">How to say "no" (Negation)</a></li>
+            <li><a href="#sentence-structure">Sentence and question structure</a></li>
+            <li><a href="#question-words">Question words</a></li>
+            <li><a href="#numbers">Numbers (Αριθμοί)</a></li>
+            <li><a href="#days-months">Days of the week and Months (Ημέρες της εβδομάδας & Μήνες)</a></li>
+            <li><a href="#seasons">Seasons (Εποχές)</a></li>
+            <li><a href="#colors">Colors (Χρώματα)</a></li>
+            <li><a href="#prepositions">Basic Prepositions (Βασικές Προθέσεις)</a></li>
+            <li><a href="#greetings">Basic communication phrases (Βασικές Φράσεις Επικοινωνίας)</a></li>
+        </ul>
+    </div>
+
+    ---
+
+    <div id="alphabet" class="content-section">
+        <h2>Alphabet</h2>
+        <p>The Greek alphabet (Το Ελληνικό Αλφάβητο) consists of 24 letters.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Letter</th>
+                    <th>Name</th>
+                    <th>Pronunciation (approximate)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Α α</td><td>Άλφα</td><td>[a]</td></tr>
+                <tr><td>Β β</td><td>Βήτα</td><td>[v]</td></tr>
+                <tr><td>Γ γ</td><td>Γάμμα</td><td>[g] or [y] (before e, i)</td></tr>
+                <tr><td>Δ δ</td><td>Δέλτα</td><td>[d] (interdental, like th in "the")</td></tr>
+                <tr><td>Ε ε</td><td>Έψιλον</td><td>[e]</td></tr>
+                <tr><td>Ζ ζ</td><td>Ζήτα</td><td>[z]</td></tr>
+                <tr><td>Η η</td><td>Ήτα</td><td>[i]</td></tr>
+                <tr><td>Θ θ</td><td>Θήτα</td><td>[th] (interdental, like th in "think")</td></tr>
+                <tr><td>Ι ι</td><td>Ιώτα</td><td>[i]</td></tr>
+                <tr><td>Κ κ</td><td>Κάππα</td><td>[k]</td></tr>
+                <tr><td>Λ λ</td><td>Λάμδα</td><td>[l]</td></tr>
+                <tr><td>Μ μ</td><td>Μι</td><td>[m]</td></tr>
+                <tr><td>Ν ν</td><td>Νι</td><td>[n]</td></tr>
+                <tr><td>Ξ ξ</td><td>Ξι</td><td>[ks]</td></tr>
+                <tr><td>Ο ο</td><td>Όμικρον</td><td>[o]</td></tr>
+                <tr><td>Π π</td><td>Πι</td><td>[p]</td></tr>
+                <tr><td>Ρ ρ</td><td>Ρο</td><td>[r]</td></tr>
+                <tr><td>Σ σ / ς</td><td>Σίγμα</td><td>[s] (ς - at the end of a word)</td></tr>
+                <tr><td>Τ τ</td><td>Τάφ</td><td>[t]</td></tr>
+                <tr><td>Υ υ</td><td>Ύψιλον</td><td>[i]</td></tr>
+                <tr><td>Φ φ</td><td>Φι</td><td>[f]</td></tr>
+                <tr><td>Χ χ</td><td>Χι</td><td>[ch]</td></tr>
+                <tr><td>Ψ ψ</td><td>Ψι</td><td>[ps]</td></tr>
+                <tr><td>Ω ω</td><td>Ωμέγα</td><td>[o]</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    ---
+
+    <div id="sound-combinations" class="content-section">
+        <h2>Sounds from multiple letters</h2>
+        <p>Some letter combinations in Greek form special sounds.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Combination</th>
+                    <th>Sound (approximate)</th>
+                    <th>Example word</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>αι</td><td>[e]</td><td><b>καιρός</b> (weather)</td></tr>
+                <tr><td>ει</td><td>[i]</td><td><b>είκοσι</b> (twenty)</td></tr>
+                <tr><td>οι</td><td>[i]</td><td><b>κοίτα</b> (look)</td></tr>
+                <tr><td>ου</td><td>[u]</td><td><b>που</b> (where)</td></tr>
+                <tr><td>αυ</td><td>[av] or [af]</td><td><b>αυτό</b> (this), <b>αύριο</b> (tomorrow)</td></tr>
+                <tr><td>ευ</td><td>[ev] or [ef]</td><td><b>ευχαριστώ</b> (thank you), <b>Ευρώπη</b> (Europe)</td></tr>
+                <tr><td>μπ</td><td>[b] or [mb]</td><td><b>μπαμπάς</b> (dad), <b>λάμπα</b> (lamp)</td></tr>
+                <tr><td>ντ</td><td>[d] or [nd]</td><td><b>ντομάτα</b> (tomato), <b>άντρας</b> (man)</td></tr>
+                <tr><td>γγ</td><td>[g] or [ng]</td><td><b>αγγούρι</b> (cucumber)</td></tr>
+                <tr><td>γκ</td><td>[g] or [ng]</td><td><b>γκολ</b> (goal), <b>αγκάθι</b> (thorn)</td></tr>
+                <tr><td>τσ</td><td>[ts]</td><td><b>τσάι</b> (tea)</td></tr>
+                <tr><td>τζ</td><td>[dz]</td><td><b>τζάκι</b> (fireplace)</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    ---
+
+    <div id="pronouns" class="content-section">
+        <h2>Pronouns (Αντωνυμίες)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Greek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>I</td><td>Εγώ</td></tr>
+                <tr><td>You</td><td>Εσύ</td></tr>
+                <tr><td>He</td><td>Αυτός</td></tr>
+                <tr><td>She</td><td>Αυτή</td></tr>
+                <tr><td>It</td><td>Αυτό</td></tr>
+                <tr><td>We</td><td>Εμείς</td></tr>
+                <tr><td>You (pl.)</td><td>Εσείς</td></tr>
+                <tr><td>They (m.)</td><td>Αυτοί</td></tr>
+                <tr><td>They (f.)</td><td>Αυτές</td></tr>
+                <tr><td>They (n.)</td><td>Αυτά</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    ---
+
+    <div id="to-be-verb" class="content-section">
+        <h2>The verb "to be" (Είμαι)</h2>
+        <p>Conjugation of the verb "to be" in the present tense.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pronoun</th>
+                    <th>Verb "Είμαι"</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Εγώ (I)</td><td>Είμαι</td></tr>
+                <tr><td>Εσύ (You)</td><td>Είσαι</td></tr>
+                <tr><td>Αυτός/Αυτή/Αυτό (He/She/It)</td><td>Είναι</td></tr>
+                <tr><td>Εμείς (We)</td><td>Είμαστε</td></tr>
+                <tr><td>Εσείς (You pl.)</td><td>Είστε</td></tr>
+                <tr><td>Αυτοί/Αυτές/Αυτά (They)</td><td>Είναι</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    ---
+
+    <div id="articles-endings" class="content-section">
+        <h2>Articles and word endings by gender and number</h2>
+        <h3>Definite articles (Οριστικά άρθρα)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Gender / Number</th>
+                    <th>Nominative</th>
+                    <th>Accusative</th>
+                    <th>Genitive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Masculine (sg.)</td><td>ο</td><td>τον</td><td>του</td></tr>
+                <tr><td>Feminine (sg.)</td><td>η</td><td>τη(ν)</td><td>της</td></tr>
+                <tr><td>Neuter (sg.)</td><td>το</td><td>το</td><td>του</td></tr>
+                <tr><td>Masculine (pl.)</td><td>οι</td><td>τους</td><td>των</td></tr>
+                <tr><td>Feminine (pl.)</td><td>οι</td><td>τις</td><td>των</td></tr>
+                <tr><td>Neuter (pl.)</td><td>τα</td><td>τα</td><td>των</td></tr>
+            </tbody>
+        </table>
+        <p>Definite articles are used when talking about something specific or already known. For example, "το σπίτι" (the house we both know about), "ο ήλιος" (the sun, one of a kind), "η Ελλάδα" (Greece, a specific country).</p>
+
+        <h3>Indefinite articles (Αόριστα άρθρα)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Gender</th>
+                    <th>Indefinite article</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Masculine</td><td>ένας</td></tr>
+                <tr><td>Feminine</td><td>μία / μια</td></tr>
+                <tr><td>Neuter</td><td>ένα</td></tr>
+            </tbody>
+        </table>
+        <p>Indefinite articles are used when talking about something non-specific, someone or something mentioned for the first time. For example, "ένα βιβλίο" (a book, any book), "μία γυναίκα" (a woman), "ένας άντρας" (a man).</p>
+
+        <h3>Typical noun endings (Ενδεικτικές καταλήξεις ουσιαστικών)</h3>
+        <p>There are many exceptions and declensions in Greek. These are just general examples.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Gender</th>
+                    <th>Endings</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Masculine</td><td>-ος, -ης, -ας, -έας</td><td>ο δάσκαλ<b>ος</b> (teacher), ο μαθητ<b>ής</b> (student)</td></tr>
+                <tr><td>Feminine</td><td>-α, -η, -ού</td><td>η πόρτ<b>α</b> (door), η πόλ<b>η</b> (city), η μαμ<b>ά</b> (mom)</td></tr>
+                <tr><td>Neuter</td><td>-ο, -ι, -μα, -ος (pl. -η)</td><td>το βιβλί<b>ο</b> (book), το παιδ<b>ί</b> (child), το όνο<b>μα</b> (name)</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Plural (Πληθυντικός αριθμός)</h3>
+        <p>The formation of the plural of nouns depends on their gender and ending in the singular. Below are the most common rules:</p>
+        <h4>Masculine</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sg. ending</th>
+                    <th>Pl. ending</th>
+                    <th>Example (Sg. / Pl.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>-ος</td><td>-οι</td><td>ο δάσκαλ<b>ος</b> / οι δάσκαλ<b>οι</b> (teacher/teachers)</td></tr>
+                <tr><td>-ης</td><td>-ες</td><td>ο μαθητ<b>ής</b> / οι μαθητ<b>ές</b> (student/students)</td></tr>
+                <tr><td>-ας</td><td>-ες</td><td>ο άντρ<b>ας</b> / οι άντρ<b>ες</b> (man/men)</td></tr>
+            </tbody>
+        </table>
+        <h4>Feminine</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sg. ending</th>
+                    <th>Pl. ending</th>
+                    <th>Example (Sg. / Pl.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>-α</td><td>-ες</td><td>η πόρτ<b>α</b> / οι πόρτ<b>ες</b> (door/doors)</td></tr>
+                <tr><td>-η</td><td>-ες</td><td>η πόλ<b>η</b> / οι πόλ<b>εις</b> (city/cities)</td></tr>
+                <tr><td>-ού</td><td>-ούδες</td><td>η μαμ<b>ά</b> / οι μαμ<b>άδες</b> (mom/moms - for some words)</td></tr>
+            </tbody>
+        </table>
+        <h4>Neuter</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sg. ending</th>
+                    <th>Pl. ending</th>
+                    <th>Example (Sg. / Pl.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>-ο</td><td>-α</td><td>το βιβλί<b>ο</b> / τα βιβλί<b>α</b> (book/books)</td></tr>
+                <tr><td>-ι</td><td>-ια</td><td>το παιδ<b>ί</b> / τα παιδ<b>ιά</b> (child/children)</td></tr>
+                <tr><td>-μα</td><td>-ματα</td><td>το όνο<b>μα</b> / τα ονό<b>ματα</b> (name/names)</td></tr>
+            </tbody>
+        </table>
+        <p>Remember that articles also change to the plural (see the "Definite articles" table).</p>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    ---
+
+    <div id="verb-conjugation" class="content-section">
+        <h2>Verb conjugation (Present tense - Ενεστώτας)</h2>
+        <p>In Greek, verbs are divided into conjugation groups. Here are the main ones in the present tense.</p>
+
+        <div id="groupA-verbs">
+            <h3>Verbs of the 1st group (Α' Κλίσης): ending in -ω</h3>
+            <p>Example: <strong>γράφω</strong> (to write)</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pronoun</th>
+                        <th>Γράφω</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Εγώ</td><td>γράφω</td></tr>
+                    <tr><td>Εσύ</td><td>γράφεις</td></tr>
+                    <tr><td>Αυτός/Αυτή/Αυτό</td><td>γράφει</td></tr>
+                    <tr><td>Εμείς</td><td>γράφουμε</td></tr>
+                    <tr><td>Εσείς</td><td>γράφετε</td></tr>
+                    <tr><td>Αυτοί/Αυτές/Αυτά</td><td>γράφουν(ε)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="groupB1-verbs">
+            <h3>Verbs of the 2nd group, subgroup 1 (Β1' Κλίσης): ending in -άω/-άω</h3>
+            <p>Example: <b>αγαπάω</b> (to love)</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pronoun</th>
+                        <th>Αγαπάω</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Εγώ</td><td>αγαπάω</td></tr>
+                    <tr><td>Εσύ</td><td>αγαπάς</td></tr>
+                    <tr><td>Αυτός/Αυτή/Αυτό</td><td>αγαπάει</td></tr>
+                    <tr><td>Εμείς</td><td>αγαπάμε</td></tr>
+                    <tr><td>Εσείς</td><td>αγαπάτε</td></tr>
+                    <tr><td>Αυτοί/Αυτές/Αυτά</td><td>αγαπάνε / αγαπούν</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="groupB2-verbs">
+            <h3>Verbs of the 2nd group, subgroup 2 (Β2' Κλίσης): ending in -ώ</h3>
+            <p>Example: <b>μπορώ</b> (can)</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pronoun</th>
+                        <th>Μπορώ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Εγώ</td><td>μπορώ</td></tr>
+                    <tr><td>Εσύ</td><td>μπορείς</td></tr>
+                    <tr><td>Αυτός/Αυτή/Αυτό</td><td>μπορεί</td></tr>
+                    <tr><td>Εμείς</td><td>μπορούμε</td></tr>
+                    <tr><td>Εσείς</td><td>μπορείτε</td></tr>
+                    <tr><td>Αυτοί/Αυτές/Αυτά</td><td>μπορούν</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    ---
+
+    <div id="possessive-adjectives" class="content-section">
+        <h2>Possessive pronouns / adjectives (Κτητικές αντωνυμίες / επίθετα)</h2>
+        <p>In Greek, possessive adjectives are declined by gender, number, and case. The most common construction is <b>article + noun + personal pronoun in the genitive case</b> </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Construction (example: "my book" - το βιβλίο)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>My</td><td><b>το βιβλίο μου</b> (my book)</td></tr>
+                <tr><td>Your (sg.)</td><td><b>το βιβλίο σου</b> (your book)</td></tr>
+                <tr><td>His/Her/Its</td><td><b>το βιβλίο του</b> (his book) / <b>το βιβλίο της</b> (her book)</td></tr>
+                <tr><td>Our</td><td><b>το βιβλίο μας</b> (our book)</td></tr>
+                <tr><td>Your (pl.)</td><td><b>το βιβλίο σας</b> (your book)</td></tr>
+                <tr><td>Their</td><td><b>το βιβλίο τους</b> (their book)</td></tr>
+            </tbody>
+        </table>
+        <p>You can also use the words <b>δικός/δική/δικό</b> + pronoun in the genitive case to emphasize possession (for example: <b>το δικό μου βιβλίο</b> - my *own* book).</p>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+    ---
+
+    <div id="negation" class="content-section">
+        <h2>How to say "no" (Negation)</h2>
+        <p>To negate verbs and phrases, the particles <b>δεν</b> (before a verb) and <b>μη(ν)</b> (in the imperative mood, for prohibitions) are used. <b>Όχι</b> is used as a separate word for "no".</p>
+        <ul>
+            <li><b>Δεν</b> (to negate verbs in the indicative mood):
                 <ul>
-<li>**Μην** μιλάς! (Не говори!)</li>
-<li>**Μην** το κάνεις! (Не делай этого!)</li>
-</ul>
-</li>
-<li>**Όχι** (как ответ "нет" или отрицание существительных):
+                    <li>Εγώ <b>δεν</b> μιλάω. (I <b>do not</b> speak.)</li>
+                    <li>Αυτός <b>δεν</b> είναι Έλληνας. (He <b>is not</b> Greek.)</li>
+                </ul>
+            </li>
+            <li><b>Μην</b> (for prohibitions and negations in the imperative/subjunctive mood):
                 <ul>
-<li>- Είσαι Έλληνας; - **Όχι**. (- Ты грек? - Нет.)</li>
-<li>**Όχι** καφές, τσάй. (Не кофе, чай.)</li>
-</ul>
-</li>
-</ul>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+                    <li><b>Μην</b> μιλάς! (Don't speak!)</li>
+                    <li><b>Μην</b> το κάνεις! (Don't do it!)</li>
+                </ul>
+            </li>
+            <li><b>Όχι</b> (as the answer "no" or to negate nouns):
+                <ul>
+                    <li>- Είσαι Έλληνας; - <b>Όχι</b>  (- Are you Greek? - No.)</li>
+                    <li><b>Όχι</b> καφές, τσάй. (Not coffee, tea.)</li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
 
     ---
 
-    <div class="content-section" id="sentence-structure">
-<h2>Sentence and Question Structure</h2>
-<h3>Структура утвердительного предложения (Δομή καταφατικής πρότασης)</h3>
-<p>**Подлежащее (Υποκείμενο) + Сказуемое (Ρήμα) + Дополнение/Обстоятельство (Αντικείμενο/Συμπλήρωμα)**</p>
-<ul>
-<li>**Εγώ** διαβάζω **ένα βιβλίο**. (Я читаю книгу.)</li>
-<li>**Ο Γιάννης** τρέχει **γρήγορα**. (Яннис быстро бежит.)</li>
-</ul>
-<h3>Структура вопросительного предложения (Δομή ερωτηματικής πρότασης)</h3>
-<p>Вопрос можно задать:</p>
-<h4>1. Интонация (Τονισμός)</h4>
-<p>Самый распространенный способ в разговорной речи. Интонация повышается к концу предложения.</p>
-<ul>
-<li>Διαβάζεις ένα βιβλίο; (Ты читаешь книгу?)</li>
-</ul>
-<h4>2. Использование вопросительных слов (Χρήση ερωτηματικών λέξεων)</h4>
-<p>Вопросительное слово обычно ставится в начале предложения.</p>
-<ul>
-<li>**Πού** μένεις; (Где ты живешь?)</li>
-<li>**Τι** κάνεις; (Что ты делаешь?)</li>
-</ul>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+    <div id="sentence-structure" class="content-section">
+        <h2>Sentence and question structure</h2>
+        <h3>Affirmative sentence structure (Δομή καταφατικής πρότασης)</h3>
+        <p><b>Subject (Υποκείμενο) + Verb (Ρήμα) + Object/Complement (Αντικείμενο/Συμπλήρωμα)</b></p>
+        <ul>
+            <li><b>Εγώ</b> διαβάζω <b>ένα βιβλίο</b>  (I am reading a book.)</li>
+            <li><b>Ο Γιάννης</b> τρέχει <b>γρήγορα</b>  (Yiannis runs quickly.)</li>
+        </ul>
+
+        <h3>Interrogative sentence structure (Δομή ερωτηματικής πρότασης)</h3>
+        <p>A question can be asked by:</p>
+        <h4>1. Intonation (Τονισμός)</h4>
+        <p>The most common way in spoken language. The intonation rises at the end of the sentence.</p>
+        <ul>
+            <li>Διαβάζεις ένα βιβλίο; (Are you reading a book?)</li>
+        </ul>
+        <h4>2. Using question words (Χρήση ερωτηματικών λέξεων)</h4>
+        <p>The question word is usually placed at the beginning of the sentence.</p>
+        <ul>
+            <li><b>Πού</b> μένεις; (Where do you live?)</li>
+            <li><b>Τι</b> κάνεις; (What are you doing?)</li>
+        </ul>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
 
     ---
 
-    <div class="content-section" id="question-words">
-<h2>Вопросительные слова (Ερωτηματικές λέξεις)</h2>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Греческий</th>
-<th>Пример использования</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Кто?</td><td>**Ποιος; / Ποια; / Ποιο;** (м.р./ж.р./ср.р.)</td><td>**Ποιος** είναι; (Кто это?)</td></tr>
-<tr><td>Что?</td><td>**Τι;**</td><td>**Τι** κάνεις; (Что ты делаешь?)</td></tr>
-<tr><td>Где?</td><td>**Πού;**</td><td>**Πού** πηγαίνεις; (Куда ты идешь?)</td></tr>
-<tr><td>Когда?</td><td>**Πότε;**</td><td>**Πότε** θα έρθεις; (Когда ты придешь?)</td></tr>
-<tr><td>Почему?</td><td>**Γιατί;**</td><td>**Γιατί** κλαις; (Почему ты плачешь?)</td></tr>
-<tr><td>Как?</td><td>**Πώς;**</td><td>**Πώς** είσαι; (Как ты?)</td></tr>
-<tr><td>Сколько?</td><td>**Πόσο; / Πόσα; / Πόσες;**</td><td>**Πόσο** κάνει; (Сколько это стоит?)</td></tr>
-<tr><td>Какой?/Какая?/Какое?/Какие?</td><td>**Ποιος; / Ποια; / Ποιο; / Ποιοι; / Ποιες; / Ποια;**</td><td>**Ποιο** χρώμα θες; (Какой цвет ты хочешь?)</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+    <div id="question-words" class="content-section">
+        <h2>Question words (Ερωτηματικές λέξεις)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Greek</th>
+                    <th>Example of use</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Who?</td><td><b>Ποιος; / Ποια; / Ποιο;</b> (m./f./n.)</td><td><b>Ποιος</b> είναι; (Who is it?)</td></tr>
+                <tr><td>What?</td><td><b>Τι;<b></td><td><b>Τι</b> κάνεις; (What are you doing?)</td></tr>
+                <tr><td>Where?</td><td><b>Πού;<b></td><td><b>Πού</b> πηγαίνεις; (Where are you going?)</td></tr>
+                <tr><td>When?</td><td><b>Πότε;<b></td><td><b>Πότε</b> θα έρθεις; (When will you come?)</td></tr>
+                <tr><td>Why?</td><td><b>Γιατί;<b></td><td><b>Γιατί</b> κλαις; (Why are you crying?)</td></tr>
+                <tr><td>How?</td><td><b>Πώς;<b></td><td><b>Πώς</b> είσαι; (How are you?)</td></tr>
+                <tr><td>How much/many?</td><td><b>Πόσο; / Πόσα; / Πόσες;<b></td><td><b>Πόσο</b> κάνει; (How much is it?)</td></tr>
+                <tr><td>Which?</td><td><b>Ποιος; / Ποια; / Ποιο; / Ποιοι; / Ποιες; / Ποια;<b></td><td><b>Ποιο</b> χρώμα θες; (Which color do you want?)</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
 
     ---
 
-    <div class="content-section" id="numbers">
-<h2>Числа (Αριθμοί)</h2>
-<table>
-<thead>
-<tr>
-<th>Число</th>
-<th>Греческий</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>0</td><td>μηδέν</td></tr>
-<tr><td>1</td><td>ένα (ср.р.) / ένας (м.р.) / μία (ж.р.)</td></tr>
-<tr><td>2</td><td>δύο</td></tr>
-<tr><td>3</td><td>τρία (ср.р.) / τρεις (м.р./ж.р.)</td></tr>
-<tr><td>4</td><td>τέσσερα (ср.р.) / τέσσερις (м.р./ж.р.)</td></tr>
-<tr><td>5</td><td>πέντε</td></tr>
-<tr><td>10</td><td>δέκα</td></tr>
-<tr><td>20</td><td>είκοσι</td></tr>
-<tr><td>100</td><td>εκατό</td></tr>
-<tr><td>1000</td><td>χίλια</td></tr>
-</tbody>
-</table>
-<p>Числа **1, 3, 4** и все числа, оканчивающиеся на них (например, 21, 33, 44), **склоняются по родам**. Например, "ένα" для среднего рода, "ένας" для мужского, "μία" для женского.</p>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+    <div id="numbers" class="content-section">
+        <h2>Numbers (Αριθμοί)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Greek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0</td><td>μηδέν</td></tr>
+                <tr><td>1</td><td>ένα (n.) / ένας (m.) / μία (f.)</td></tr>
+                <tr><td>2</td><td>δύο</td></tr>
+                <tr><td>3</td><td>τρία (n.) / τρεις (m./f.)</td></tr>
+                <tr><td>4</td><td>τέσσερα (n.) / τέσσερις (m./f.)</td></tr>
+                <tr><td>5</td><td>πέντε</td></tr>
+                <tr><td>10</td><td>δέκα</td></tr>
+                <tr><td>20</td><td>είκοσι</td></tr>
+                <tr><td>100</td><td>εκατό</td></tr>
+                <tr><td>1000</td><td>χίλια</td></tr>
+            </tbody>
+        </table>
+        <p>The numbers <b>1, 3, 4</b> and all numbers ending in them (e.g., 21, 33, 44), <b>are declined by gender</b>  For example, "ένα" for neuter, "ένας" for masculine, "μία" for feminine.</p>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
 
     ---
 
-    <div class="content-section" id="days-months">
-<h2>Дни недели и Месяцы (Ημέρες της εβδομάδας &amp; Μήνες)</h2>
-<h3>Дни недели (Ημέρες της εβδομάδας)</h3>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Греческий</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Понедельник</td><td>Δευτέρα</td></tr>
-<tr><td>Вторник</td><td>Τρίτη</td></tr>
-<tr><td>Среда</td><td>Τετάρτη</td></tr>
-<tr><td>Четверг</td><td>Πέμπτη</td></tr>
-<tr><td>Пятница</td><td>Παρασκευή</td></tr>
-<tr><td>Суббота</td><td>Σάββατο</td></tr>
-<tr><td>Воскресенье</td><td>Κυριακή</td></tr>
-</tbody>
-</table>
-<h3>Месяцы (Μήνες)</h3>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Греческий</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Январь</td><td>Ιανουάριος</td></tr>
-<tr><td>Февраль</td><td>Φεβρουάριος</td></tr>
-<tr><td>Март</td><td>Μάρτιος</td></tr>
-<tr><td>Апрель</td><td>Απρίλιος</td></tr>
-<tr><td>Май</td><td>Μάιος</td></tr>
-<tr><td>Июнь</td><td>Ιούνιος</td></tr>
-<tr><td>Июль</td><td>Ιούλιος</td></tr>
-<tr><td>Август</td><td>Αύγουστος</td></tr>
-<tr><td>Сентябрь</td><td>Σεπτέμβριος</td></tr>
-<tr><td>Октябрь</td><td>Οκτώβριος</td></tr>
-<tr><td>Ноябрь</td><td>Νοέμβριος</td></tr>
-<tr><td>Декабрь</td><td>Δεκέμβριος</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+    <div id="days-months" class="content-section">
+        <h2>Days of the week and Months (Ημέρες της εβδομάδας & Μήνες)</h2>
+        <h3>Days of the week (Ημέρες της εβδομάδας)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Greek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Monday</td><td>Δευτέρα</td></tr>
+                <tr><td>Tuesday</td><td>Τρίτη</td></tr>
+                <tr><td>Wednesday</td><td>Τετάρτη</td></tr>
+                <tr><td>Thursday</td><td>Πέμπτη</td></tr>
+                <tr><td>Friday</td><td>Παρασκευή</td></tr>
+                <tr><td>Saturday</td><td>Σάββατο</td></tr>
+                <tr><td>Sunday</td><td>Κυριακή</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Months (Μήνες)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Greek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>January</td><td>Ιανουάριος</td></tr>
+                <tr><td>February</td><td>Φεβρουάριος</td></tr>
+                <tr><td>March</td><td>Μάρτιος</td></tr>
+                <tr><td>April</td><td>Απρίλιος</td></tr>
+                <tr><td>May</td><td>Μάιος</td></tr>
+                <tr><td>June</td><td>Ιούνιος</td></tr>
+                <tr><td>July</td><td>Ιούλιος</td></tr>
+                <tr><td>August</td><td>Αύγουστος</td></tr>
+                <tr><td>September</td><td>Σεπτέμβριος</td></tr>
+                <tr><td>October</td><td>Οκτώβριος</td></tr>
+                <tr><td>November</td><td>Νοέμβριος</td></tr>
+                <tr><td>December</td><td>Δεκέμβριος</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
 
     ---
 
-    <div class="content-section" id="seasons">
-<h2>Времена года (Εποχές)</h2>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Греческий</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Весна</td><td>Άνοιξη</td></tr>
-<tr><td>Лето</td><td>Καλοκαίρι</td></tr>
-<tr><td>Осень</td><td>Φθινόπωρο</td></tr>
-<tr><td>Зима</td><td>Χειμώνας</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+    <div id="seasons" class="content-section">
+        <h2>Seasons (Εποχές)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Greek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Spring</td><td>Άνοιξη</td></tr>
+                <tr><td>Summer</td><td>Καλοκαίρι</td></tr>
+                <tr><td>Autumn</td><td>Φθινόπωρο</td></tr>
+                <tr><td>Winter</td><td>Χειμώνας</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
 
     ---
 
-    <div class="content-section" id="colors">
-<h2>Цвета (Χρώματα)</h2>
-<p>Цвета в греческом языке, как и прилагательные, согласуются по роду и числу с существительным.</p>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Мужской род</th>
-<th>Женский род</th>
-<th>Средний род</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Белый</td><td>άσπρος</td><td>άσπρη</td><td>άσπρο</td></tr>
-<tr><td>Черный</td><td>μαύρος</td><td>μαύρη</td><td>μαύρο</td></tr>
-<tr><td>Красный</td><td>κόκκινος</td><td>κόκκινη</td><td>κόκκινο</td></tr>
-<tr><td>Синий</td><td>μπλε (неизменяемое)</td><td>μπλε</td><td>μπλε</td></tr>
-<tr><td>Зеленый</td><td>πράσινος</td><td>πράσινη</td><td>πράσινο</td></tr>
-<tr><td>Желтый</td><td>κίτρινος</td><td>κίτρινη</td><td>κίτρινο</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+    <div id="colors" class="content-section">
+        <h2>Colors (Χρώματα)</h2>
+        <p>Colors in Greek, like adjectives, agree in gender and number with the noun.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Masculine</th>
+                    <th>Feminine</th>
+                    <th>Neuter</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>White</td><td>άσπρος</td><td>άσπρη</td><td>άσπρο</td></tr>
+                <tr><td>Black</td><td>μαύρος</td><td>μαύρη</td><td>μαύρο</td></tr>
+                <tr><td>Red</td><td>κόκκινος</td><td>κόκκινη</td><td>κόκκινο</td></tr>
+                <tr><td>Blue</td><td>μπλε (invariable)</td><td>μπλε</td><td>μπλε</td></tr>
+                <tr><td>Green</td><td>πράσινος</td><td>πράσινη</td><td>πράσινο</td></tr>
+                <tr><td>Yellow</td><td>κίτρινος</td><td>κίτρινη</td><td>κίτρινο</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
 
     ---
 
-    <div class="content-section" id="prepositions">
-<h2>Основные предлоги (Βασικές Προθέσεις)</h2>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Греческий</th>
-<th>Пример</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>в, на (куда?)</td><td>σε</td><td>Πάω **σε** σπίτι. (Иду **в** дом.)</td></tr>
-<tr><td>от, из</td><td>από</td><td>Είμαι **από** Ελλάδα. (Я **из** Греции.)</td></tr>
-<tr><td>с (кем? чем?)</td><td>με</td><td>Είμαι **με** φίλους. (Я **с** друзьями.)</td></tr>
-<tr><td>для, о (чем?)</td><td>για</td><td>Αυτό είναι **για** σένα. (Это **для** тебя.)</td></tr>
-<tr><td>до</td><td>ως / μέχρι</td><td>**Μέχρι** αύριο! (**До** завтра!)</td></tr>
-<tr><td>без</td><td>χωρίς</td><td>καφές **χωρίς** ζάχαρη (кофе **без** сахара)</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+    <div id="prepositions" class="content-section">
+        <h2>Basic Prepositions (Βασικές Προθέσεις)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Greek</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>in, on, at (to where?)</td><td>σε</td><td>Πάω <b>σε</b> σπίτι. (I go <b>to</b> the house.)</td></tr>
+                <tr><td>from</td><td>από</td><td>Είμαι <b>από</b> Ελλάδα. (I am <b>from</b> Greece.)</td></tr>
+                <tr><td>with</td><td>με</td><td>Είμαι <b>με</b> φίλους. (I am <b>with</b> friends.)</td></tr>
+                <tr><td>for, about</td><td>για</td><td>Αυτό είναι <b>για</b> σένα. (This is <b>for</b> you.)</td></tr>
+                <tr><td>until</td><td>ως / μέχρι</td><td><b>Μέχρι</b> αύριο! (<b>Until</b> tomorrow!)</td></tr>
+                <tr><td>without</td><td>χωρίς</td><td>καφές <b>χωρίς</b> ζάχαρη (coffee <b>without</b> sugar)</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
 
     ---
 
-    <div class="content-section" id="greetings">
-<h2>Базовые фразы общения (Βασικές Φράσεις Επικοινωνίας)</h2>
-<table>
-<thead>
-<tr>
-<th>Русский</th>
-<th>Греческий</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Привет / Пока</td><td>Γεια (σου/σας)</td></tr>
-<tr><td>Доброе утро</td><td>Καλημέρα</td></tr>
-<tr><td>Добрый день (Добрый вечер)</td><td>Καλησπέρα</td></tr>
-<tr><td>Доброй ночи</td><td>Καληνύχτα</td></tr>
-<tr><td>Как дела? (неформ.)</td><td>Τι κάνεις;</td></tr>
-<tr><td>Как дела? (форм./мн.ч.)</td><td>Τι κάνετε;</td></tr>
-<tr><td>Как поживаете? (форм./мн.ч.)</td><td>Πώς είστε;</td></tr>
-<tr><td>Что нового?</td><td>Τι νέα;</td></tr>
-<tr><td>Хорошо / В порядке</td><td>Καλά</td></tr>
-<tr><td>Я в порядке.</td><td>Είμαι καλά.</td></tr>
-<tr><td>Спасибо</td><td>Ευχαριστώ</td></tr>
-<tr><td>Пожалуйста (отвечая на спасибо)</td><td>Παρακαλώ</td></tr>
-<tr><td>Пожалуйста (прошу)</td><td>Παρακαλώ</td></tr>
-<tr><td>Извините / Простите</td><td>Συγγνώμη</td></tr>
-<tr><td>Да</td><td>Ναι</td></tr>
-<tr><td>Нет</td><td>Όχι</td></tr>
-<tr><td>До свидания</td><td>Αντίο</td></tr>
-<tr><td>Увидимся</td><td>Τα λέμε</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
+    <div id="greetings" class="content-section">
+        <h2>Basic communication phrases (Βασικές Φράσεις Επικοινωνίας)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>English</th>
+                    <th>Greek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Hello / Bye</td><td>Γεια (σου/σας)</td></tr>
+                <tr><td>Good morning</td><td>Καλημέρα</td></tr>
+                <tr><td>Good afternoon (Good evening)</td><td>Καλησπέρα</td></tr>
+                <tr><td>Good night</td><td>Καληνύχτα</td></tr>
+                <tr><td>How are you? (inf.)</td><td>Τι κάνεις;</td></tr>
+                <tr><td>How are you? (form./pl.)</td><td>Τι κάνετε;</td></tr>
+                <tr><td>How are you? (form./pl.)</td><td>Πώς είστε;</td></tr>
+                <tr><td>What's new?</td><td>Τι νέα;</td></tr>
+                <tr><td>Fine / Okay</td><td>Καλά</td></tr>
+                <tr><td>I'm fine.</td><td>Είμαι καλά.</td></tr>
+                <tr><td>Thank you</td><td>Ευχαριστώ</td></tr>
+                <tr><td>You're welcome (in response to thank you)</td><td>Παρακαλώ</td></tr>
+                <tr><td>Please (requesting)</td><td>Παρακαλώ</td></tr>
+                <tr><td>Sorry / Excuse me</td><td>Συγγνώμη</td></tr>
+                <tr><td>Yes</td><td>Ναι</td></tr>
+                <tr><td>No</td><td>Όχι</td></tr>
+                <tr><td>Goodbye</td><td>Αντίο</td></tr>
+                <tr><td>See you</td><td>Τα λέμε</td></tr>
+            </tbody>
+        </table>
+        <a href="#top" class="back-to-top">Back to top</a>
+    </div>
+
+
+<hr>
+<div id="verb-tenses" class="content-section">
+    <h2>Other verb tenses</h2>
+    <h3>Past tense (Αόριστος)</h3>
+    <p>The past tense (Αόριστος) denotes a single, completed action in the past. It is used with time markers like "χθες" (yesterday), "πριν" (before), "προχθές" (the day before yesterday).</p>
+    <table>
+        <thead>
+            <tr><th>Pronoun</th><th>Verb "γράφω" (to write)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Εγώ</td><td>έγραψα</td></tr>
+            <tr><td>Εσύ</td><td>έγραψες</td></tr>
+            <tr><td>Αυτός/Αυτή/Αυτό</td><td>έγραψε</td></tr>
+            <tr><td>Εμείς</td><td>γράψαμε</td></tr>
+            <tr><td>Εσείς</td><td>γράψατε</td></tr>
+            <tr><td>Αυτοί/Αυτές/Αυτά</td><td>έγραψαν</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Future tense (Μέλλοντας)</h3>
+    <p>The future tense (Μέλλοντας) denotes an action that will happen in the future. It is formed with the particle "θα" + verb in the present tense (ενεστώτας) or with a special form depending on the verb (simple or continuous future).</p>
+    <table>
+        <thead>
+            <tr><th>Pronoun</th><th>Verb "πάω" (to go)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Εγώ</td><td>θα πάω</td></tr>
+            <tr><td>Εσύ</td><td>θα πας</td></tr>
+            <tr><td>Αυτός/Αυτή/Αυτό</td><td>θα πάει</td></tr>
+            <tr><td>Εμείς</td><td>θα πάμε</td></tr>
+            <tr><td>Εσείς</td><td>θα πάτε</td></tr>
+            <tr><td>Αυτοί/Αυτές/Αυτά</td><td>θα πάνε</td></tr>
+        </tbody>
+    </table>
+    
+    <h4>Types of future tense</h4>
+    <ul>
+        <li><strong>Μέλλοντας στιγμιαίος (simple future)</strong> — used for single, completed actions in the future. Example: <em>θα γράψω</em> (I will write).</li>
+        <li><strong>Μέλλοντας εξακολουθητικός (continuous future)</strong> — for actions that will take place over a period of time. Example: <em>θα γράφω</em> (I will be writing).</li>
+    </ul>
+    <h4>Comparison: γράφω</h4>
+    <table>
+        <thead>
+            <tr><th>Tense</th><th>Form</th><th>Example</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Present</td><td>γράφω</td><td>Τώρα γράφω ένα γράμμα. (Now I am writing a letter.)</td></tr>
+            <tr><td>Future (cont.)</td><td>θα γράφω</td><td>Αύριο θα γράφω όλη μέρα. (Tomorrow I will be writing all day.)</td></tr>
+            <tr><td>Future (simple)</td><td>θα γράψω</td><td>Θα γράψω ένα βιβλίο. (I will write a book.)</td></tr>
+        </tbody>
+    </table>
+
+<a href="#top" class="back-to-top">Back to top</a>
 </div>
-<hr/>
-<div class="content-section" id="verb-tenses">
-<h2>Other Verb Tenses</h2>
-<h3>Прошедшее время (Αόριστος)</h3>
-<p>Прошедшее время (Αόριστος) обозначает разовое, завершенное действие в прошлом. Употребляется с маркерами времени, как "χθες" (вчера), "πριν" (до этого), "προχθές" (позавчера).</p>
-<table>
-<thead>
-<tr><th>Местоимение</th><th>Глагол "γράφω" (писать)</th></tr>
-</thead>
-<tbody>
-<tr><td>Εγώ</td><td>έγραψα</td></tr>
-<tr><td>Εσύ</td><td>έγραψες</td></tr>
-<tr><td>Αυτός/Αυτή/Αυτό</td><td>έγραψε</td></tr>
-<tr><td>Εμείς</td><td>γράψαμε</td></tr>
-<tr><td>Εσείς</td><td>γράψατε</td></tr>
-<tr><td>Αυτοί/Αυτές/Αυτά</td><td>έγραψαν</td></tr>
-</tbody>
-</table>
-<h3>Будущее время (Μέλλοντας)</h3>
-<p>Будущее время (Μέλλοντας) обозначает действие, которое произойдет в будущем. Образуется с частицей "θα" + глагол в настоящем времени (ενεστώτας) или с особой формой, зависящей от глагола (простое или длительное будущее).</p>
-<table>
-<thead>
-<tr><th>Местоимение</th><th>Глагол "πάω" (идти)</th></tr>
-</thead>
-<tbody>
-<tr><td>Εγώ</td><td>θα πάω</td></tr>
-<tr><td>Εσύ</td><td>θα πας</td></tr>
-<tr><td>Αυτός/Αυτή/Αυτό</td><td>θα πάει</td></tr>
-<tr><td>Εμείς</td><td>θα πάμε</td></tr>
-<tr><td>Εσείς</td><td>θα πάτε</td></tr>
-<tr><td>Αυτοί/Αυτές/Αυτά</td><td>θα πάνε</td></tr>
-</tbody>
-</table>
-<h4>Типы будущего времени</h4>
-<ul>
-<li><strong>Μέλλοντας στιγμιαίος (простое будущее)</strong> — используется для разовых, завершённых действий в будущем. Пример: <em>θα γράψω</em> (я напишу).</li>
-<li><strong>Μέλλοντας εξακολουθητικός (длительное будущее)</strong> — для действий, которые будут происходить на протяжении времени. Пример: <em>θα γράφω</em> (я буду писать).</li>
-</ul>
-<h4>Сравнение: γράφω</h4>
-<table>
-<thead>
-<tr><th>Время</th><th>Форма</th><th>Пример</th></tr>
-</thead>
-<tbody>
-<tr><td>Настоящее</td><td>γράφω</td><td>Τώρα γράφω ένα γράμμα. (Сейчас я пишу письмо.)</td></tr>
-<tr><td>Будущее (длит.)</td><td>θα γράφω</td><td>Αύριο θα γράφω όλη μέρα. (Завтра я буду писать весь день.)</td></tr>
-<tr><td>Будущее (простое)</td><td>θα γράψω</td><td>Θα γράψω ένα βιβλίο. (Я напишу книгу.)</td></tr>
-</tbody>
-</table>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
+
+
+<hr>
+<div id="irregular-verbs" class="content-section">
+    <h2>Irregular verbs (Ανώμαλα ρήματα)</h2>
+    <p>Some verbs in Greek change according to special rules. Here are the most commonly used ones:</p>
+    <table>
+        <thead>
+            <tr><th>Infinitive</th><th>Present</th><th>Past (Αόριστος)</th><th>Future (Μέλλοντας)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>είμαι (to be)</td><td>είμαι</td><td>ήμουν</td><td>θα είμαι</td></tr>
+            <tr><td>έχω (to have)</td><td>έχω</td><td>είχα</td><td>θα έχω</td></tr>
+            <tr><td>πάω (to go)</td><td>πάω / πηγαίνω</td><td>πήγα</td><td>θα πάω</td></tr>
+            <tr><td>τρώω (to eat)</td><td>τρώω</td><td>έφαγα</td><td>θα φάω</td></tr>
+            <tr><td>βλέπω (to see)</td><td>βλέπω</td><td>είδα</td><td>θα δω</td></tr>
+            <tr><td>λέω (to say)</td><td>λέω</td><td>είπα</td><td>θα πω</td></tr>
+            <tr><td>φέρνω (to bring)</td><td>φέρνω</td><td>έφερα</td><td>θα φέρω</td></tr>
+        </tbody>
+    </table>
+    <p>These forms must be memorized, as they do not follow regular conjugation rules.</p>
+    <a href="#top" class="back-to-top">Back to top</a>
 </div>
-<hr/>
-<div class="content-section" id="irregular-verbs">
-<h2>Неправильные глаголы (Ανώμαλα ρήματα)</h2>
-<p>Некоторые глаголы в греческом языке изменяются по особым правилам. Вот наиболее часто используемые:</p>
-<table>
-<thead>
-<tr><th>Инфинитив</th><th>Настоящее</th><th>Прошедшее (Аόριστος)</th><th>Будущее (Μέλλοντας)</th></tr>
-</thead>
-<tbody>
-<tr><td>είμαι (быть)</td><td>είμαι</td><td>ήμουν</td><td>θα είμαι</td></tr>
-<tr><td>έχω (иметь)</td><td>έχω</td><td>είχα</td><td>θα έχω</td></tr>
-<tr><td>πάω (идти)</td><td>πάω / πηγαίνω</td><td>πήγα</td><td>θα πάω</td></tr>
-<tr><td>τρώω (есть)</td><td>τρώω</td><td>έφαγα</td><td>θα φάω</td></tr>
-<tr><td>βλέπω (видеть)</td><td>βλέπω</td><td>είδα</td><td>θα δω</td></tr>
-<tr><td>λέω (говорить)</td><td>λέω</td><td>είπα</td><td>θα πω</td></tr>
-<tr><td>φέρνω (приносить)</td><td>φέρνω</td><td>έφερα</td><td>θα φέρω</td></tr>
-</tbody>
-</table>
-<p>Эти формы необходимо заучивать, так как они не подчиняются регулярным правилам спряжения.</p>
-<a class="back-to-top" href="#top">Back to Table of Contents</a>
-</div>
+
 </body>
 </html>
