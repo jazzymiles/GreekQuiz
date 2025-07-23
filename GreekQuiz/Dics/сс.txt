@@ -1,0 +1,434 @@
+[
+  {
+    "ru": "пока, хотя",
+    "en": "while, even though",
+    "el": "ενώ",
+    "transcription": "эно́",
+    "el_transcription_en": "enó",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "тем не менее, однако",
+    "en": "yet, nonetheless",
+    "el": "ωστόσο",
+    "transcription": "осто́со",
+    "el_transcription_en": "ostóso",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "хотя, даже если",
+    "en": "although, even though",
+    "el": "αν και",
+    "transcription": "ан ки",
+    "el_transcription_en": "an ki",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "или",
+    "en": "or",
+    "el": "ή",
+    "transcription": "и",
+    "el_transcription_en": "i",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "так, следовательно",
+    "en": "so, therefore",
+    "el": "άρα",
+    "transcription": "а́ра",
+    "el_transcription_en": "ára",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "однако",
+    "en": "however",
+    "el": "όμως",
+    "transcription": "о́мос",
+    "el_transcription_en": "ómos",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "но",
+    "en": "but",
+    "el": "αλλά",
+    "transcription": "алла́",
+    "el_transcription_en": "allá",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "потому что",
+    "en": "because",
+    "el": "επειδή",
+    "transcription": "эпэйди́",
+    "el_transcription_en": "epeidí",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "когда",
+    "en": "when",
+    "el": "όταν",
+    "transcription": "о́тан",
+    "el_transcription_en": "ótan",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "что (союз)",
+    "en": "that (conjunction)",
+    "el": "πως",
+    "transcription": "пос",
+    "el_transcription_en": "pos",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "всякий раз, когда",
+    "en": "whenever",
+    "el": "όποτε",
+    "transcription": "о́потэ",
+    "el_transcription_en": "ópote",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "что (союз)",
+    "en": "that (conjunction)",
+    "el": "ότι",
+    "transcription": "о́ти",
+    "el_transcription_en": "óti",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "то есть, иначе говоря",
+    "en": "namely, in other words",
+    "el": "δηλαδή",
+    "transcription": "дилази́",
+    "el_transcription_en": "diladí",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "ну, итак",
+    "en": "well, so",
+    "el": "λοιπόν",
+    "transcription": "липо́н",
+    "el_transcription_en": "lipón",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "поскольку, в то время как",
+    "en": "as, while",
+    "el": "καθώς",
+    "transcription": "каθо́с",
+    "el_transcription_en": "kathós",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "так что, следовательно",
+    "en": "so, therefore",
+    "el": "οπότε",
+    "transcription": "опо́тэ",
+    "el_transcription_en": "ópote",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "один (мужской)",
+    "en": "alone (masc.)",
+    "el": "μόνος",
+    "transcription": "мо́нос",
+    "el_transcription_en": "mónos",
+    "category": "прилагательные"
+  },
+  {
+    "ru": "одна (женский)",
+    "en": "alone (fem.)",
+    "el": "μόνη",
+    "transcription": "мо́ни",
+    "el_transcription_en": "móni",
+    "category": "прилагательные"
+  },
+  {
+    "ru": "только, просто",
+    "en": "only, just",
+    "el": "μόνο",
+    "transcription": "мо́но",
+    "el_transcription_en": "móno",
+    "category": "наречия"
+  },
+  {
+    "ru": "тот же, та же, то же",
+    "en": "same",
+    "el": "ίδιο, ίδια, ίδιος",
+    "transcription": "и́дьо, и́дья, и́дьос",
+    "el_transcription_en": "ídio, ídia, ídios",
+    "category": "прилагательные"
+  },
+  {
+    "ru": "также, и",
+    "en": "also, and",
+    "el": "κι",
+    "transcription": "ки",
+    "el_transcription_en": "ki",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "а вдруг, не",
+    "en": "maybe, perhaps (implies doubt/concern)",
+    "el": "μήπως",
+    "transcription": "ми́пос",
+    "el_transcription_en": "mípos",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "и",
+    "en": "and",
+    "el": "και",
+    "transcription": "ке",
+    "el_transcription_en": "ke",
+    "category": "союзы и наречия"
+  },
+  {
+    "ru": "да",
+    "en": "yes",
+    "el": "ναι",
+    "transcription": "нэ",
+    "el_transcription_en": "ne",
+    "category": "фразы"
+  },
+  {
+    "ru": "нет",
+    "en": "no",
+    "el": "όχι",
+    "transcription": "о́хи",
+    "el_transcription_en": "óchi",
+    "category": "фразы"
+  },
+  {
+    "ru": "привет",
+    "en": "hello, hi",
+    "el": "γεια",
+    "transcription": "йа",
+    "el_transcription_en": "ya",
+    "category": "приветствия"
+  },
+  {
+    "ru": "доброе утро",
+    "en": "good morning",
+    "el": "καλημέρα",
+    "transcription": "калимэ́ра",
+    "el_transcription_en": "kaliméra",
+    "category": "приветствия"
+  },
+  {
+    "ru": "добрый вечер",
+    "en": "good evening",
+    "el": "καλησπέρα",
+    "transcription": "калиспэ́ра",
+    "el_transcription_en": "kalispéra",
+    "category": "приветствия"
+  },
+  {
+    "ru": "доброй ночи",
+    "en": "good night",
+    "el": "καληνύχτα",
+    "transcription": "калини́хта",
+    "el_transcription_en": "kalinýchta",
+    "category": "приветствия"
+  },
+  {
+    "ru": "до свидания",
+    "en": "goodbye",
+    "el": "αντίο",
+    "transcription": "анди́о",
+    "el_transcription_en": "andío",
+    "category": "прощания"
+  },
+  {
+    "ru": "как дела?",
+    "en": "how are you?",
+    "el": "τι κάνεις;",
+    "transcription": "ти ка́нис;",
+    "el_transcription_en": "ti káneis?",
+    "category": "фразы"
+  },
+  {
+    "ru": "хорошо",
+    "en": "good, well",
+    "el": "καλά",
+    "transcription": "кала́",
+    "el_transcription_en": "kalá",
+    "category": "фразы"
+  },
+  {
+    "ru": "плохо",
+    "en": "bad",
+    "el": "άσχημα",
+    "transcription": "а́схима",
+    "el_transcription_en": "áschima",
+    "category": "фразы"
+  },
+  {
+    "ru": "пожалуйста (при просьбе)",
+    "en": "please",
+    "el": "παρακαλώ",
+    "transcription": "паракало́",
+    "el_transcription_en": "parakaló",
+    "category": "фразы"
+  },
+  {
+    "ru": "спасибо",
+    "en": "thank you",
+    "el": "ευχαριστώ",
+    "transcription": "эфхаристо́",
+    "el_transcription_en": "efcharistó",
+    "category": "фразы"
+  },
+  {
+    "ru": "извините",
+    "en": "excuse me, sorry",
+    "el": "συγγνώμη",
+    "transcription": "сигно́ми",
+    "el_transcription_en": "syngnómi",
+    "category": "фразы"
+  },
+  {
+    "ru": "давайте",
+    "en": "let's",
+    "el": "πάμε",
+    "transcription": "па́мэ",
+    "el_transcription_en": "páme",
+    "category": "фразы"
+  },
+  {
+    "ru": "мне нужно",
+    "en": "I need",
+    "el": "χρειάζομαι",
+    "transcription": "хрья́зомэ",
+    "el_transcription_en": "chreíazomai",
+    "category": "фразы"
+  },
+  {
+    "ru": "я хочу",
+    "en": "I want",
+    "el": "θέλω",
+    "transcription": "тэ́ло",
+    "el_transcription_en": "thélo",
+    "category": "фразы"
+  },
+  {
+    "ru": "где?",
+    "en": "where?",
+    "el": "πού;",
+    "transcription": "пу́;",
+    "el_transcription_en": "pou?",
+    "category": "вопросы"
+  },
+  {
+    "ru": "кто?",
+    "en": "who?",
+    "el": "ποιος;",
+    "transcription": "пьос;",
+    "el_transcription_en": "pios?",
+    "category": "вопросы"
+  },
+  {
+    "ru": "что?",
+    "en": "what?",
+    "el": "τι;",
+    "transcription": "ти;",
+    "el_transcription_en": "ti?",
+    "category": "вопросы"
+  },
+  {
+    "ru": "когда?",
+    "en": "when?",
+    "el": "πότε;",
+    "transcription": "по́тэ;",
+    "el_transcription_en": "póte?",
+    "category": "вопросы"
+  },
+  {
+    "ru": "как?",
+    "en": "how?",
+    "el": "πώς;",
+    "transcription": "по́с;",
+    "el_transcription_en": "pos?",
+    "category": "вопросы"
+  },
+  {
+    "ru": "почему?",
+    "en": "why?",
+    "el": "γιατί;",
+    "transcription": "йати́;",
+    "el_transcription_en": "giatí?",
+    "category": "вопросы"
+  },
+  {
+    "ru": "сколько?",
+    "en": "how much/many?",
+    "el": "πόσο;",
+    "transcription": "по́со;",
+    "el_transcription_en": "póso?",
+    "category": "вопросы"
+  },
+  {
+    "ru": "здесь",
+    "en": "here",
+    "el": "εδώ",
+    "transcription": "эдо́",
+    "el_transcription_en": "edó",
+    "category": "наречия места"
+  },
+  {
+    "ru": "там",
+    "en": "there",
+    "el": "εκεί",
+    "transcription": "эки́",
+    "el_transcription_en": "ekí",
+    "category": "наречия места"
+  },
+  {
+    "ru": "сейчас",
+    "en": "now",
+    "el": "τώρα",
+    "transcription": "то́ра",
+    "el_transcription_en": "tóra",
+    "category": "наречия времени"
+  },
+  {
+    "ru": "потом",
+    "en": "later, then",
+    "el": "μετά",
+    "transcription": "мэта́",
+    "el_transcription_en": "metá",
+    "category": "наречия времени"
+  },
+  {
+    "ru": "всегда",
+    "en": "always",
+    "el": "πάντα",
+    "transcription": "па́нда",
+    "el_transcription_en": "pánda",
+    "category": "наречия времени"
+  },
+  {
+    "ru": "никогда",
+    "en": "never",
+    "el": "ποτέ",
+    "transcription": "потэ́",
+    "el_transcription_en": "poté",
+    "category": "наречия времени"
+  },
+  {
+    "ru": "много",
+    "en": "much, many",
+    "el": "πολύ",
+    "transcription": "поли́",
+    "el_transcription_en": "polý",
+    "category": "наречия количества"
+  },
+  {
+    "ru": "мало",
+    "en": "little, few",
+    "el": "λίγο",
+    "transcription": "ли́го",
+    "el_transcription_en": "lígo",
+    "category": "наречия количества"
+  }
+]

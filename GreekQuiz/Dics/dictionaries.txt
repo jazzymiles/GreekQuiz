@@ -91,6 +91,20 @@
     "file": "jobs.txt"
   },
   {
+    "name_ru": "предметы",
+    "name_en": "household",
+    "name_el": "Οικιακά είδη",
+    "filePath": "https://www.dropbox.com/scl/fi/9mo0umbaxbw60n1rhhlbw/household.txt?rlkey=zl7kutiaxald50f1ojya3tvpg&st=5sf7kyaj&raw=1",
+    "file": "household.txt"
+  },
+    {
+    "name_ru": "союзы и связки",
+    "name_en": "conjunctions & connectors",
+    "name_el": "Σύνδεσμοι",
+    "filePath": "https://www.dropbox.com/scl/fi/hkbyhdkkklvudgmm7cx0a/.txt?rlkey=dki5jgb7w8leaojyppyhsl3ij&st=8gxs94p4&raw=1",
+    "file": "cc.txt"
+  },
+  {
     "name_ru": "разное",
     "name_en": "miscellaneous",
     "name_el": "διάφορα",

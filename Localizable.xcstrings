@@ -2,7 +2,20 @@
   "sourceLanguage" : "en",
   "strings" : {
     " " : {
-
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        }
+      }
     },
     "all_dictionaries_updated" : {
       "extractionState" : "manual",
@@ -66,8 +79,30 @@
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Язык ответа"
+          }
+        }
+      }
+    },
+    "answers_sounds_toggle" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekfónisi apántisis"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Answers sound"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Озвучка ответа"
           }
         }
       }
@@ -101,19 +136,19 @@
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Αυτόματη αναπαραγωγή ήχου"
+            "value" : "Εκφωνώ λέξεις"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Autoplay sound"
+            "value" : "Word sound"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Автоматически озвучивать слова"
+            "value" : "Озвучивать слова"
           }
         }
       }
@@ -1276,7 +1311,7 @@
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Изучаемый язык"
           }
         }

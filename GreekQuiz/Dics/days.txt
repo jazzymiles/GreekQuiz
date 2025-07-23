@@ -64,7 +64,7 @@
     "ru_transcription_gr": "βασκρεσένγιε",
     "en": "Sunday",
     "el": "η Κυριακή",
-    "transcription": "кириаκί",
+    "transcription": "кириаки́",
     "el_transcription_en": "i kyriaki",
     "category": "дни",
     "gender": "женский"
@@ -174,7 +174,7 @@
     "ru_transcription_gr": "ντιέν",
     "en": "day",
     "el": "η μέρα",
-    "transcription": "мэ́ρα",
+    "transcription": "мэ́ра",
     "el_transcription_en": "i mera",
     "category": "время суток",
     "gender": "женский"
@@ -244,7 +244,7 @@
     "ru_transcription_gr": "μάι",
     "en": "May",
     "el": "ο Μάιος",
-    "transcription": "μάйос",
+    "transcription": "ма́йос",
     "el_transcription_en": "o maios",
     "category": "месяц",
     "gender": "мужской"
@@ -291,7 +291,7 @@
   },
   {
     "ru": "октябрь",
-    "ru_transcription_gr": "ακτιάμπρ",
+    "ru_transcription_gr": "ακτιάμπр",
     "en": "October",
     "el": "ο Οκτώβριος",
     "transcription": "окто́вриос",
@@ -301,22 +301,280 @@
   },
   {
     "ru": "ноябрь",
-    "ru_transcription_gr": "ναγιάμπρ",
+    "ru_transcription_gr": "ναγιάμπр",
     "en": "November",
     "el": "ο Νοέμβριος",
-    "transcription": "νοэ́вριοс",
+    "transcription": "ноэ́вриос",
     "el_transcription_en": "o noemvrios",
     "category": "месяц",
     "gender": "мужской"
   },
   {
     "ru": "декабрь",
-    "ru_transcription_gr": "ντεκάμπρ",
+    "ru_transcription_gr": "ντεκάμπр",
     "en": "December",
     "el": "ο Δεκέμβριος",
     "transcription": "деке́вриос",
     "el_transcription_en": "o dekemvrios",
     "category": "месяц",
     "gender": "мужской"
+  },
+  {
+    "ru": "половина",
+    "en": "half",
+    "el": "μισή",
+    "transcription": "миси́",
+    "el_transcription_en": "misí",
+    "category": "время",
+    "gender": "женский"
+  },
+  {
+    "ru": "четверть",
+    "en": "quarter",
+    "el": "τέταρτο",
+    "transcription": "тэ́тарто",
+    "el_transcription_en": "tétarto",
+    "category": "время",
+    "gender": "средний"
+  },
+  {
+    "ru": "десятилетие",
+    "en": "decade",
+    "el": "δεκαετία",
+    "transcription": "дэкаэти́а",
+    "el_transcription_en": "dekaetía",
+    "category": "время",
+    "gender": "женский"
+  },
+  {
+    "ru": "век",
+    "en": "century",
+    "el": "αιώνας",
+    "transcription": "эо́нас",
+    "el_transcription_en": "aiónas",
+    "category": "время",
+    "gender": "мужской"
+  },
+  {
+    "ru": "тысячелетие",
+    "en": "millennium",
+    "el": "χιλιετία",
+    "transcription": "хильети́а",
+    "el_transcription_en": "chilietía",
+    "category": "время",
+    "gender": "женский"
+  },
+  {
+    "ru": "поколение",
+    "en": "generation",
+    "el": "γενιά",
+    "transcription": "йэнья́",
+    "el_transcription_en": "geniá",
+    "category": "время",
+    "gender": "женский"
+  },
+  {
+    "ru": "моменты",
+    "en": "moments",
+    "el": "στιγμές",
+    "transcription": "стигмэ́с",
+    "el_transcription_en": "stigmés",
+    "category": "время",
+    "gender": "женский (мн.ч.)"
+  },
+  {
+    "ru": "время, год",
+    "en": "time, year",
+    "el": "χρόνος",
+    "transcription": "хро́нос",
+    "el_transcription_en": "chrónos",
+    "category": "время",
+    "gender": "мужской"
+  },
+  {
+    "ru": "период, время",
+    "en": "period, time",
+    "el": "περίοδος",
+    "transcription": "пэри́одос",
+    "el_transcription_en": "períodos",
+    "category": "время",
+    "gender": "женский"
+  },
+  {
+    "ru": "дата",
+    "en": "date",
+    "el": "ημερομηνία",
+    "transcription": "имэромини́а",
+    "el_transcription_en": "imerominía",
+    "category": "время",
+    "gender": "женский"
+  },
+  {
+    "ru": "полночь",
+    "en": "midnight",
+    "el": "μεσάνυχτα",
+    "transcription": "мэса́нихта",
+    "el_transcription_en": "mesánychta",
+    "category": "время суток",
+    "gender": "средний (мн.ч.)"
+  },
+  {
+    "ru": "полдень",
+    "en": "noon",
+    "el": "μεσημέρι",
+    "transcription": "мэсимэ́ри",
+    "el_transcription_en": "mesiméri",
+    "category": "время суток",
+    "gender": "средний"
+  },
+  {
+    "ru": "календарь, дневник",
+    "en": "calendar, diary",
+    "el": "ημερολόγιο",
+    "transcription": "имэроло́гьо",
+    "el_transcription_en": "imerológio",
+    "category": "предметы быта",
+    "gender": "средний"
+  },
+  {
+    "ru": "рождение",
+    "en": "birth",
+    "el": "γέννηση",
+    "transcription": "йэ́ниси",
+    "el_transcription_en": "génnisi",
+    "category": "общее",
+    "gender": "женский"
+  },
+  {
+    "ru": "до",
+    "en": "before",
+    "el": "πριν",
+    "transcription": "прин",
+    "el_transcription_en": "prin",
+    "category": "наречия времени"
+  },
+  {
+    "ru": "в прошлом году",
+    "en": "last year",
+    "el": "πέρυσι",
+    "transcription": "пэ́риси",
+    "el_transcription_en": "pérysi",
+    "category": "время"
+  },
+  {
+    "ru": "в этом году",
+    "en": "this year",
+    "el": "φέτος",
+    "transcription": "фэ́тос",
+    "el_transcription_en": "fétos",
+    "category": "время"
+  },
+  {
+    "ru": "весна",
+    "en": "spring",
+    "el": "άνοιξη",
+    "transcription": "а́никси",
+    "el_transcription_en": "ánoixi",
+    "category": "времена года",
+    "gender": "женский"
+  },
+  {
+    "ru": "лето",
+    "en": "summer",
+    "el": "καλοκαίρι",
+    "transcription": "калокэ́ри",
+    "el_transcription_en": "kalokaíri",
+    "category": "времена года",
+    "gender": "средний"
+  },
+  {
+    "ru": "осень",
+    "en": "autumn",
+    "el": "φθινόπωρο",
+    "transcription": "фтино́поро",
+    "el_transcription_en": "fthinóporo",
+    "category": "времена года",
+    "gender": "средний"
+  },
+  {
+    "ru": "зима",
+    "en": "winter",
+    "el": "χειμώνας",
+    "transcription": "химо́нас",
+    "el_transcription_en": "cheimónas",
+    "category": "времена года",
+    "gender": "мужской"
+  },
+  {
+    "ru": "сезон, эра",
+    "en": "season, era",
+    "el": "εποχή",
+    "transcription": "эпохи́",
+    "el_transcription_en": "epochí",
+    "category": "времена года",
+    "gender": "женский"
+  },
+  {
+    "ru": "выходные",
+    "en": "weekend",
+    "el": "Σαββατοκύριακο",
+    "transcription": "саватоки́рьяко",
+    "el_transcription_en": "Savvatokýriako",
+    "category": "дни",
+    "gender": "средний"
+  },
+  {
+    "ru": "возраст",
+    "en": "age",
+    "el": "ηλικία",
+    "transcription": "илики́а",
+    "el_transcription_en": "ilikía",
+    "category": "общее",
+    "gender": "женский"
+  },
+  {
+    "ru": "начало",
+    "en": "beginning",
+    "el": "αρχή",
+    "transcription": "архи́",
+    "el_transcription_en": "archí",
+    "category": "общее",
+    "gender": "женский"
+  },
+  {
+    "ru": "сегодня вечером",
+    "en": "tonight",
+    "el": "απόψε",
+    "transcription": "апо́псе",
+    "el_transcription_en": "apópse",
+    "category": "время суток",
+    "gender": "-"
+  },
+  {
+    "ru": "день",
+    "en": "day",
+    "el": "η ημέρα",
+    "transcription": "имэ́ра",
+    "el_transcription_en": "i iméra",
+    "category": "время суток",
+    "gender": "женский"
+  },
+  {
+    "ru": "после полудня",
+    "en": "afternoon",
+    "el": "απόγευμα",
+    "transcription": "апо́гэвма",
+    "el_transcription_en": "apógevma",
+    "category": "время суток",
+    "gender": "средний"
+  },
+  {
+    "ru": "конец",
+    "en": "end",
+    "el": "τέλος",
+    "transcription": "тэ́лос",
+    "el_transcription_en": "télos",
+    "category": "общее",
+    "gender": "средний"
   }
 ]

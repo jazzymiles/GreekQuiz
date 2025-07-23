@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @Binding var showTranscription: Bool
     @Binding var autoPlaySound: Bool
+    @Binding var playAnswerSound: Bool // ✨ НОВОЕ СВОЙСТВО
     @Binding var colorSchemePreference: String
     @Binding var dictionarySource: DictionarySource
     @Binding var customDictionaryURL: String
@@ -28,10 +29,13 @@ struct SettingsView: View {
                     Toggle(isOn: $autoPlaySound) {
                         Text("autoplay_sound_toggle")
                     }
+                    // ✨ НОВЫЙ ПЕРЕКЛЮЧАТЕЛЬ
+                    Toggle(isOn: $playAnswerSound) {
+                        Text("answers_sounds_toggle")
+                    }
                 }
 
                 Section(header: Text("language_settings_section")) {
-                    // ✨ ИЗМЕНЕНИЕ: Добавлена надпись "Язык обучения"
                     Text("studied_language_picker")
                         .font(.caption)
                         .foregroundColor(.gray)
@@ -43,11 +47,10 @@ struct SettingsView: View {
                     }
                     .pickerStyle(.segmented)
 
-                    // ✨ ИЗМЕНЕНИЕ: Добавлена надпись "Язык ответа"
                     Text("answer_language_picker")
                         .font(.caption)
                         .foregroundColor(.gray)
-                        .padding(.top) // Добавляем отступ сверху для визуального разделения
+                        .padding(.top)
 
                     Picker("answer_language_picker", selection: $answerLanguage) {
                         Text("russian_language").tag("ru")

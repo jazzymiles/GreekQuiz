@@ -2,7 +2,6 @@ import SwiftUI
 import AVFoundation
 import WebKit
 
-// CardView теперь использует новые настройки через параметры
 struct CardView: View {
     let questionWord: String
     let answerWord: String
@@ -21,7 +20,6 @@ struct CardView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
             
-            // Показываем транскрипцию только для греческого языка
             if let trans = transcription, studiedLanguage == "el" {
                 Text(showTranscription ? trans : String(repeating: "*", count: trans.count))
                     .font(.system(size: 28))
@@ -83,11 +81,11 @@ struct ContentView: View {
     @AppStorage("currentQuizMode") private var quizMode: QuizMode = .keyboard
     @AppStorage("showTranscription") private var showTranscription: Bool = true
     @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true
+    @AppStorage("playAnswerSound") private var playAnswerSound: Bool = true
     @AppStorage("colorSchemePreference") private var colorSchemePreference: String = "system"
     @AppStorage("dictionarySourcePreference") private var dictionarySource: DictionarySource = .standard
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
     
-    // ✨ ИЗМЕНЕНИЕ: Новые настройки для языков с дефолтными значениями
     @AppStorage("studiedLanguage") private var studiedLanguage: String = "el"
     @AppStorage("answerLanguage") private var answerLanguage: String = "ru"
     
@@ -97,10 +95,18 @@ struct ContentView: View {
     
     private let synthesizer = AVSpeechSynthesizer()
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
-
-    // MARK: - Вспомогательные функции для языка
     
-    // Получает нужное слово (ru, el, en) из объекта Word
+    // MARK: - Вспомогательные свойства и функции
+    
+    // ✨ НОВОЕ СВОЙСТВО: Определяет имя файла правил на основе языка ответа
+    private var rulesHtmlFileName: String {
+        if answerLanguage == "en" || answerLanguage == "el" {
+            return "rules-en"
+        } else {
+            return "rules-el" // Файл по умолчанию для остальных языков (например, русского)
+        }
+    }
+
     private func getWord(for word: Word, langCode: String) -> String {
         switch langCode {
         case "ru":
@@ -108,20 +114,18 @@ struct ContentView: View {
         case "el":
             return word.el
         case "en":
-            return word.en ?? "N/A" // Возвращаем "N/A" если перевод на английский отсутствует
+            return word.en ?? "N/A"
         default:
             return ""
         }
     }
 
-    // Возвращает текущее слово для вопроса
     private func currentQuestionWord() -> String {
         guard !dictionaryService.activeWords.isEmpty else { return "" }
         let word = dictionaryService.activeWords[currentWordIndex]
         return getWord(for: word, langCode: studiedLanguage)
     }
     
-    // Возвращает текущее слово для ответа
     private func currentAnswerWord() -> String {
         guard !dictionaryService.activeWords.isEmpty else { return "" }
         let word = dictionaryService.activeWords[currentWordIndex]
@@ -175,8 +179,9 @@ struct ContentView: View {
     private var headerButtons: some View {
         HStack(spacing: 8) {
             Spacer()
+            // ✨ ИЗМЕНЕНИЕ: Передаем динамическое имя файла в RulesSheetView
             HeaderButton(imageName: "rules", action: { showingRules = true })
-                .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileName: "rules-el") }
+                .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileName: rulesHtmlFileName) }
             
             HeaderButton(imageName: "dic", action: { showingDictionarySelection = true })
                 .sheet(isPresented: $showingDictionarySelection) {
@@ -189,10 +194,10 @@ struct ContentView: View {
 
             HeaderButton(imageName: "settings", action: { showingSettings = true })
                 .sheet(isPresented: $showingSettings) {
-                    // ✨ ИЗМЕНЕНИЕ: Передаем новые привязки в SettingsView
                     SettingsView(
                         showTranscription: $showTranscription,
                         autoPlaySound: $autoPlaySound,
+                        playAnswerSound: $playAnswerSound,
                         colorSchemePreference: $colorSchemePreference,
                         dictionarySource: $dictionarySource,
                         customDictionaryURL: $customDictionaryURL,
@@ -297,7 +302,9 @@ struct ContentView: View {
                 ForEach(cardOptions, id: \.self) { option in
                     Button(action: {
                         selectedAnswer = option
-                        speakWord(option, answerLanguage)
+                        if playAnswerSound {
+                            speakWord(option, answerLanguage)
+                        }
                     }) {
                         Text(option)
                             .font(.headline)
@@ -433,7 +440,6 @@ struct ContentView: View {
         let correctAnswer = parseAcceptedAnswers(from: currentAnswerWord()).first ?? currentAnswerWord()
         
         var options = Set([correctAnswer])
-        // Собираем все возможные варианты ответов на нужном языке
         let allPossibleAnswers = dictionaryService.allWords.map { getWord(for: $0, langCode: answerLanguage) }
         
         while options.count < 4 && options.count < allPossibleAnswers.count {
@@ -478,7 +484,6 @@ struct ContentView: View {
         if synthesizer.isSpeaking { synthesizer.stopSpeaking(at: .immediate) }
         
         let utterance = AVSpeechUtterance(string: text)
-        // Преобразуем код языка в формат, понятный AVSpeechSynthesisVoice
         let voiceLanguageCode = langCode == "el" ? "el-GR" : (langCode == "ru" ? "ru-RU" : "en-US")
         utterance.voice = AVSpeechSynthesisVoice(language: voiceLanguageCode)
         utterance.rate = 0.5
@@ -541,7 +546,6 @@ struct FeedbackText: View {
     }
 }
 
-
 struct WordDisplay: View {
     let questionWord: String
     let transcription: String?
@@ -565,13 +569,12 @@ struct WordDisplay: View {
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.bottom, 8)
 
-            // Показываем транскрипцию только если изучаемый язык греческий
             if let trans = transcription, studiedLanguage == "el" {
                 Text(showTranscription ? trans : String(repeating: "*", count: trans.count))
                     .font(.system(size: 28)).foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
             } else {
-                 Text(" ").font(.system(size: 28)) // Пустое место для сохранения верстки
+                 Text(" ").font(.system(size: 28))
             }
         }
         .padding(.bottom, 16)

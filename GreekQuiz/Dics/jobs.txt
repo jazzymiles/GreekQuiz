@@ -347,7 +347,7 @@
     "ru": "портниха",
     "en": "seamstress",
     "el": "η ράφτρα",
-    "transcription": "и ра́фтра",
+    "transcription": "и ра́φτρα",
     "el_transcription_en": "i ráftra",
     "gender": "женский"
   },
@@ -846,5 +846,157 @@
     "transcription": "о тапитурго́с",
     "el_transcription_en": "o tapitourgós",
     "gender": "мужской"
+  },
+  {
+    "ru": "профессия",
+    "en": "profession",
+    "el": "το επάγγελμα",
+    "transcription": "то эпа́нгэлма",
+    "el_transcription_en": "to epángelma",
+    "gender": "средний"
+  },
+  {
+    "ru": "босс",
+    "en": "boss",
+    "el": "το αφεντικό",
+    "transcription": "то афэндико́",
+    "el_transcription_en": "to afentikó",
+    "gender": "средний"
+  },
+  {
+    "ru": "судья",
+    "en": "judge",
+    "el": "ο δικαστής",
+    "transcription": "о дикасти́с",
+    "el_transcription_en": "o dikastís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "охранник",
+    "en": "guard",
+    "el": "ο φύλακας",
+    "transcription": "о фи́лакас",
+    "el_transcription_en": "o fýlakas",
+    "gender": "мужской"
+  },
+  {
+    "ru": "капитан",
+    "en": "captain",
+    "el": "ο καπετάνιος",
+    "transcription": "о капэта́ньос",
+    "el_transcription_en": "o kapetánios",
+    "gender": "мужской"
+  },
+  {
+    "ru": "менеджер",
+    "en": "manager",
+    "el": "ο προϊστάμενος",
+    "transcription": "о происта́мэнос",
+    "el_transcription_en": "o proïstámenos",
+    "gender": "мужской"
+  },
+  {
+    "ru": "офицер",
+    "en": "officer",
+    "el": "ο αξιωματικός",
+    "transcription": "о аксьоматико́с",
+    "el_transcription_en": "o axiomatikós",
+    "gender": "мужской"
+  },
+  {
+    "ru": "солдат",
+    "en": "soldier",
+    "el": "ο στρατιώτης",
+    "transcription": "о стратьо́тис",
+    "el_transcription_en": "o stratiótis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "художник, артист, исполнитель",
+    "en": "artist, painter, performer",
+    "el": "ο καλλιτέχνης",
+    "transcription": "о калитэ́хнис",
+    "el_transcription_en": "o kallitéchnis",
+    "gender": "мужской"
+  },
+  {
+    "ru": "директор, менеджер",
+    "en": "director, manager",
+    "el": "ο διευθυντής",
+    "transcription": "о дьефтинти́с",
+    "el_transcription_en": "o diefthyntís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "полиция",
+    "en": "police",
+    "el": "η αστυνομία",
+    "transcription": "и астиноми́а",
+    "el_transcription_en": "i astynomía",
+    "gender": "женский"
+  },
+  {
+    "ru": "карьера",
+    "en": "career",
+    "el": "η καριέρα",
+    "transcription": "и карьэ́ра",
+    "el_transcription_en": "i kariéra",
+    "gender": "женский"
+  },
+  {
+    "ru": "профессионал",
+    "en": "professional",
+    "el": "ο επαγγελματίας",
+    "transcription": "о эпангэлма́тьас",
+    "el_transcription_en": "o epangelmatías",
+    "gender": "мужской"
+  },
+  {
+    "ru": "священник",
+    "en": "priest",
+    "el": "ο παπάς",
+    "transcription": "о папа́с",
+    "el_transcription_en": "o papás",
+    "gender": "мужской"
+  },
+  {
+    "ru": "студент",
+    "en": "student",
+    "el": "ο μαθητής",
+    "transcription": "о матити́с",
+    "el_transcription_en": "o mathitís",
+    "gender": "мужской"
+  },
+  {
+    "ru": "модель",
+    "en": "model",
+    "el": "το μοντέλο",
+    "transcription": "то монтэ́ло",
+    "el_transcription_en": "to montélo",
+    "gender": "средний"
+  },
+  {
+    "ru": "работа, задание",
+    "en": "work, task",
+    "el": "η εργασία",
+    "transcription": "и эргаси́а",
+    "el_transcription_en": "i ergasía",
+    "gender": "женский"
+  },
+  {
+    "ru": "работа, дело",
+    "en": "work, business",
+    "el": "η δουλειά",
+    "transcription": "и дулья́",
+    "el_transcription_en": "i douliá",
+    "gender": "женский"
+  },
+  {
+    "ru": "персонал, сотрудники",
+    "en": "staff, employees",
+    "el": "το προσωπικό",
+    "transcription": "то просопико́",
+    "el_transcription_en": "to prosopikó",
+    "gender": "средний"
   }
 ]
