@@ -6,7 +6,10 @@
     "transcription": "кути́",
     "el_transcription_en": "koutí",
     "category": "предметы быта",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το κουτί είναι άδειο.",
+    "ru_example": "Коробка пустая.",
+    "en_example": "The box is empty."
   },
   {
     "ru": "простыня",
@@ -15,7 +18,10 @@
     "transcription": "сэндо́ни",
     "el_transcription_en": "sentóni",
     "category": "предметы быта",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σεντόνι είναι καθαρό.",
+    "ru_example": "Простыня чистая.",
+    "en_example": "The bedsheet is clean."
   },
   {
     "ru": "подарок",
@@ -24,7 +30,10 @@
     "transcription": "до́ро",
     "el_transcription_en": "dóro",
     "category": "предметы быта",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το δώρο είναι ωραίο.",
+    "ru_example": "Подарок красивый.",
+    "en_example": "The gift is nice."
   },
   {
     "ru": "фен",
@@ -33,7 +42,10 @@
     "transcription": "пистола́ки",
     "el_transcription_en": "pistoláki",
     "category": "предметы быта",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το πιστολάκι δεν λειτουργεί.",
+    "ru_example": "Фен не работает.",
+    "en_example": "The hairdryer is not working."
   },
   {
     "ru": "экран, монитор",
@@ -42,7 +54,10 @@
     "transcription": "ото́ни",
     "el_transcription_en": "othóni",
     "category": "электроника",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η οθόνη του υπολογιστή είναι μεγάλη.",
+    "ru_example": "Экран компьютера большой.",
+    "en_example": "The computer screen is big."
   },
   {
     "ru": "тетрадь",
@@ -51,7 +66,10 @@
     "transcription": "тэтра́дьо",
     "el_transcription_en": "tetrádio",
     "category": "канцелярия",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το τετράδιο είναι στο γραφείο.",
+    "ru_example": "Тетрадь на столе.",
+    "en_example": "The notebook is on the desk."
   },
   {
     "ru": "пистолет",
@@ -60,7 +78,10 @@
     "transcription": "писто́ли",
     "el_transcription_en": "pistóli",
     "category": "общее",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το παιχνίδι έχει ένα πιστόλι.",
+    "ru_example": "В игре есть пистолет.",
+    "en_example": "The game has a gun."
   },
   {
     "ru": "батарея",
@@ -69,7 +90,10 @@
     "transcription": "мбатари́а",
     "el_transcription_en": "bataría",
     "category": "электроника",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η μπαταρία είναι άδεια.",
+    "ru_example": "Батарея разряжена.",
+    "en_example": "The battery is empty."
   },
   {
     "ru": "игрушка, игра",
@@ -78,7 +102,10 @@
     "transcription": "пэхни́ди",
     "el_transcription_en": "pechnídi",
     "category": "общее",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το παιχνίδι είναι διασκεδαστικό.",
+    "ru_example": "Игра веселая.",
+    "en_example": "The game is fun."
   },
   {
     "ru": "веревка",
@@ -87,7 +114,10 @@
     "transcription": "схини́",
     "el_transcription_en": "schoiní",
     "category": "общее",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σχοινί είναι μακρύ.",
+    "ru_example": "Веревка длинная.",
+    "en_example": "The rope is long."
   },
   {
     "ru": "часы",
@@ -96,7 +126,10 @@
     "transcription": "роло́и",
     "el_transcription_en": "rolói",
     "category": "предметы быта",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το ρολόι δείχνει την ώρα.",
+    "ru_example": "Часы показывают время.",
+    "en_example": "The clock shows the time."
   },
   {
     "ru": "компьютер",
@@ -105,7 +138,10 @@
     "transcription": "ипологисти́с",
     "el_transcription_en": "ypologistís",
     "category": "электроника",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο υπολογιστής μου είναι γρήγορος.",
+    "ru_example": "Мой компьютер быстрый.",
+    "en_example": "My computer is fast."
   },
   {
     "ru": "мобильный телефон",
@@ -114,7 +150,10 @@
     "transcription": "кинито́",
     "el_transcription_en": "kinitó",
     "category": "электроника",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το κινητό μου είναι κόκκινο.",
+    "ru_example": "Мой телефон красный.",
+    "en_example": "My cellphone is red."
   },
   {
     "ru": "корзина",
@@ -123,7 +162,10 @@
     "transcription": "кала́ти",
     "el_transcription_en": "kaláthi",
     "category": "предметы быта",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το καλάθι είναι γεμάτο φρούτα.",
+    "ru_example": "Корзина полна фруктов.",
+    "en_example": "The basket is full of fruits."
   },
   {
     "ru": "одеяло",
@@ -132,7 +174,10 @@
     "transcription": "кувэ́рта",
     "el_transcription_en": "kouvérta",
     "category": "предметы быта",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η κουβέρτα είναι ζεστή.",
+    "ru_example": "Одеяло теплое.",
+    "en_example": "The blanket is warm."
   },
   {
     "ru": "миска",
@@ -141,7 +186,10 @@
     "transcription": "бол",
     "el_transcription_en": "bol",
     "category": "посуда",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το μπολ είναι στο τραπέζι.",
+    "ru_example": "Миска на столе.",
+    "en_example": "The bowl is on the table."
   },
   {
     "ru": "телевизор",
@@ -150,7 +198,10 @@
     "transcription": "тилэо́раси",
     "el_transcription_en": "tileórasi",
     "category": "электроника",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η τηλεόραση είναι κλειστή.",
+    "ru_example": "Телевизор выключен.",
+    "en_example": "The television is off."
   },
   {
     "ru": "машина, механизм",
@@ -159,7 +210,10 @@
     "transcription": "михани́",
     "el_transcription_en": "michaní",
     "category": "общее",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η μηχανή είναι καινούργια.",
+    "ru_example": "Машина новая.",
+    "en_example": "The machine is new."
   },
   {
     "ru": "стул",
@@ -168,7 +222,10 @@
     "transcription": "карэ́кла",
     "el_transcription_en": "karékla",
     "category": "мебель",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η καρέκλα είναι άσπρη.",
+    "ru_example": "Стул белый.",
+    "en_example": "The chair is white."
   },
   {
     "ru": "журнал",
@@ -177,7 +234,10 @@
     "transcription": "пэрьодико́",
     "el_transcription_en": "periodikó",
     "category": "чтение",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το περιοδικό είναι παλιό.",
+    "ru_example": "Журнал старый.",
+    "en_example": "The magazine is old."
   },
   {
     "ru": "ложка",
@@ -186,7 +246,10 @@
     "transcription": "кута́ли",
     "el_transcription_en": "koutáli",
     "category": "посуда",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το κουτάλι είναι ασημένιο.",
+    "ru_example": "Ложка серебряная.",
+    "en_example": "The spoon is silver."
   },
   {
     "ru": "бутылка",
@@ -195,7 +258,10 @@
     "transcription": "бука́ли",
     "el_transcription_en": "boukáli",
     "category": "посуда",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το μπουκάλι είναι γεμάτο νερό.",
+    "ru_example": "Бутылка полна воды.",
+    "en_example": "The bottle is full of water."
   },
   {
     "ru": "радио",
@@ -204,7 +270,10 @@
     "transcription": "радьо́фоно",
     "el_transcription_en": "radiofono",
     "category": "электроника",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το ραδιόφωνο παίζει μουσική.",
+    "ru_example": "Радио играет музыку.",
+    "en_example": "The radio is playing music."
   },
   {
     "ru": "карандаш",
@@ -213,7 +282,10 @@
     "transcription": "моли́ви",
     "el_transcription_en": "molývi",
     "category": "канцелярия",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το μολύβι είναι κοντό.",
+    "ru_example": "Карандаш короткий.",
+    "en_example": "The pencil is short."
   },
   {
     "ru": "ручка",
@@ -222,7 +294,10 @@
     "transcription": "стило́с",
     "el_transcription_en": "stylós",
     "category": "канцелярия",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο στυλός γράφει καλά.",
+    "ru_example": "Ручка хорошо пишет.",
+    "en_example": "The pen writes well."
   },
   {
     "ru": "ключ",
@@ -231,7 +306,10 @@
     "transcription": "клиди́",
     "el_transcription_en": "kleidí",
     "category": "предметы быта",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το κλειδί είναι στο χέρι μου.",
+    "ru_example": "Ключ в моей руке.",
+    "en_example": "The key is in my hand."
   },
   {
     "ru": "зубная щетка",
@@ -240,7 +318,10 @@
     "transcription": "одонто́вурца",
     "el_transcription_en": "odontóvourtsa",
     "category": "гигиена",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η οδοντόβουρτσα είναι καινούργια.",
+    "ru_example": "Зубная щетка новая.",
+    "en_example": "The toothbrush is new."
   },
   {
     "ru": "бритва",
@@ -249,7 +330,10 @@
     "transcription": "ксира́фи",
     "el_transcription_en": "xiráfi",
     "category": "гигиена",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το ξυράφι είναι κοφτερό.",
+    "ru_example": "Бритва острая.",
+    "en_example": "The razor is sharp."
   },
   {
     "ru": "мыло",
@@ -258,7 +342,10 @@
     "transcription": "сапу́ни",
     "el_transcription_en": "sapoúni",
     "category": "гигиена",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σαπούνι έχει ωραία μυρωδιά.",
+    "ru_example": "Мыло имеет приятный запах.",
+    "en_example": "The soap has a nice smell."
   },
   {
     "ru": "зубная паста",
@@ -267,7 +354,10 @@
     "transcription": "одонто́крэма",
     "el_transcription_en": "odontókrema",
     "category": "гигиена",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η οδοντόκρεμα είναι μέντας.",
+    "ru_example": "Зубная паста мятная.",
+    "en_example": "The toothpaste is minty."
   },
   {
     "ru": "соломинка",
@@ -276,7 +366,10 @@
     "transcription": "калама́ки",
     "el_transcription_en": "kalamáki",
     "category": "посуда",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το καλαμάκι είναι για το ποτό.",
+    "ru_example": "Соломинка для напитка.",
+    "en_example": "The straw is for the drink."
   },
   {
     "ru": "стол",
@@ -285,7 +378,10 @@
     "transcription": "трапэ́зи",
     "el_transcription_en": "trapézi",
     "category": "мебель",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το τραπέζι είναι ξύλινο.",
+    "ru_example": "Стол деревянный.",
+    "en_example": "The table is wooden."
   },
   {
     "ru": "кровать",
@@ -294,7 +390,10 @@
     "transcription": "крэва́ти",
     "el_transcription_en": "kreváti",
     "category": "мебель",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το κρεβάτι είναι άνετο.",
+    "ru_example": "Кровать удобная.",
+    "en_example": "The bed is comfortable."
   },
   {
     "ru": "лампа",
@@ -303,7 +402,10 @@
     "transcription": "ла́мба",
     "el_transcription_en": "lába",
     "category": "предметы быта",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η λάμπα είναι αναμμένη.",
+    "ru_example": "Лампа включена.",
+    "en_example": "The lamp is on."
   },
   {
     "ru": "телефон",
@@ -312,7 +414,10 @@
     "transcription": "тилэ́фоно",
     "el_transcription_en": "tiléfono",
     "category": "электроника",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το τηλέφωνο χτυπάει.",
+    "ru_example": "Телефон звонит.",
+    "en_example": "The telephone is ringing."
   },
   {
     "ru": "дверь",
@@ -321,7 +426,10 @@
     "transcription": "по́рта",
     "el_transcription_en": "pórta",
     "category": "части дома",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η πόρτα είναι ανοιχτή.",
+    "ru_example": "Дверь открыта.",
+    "en_example": "The door is open."
   },
   {
     "ru": "окно",
@@ -330,7 +438,10 @@
     "transcription": "пара́тиро",
     "el_transcription_en": "paráthyro",
     "category": "части дома",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το παράθυρο είναι κλειστό.",
+    "ru_example": "Окно закрыто.",
+    "en_example": "The window is closed."
   },
   {
     "ru": "книга",
@@ -339,7 +450,10 @@
     "transcription": "вивли́о",
     "el_transcription_en": "vivlío",
     "category": "чтение",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το βιβλίο είναι ενδιαφέρον.",
+    "ru_example": "Книга интересная.",
+    "en_example": "The book is interesting."
   },
   {
     "ru": "вода",
@@ -348,7 +462,10 @@
     "transcription": "нэро́",
     "el_transcription_en": "neró",
     "category": "напитки",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το νερό είναι κρύο.",
+    "ru_example": "Вода холодная.",
+    "en_example": "The water is cold."
   },
   {
     "ru": "хлеб",
@@ -357,7 +474,10 @@
     "transcription": "псоми́",
     "el_transcription_en": "psomí",
     "category": "еда",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το ψωμί είναι φρέσκο.",
+    "ru_example": "Хлеб свежий.",
+    "en_example": "The bread is fresh."
   },
   {
     "ru": "молоко",
@@ -366,7 +486,10 @@
     "transcription": "га́ла",
     "el_transcription_en": "gála",
     "category": "напитки",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το γάλα είναι στο ψυγείο.",
+    "ru_example": "Молоко в холодильнике.",
+    "en_example": "The milk is in the fridge."
   },
   {
     "ru": "яблоко",
@@ -375,7 +498,10 @@
     "transcription": "ми́ло",
     "el_transcription_en": "mílo",
     "category": "фрукты",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το μήλο είναι κόκκινο.",
+    "ru_example": "Яблоко красное.",
+    "en_example": "The apple is red."
   },
   {
     "ru": "машина",
@@ -384,7 +510,10 @@
     "transcription": "афтоки́нито",
     "el_transcription_en": "aftokínito",
     "category": "транспорт",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το αυτοκίνητο είναι γρήγορο.",
+    "ru_example": "Машина быстрая.",
+    "en_example": "The car is fast."
   },
   {
     "ru": "деньги",
@@ -393,7 +522,10 @@
     "transcription": "хри́мата",
     "el_transcription_en": "chrímata",
     "category": "финансы",
-    "gender": "средний (мн.ч.)"
+    "gender": "средний (мн.ч.)",
+    "el_example": "Τα χρήματα είναι στο πορτοφόλι.",
+    "ru_example": "Деньги в кошельке.",
+    "en_example": "The money is in the wallet."
   },
   {
     "ru": "дом",
@@ -402,6 +534,9 @@
     "transcription": "спи́ти",
     "el_transcription_en": "spíti",
     "category": "здания",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σπίτι είναι μεγάλο.",
+    "ru_example": "Дом большой.",
+    "en_example": "The house is big."
   }
 ]

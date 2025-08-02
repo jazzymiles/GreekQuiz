@@ -5,7 +5,10 @@
     "el": "ο γιατρός",
     "transcription": "о йятро́с",
     "el_transcription_en": "o yatrós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο γιατρός δουλεύει στο νοσοκομείο.",
+    "ru_example": "Доктор работает в больнице.",
+    "en_example": "The doctor works in the hospital."
   },
   {
     "ru": "безработный",
@@ -13,7 +16,10 @@
     "el": "ο άνεργος",
     "transcription": "о а́нэрьгос",
     "el_transcription_en": "o áneryos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Είναι άνεργος εδώ και ένα χρόνο.",
+    "ru_example": "Он безработный уже год.",
+    "en_example": "He has been unemployed for a year."
   },
   {
     "ru": "безработная",
@@ -21,7 +27,10 @@
     "el": "η άνεργη",
     "transcription": "и а́нэрьги",
     "el_transcription_en": "i áneryi",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η άνεργη γυναίκα ψάχνει δουλειά.",
+    "ru_example": "Безработная женщина ищет работу.",
+    "en_example": "The unemployed woman is looking for a job."
   },
   {
     "ru": "не занятый",
@@ -29,7 +38,10 @@
     "el": "ο μη απασχολούμενος",
     "transcription": "о ми апсхолу́мэнос",
     "el_transcription_en": "o mi apascholóumenos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Είναι μη απασχολούμενος αυτή τη στιγμή.",
+    "ru_example": "Он в данный момент не занят.",
+    "en_example": "He is unoccupied at the moment."
   },
   {
     "ru": "не занятая",
@@ -37,7 +49,10 @@
     "el": "η μη απασχολούμενη",
     "transcription": "и ми апсхолу́мэни",
     "el_transcription_en": "i mi apascholoumeni",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η μη απασχολούμενη γυναίκα διαβάζει.",
+    "ru_example": "Незанятая женщина читает.",
+    "en_example": "The unoccupied woman is reading."
   },
   {
     "ru": "водитель",
@@ -45,7 +60,10 @@
     "el": "ο οδηγός",
     "transcription": "о одиго́с",
     "el_transcription_en": "o odigós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο οδηγός του λεωφορείου είναι ευγενικός.",
+    "ru_example": "Водитель автобуса вежливый.",
+    "en_example": "The bus driver is polite."
   },
   {
     "ru": "секретарь",
@@ -53,7 +71,10 @@
     "el": "ο γραμματέας",
     "transcription": "о грамматэ́ас",
     "el_transcription_en": "o grammatéas",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο γραμματέας μας είναι πολύ οργανωτικός.",
+    "ru_example": "Наш секретарь очень организованный.",
+    "en_example": "Our secretary is very organized."
   },
   {
     "ru": "секретарша",
@@ -61,7 +82,10 @@
     "el": "η γραμματέας",
     "transcription": "и грамматэ́ас",
     "el_transcription_en": "i grammatéas",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η γραμματέας απαντάει στα τηλέφωνα.",
+    "ru_example": "Секретарша отвечает на звонки.",
+    "en_example": "The secretary answers the phones."
   },
   {
     "ru": "певец",
@@ -69,7 +93,10 @@
     "el": "ο τραγουδιστής",
     "transcription": "о трагудисти́с",
     "el_transcription_en": "o tragoudistís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο τραγουδιστής έχει ωραία φωνή.",
+    "ru_example": "У певца красивый голос.",
+    "en_example": "The singer has a beautiful voice."
   },
   {
     "ru": "певица",
@@ -77,7 +104,10 @@
     "el": "η τραγουδίστρια",
     "transcription": "и трагуди́стрия",
     "el_transcription_en": "i tragoudístria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η τραγουδίστρια τραγουδάει στο θέατρο.",
+    "ru_example": "Певица поет в театре.",
+    "en_example": "The singer is singing in the theater."
   },
   {
     "ru": "музыкант",
@@ -85,7 +115,10 @@
     "el": "ο μουσικός",
     "transcription": "о назико́с",
     "el_transcription_en": "o mousikós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μουσικός παίζει πιάνο.",
+    "ru_example": "Музыкант играет на пианино.",
+    "en_example": "The musician plays the piano."
   },
   {
     "ru": "музыкантка",
@@ -93,7 +126,10 @@
     "el": "η μουσικός",
     "transcription": "и назико́с",
     "el_transcription_en": "i mousikós",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η μουσικός συνθέτει νέα κομμάτια.",
+    "ru_example": "Музыкантка сочиняет новые произведения.",
+    "en_example": "The musician composes new pieces."
   },
   {
     "ru": "повар",
@@ -101,7 +137,10 @@
     "el": "ο μάγειρας",
     "transcription": "о ма́йирас",
     "el_transcription_en": "o máyiras",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μάγειρας ετοιμάζει το φαγητό.",
+    "ru_example": "Повар готовит еду.",
+    "en_example": "The cook is preparing the food."
   },
   {
     "ru": "повариха",
@@ -109,7 +148,10 @@
     "el": "η μαγείρισσα",
     "transcription": "и майи́риса",
     "el_transcription_en": "i mayírisa",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η μαγείρισσα δουλεύει στο εστιατόριο.",
+    "ru_example": "Повариха работает в ресторане.",
+    "en_example": "The cook works in the restaurant."
   },
   {
     "ru": "шеф-повар",
@@ -117,7 +159,10 @@
     "el": "ο αρχιμάγειρας",
     "transcription": "о архима́йирас",
     "el_transcription_en": "o archimáyiras",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αρχιμάγειρας είναι υπεύθυνος για την κουζίνα.",
+    "ru_example": "Шеф-повар отвечает за кухню.",
+    "en_example": "The chef is responsible for the kitchen."
   },
   {
     "ru": "продавец",
@@ -125,7 +170,10 @@
     "el": "ο πωλητής",
     "transcription": "о полити́с",
     "el_transcription_en": "o politís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο πωλητής δουλεύει στο κατάστημα.",
+    "ru_example": "Продавец работает в магазине.",
+    "en_example": "The salesperson works in the store."
   },
   {
     "ru": "продавщица",
@@ -133,7 +181,10 @@
     "el": "η πωλήτρια",
     "transcription": "и поли́трия",
     "el_transcription_en": "i polítria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η πωλήτρια μας βοήθησε να διαλέξουμε.",
+    "ru_example": "Продавщица помогла нам выбрать.",
+    "en_example": "The saleswoman helped us choose."
   },
   {
     "ru": "официант",
@@ -141,7 +192,10 @@
     "el": "ο σερβιτόρος",
     "transcription": "о сэрвито́рос",
     "el_transcription_en": "o servitóros",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο σερβιτόρος φέρνει το ποτό.",
+    "ru_example": "Официант приносит напиток.",
+    "en_example": "The waiter is bringing the drink."
   },
   {
     "ru": "официантка",
@@ -149,7 +203,10 @@
     "el": "η σερβιτόρα",
     "transcription": "и сэрвито́ра",
     "el_transcription_en": "i servitóra",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η σερβιτόρα μας πήρε την παραγγελία.",
+    "ru_example": "Официантка приняла наш заказ.",
+    "en_example": "The waitress took our order."
   },
   {
     "ru": "медсестра",
@@ -157,7 +214,10 @@
     "el": "η νοσοκόμα",
     "transcription": "и носоко́ма",
     "el_transcription_en": "i nosokóma",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η νοσοκόμα φροντίζει τους ασθενείς.",
+    "ru_example": "Медсестра ухаживает за пациентами.",
+    "en_example": "The nurse takes care of the patients."
   },
   {
     "ru": "медбрат",
@@ -165,7 +225,10 @@
     "el": "ο νοσοκόμος",
     "transcription": "о носоко́мос",
     "el_transcription_en": "o nosokómos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο νοσοκόμος έκανε την ένεση.",
+    "ru_example": "Медбрат сделал укол.",
+    "en_example": "The nurse gave the injection."
   },
   {
     "ru": "строитель",
@@ -173,7 +236,10 @@
     "el": "ο οικοδόμος",
     "transcription": "о икодо́мос",
     "el_transcription_en": "o oikodómos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο οικοδόμος χτίζει ένα σπίτι.",
+    "ru_example": "Строитель строит дом.",
+    "en_example": "The builder is building a house."
   },
   {
     "ru": "рабочий",
@@ -181,7 +247,10 @@
     "el": "ο εργάτης",
     "transcription": "о эрга́тис",
     "el_transcription_en": "o ergátis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο εργάτης δουλεύει στο εργοστάσιο.",
+    "ru_example": "Рабочий работает на заводе.",
+    "en_example": "The worker works in the factory."
   },
   {
     "ru": "работница",
@@ -189,7 +258,10 @@
     "el": "η εργάτρια",
     "transcription": "и эрга́трия",
     "el_transcription_en": "i ergátria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η εργάτρια είναι κουρασμένη.",
+    "ru_example": "Работница устала.",
+    "en_example": "The worker is tired."
   },
   {
     "ru": "учитель",
@@ -197,7 +269,10 @@
     "el": "ο δάσκαλος",
     "transcription": "о да́скалос",
     "el_transcription_en": "o dáskalos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο δάσκαλος διδάσκει μαθηματικά.",
+    "ru_example": "Учитель преподает математику.",
+    "en_example": "The teacher teaches mathematics."
   },
   {
     "ru": "учительница",
@@ -205,7 +280,10 @@
     "el": "η δασκάλα",
     "transcription": "и даска́ла",
     "el_transcription_en": "i daskála",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η δασκάλα είναι ευγενική.",
+    "ru_example": "Учительница добрая.",
+    "en_example": "The teacher is kind."
   },
   {
     "ru": "инженер",
@@ -213,7 +291,10 @@
     "el": "ο μηχανικός",
     "transcription": "о миханико́с",
     "el_transcription_en": "o michanikós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μηχανικός σχεδιάζει την γέφυρα.",
+    "ru_example": "Инженер проектирует мост.",
+    "en_example": "The engineer is designing the bridge."
   },
   {
     "ru": "архитектор",
@@ -221,7 +302,10 @@
     "el": "ο αρχιτέκτονας",
     "transcription": "о архитэ́ктонас",
     "el_transcription_en": "o architéktonas",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αρχιτέκτονας σχεδίασε ένα όμορφο σπίτι.",
+    "ru_example": "Архитектор спроектировал красивый дом.",
+    "en_example": "The architect designed a beautiful house."
   },
   {
     "ru": "художник",
@@ -229,7 +313,10 @@
     "el": "ο ζωγράφος",
     "transcription": "о зогра́фос",
     "el_transcription_en": "o zográfos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ζωγράφος ζωγραφίζει έναν πίνακα.",
+    "ru_example": "Художник пишет картину.",
+    "en_example": "The painter is painting a picture."
   },
   {
     "ru": "художница",
@@ -237,7 +324,10 @@
     "el": "η ζωγράφος",
     "transcription": "и зогра́фос",
     "el_transcription_en": "i zográfos",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η ζωγράφος εκθέτει τα έργα της.",
+    "ru_example": "Художница выставляет свои работы.",
+    "en_example": "The painter is exhibiting her works."
   },
   {
     "ru": "писатель",
@@ -245,7 +335,10 @@
     "el": "ο συγγραφέας",
     "transcription": "о сиграфэ́ас",
     "el_transcription_en": "o syngraféas",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο συγγραφέας τελείωσε το νέο του βιβλίο.",
+    "ru_example": "Писатель закончил свою новую книгу.",
+    "en_example": "The writer finished his new book."
   },
   {
     "ru": "писательница",
@@ -253,7 +346,10 @@
     "el": "η συγγραφέας",
     "transcription": "и сиграфэ́ас",
     "el_transcription_en": "i syngraféas",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η συγγραφέας κέρδισε ένα βραβείο.",
+    "ru_example": "Писательница получила премию.",
+    "en_example": "The writer won an award."
   },
   {
     "ru": "адвокат",
@@ -261,7 +357,10 @@
     "el": "ο δικηγόρος",
     "transcription": "о дикиго́рос",
     "el_transcription_en": "o dikigóros",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο δικηγόρος υπερασπίζεται τον πελάτη του.",
+    "ru_example": "Адвокат защищает своего клиента.",
+    "en_example": "The lawyer is defending his client."
   },
   {
     "ru": "адвокатесса",
@@ -269,7 +368,10 @@
     "el": "η δικηγόρος",
     "transcription": "и дикиго́ros",
     "el_transcription_en": "i dikigóros",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η δικηγόρος κέρδισε την υπόθεση.",
+    "ru_example": "Адвокатесса выиграла дело.",
+    "en_example": "The lawyer won the case."
   },
   {
     "ru": "полицейский",
@@ -277,7 +379,10 @@
     "el": "ο αστυνομικός",
     "transcription": "о астиномико́с",
     "el_transcription_en": "o astynomikós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αστυνομικός μας βοήθησε να βρούμε το δρόμο.",
+    "ru_example": "Полицейский помог нам найти дорогу.",
+    "en_example": "The policeman helped us find the way."
   },
   {
     "ru": "пожарный",
@@ -285,7 +390,10 @@
     "el": "ο πυροσβέστης",
     "transcription": "о пиросвэ́стис",
     "el_transcription_en": "o pyrosvéstis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο πυροσβέστης έσβησε τη φωτιά.",
+    "ru_example": "Пожарный потушил огонь.",
+    "en_example": "The firefighter put out the fire."
   },
   {
     "ru": "фермер",
@@ -293,7 +401,10 @@
     "el": "ο αγρότης",
     "transcription": "о агро́тис",
     "el_transcription_en": "o agrótis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αγρότης καλλιεργεί τα χωράφια του.",
+    "ru_example": "Фермер возделывает свои поля.",
+    "en_example": "The farmer is cultivating his fields."
   },
   {
     "ru": "рыбак",
@@ -301,7 +412,10 @@
     "el": "ο ψαράς",
     "transcription": "о псара́с",
     "el_transcription_en": "o psarás",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ψαράς έπιασε ένα μεγάλο ψάρι.",
+    "ru_example": "Рыбак поймал большую рыбу.",
+    "en_example": "The fisherman caught a big fish."
   },
   {
     "ru": "пекарь",
@@ -309,7 +423,10 @@
     "el": "ο αρτοποιός",
     "transcription": "о артопио́с",
     "el_transcription_en": "o artopoiós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αρτοποιός φτιάχνει ψωμί.",
+    "ru_example": "Пекарь печет хлеб.",
+    "en_example": "The baker is making bread."
   },
   {
     "ru": "мясник",
@@ -317,7 +434,10 @@
     "el": "ο χασάπης",
     "transcription": "о хаса́пис",
     "el_transcription_en": "o chasápis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο χασάπης έχει ποιοτικό κρέας.",
+    "ru_example": "У мясника качественное мясо.",
+    "en_example": "The butcher has quality meat."
   },
   {
     "ru": "парикмахер",
@@ -325,7 +445,10 @@
     "el": "ο κομμωτής",
     "transcription": "о коммоти́с",
     "el_transcription_en": "o kommotís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο κομμωτής μου έκοψε τα μαλλιά.",
+    "ru_example": "Парикмахер подстриг мне волосы.",
+    "en_example": "The hairdresser cut my hair."
   },
   {
     "ru": "парикмахерша",
@@ -333,7 +456,10 @@
     "el": "η κομμώτρια",
     "transcription": "и коммо́трия",
     "el_transcription_en": "i kommótria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η κομμώτρια είναι πολύ καλή.",
+    "ru_example": "Парикмахерша очень хорошая.",
+    "en_example": "The hairdresser is very good."
   },
   {
     "ru": "портной",
@@ -341,7 +467,10 @@
     "el": "ο ράφτης",
     "transcription": "о ра́фтис",
     "el_transcription_en": "o ráftis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ράφτης μου έφτιαξε ένα κοστούμι.",
+    "ru_example": "Портной сшил мне костюм.",
+    "en_example": "The tailor made me a suit."
   },
   {
     "ru": "портниха",
@@ -349,7 +478,10 @@
     "el": "η ράφτρα",
     "transcription": "и ра́φτρα",
     "el_transcription_en": "i ráftra",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η ράφτρα έραψε ένα φόρεμα.",
+    "ru_example": "Портниха сшила платье.",
+    "en_example": "The seamstress sewed a dress."
   },
   {
     "ru": "сапожник",
@@ -357,7 +489,9 @@
     "el": "ο τσαγκάρης",
     "transcription": "о цанга́рис",
     "el_transcription_en": "o tsangáris",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο τσαγκάρης επισκεύασε τα παπούτσια μου.",
+    "ru_example": "Сапожник отремонтировал мои ботинки.",
   },
   {
     "ru": "сантехник",
@@ -365,7 +499,10 @@
     "el": "ο υδραυλικός",
     "transcription": "о идравлико́с",
     "el_transcription_en": "o ydravlikós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο υδραυλικός επιδιόρθωσε τη βρύση.",
+    "ru_example": "Сантехник починил кран.",
+    "en_example": "The plumber fixed the faucet."
   },
   {
     "ru": "электрик",
@@ -373,7 +510,10 @@
     "el": "ο ηλεκτρολόγος",
     "transcription": "о илектрло́гос",
     "el_transcription_en": "o ilektrológos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ηλεκτρολόγος εγκατέστησε τα φώτα.",
+    "ru_example": "Электрик установил свет.",
+    "en_example": "The electrician installed the lights."
   },
   {
     "ru": "столяр",
@@ -381,7 +521,10 @@
     "el": "ο ξυλουργός",
     "transcription": "о ксилурго́с",
     "el_transcription_en": "o xilourgós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ξυλουργός φτιάχνει ένα τραπέζι.",
+    "ru_example": "Столяр делает стол.",
+    "en_example": "The carpenter is making a table."
   },
   {
     "ru": "плотник",
@@ -389,7 +532,10 @@
     "el": "ο μαραγκός",
     "transcription": "о маранго́с",
     "el_transcription_en": "o marangós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μαραγκός δουλεύει στο εργαστήριο του.",
+    "ru_example": "Плотник работает в своей мастерской.",
+    "en_example": "The carpenter works in his workshop."
   },
   {
     "ru": "каменщик",
@@ -397,7 +543,10 @@
     "el": "ο χτίστης",
     "transcription": "о хти́стис",
     "el_transcription_en": "o chtístis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο χτίστης χτίζει τον τοίχο.",
+    "ru_example": "Каменщик строит стену.",
+    "en_example": "The mason is building the wall."
   },
   {
     "ru": "маляр",
@@ -405,7 +554,10 @@
     "el": "ο ελαιοχρωματιστής",
     "transcription": "о элэохроматисти́с",
     "el_transcription_en": "o elaiochromatistís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ελαιοχρωματιστής βάφει το σπίτι.",
+    "ru_example": "Маляр красит дом.",
+    "en_example": "The painter is painting the house."
   },
   {
     "ru": "уборщик",
@@ -413,7 +565,10 @@
     "el": "ο καθαριστής",
     "transcription": "о кадаристи́с",
     "el_transcription_en": "o katharistís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο καθαριστής καθαρίζει το δωμάτιο.",
+    "ru_example": "Уборщик убирает комнату.",
+    "en_example": "The cleaner is cleaning the room."
   },
   {
     "ru": "уборщица",
@@ -421,7 +576,10 @@
     "el": "η καθαρίστρια",
     "transcription": "и кадари́стрия",
     "el_transcription_en": "i katharístria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η καθαρίστρια σκουπίζει το πάτωμα.",
+    "ru_example": "Уборщица подметает пол.",
+    "en_example": "The cleaner is sweeping the floor."
   },
   {
     "ru": "почтальон",
@@ -429,7 +587,10 @@
     "el": "ο ταχυδρόμος",
     "transcription": "о тахидро́мос",
     "el_transcription_en": "o tachydrómos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ταχυδρόμος έφερε ένα γράμμα.",
+    "ru_example": "Почтальон принес письмо.",
+    "en_example": "The postman brought a letter."
   },
   {
     "ru": "библиотекарь",
@@ -437,7 +598,10 @@
     "el": "ο βιβλιοθηκάριος",
     "transcription": "о вивлиотика́рьос",
     "el_transcription_en": "o vivliothikários",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο βιβλιοθηκάριος μας βοήθησε να βρούμε το βιβλίο.",
+    "ru_example": "Библиотекарь помог нам найти книгу.",
+    "en_example": "The librarian helped us find the book."
   },
   {
     "ru": "журналист",
@@ -445,7 +609,10 @@
     "el": "ο δημοσιογράφος",
     "transcription": "о димосьогра́фос",
     "el_transcription_en": "o dimosiográfos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο δημοσιογράφος γράφει ένα άρθρο.",
+    "ru_example": "Журналист пишет статью.",
+    "en_example": "The journalist is writing an article."
   },
   {
     "ru": "журналистка",
@@ -453,7 +620,10 @@
     "el": "η δημοσιογράφος",
     "transcription": "и димосьогра́фос",
     "el_transcription_en": "i dimosiográfos",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η δημοσιογράφος πήρε συνέντευξη από τον καλλιτέχνη.",
+    "ru_example": "Журналистка взяла интервью у художника.",
+    "en_example": "The journalist interviewed the artist."
   },
   {
     "ru": "фотограф",
@@ -461,7 +631,10 @@
     "el": "ο φωτογράφος",
     "transcription": "о фотогра́фос",
     "el_transcription_en": "o fotográfos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο φωτογράφος τραβάει φωτογραφίες.",
+    "ru_example": "Фотограф делает фотографии.",
+    "en_example": "The photographer is taking pictures."
   },
   {
     "ru": "актёр",
@@ -469,7 +642,10 @@
     "el": "ο ηθοποιός",
     "transcription": "о ифопио́с",
     "el_transcription_en": "o ithopoiós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ηθοποιός παίζει σε μια ταινία.",
+    "ru_example": "Актер играет в фильме.",
+    "en_example": "The actor is playing in a movie."
   },
   {
     "ru": "актриса",
@@ -477,7 +653,10 @@
     "el": "η ηθοποιός",
     "transcription": "и ифопио́с",
     "el_transcription_en": "i ithopoiós",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η ηθοποιός είναι πολύ ταλαντούχα.",
+    "ru_example": "Актриса очень талантливая.",
+    "en_example": "The actress is very talented."
   },
   {
     "ru": "режиссёр",
@@ -485,7 +664,10 @@
     "el": "ο σκηνοθέτης",
     "transcription": "о скинофе́тис",
     "el_transcription_en": "o skinothétis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο σκηνοθέτης γυρίζει μια νέα ταινία.",
+    "ru_example": "Режиссер снимает новый фильм.",
+    "en_example": "The director is shooting a new film."
   },
   {
     "ru": "танцор",
@@ -493,7 +675,10 @@
     "el": "ο χορευτής",
     "transcription": "о хорэфти́с",
     "el_transcription_en": "o choreftís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο χορευτής χορεύει με πάθος.",
+    "ru_example": "Танцор танцует со страстью.",
+    "en_example": "The dancer dances with passion."
   },
   {
     "ru": "танцовщица",
@@ -501,7 +686,10 @@
     "el": "η χορεύτρια",
     "transcription": "и хорэ́фтрия",
     "el_transcription_en": "i choréftria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η χορεύτρια είναι πολύ ευλύγιστη.",
+    "ru_example": "Танцовщица очень гибкая.",
+    "en_example": "The dancer is very flexible."
   },
   {
     "ru": "спортсмен",
@@ -509,7 +697,10 @@
     "el": "ο αθλητής",
     "transcription": "о атлити́с",
     "el_transcription_en": "o athlitís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αθλητής κέρδισε το χρυσό μετάλλιο.",
+    "ru_example": "Спортсмен выиграл золотую медаль.",
+    "en_example": "The athlete won the gold medal."
   },
   {
     "ru": "спортсменка",
@@ -517,7 +708,10 @@
     "el": "η αθλήτρια",
     "transcription": "и атли́трия",
     "el_transcription_en": "i athlítria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η αθλήτρια προπονείται κάθε μέρα.",
+    "ru_example": "Спортсменка тренируется каждый день.",
+    "en_example": "The athlete trains every day."
   },
   {
     "ru": "продавец цветов",
@@ -525,7 +719,10 @@
     "el": "ο ανθοπώλης",
     "transcription": "о анфопо́лис",
     "el_transcription_en": "o anthopólis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ανθοπώλης φτιάχνει όμορφα μπουκέτα.",
+    "ru_example": "Цветочник делает красивые букеты.",
+    "en_example": "The florist makes beautiful bouquets."
   },
   {
     "ru": "бухгалтер",
@@ -533,7 +730,10 @@
     "el": "ο λογιστής",
     "transcription": "о логисти́с",
     "el_transcription_en": "o logistís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο λογιστής ετοιμάζει τον ισολογισμό.",
+    "ru_example": "Бухгалтер составляет баланс.",
+    "en_example": "The accountant is preparing the balance sheet."
   },
   {
     "ru": "пасечник",
@@ -541,7 +741,10 @@
     "el": "ο μελισσοκόμος",
     "transcription": "о мэлиссоко́мос",
     "el_transcription_en": "o melissokómos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μελισσοκόμος συλλέγει μέλι.",
+    "ru_example": "Пасечник собирает мед.",
+    "en_example": "The beekeeper is collecting honey."
   },
   {
     "ru": "стеклодув",
@@ -549,7 +752,10 @@
     "el": "ο φυσητής γυαλιού",
     "transcription": "о фисити́с йялью́",
     "el_transcription_en": "o fysitís gyalioú",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο φυσητής γυαλιού φτιάχνει ένα βάζο.",
+    "ru_example": "Стеклодув делает вазу.",
+    "en_example": "The glassblower is making a vase."
   },
   {
     "ru": "гончар",
@@ -557,7 +763,10 @@
     "el": "ο αγγειοπλάστης",
     "transcription": "о ангиопла́стис",
     "el_transcription_en": "o angeioplástis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αγγειοπλάστης φτιάχνει πήλινα αγγεία.",
+    "ru_example": "Гончар делает глиняные горшки.",
+    "en_example": "The potter is making clay pots."
   },
   {
     "ru": "ткач",
@@ -565,7 +774,10 @@
     "el": "ο υφαντουργός",
     "transcription": "о ифантурго́с",
     "el_transcription_en": "o yfantourgós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο υφαντουργός φτιάχνει χαλιά.",
+    "ru_example": "Ткач делает ковры.",
+    "en_example": "The weaver is making carpets."
   },
   {
     "ru": "ювелир",
@@ -573,7 +785,10 @@
     "el": "ο χρυσοχόος",
     "transcription": "о хрисохо́ос",
     "el_transcription_en": "o chrysochóos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο χρυσοχόος φτιάχνει ένα δαχτυλίδι.",
+    "ru_example": "Ювелир делает кольцо.",
+    "en_example": "The jeweler is making a ring."
   },
   {
     "ru": "оружейник",
@@ -581,7 +796,10 @@
     "el": "ο οπλουργός",
     "transcription": "о оплурго́с",
     "el_transcription_en": "o oplourgós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο οπλουργός επισκευάζει όπλα.",
+    "ru_example": "Оружейник ремонтирует оружие.",
+    "en_example": "The gunsmith is repairing weapons."
   },
   {
     "ru": "кузнец",
@@ -589,7 +807,10 @@
     "el": "ο σιδηρουργός",
     "transcription": "о сидирурго́с",
     "el_transcription_en": "o sidirourgós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο σιδηρουργός δουλεύει με το σίδερο.",
+    "ru_example": "Кузнец работает с железом.",
+    "en_example": "The blacksmith works with iron."
   },
   {
     "ru": "печник",
@@ -597,7 +818,10 @@
     "el": "ο καμινοποιός",
     "transcription": "о каминопио́с",
     "el_transcription_en": "o kaminopoiós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο καμινοποιός φτιάχνει φούρνους.",
+    "ru_example": "Печник делает печи.",
+    "en_example": "The stove maker makes ovens."
   },
   {
     "ru": "кровельщик",
@@ -605,7 +829,10 @@
     "el": "ο στεγοποιός",
     "transcription": "о стэгопио́с",
     "el_transcription_en": "o stegopoiós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο στεγοποιός επισκευάζει τη στέγη.",
+    "ru_example": "Кровельщик ремонтирует крышу.",
+    "en_example": "The roofer is repairing the roof."
   },
   {
     "ru": "стекольщик",
@@ -613,7 +840,10 @@
     "el": "ο υαλουργός",
     "transcription": "о йялурго́с",
     "el_transcription_en": "o yfalourgós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο υαλουργός τοποθετεί τα τζάμια.",
+    "ru_example": "Стекольщик устанавливает стекла.",
+    "en_example": "The glazier is installing the window panes."
   },
   {
     "ru": "каменотес",
@@ -621,7 +851,10 @@
     "el": "ο λιθοξόος",
     "transcription": "о лифоксо́ос",
     "el_transcription_en": "o lithoxóos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο λιθοξόος σκαλίζει την πέτρα.",
+    "ru_example": "Каменотес вырезает из камня.",
+    "en_example": "The stonecutter is carving the stone."
   },
   {
     "ru": "штукатур",
@@ -629,7 +862,10 @@
     "el": "ο σοβατζής",
     "transcription": "о совадзи́с",
     "el_transcription_en": "o sovatís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο σοβατζής σοβατίζει τον τοίχο.",
+    "ru_example": "Штукатур штукатурит стену.",
+    "en_example": "The plasterer is plastering the wall."
   },
   {
     "ru": "облицовщик",
@@ -637,7 +873,10 @@
     "el": "ο πλακάς",
     "transcription": "о плака́с",
     "el_transcription_en": "o plakás",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο πλακάς βάζει τα πλακάκια στο μπάνιο.",
+    "ru_example": "Облицовщик кладет плитку в ванной.",
+    "en_example": "The tiler is laying tiles in the bathroom."
   },
   {
     "ru": "сварщик",
@@ -645,7 +884,10 @@
     "el": "ο συγκολλητής",
     "transcription": "о сиголлити́с",
     "el_transcription_en": "o syngollitís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο συγκολλητής ενώνει δύο μέταλλα.",
+    "ru_example": "Сварщик соединяет два металла.",
+    "en_example": "The welder is joining two metals."
   },
   {
     "ru": "слесарь",
@@ -653,7 +895,10 @@
     "el": "ο κλειδαράς",
     "transcription": "о клидара́с",
     "el_transcription_en": "o kleidarákas",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο κλειδαράς άνοιξε την πόρτα.",
+    "ru_example": "Слесарь открыл дверь.",
+    "en_example": "The locksmith opened the door."
   },
   {
     "ru": "машинист",
@@ -661,7 +906,10 @@
     "el": "ο μηχανοδηγός",
     "transcription": "о миханодиго́с",
     "el_transcription_en": "o michanodigós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μηχανοδηγός οδηγεί το τρένο.",
+    "ru_example": "Машинист ведет поезд.",
+    "en_example": "The engine driver is driving the train."
   },
   {
     "ru": "тракторист",
@@ -669,7 +917,10 @@
     "el": "ο χειριστής γεωργικών μηχανημάτων",
     "transcription": "о хиристи́с йеоргико́н миханима́тон",
     "el_transcription_en": "o cheiristís georgikón michanimáton",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο χειριστής γεωργικών μηχανημάτων οργώνει το χωράφι.",
+    "ru_example": "Тракторист пашет поле.",
+    "en_example": "The tractor driver is plowing the field."
   },
   {
     "ru": "лесоруб",
@@ -677,7 +928,10 @@
     "el": "ο υλοτόμος",
     "transcription": "о илото́мос",
     "el_transcription_en": "o ylotómos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο υλοτόμος κόβει τα δέντρα.",
+    "ru_example": "Лесоруб рубит деревья.",
+    "en_example": "The lumberjack is cutting down trees."
   },
   {
     "ru": "пастух",
@@ -685,7 +939,10 @@
     "el": "ο βοσκός",
     "transcription": "о воско́с",
     "el_transcription_en": "o voskós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο βοσκός φυλάει τα πρόβατα.",
+    "ru_example": "Пастух пасет овец.",
+    "en_example": "The shepherd is guarding the sheep."
   },
   {
     "ru": "виноградарь",
@@ -693,7 +950,10 @@
     "el": "ο αμπελουργός",
     "transcription": "о ампэлурго́с",
     "el_transcription_en": "o ampelourgós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αμπελουργός μαζεύει σταφύλια.",
+    "ru_example": "Виноградарь собирает виноград.",
+    "en_example": "The viticulturist is harvesting grapes."
   },
   {
     "ru": "сыровар",
@@ -701,7 +961,10 @@
     "el": "ο τυροκόμος",
     "transcription": "о тироко́мос",
     "el_transcription_en": "o tyrokómos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο τυροκόμος φτιάχνει τυρί από γάλα.",
+    "ru_example": "Сыровар делает сыр из молока.",
+    "en_example": "The cheesemaker is making cheese from milk."
   },
   {
     "ru": "маслодел",
@@ -709,7 +972,10 @@
     "el": "ο βουτυροποιός",
     "transcription": "о вутиропио́с",
     "el_transcription_en": "o voutyropoiós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο βουτυροποιός φτιάχνει βούτυρο.",
+    "ru_example": "Маслодел делает масло.",
+    "en_example": "The butter maker is making butter."
   },
   {
     "ru": "садовод",
@@ -717,7 +983,10 @@
     "el": "ο κηπουρός",
     "transcription": "о кипуро́с",
     "el_transcription_en": "o kipourós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο κηπουρός φροντίζει τον κήπο.",
+    "ru_example": "Садовод ухаживает за садом.",
+    "en_example": "The gardener is taking care of the garden."
   },
   {
     "ru": "цветовод",
@@ -725,7 +994,10 @@
     "el": "ο ανθοκόμος",
     "transcription": "о анфоко́мос",
     "el_transcription_en": "o anthokómos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ανθοκόμος καλλιεργεί όμορφα λουλούδια.",
+    "ru_example": "Цветовод выращивает красивые цветы.",
+    "en_example": "The floriculturist is growing beautiful flowers."
   },
   {
     "ru": "агроном",
@@ -733,7 +1005,10 @@
     "el": "ο γεωπόνος",
     "transcription": "о йеопо́nos",
     "el_transcription_en": "o geóponos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο γεωπόνος μελετά τη γεωργία.",
+    "ru_example": "Агроном изучает сельское хозяйство.",
+    "en_example": "The agronomist studies agriculture."
   },
   {
     "ru": "ветеринар",
@@ -741,7 +1016,10 @@
     "el": "ο κτηνίατρος",
     "transcription": "о ктинья́трос",
     "el_transcription_en": "o ktiníatros",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο κτηνίατρος εξέτασε τη γάτα.",
+    "ru_example": "Ветеринар осмотрел кошку.",
+    "en_example": "The veterinarian examined the cat."
   },
   {
     "ru": "переводчик",
@@ -749,7 +1027,10 @@
     "el": "ο μεταφραστής",
     "transcription": "о мэтафрасти́с",
     "el_transcription_en": "o metafrastís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μεταφραστής μεταφράζει ένα βιβλίο.",
+    "ru_example": "Переводчик переводит книгу.",
+    "en_example": "The translator is translating a book."
   },
   {
     "ru": "переводчица",
@@ -757,7 +1038,10 @@
     "el": "η μεταφράστρια",
     "transcription": "и мэтафра́стрия",
     "el_transcription_en": "i metafrástria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η μεταφράστρια μιλάει πολλές γλώσσες.",
+    "ru_example": "Переводчица говорит на многих языках.",
+    "en_example": "The translator speaks many languages."
   },
   {
     "ru": "редактор",
@@ -765,7 +1049,10 @@
     "el": "ο επιμελητής",
     "transcription": "о эпимэлити́с",
     "el_transcription_en": "o epimelitís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο επιμελητής διόρθωσε το κείμενο.",
+    "ru_example": "Редактор отредактировал текст.",
+    "en_example": "The editor corrected the text."
   },
   {
     "ru": "редактор (жен)",
@@ -773,7 +1060,10 @@
     "el": "η επιμελήτρια",
     "transcription": "и эпимэли́трия",
     "el_transcription_en": "i epimelítria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η επιμελήτρια εργάζεται σε εκδοτικό οίκο.",
+    "ru_example": "Редактор работает в издательстве.",
+    "en_example": "The editor works for a publishing house."
   },
   {
     "ru": "издатель",
@@ -781,7 +1071,10 @@
     "el": "ο εκδότης",
     "transcription": "о экдо́тис",
     "el_transcription_en": "o ekdótis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο εκδότης δημοσίευσε ένα καινούργιο βιβλίο.",
+    "ru_example": "Издатель опубликовал новую книгу.",
+    "en_example": "The publisher released a new book."
   },
   {
     "ru": "печатник",
@@ -789,7 +1082,10 @@
     "el": "ο τυπογράφος",
     "transcription": "о типогра́фос",
     "el_transcription_en": "o typográfos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο τυπογράφος εκτυπώνει εφημερίδες.",
+    "ru_example": "Печатник печатает газеты.",
+    "en_example": "The printer is printing newspapers."
   },
   {
     "ru": "гравер",
@@ -797,7 +1093,10 @@
     "el": "ο χαράκτης",
     "transcription": "о хара́ктис",
     "el_transcription_en": "o charáktis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο χαράκτης κάνει σχέδια σε μέταλλο.",
+    "ru_example": "Гравер делает узоры на металле.",
+    "en_example": "The engraver is making designs on metal."
   },
   {
     "ru": "реставратор",
@@ -805,7 +1104,10 @@
     "el": "ο συντηρητής",
     "transcription": "о синдирити́с",
     "el_transcription_en": "o syntiritís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο συντηρητής αναπαλαίωσε τον πίνακα.",
+    "ru_example": "Реставратор восстановил картину.",
+    "en_example": "The restorer restored the painting."
   },
   {
     "ru": "скульптор",
@@ -813,7 +1115,10 @@
     "el": "ο γλύπτης",
     "transcription": "о гли́птис",
     "el_transcription_en": "o glýptis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο γλύπτης δουλεύει με μάρμαρο.",
+    "ru_example": "Скульптор работает с мрамором.",
+    "en_example": "The sculptor works with marble."
   },
   {
     "ru": "гончар",
@@ -821,7 +1126,10 @@
     "el": "ο κεραμίστας",
     "transcription": "о кэрами́стас",
     "el_transcription_en": "o keramístas",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο κεραμίστας φτιάχνει κεραμικά.",
+    "ru_example": "Гончар делает керамику.",
+    "en_example": "The potter is making ceramics."
   },
   {
     "ru": "стекловар",
@@ -829,7 +1137,10 @@
     "el": "ο υαλουργός",
     "transcription": "о йялурго́с",
     "el_transcription_en": "o yfalourgós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο υαλουργός λιώνει την άμμο σε γυαλί.",
+    "ru_example": "Стекловар плавит песок в стекло.",
+    "en_example": "The glassmaker melts sand into glass."
   },
   {
     "ru": "ткачиха",
@@ -837,7 +1148,10 @@
     "el": "η υφάντρια",
     "transcription": "и ифа́ндрия",
     "el_transcription_en": "i yfántria",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η υφάντρια φτιάχνει υφάσματα.",
+    "ru_example": "Ткачиха делает ткани.",
+    "en_example": "The weaver is making fabrics."
   },
   {
     "ru": "ковровщик",
@@ -845,7 +1159,10 @@
     "el": "ο ταπητουργός",
     "transcription": "о тапитурго́с",
     "el_transcription_en": "o tapitourgós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ταπητουργός φτιάχνει χειροποίητα χαλιά.",
+    "ru_example": "Ковровщик делает ковры ручной работы.",
+    "en_example": "The carpet maker makes handmade carpets."
   },
   {
     "ru": "профессия",
@@ -853,7 +1170,10 @@
     "el": "το επάγγελμα",
     "transcription": "то эпа́нгэлма",
     "el_transcription_en": "to epángelma",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το επάγγελμά μου είναι γιατρός.",
+    "ru_example": "Моя профессия - врач.",
+    "en_example": "My profession is a doctor."
   },
   {
     "ru": "босс",
@@ -861,7 +1181,10 @@
     "el": "το αφεντικό",
     "transcription": "то афэндико́",
     "el_transcription_en": "to afentikó",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το αφεντικό μου είναι πολύ αυστηρό.",
+    "ru_example": "Мой босс очень строгий.",
+    "en_example": "My boss is very strict."
   },
   {
     "ru": "судья",
@@ -869,7 +1192,10 @@
     "el": "ο δικαστής",
     "transcription": "о дикасти́с",
     "el_transcription_en": "o dikastís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο δικαστής έβγαλε την απόφαση.",
+    "ru_example": "Судья вынес решение.",
+    "en_example": "The judge made a decision."
   },
   {
     "ru": "охранник",
@@ -877,7 +1203,10 @@
     "el": "ο φύλακας",
     "transcription": "о фи́лакас",
     "el_transcription_en": "o fýlakas",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο φύλακας προσέχει το κτήριο.",
+    "ru_example": "Охранник следит за зданием.",
+    "en_example": "The guard is watching the building."
   },
   {
     "ru": "капитан",
@@ -885,7 +1214,10 @@
     "el": "ο καπετάνιος",
     "transcription": "о капэта́ньос",
     "el_transcription_en": "o kapetánios",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο καπετάνιος οδηγεί το πλοίο.",
+    "ru_example": "Капитан ведет корабль.",
+    "en_example": "The captain is steering the ship."
   },
   {
     "ru": "менеджер",
@@ -893,7 +1225,10 @@
     "el": "ο προϊστάμενος",
     "transcription": "о происта́мэнос",
     "el_transcription_en": "o proïstámenos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο προϊστάμενος είναι πολύ απαιτητικός.",
+    "ru_example": "Менеджер очень требовательный.",
+    "en_example": "The manager is very demanding."
   },
   {
     "ru": "офицер",
@@ -901,7 +1236,10 @@
     "el": "ο αξιωματικός",
     "transcription": "о аксьоматико́с",
     "el_transcription_en": "o axiomatikós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αξιωματικός δίνει εντολές.",
+    "ru_example": "Офицер отдает приказы.",
+    "en_example": "The officer is giving orders."
   },
   {
     "ru": "солдат",
@@ -909,7 +1247,10 @@
     "el": "ο στρατιώτης",
     "transcription": "о стратьо́тис",
     "el_transcription_en": "o stratiótis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο στρατιώτης προστατεύει τη χώρα.",
+    "ru_example": "Солдат защищает страну.",
+    "en_example": "The soldier is protecting the country."
   },
   {
     "ru": "художник, артист, исполнитель",
@@ -917,7 +1258,10 @@
     "el": "ο καλλιτέχνης",
     "transcription": "о калитэ́хнис",
     "el_transcription_en": "o kallitéchnis",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο καλλιτέχνης έφτιαξε ένα όμορφο γλυπτό.",
+    "ru_example": "Художник создал красивую скульптуру.",
+    "en_example": "The artist created a beautiful sculpture."
   },
   {
     "ru": "директор, менеджер",
@@ -925,7 +1269,10 @@
     "el": "ο διευθυντής",
     "transcription": "о дьефтинти́с",
     "el_transcription_en": "o diefthyntís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο διευθυντής διοικεί την εταιρεία.",
+    "ru_example": "Директор управляет компанией.",
+    "en_example": "The director manages the company."
   },
   {
     "ru": "полиция",
@@ -933,7 +1280,10 @@
     "el": "η αστυνομία",
     "transcription": "и астиноми́а",
     "el_transcription_en": "i astynomía",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η αστυνομία ήρθε στο σημείο.",
+    "ru_example": "Полиция прибыла на место.",
+    "en_example": "The police arrived at the scene."
   },
   {
     "ru": "карьера",
@@ -941,7 +1291,10 @@
     "el": "η καριέρα",
     "transcription": "и карьэ́ра",
     "el_transcription_en": "i kariéra",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Έχει μια επιτυχημένη καριέρα.",
+    "ru_example": "У него успешная карьера.",
+    "en_example": "He has a successful career."
   },
   {
     "ru": "профессионал",
@@ -949,7 +1302,10 @@
     "el": "ο επαγγελματίας",
     "transcription": "о эпангэлма́тьас",
     "el_transcription_en": "o epangelmatías",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Είναι ένας πραγματικός επαγγελματίας.",
+    "ru_example": "Он настоящий профессионал.",
+    "en_example": "He is a true professional."
   },
   {
     "ru": "священник",
@@ -957,7 +1313,10 @@
     "el": "ο παπάς",
     "transcription": "о папа́с",
     "el_transcription_en": "o papás",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο παπάς τελεί την λειτουργία.",
+    "ru_example": "Священник служит литургию.",
+    "en_example": "The priest is performing the liturgy."
   },
   {
     "ru": "студент",
@@ -965,7 +1324,10 @@
     "el": "ο μαθητής",
     "transcription": "о матити́с",
     "el_transcription_en": "o mathitís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μαθητής διαβάζει τα μαθήματά του.",
+    "ru_example": "Студент учит свои уроки.",
+    "en_example": "The student is studying his lessons."
   },
   {
     "ru": "модель",
@@ -973,7 +1335,10 @@
     "el": "το μοντέλο",
     "transcription": "то монтэ́ло",
     "el_transcription_en": "to montélo",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το μοντέλο φοράει όμορφα ρούχα.",
+    "ru_example": "Модель носит красивую одежду.",
+    "en_example": "The model is wearing beautiful clothes."
   },
   {
     "ru": "работа, задание",
@@ -981,7 +1346,10 @@
     "el": "η εργασία",
     "transcription": "и эргаси́а",
     "el_transcription_en": "i ergasía",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η εργασία πρέπει να γίνει μέχρι αύριο.",
+    "ru_example": "Работа должна быть выполнена до завтра.",
+    "en_example": "The work must be done by tomorrow."
   },
   {
     "ru": "работа, дело",
@@ -989,14 +1357,20 @@
     "el": "η δουλειά",
     "transcription": "и дулья́",
     "el_transcription_en": "i douliá",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Πάω στη δουλειά μου.",
+    "ru_example": "Я иду на свою работу.",
+    "en_example": "I'm going to my work."
   },
   {
     "ru": "персонал, сотрудники",
     "en": "staff, employees",
     "el": "το προσωπικό",
-    "transcription": "то просопико́",
+    "transcription": "то просопиκό",
     "el_transcription_en": "to prosopikó",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το προσωπικό είναι πολύ φιλικό.",
+    "ru_example": "Персонал очень дружелюбный.",
+    "en_example": "The staff is very friendly."
   }
 ]

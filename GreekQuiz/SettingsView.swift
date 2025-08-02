@@ -3,7 +3,9 @@ import SwiftUI
 struct SettingsView: View {
     @Binding var showTranscription: Bool
     @Binding var autoPlaySound: Bool
-    @Binding var playAnswerSound: Bool // ✨ НОВОЕ СВОЙСТВО
+    @Binding var playAnswerSound: Bool
+    @Binding var useAllWordsInQuiz: Bool
+    
     @Binding var colorSchemePreference: String
     @Binding var dictionarySource: DictionarySource
     @Binding var customDictionaryURL: String
@@ -29,9 +31,14 @@ struct SettingsView: View {
                     Toggle(isOn: $autoPlaySound) {
                         Text("autoplay_sound_toggle")
                     }
-                    // ✨ НОВЫЙ ПЕРЕКЛЮЧАТЕЛЬ
                     Toggle(isOn: $playAnswerSound) {
                         Text("answers_sounds_toggle")
+                    }
+                }
+                
+                Section(header: Text("quiz_settings_section")) {
+                    Toggle(isOn: $useAllWordsInQuiz) {
+                        Text("use_all_words_toggle")
                     }
                 }
 

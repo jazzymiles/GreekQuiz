@@ -5,7 +5,10 @@
     "el": "ο άνθρωπος",
     "transcription": "о а́нтропос",
     "el_transcription_en": "o ánthropos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο άνθρωπος είναι ένα κοινωνικό ον.",
+    "ru_example": "Человек - социальное существо.",
+    "en_example": "Man is a social being."
   },
   {
     "ru": "женщина",
@@ -13,7 +16,10 @@
     "el": "η γυναίκα",
     "transcription": "и йинэ́ка",
     "el_transcription_en": "i yinéka",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η γυναίκα είναι δυνατή και ανεξάρτητη.",
+    "ru_example": "Женщина сильна и независима.",
+    "en_example": "The woman is strong and independent."
   },
   {
     "ru": "мужчина",
@@ -21,7 +27,10 @@
     "el": "ο άνδρας",
     "transcription": "о а́ндрас",
     "el_transcription_en": "o ándras",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο άνδρας φοράει ένα καπέλο.",
+    "ru_example": "Мужчина носит шляпу.",
+    "en_example": "The man is wearing a hat."
   },
   {
     "ru": "ребенок",
@@ -29,7 +38,10 @@
     "el": "το παιδί",
     "transcription": "то пэди́",
     "el_transcription_en": "to paidí",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το παιδί παίζει στην αυλή.",
+    "ru_example": "Ребенок играет во дворе.",
+    "en_example": "The child is playing in the yard."
   },
   {
     "ru": "дом",
@@ -37,7 +49,10 @@
     "el": "το σπίτι",
     "transcription": "то спи́ти",
     "el_transcription_en": "to spíti",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σπίτι μου είναι μεγάλο.",
+    "ru_example": "Мой дом большой.",
+    "en_example": "My house is big."
   },
   {
     "ru": "семья",
@@ -45,7 +60,10 @@
     "el": "η οικογένεια",
     "transcription": "и икогэ́ниа",
     "el_transcription_en": "i ikoyénia",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η οικογένειά μου είναι ευτυχισμένη.",
+    "ru_example": "Моя семья счастлива.",
+    "en_example": "My family is happy."
   },
   {
     "ru": "друг",
@@ -53,7 +71,10 @@
     "el": "ο φίλος",
     "transcription": "о фи́лос",
     "el_transcription_en": "o fílos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο φίλος μου με βοηθάει.",
+    "ru_example": "Мой друг помогает мне.",
+    "en_example": "My friend helps me."
   },
   {
     "ru": "подруга",
@@ -61,7 +82,10 @@
     "el": "η φίλη",
     "transcription": "и фи́ли",
     "el_transcription_en": "i fíli",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η φίλη μου έρχεται σε λίγο.",
+    "ru_example": "Моя подруга скоро придет.",
+    "en_example": "My friend will be here soon."
   },
   {
     "ru": "работа",
@@ -69,7 +93,10 @@
     "el": "η δουλειά",
     "transcription": "и дулья́",
     "el_transcription_en": "i douliá",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η δουλειά μου είναι πολύ ενδιαφέρουσα.",
+    "ru_example": "Моя работа очень интересная.",
+    "en_example": "My work is very interesting."
   },
   {
     "ru": "деньги",
@@ -77,7 +104,10 @@
     "el": "τα χρήματα",
     "transcription": "та хри́мата",
     "el_transcription_en": "ta chrímata",
-    "gender": "средний (мн.ч.)"
+    "gender": "средний (мн.ч.)",
+    "el_example": "Τα χρήματα δεν αγοράζουν την ευτυχία.",
+    "ru_example": "Деньги не могут купить счастье.",
+    "en_example": "Money cannot buy happiness."
   },
   {
     "ru": "вода",
@@ -85,7 +115,10 @@
     "el": "το νερό",
     "transcription": "то нэро́",
     "el_transcription_en": "to neró",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το νερό είναι απαραίτητο για τη ζωή.",
+    "ru_example": "Вода необходима для жизни.",
+    "en_example": "Water is essential for life."
   },
   {
     "ru": "машина",
@@ -93,7 +126,10 @@
     "el": "το αυτοκίνητο",
     "transcription": "то автоки́нито",
     "el_transcription_en": "to aftokínito",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το αυτοκίνητο μου είναι κόκκινο.",
+    "ru_example": "Моя машина красная.",
+    "en_example": "My car is red."
   },
   {
     "ru": "телефон",
@@ -101,7 +137,10 @@
     "el": "το τηλέφωνο",
     "transcription": "то тиле́фоно",
     "el_transcription_en": "to tiléfono",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το τηλέφωνο μου χτυπάει.",
+    "ru_example": "Мой телефон звонит.",
+    "en_example": "My telephone is ringing."
   },
   {
     "ru": "книга",
@@ -109,7 +148,10 @@
     "el": "το βιβλίο",
     "transcription": "то вивли́о",
     "el_transcription_en": "to vivlío",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Διαβάζω ένα ενδιαφέρον βιβλίο.",
+    "ru_example": "Я читаю интересную книгу.",
+    "en_example": "I am reading an interesting book."
   },
   {
     "ru": "стол",
@@ -117,7 +159,10 @@
     "el": "το τραπέζι",
     "transcription": "то трапэ́зи",
     "el_transcription_en": "to trapézi",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το τραπέζι είναι ξύλινο.",
+    "ru_example": "Стол деревянный.",
+    "en_example": "The table is wooden."
   },
   {
     "ru": "стул",
@@ -125,7 +170,10 @@
     "el": "η καρέκλα",
     "transcription": "и карэ́кла",
     "el_transcription_en": "i karékla",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Κάθομαι στην καρέκλα.",
+    "ru_example": "Я сижу на стуле.",
+    "en_example": "I'm sitting on the chair."
   },
   {
     "ru": "дверь",
@@ -133,7 +181,10 @@
     "el": "η πόρτα",
     "transcription": "и по́рта",
     "el_transcription_en": "i párta",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Άνοιξε την πόρτα, σε παρακαλώ.",
+    "ru_example": "Открой дверь, пожалуйста.",
+    "en_example": "Open the door, please."
   },
   {
     "ru": "окно",
@@ -141,7 +192,10 @@
     "el": "το παράθυρο",
     "transcription": "то пара́тиро",
     "el_transcription_en": "to paráthyro",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Κλείσε το παράθυρο, κάνει κρύο.",
+    "ru_example": "Закрой окно, холодно.",
+    "en_example": "Close the window, it's cold."
   },
   {
     "ru": "свет",
@@ -149,7 +203,10 @@
     "el": "το φως",
     "transcription": "то фос",
     "el_transcription_en": "to fos",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Άναψε το φως.",
+    "ru_example": "Включи свет.",
+    "en_example": "Turn on the light."
   },
   {
     "ru": "город",
@@ -157,7 +214,10 @@
     "el": "η πόλη",
     "transcription": "и по́ли",
     "el_transcription_en": "i póli",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η πόλη μας είναι πολύ όμορφη.",
+    "ru_example": "Наш город очень красивый.",
+    "en_example": "Our city is very beautiful."
   },
   {
     "ru": "деревня",
@@ -165,7 +225,10 @@
     "el": "το χωριό",
     "transcription": "то хорьо́",
     "el_transcription_en": "to chorió",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Ζει σε ένα μικρό χωριό.",
+    "ru_example": "Он живет в маленькой деревне.",
+    "en_example": "He lives in a small village."
   },
   {
     "ru": "улица",
@@ -173,7 +236,10 @@
     "el": "ο δρόμος",
     "transcription": "о дро́мос",
     "el_transcription_en": "o drómos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο δρόμος είναι γεμάτος αυτοκίνητα.",
+    "ru_example": "Улица полна машин.",
+    "en_example": "The street is full of cars."
   },
   {
     "ru": "море",
@@ -181,7 +247,10 @@
     "el": "η θάλασσα",
     "transcription": "и та́ласа",
     "el_transcription_en": "i thálassa",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η θάλασσα είναι γαλάζια.",
+    "ru_example": "Море синее.",
+    "en_example": "The sea is blue."
   },
   {
     "ru": "пляж",
@@ -189,7 +258,10 @@
     "el": "η παραλία",
     "transcription": "и парали́а",
     "el_transcription_en": "i paralía",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Πάμε στην παραλία.",
+    "ru_example": "Пойдем на пляж.",
+    "en_example": "Let's go to the beach."
   },
   {
     "ru": "солнце",
@@ -197,7 +269,10 @@
     "el": "ο ήλιος",
     "transcription": "о и́лиос",
     "el_transcription_en": "o ílios",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ήλιος λάμπει.",
+    "ru_example": "Солнце светит.",
+    "en_example": "The sun is shining."
   },
   {
     "ru": "дождь",
@@ -205,7 +280,10 @@
     "el": "η βροχή",
     "transcription": "и врохи́",
     "el_transcription_en": "i vrochí",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Βρέχει πολύ δυνατά.",
+    "ru_example": "Идет очень сильный дождь.",
+    "en_example": "It's raining very hard."
   },
   {
     "ru": "воздух",
@@ -213,7 +291,10 @@
     "el": "ο αέρας",
     "transcription": "о аэ́рас",
     "el_transcription_en": "o aéras",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο αέρας είναι καθαρός.",
+    "ru_example": "Воздух чистый.",
+    "en_example": "The air is clean."
   },
   {
     "ru": "небо",
@@ -221,7 +302,10 @@
     "el": "ο ουρανός",
     "transcription": "о урано́с",
     "el_transcription_en": "o ouranós",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο ουρανός είναι καθαρός.",
+    "ru_example": "Небо чистое.",
+    "en_example": "The sky is clear."
   },
   {
     "ru": "земля",
@@ -229,7 +313,10 @@
     "el": "η γη",
     "transcription": "и йи",
     "el_transcription_en": "i yi",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η γη γυρίζει γύρω από τον ήλιο.",
+    "ru_example": "Земля вращается вокруг солнца.",
+    "en_example": "The earth revolves around the sun."
   },
   {
     "ru": "жизнь",
@@ -237,7 +324,10 @@
     "el": "η ζωή",
     "transcription": "и зои́",
     "el_transcription_en": "i zoí",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η ζωή είναι ένα δώρο.",
+    "ru_example": "Жизнь - это подарок.",
+    "en_example": "Life is a gift."
   },
   {
     "ru": "любовь",
@@ -245,7 +335,10 @@
     "el": "η αγάπη",
     "transcription": "и ага́пи",
     "el_transcription_en": "i agápi",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η αγάπη είναι το πιο σημαντικό πράγμα.",
+    "ru_example": "Любовь - самая важная вещь.",
+    "en_example": "Love is the most important thing."
   },
   {
     "ru": "счастье",
@@ -253,15 +346,21 @@
     "el": "η ευτυχία",
     "transcription": "и эфтихи́а",
     "el_transcription_en": "i eftychía",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η ευτυχία βρίσκεται στα μικρά πράγματα.",
+    "ru_example": "Счастье находится в мелочах.",
+    "en_example": "Happiness is found in small things."
   },
   {
-    "ru": "мир",
+    "ru": "мир (покой)",
     "en": "peace",
     "el": "η ειρήνη",
     "transcription": "и ири́ни",
     "el_transcription_en": "i iríni",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Ευχόμαστε ειρήνη σε όλο τον κόσμο.",
+    "ru_example": "Мы желаем мира всему миру.",
+    "en_example": "We wish for peace all over the world."
   },
   {
     "ru": "проблема",
@@ -269,7 +368,10 @@
     "el": "το πρόβλημα",
     "transcription": "то про́влима",
     "el_transcription_en": "to próvlima",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Πρέπει να βρούμε μια λύση στο πρόβλημα.",
+    "ru_example": "Мы должны найти решение проблемы.",
+    "en_example": "We need to find a solution to the problem."
   },
   {
     "ru": "решение",
@@ -277,7 +379,10 @@
     "el": "η λύση",
     "transcription": "и ли́си",
     "el_transcription_en": "i lýsi",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η λύση είναι απλή.",
+    "ru_example": "Решение простое.",
+    "en_example": "The solution is simple."
   },
   {
     "ru": "мысль",
@@ -285,7 +390,10 @@
     "el": "η σκέψη",
     "transcription": "и ске́пси",
     "el_transcription_en": "i sképsi",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η σκέψη μου είναι ότι πρέπει να φύγουμε.",
+    "ru_example": "Моя мысль - что мы должны уйти.",
+    "en_example": "My thought is that we should leave."
   },
   {
     "ru": "чувство",
@@ -293,7 +401,10 @@
     "el": "το συναίσθημα",
     "transcription": "то сине́стима",
     "el_transcription_en": "to synaísthima",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Είναι ένα όμορφο συναίσθημα.",
+    "ru_example": "Это прекрасное чувство.",
+    "en_example": "It's a beautiful feeling."
   },
   {
     "ru": "сердце",
@@ -301,7 +412,10 @@
     "el": "η καρδιά",
     "transcription": "и кардья́",
     "el_transcription_en": "i kardiá",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η καρδιά του χτυπάει γρήγορα.",
+    "ru_example": "Его сердце бьется быстро.",
+    "en_example": "His heart is beating fast."
   },
   {
     "ru": "разум",
@@ -309,7 +423,10 @@
     "el": "το μυαλό",
     "transcription": "то мьяло́",
     "el_transcription_en": "to myaló",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Πρέπει να χρησιμοποιήσεις το μυαλό σου.",
+    "ru_example": "Ты должен использовать свой разум.",
+    "en_example": "You have to use your mind."
   },
   {
     "ru": "голос",
@@ -317,7 +434,10 @@
     "el": "η φωνή",
     "transcription": "и фони́",
     "el_transcription_en": "i foní",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η φωνή της είναι πολύ γλυκιά.",
+    "ru_example": "Её голос очень сладкий.",
+    "en_example": "Her voice is very sweet."
   },
   {
     "ru": "мир (вселенная)",
@@ -325,7 +445,10 @@
     "el": "ο κόσμος",
     "transcription": "о ко́змос",
     "el_transcription_en": "o kósmos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο κόσμος είναι ένα μεγάλο μέρος.",
+    "ru_example": "Мир - это большое место.",
+    "en_example": "The world is a big place."
   },
   {
     "ru": "страна",
@@ -333,7 +456,10 @@
     "el": "η χώρα",
     "transcription": "и хо́ра",
     "el_transcription_en": "i chóra",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η χώρα μας έχει όμορφα νησιά.",
+    "ru_example": "В нашей стране красивые острова.",
+    "en_example": "Our country has beautiful islands."
   },
   {
     "ru": "школа",
@@ -341,7 +467,10 @@
     "el": "το σχολείο",
     "transcription": "то схоли́о",
     "el_transcription_en": "to scholío",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σχολείο μου είναι κοντά.",
+    "ru_example": "Моя школа находится близко.",
+    "en_example": "My school is nearby."
   },
   {
     "ru": "учитель",
@@ -349,7 +478,10 @@
     "el": "ο δάσκαλος",
     "transcription": "о да́скалос",
     "el_transcription_en": "o dáskalos",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο δάσκαλος μας μαθαίνει πολλά.",
+    "ru_example": "Учитель многому нас учит.",
+    "en_example": "The teacher teaches us a lot."
   },
   {
     "ru": "ученик",
@@ -357,7 +489,10 @@
     "el": "ο μαθητής",
     "transcription": "о матити́с",
     "el_transcription_en": "o mathitís",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο μαθητής γράφει στο τετράδιο.",
+    "ru_example": "Ученик пишет в тетради.",
+    "en_example": "The student is writing in the notebook."
   },
   {
     "ru": "музыка",
@@ -365,6 +500,9 @@
     "el": "η μουσική",
     "transcription": "и музики́",
     "el_transcription_en": "i mousikí",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Ακούω ελληνική μουσική.",
+    "ru_example": "Я слушаю греческую музыку.",
+    "en_example": "I'm listening to Greek music."
   }
 ]

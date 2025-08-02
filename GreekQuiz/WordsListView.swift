@@ -2,7 +2,7 @@ import SwiftUI
 import AVFoundation
 
 struct WordsListView: View {
-    let words: [Word] // Это массив всех слов
+    let words: [Word]
     let speakWord: (String, String) -> Void
 
     @Environment(\.dismiss) var dismiss
@@ -22,7 +22,6 @@ struct WordsListView: View {
             return words
         } else {
             return words.filter { word in
-                // Поиск по греческому, русскому, английскому слову или транскрипции
                 word.el.localizedCaseInsensitiveContains(searchQuery) ||
                 word.ru.localizedCaseInsensitiveContains(searchQuery) ||
                 (word.en ?? "").localizedCaseInsensitiveContains(searchQuery) ||
@@ -65,8 +64,6 @@ struct WordsListView: View {
                                             Text(word.ru)
                                                 .font(.subheadline)
                                                 .foregroundColor(.gray)
-                                            // ✨ ИЗМЕНЕНИЕ: Вместо транскрипции выводим английский перевод.
-                                            // Используем `?? ""` на случай, если перевод отсутствует.
                                             Text(word.en ?? "")
                                                 .font(.caption)
                                                 .foregroundColor(.secondary)

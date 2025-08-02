@@ -5,7 +5,10 @@
     "el": "ενώ",
     "transcription": "эно́",
     "el_transcription_en": "enó",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Θα περιμένω εδώ, ενώ εσύ πας στο κατάστημα.",
+    "ru_example": "Я подожду здесь, пока ты идешь в магазин.",
+    "en_example": "I'll wait here, while you go to the store."
   },
   {
     "ru": "тем не менее, однако",
@@ -13,7 +16,10 @@
     "el": "ωστόσο",
     "transcription": "осто́со",
     "el_transcription_en": "ostóso",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Είμαστε κουρασμένοι, ωστόσο πρέπει να συνεχίσουμε.",
+    "ru_example": "Мы устали, тем не менее, нам нужно продолжать.",
+    "en_example": "We are tired, nonetheless, we must continue."
   },
   {
     "ru": "хотя, даже если",
@@ -21,7 +27,10 @@
     "el": "αν και",
     "transcription": "ан ки",
     "el_transcription_en": "an ki",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Αν και βρέχει, θα πάμε βόλτα.",
+    "ru_example": "Хотя и идет дождь, мы пойдем гулять.",
+    "en_example": "Although it's raining, we will go for a walk."
   },
   {
     "ru": "или",
@@ -29,7 +38,10 @@
     "el": "ή",
     "transcription": "и",
     "el_transcription_en": "i",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Θέλεις καφέ ή τσάι;",
+    "ru_example": "Хочешь кофе или чай?",
+    "en_example": "Do you want coffee or tea?"
   },
   {
     "ru": "так, следовательно",
@@ -37,7 +49,10 @@
     "el": "άρα",
     "transcription": "а́ра",
     "el_transcription_en": "ára",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Είναι αργά, άρα πρέπει να φύγουμε.",
+    "ru_example": "Уже поздно, следовательно, нам нужно уходить.",
+    "en_example": "It's late, so we have to leave."
   },
   {
     "ru": "однако",
@@ -45,7 +60,10 @@
     "el": "όμως",
     "transcription": "о́мос",
     "el_transcription_en": "ómos",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Μου αρέσει το φαγητό, όμως είναι πολύ αλμυρό.",
+    "ru_example": "Мне нравится еда, однако она очень соленая.",
+    "en_example": "I like the food, however it's too salty."
   },
   {
     "ru": "но",
@@ -53,7 +71,10 @@
     "el": "αλλά",
     "transcription": "алла́",
     "el_transcription_en": "allá",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Θέλω να πάω, αλλά δεν μπορώ.",
+    "ru_example": "Я хочу пойти, но не могу.",
+    "en_example": "I want to go, but I can't."
   },
   {
     "ru": "потому что",
@@ -61,7 +82,10 @@
     "el": "επειδή",
     "transcription": "эпэйди́",
     "el_transcription_en": "epeidí",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Δεν πήγα, επειδή ήμουν άρρωστος.",
+    "ru_example": "Я не пошел, потому что был болен.",
+    "en_example": "I didn't go, because I was sick."
   },
   {
     "ru": "когда",
@@ -69,7 +93,10 @@
     "el": "όταν",
     "transcription": "о́тан",
     "el_transcription_en": "ótan",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Θα σε πάρω τηλέφωνο, όταν φτάσω.",
+    "ru_example": "Я позвоню тебе, когда приеду.",
+    "en_example": "I will call you when I arrive."
   },
   {
     "ru": "что (союз)",
@@ -77,7 +104,10 @@
     "el": "πως",
     "transcription": "пос",
     "el_transcription_en": "pos",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Λέει πως είναι ευτυχισμένος.",
+    "ru_example": "Он говорит, что счастлив.",
+    "en_example": "He says that he is happy."
   },
   {
     "ru": "всякий раз, когда",
@@ -85,7 +115,10 @@
     "el": "όποτε",
     "transcription": "о́потэ",
     "el_transcription_en": "ópote",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Μπορείς να με επισκεφθείς όποτε θέλεις.",
+    "ru_example": "Можешь навещать меня, когда захочешь.",
+    "en_example": "You can visit me whenever you want."
   },
   {
     "ru": "что (союз)",
@@ -93,7 +126,10 @@
     "el": "ότι",
     "transcription": "о́ти",
     "el_transcription_en": "óti",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Είπε ότι θα έρθει.",
+    "ru_example": "Он сказал, что придет.",
+    "en_example": "He said that he would come."
   },
   {
     "ru": "то есть, иначе говоря",
@@ -101,7 +137,10 @@
     "el": "δηλαδή",
     "transcription": "дилази́",
     "el_transcription_en": "diladí",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Είναι πολύ ζεστό, δηλαδή πάνω από 30 βαθμούς.",
+    "ru_example": "Очень жарко, то есть выше 30 градусов.",
+    "en_example": "It's very hot, namely, over 30 degrees."
   },
   {
     "ru": "ну, итак",
@@ -109,7 +148,10 @@
     "el": "λοιπόν",
     "transcription": "липо́н",
     "el_transcription_en": "lipón",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Λοιπόν, τι θα κάνουμε;",
+    "ru_example": "Ну, что мы будем делать?",
+    "en_example": "Well, what are we going to do?"
   },
   {
     "ru": "поскольку, в то время как",
@@ -117,7 +159,10 @@
     "el": "καθώς",
     "transcription": "каθо́с",
     "el_transcription_en": "kathós",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Μας μίλησε καθώς τρώγαμε.",
+    "ru_example": "Он говорил с нами, пока мы ели.",
+    "en_example": "He spoke to us as we were eating."
   },
   {
     "ru": "так что, следовательно",
@@ -125,7 +170,10 @@
     "el": "οπότε",
     "transcription": "опо́тэ",
     "el_transcription_en": "ópote",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Είχε πολύ κρύο, οπότε έβαλα παλτό.",
+    "ru_example": "Было очень холодно, так что я надел пальто.",
+    "en_example": "It was very cold, so I put on a coat."
   },
   {
     "ru": "один (мужской)",
@@ -133,7 +181,10 @@
     "el": "μόνος",
     "transcription": "мо́нос",
     "el_transcription_en": "mónos",
-    "category": "прилагательные"
+    "category": "прилагательные",
+    "el_example": "Είναι μόνος του στο σπίτι.",
+    "ru_example": "Он один дома.",
+    "en_example": "He is alone at home."
   },
   {
     "ru": "одна (женский)",
@@ -141,7 +192,10 @@
     "el": "μόνη",
     "transcription": "мо́ни",
     "el_transcription_en": "móni",
-    "category": "прилагательные"
+    "category": "прилагательные",
+    "el_example": "Είναι μόνη της στην πόλη.",
+    "ru_example": "Она одна в городе.",
+    "en_example": "She is alone in the city."
   },
   {
     "ru": "только, просто",
@@ -149,7 +203,10 @@
     "el": "μόνο",
     "transcription": "мо́но",
     "el_transcription_en": "móno",
-    "category": "наречия"
+    "category": "наречия",
+    "el_example": "Έχω μόνο λίγα χρήματα.",
+    "ru_example": "У меня только немного денег.",
+    "en_example": "I only have a little money."
   },
   {
     "ru": "тот же, та же, то же",
@@ -157,7 +214,10 @@
     "el": "ίδιο, ίδια, ίδιος",
     "transcription": "и́дьо, и́дья, и́дьос",
     "el_transcription_en": "ídio, ídia, ídios",
-    "category": "прилагательные"
+    "category": "прилагательные",
+    "el_example": "Είναι το ίδιο αυτοκίνητο.",
+    "ru_example": "Это та же самая машина.",
+    "en_example": "It's the same car."
   },
   {
     "ru": "также, и",
@@ -165,7 +225,10 @@
     "el": "κι",
     "transcription": "ки",
     "el_transcription_en": "ki",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Πήγα κι εγώ.",
+    "ru_example": "Я тоже пошел.",
+    "en_example": "I went too."
   },
   {
     "ru": "а вдруг, не",
@@ -173,7 +236,10 @@
     "el": "μήπως",
     "transcription": "ми́пос",
     "el_transcription_en": "mípos",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Μήπως έρχεσαι;",
+    "ru_example": "А вдруг ты придешь?",
+    "en_example": "Maybe you're coming?"
   },
   {
     "ru": "и",
@@ -181,7 +247,10 @@
     "el": "και",
     "transcription": "ке",
     "el_transcription_en": "ke",
-    "category": "союзы и наречия"
+    "category": "союзы и наречия",
+    "el_example": "Θέλω ψωμί και τυρί.",
+    "ru_example": "Я хочу хлеб и сыр.",
+    "en_example": "I want bread and cheese."
   },
   {
     "ru": "да",
@@ -189,7 +258,10 @@
     "el": "ναι",
     "transcription": "нэ",
     "el_transcription_en": "ne",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Ναι, θέλω να έρθω.",
+    "ru_example": "Да, я хочу прийти.",
+    "en_example": "Yes, I want to come."
   },
   {
     "ru": "нет",
@@ -197,7 +269,10 @@
     "el": "όχι",
     "transcription": "о́хи",
     "el_transcription_en": "óchi",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Όχι, δεν μπορώ.",
+    "ru_example": "Нет, я не могу.",
+    "en_example": "No, I can't."
   },
   {
     "ru": "привет",
@@ -205,7 +280,10 @@
     "el": "γεια",
     "transcription": "йа",
     "el_transcription_en": "ya",
-    "category": "приветствия"
+    "category": "приветствия",
+    "el_example": "Γεια σου, τι κάνεις;",
+    "ru_example": "Привет, как дела?",
+    "en_example": "Hello, how are you?"
   },
   {
     "ru": "доброе утро",
@@ -213,7 +291,10 @@
     "el": "καλημέρα",
     "transcription": "калимэ́ра",
     "el_transcription_en": "kaliméra",
-    "category": "приветствия"
+    "category": "приветствия",
+    "el_example": "Καλημέρα, πώς είσαι;",
+    "ru_example": "Доброе утро, как ты?",
+    "en_example": "Good morning, how are you?"
   },
   {
     "ru": "добрый вечер",
@@ -221,7 +302,10 @@
     "el": "καλησπέρα",
     "transcription": "калиспэ́ра",
     "el_transcription_en": "kalispéra",
-    "category": "приветствия"
+    "category": "приветствия",
+    "el_example": "Καλησπέρα, τι κάνετε;",
+    "ru_example": "Добрый вечер, как вы?",
+    "en_example": "Good evening, how are you all?"
   },
   {
     "ru": "доброй ночи",
@@ -229,7 +313,10 @@
     "el": "καληνύχτα",
     "transcription": "калини́хта",
     "el_transcription_en": "kalinýchta",
-    "category": "приветствия"
+    "category": "приветствия",
+    "el_example": "Καληνύχτα, όνειρα γλυκά.",
+    "ru_example": "Доброй ночи, сладких снов.",
+    "en_example": "Good night, sweet dreams."
   },
   {
     "ru": "до свидания",
@@ -237,7 +324,10 @@
     "el": "αντίο",
     "transcription": "анди́о",
     "el_transcription_en": "andío",
-    "category": "прощания"
+    "category": "прощания",
+    "el_example": "Αντίο, τα λέμε αύριο.",
+    "ru_example": "До свидания, увидимся завтра.",
+    "en_example": "Goodbye, see you tomorrow."
   },
   {
     "ru": "как дела?",
@@ -245,7 +335,10 @@
     "el": "τι κάνεις;",
     "transcription": "ти ка́нис;",
     "el_transcription_en": "ti káneis?",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Γεια σου, τι κάνεις;",
+    "ru_example": "Привет, как дела?",
+    "en_example": "Hello, how are you?"
   },
   {
     "ru": "хорошо",
@@ -253,7 +346,10 @@
     "el": "καλά",
     "transcription": "кала́",
     "el_transcription_en": "kalá",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Είμαι πολύ καλά, ευχαριστώ.",
+    "ru_example": "Я очень хорошо, спасибо.",
+    "en_example": "I'm very well, thank you."
   },
   {
     "ru": "плохо",
@@ -261,7 +357,10 @@
     "el": "άσχημα",
     "transcription": "а́схима",
     "el_transcription_en": "áschima",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Δεν αισθάνομαι άσχημα.",
+    "ru_example": "Я не чувствую себя плохо.",
+    "en_example": "I don't feel bad."
   },
   {
     "ru": "пожалуйста (при просьбе)",
@@ -269,7 +368,10 @@
     "el": "παρακαλώ",
     "transcription": "паракало́",
     "el_transcription_en": "parakaló",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Παρακαλώ, δώσε μου λίγο νερό.",
+    "ru_example": "Пожалуйста, дай мне немного воды.",
+    "en_example": "Please, give me some water."
   },
   {
     "ru": "спасибо",
@@ -277,7 +379,10 @@
     "el": "ευχαριστώ",
     "transcription": "эфхаристо́",
     "el_transcription_en": "efcharistó",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Ευχαριστώ για τη βοήθειά σου.",
+    "ru_example": "Спасибо за твою помощь.",
+    "en_example": "Thank you for your help."
   },
   {
     "ru": "извините",
@@ -285,7 +390,10 @@
     "el": "συγγνώμη",
     "transcription": "сигно́ми",
     "el_transcription_en": "syngnómi",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Συγγνώμη, δεν άκουσα.",
+    "ru_example": "Извините, я не услышал.",
+    "en_example": "Excuse me, I didn't hear."
   },
   {
     "ru": "давайте",
@@ -293,7 +401,10 @@
     "el": "πάμε",
     "transcription": "па́мэ",
     "el_transcription_en": "páme",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Πάμε για φαγητό.",
+    "ru_example": "Давайте пойдем поесть.",
+    "en_example": "Let's go eat."
   },
   {
     "ru": "мне нужно",
@@ -301,7 +412,10 @@
     "el": "χρειάζομαι",
     "transcription": "хрья́зомэ",
     "el_transcription_en": "chreíazomai",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Χρειάζομαι ένα ποτήρι νερό.",
+    "ru_example": "Мне нужен стакан воды.",
+    "en_example": "I need a glass of water."
   },
   {
     "ru": "я хочу",
@@ -309,7 +423,10 @@
     "el": "θέλω",
     "transcription": "тэ́ло",
     "el_transcription_en": "thélo",
-    "category": "фразы"
+    "category": "фразы",
+    "el_example": "Θέλω ένα καφέ.",
+    "ru_example": "Я хочу кофе.",
+    "en_example": "I want a coffee."
   },
   {
     "ru": "где?",
@@ -317,7 +434,10 @@
     "el": "πού;",
     "transcription": "пу́;",
     "el_transcription_en": "pou?",
-    "category": "вопросы"
+    "category": "вопросы",
+    "el_example": "Πού είναι το σπίτι σου;",
+    "ru_example": "Где твой дом?",
+    "en_example": "Where is your house?"
   },
   {
     "ru": "кто?",
@@ -325,7 +445,10 @@
     "el": "ποιος;",
     "transcription": "пьос;",
     "el_transcription_en": "pios?",
-    "category": "вопросы"
+    "category": "вопросы",
+    "el_example": "Ποιος είναι αυτός ο κύριος;",
+    "ru_example": "Кто этот господин?",
+    "en_example": "Who is this man?"
   },
   {
     "ru": "что?",
@@ -333,7 +456,10 @@
     "el": "τι;",
     "transcription": "ти;",
     "el_transcription_en": "ti?",
-    "category": "вопросы"
+    "category": "вопросы",
+    "el_example": "Τι είναι αυτό;",
+    "ru_example": "Что это?",
+    "en_example": "What is this?"
   },
   {
     "ru": "когда?",
@@ -341,7 +467,10 @@
     "el": "πότε;",
     "transcription": "по́тэ;",
     "el_transcription_en": "póte?",
-    "category": "вопросы"
+    "category": "вопросы",
+    "el_example": "Πότε θα έρθεις;",
+    "ru_example": "Когда ты придешь?",
+    "en_example": "When will you come?"
   },
   {
     "ru": "как?",
@@ -349,7 +478,10 @@
     "el": "πώς;",
     "transcription": "по́с;",
     "el_transcription_en": "pos?",
-    "category": "вопросы"
+    "category": "вопросы",
+    "el_example": "Πώς είσαι;",
+    "ru_example": "Как ты?",
+    "en_example": "How are you?"
   },
   {
     "ru": "почему?",
@@ -357,7 +489,10 @@
     "el": "γιατί;",
     "transcription": "йати́;",
     "el_transcription_en": "giatí?",
-    "category": "вопросы"
+    "category": "вопросы",
+    "el_example": "Γιατί δεν ήρθες;",
+    "ru_example": "Почему ты не пришел?",
+    "en_example": "Why didn't you come?"
   },
   {
     "ru": "сколько?",
@@ -365,7 +500,10 @@
     "el": "πόσο;",
     "transcription": "по́со;",
     "el_transcription_en": "póso?",
-    "category": "вопросы"
+    "category": "вопросы",
+    "el_example": "Πόσο κάνει αυτό;",
+    "ru_example": "Сколько это стоит?",
+    "en_example": "How much does this cost?"
   },
   {
     "ru": "здесь",
@@ -373,7 +511,10 @@
     "el": "εδώ",
     "transcription": "эдо́",
     "el_transcription_en": "edó",
-    "category": "наречия места"
+    "category": "наречия места",
+    "el_example": "Μείνε εδώ, θα γυρίσω αμέσως.",
+    "ru_example": "Оставайся здесь, я скоро вернусь.",
+    "en_example": "Stay here, I'll be right back."
   },
   {
     "ru": "там",
@@ -381,7 +522,10 @@
     "el": "εκεί",
     "transcription": "эки́",
     "el_transcription_en": "ekí",
-    "category": "наречия места"
+    "category": "наречия места",
+    "el_example": "Το βιβλίο σου είναι εκεί.",
+    "ru_example": "Твоя книга там.",
+    "en_example": "Your book is there."
   },
   {
     "ru": "сейчас",
@@ -389,7 +533,10 @@
     "el": "τώρα",
     "transcription": "то́ра",
     "el_transcription_en": "tóra",
-    "category": "наречия времени"
+    "category": "наречия времени",
+    "el_example": "Πρέπει να φύγουμε τώρα.",
+    "ru_example": "Нам нужно уходить сейчас.",
+    "en_example": "We have to leave now."
   },
   {
     "ru": "потом",
@@ -397,7 +544,10 @@
     "el": "μετά",
     "transcription": "мэта́",
     "el_transcription_en": "metá",
-    "category": "наречия времени"
+    "category": "наречия времени",
+    "el_example": "Θα σε δω μετά.",
+    "ru_example": "Увидимся позже.",
+    "en_example": "I'll see you later."
   },
   {
     "ru": "всегда",
@@ -405,7 +555,10 @@
     "el": "πάντα",
     "transcription": "па́нда",
     "el_transcription_en": "pánda",
-    "category": "наречия времени"
+    "category": "наречия времени",
+    "el_example": "Είναι πάντα αισιόδοξος.",
+    "ru_example": "Он всегда оптимистичен.",
+    "en_example": "He is always optimistic."
   },
   {
     "ru": "никогда",
@@ -413,7 +566,10 @@
     "el": "ποτέ",
     "transcription": "потэ́",
     "el_transcription_en": "poté",
-    "category": "наречия времени"
+    "category": "наречия времени",
+    "el_example": "Δεν έχω πάει ποτέ εκεί.",
+    "ru_example": "Я никогда там не был.",
+    "en_example": "I have never been there."
   },
   {
     "ru": "много",
@@ -421,7 +577,10 @@
     "el": "πολύ",
     "transcription": "поли́",
     "el_transcription_en": "polý",
-    "category": "наречия количества"
+    "category": "наречия количества",
+    "el_example": "Ευχαριστώ πολύ.",
+    "ru_example": "Большое спасибо.",
+    "en_example": "Thank you very much."
   },
   {
     "ru": "мало",
@@ -429,6 +588,9 @@
     "el": "λίγο",
     "transcription": "ли́го",
     "el_transcription_en": "lígo",
-    "category": "наречия количества"
+    "category": "наречия количества",
+    "el_example": "Έχω λίγο χρόνο.",
+    "ru_example": "У меня мало времени.",
+    "en_example": "I have little time."
   }
 ]

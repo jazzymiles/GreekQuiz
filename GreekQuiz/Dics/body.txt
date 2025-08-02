@@ -6,7 +6,10 @@
     "transcription": "то со́ма",
     "el_transcription_en": "to sóma",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Το ανθρώπινο σώμα είναι περίπλοκο.",
+    "ru_example": "Человеческое тело сложно устроено.",
+    "en_example": "The human body is complex."
   },
   {
     "ru": "голова",
@@ -15,7 +18,10 @@
     "transcription": "то кэфа́ли",
     "el_transcription_en": "to kefáli",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει μεγάλο κεφάλι.",
+    "ru_example": "У него большая голова.",
+    "en_example": "He has a big head."
   },
   {
     "ru": "волосы",
@@ -24,7 +30,10 @@
     "transcription": "та малья́",
     "el_transcription_en": "ta maliá",
     "gender": "средний (мн.ч.)",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Τα μαλλιά της είναι ξανθά.",
+    "ru_example": "Ее волосы светлые.",
+    "en_example": "Her hair is blonde."
   },
   {
     "ru": "лицо",
@@ -33,7 +42,10 @@
     "transcription": "то про́сопо",
     "el_transcription_en": "to prósopo",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει όμορφο πρόσωπο.",
+    "ru_example": "У нее красивое лицо.",
+    "en_example": "She has a beautiful face."
   },
   {
     "ru": "глаз",
@@ -42,7 +54,10 @@
     "transcription": "то ма́ти",
     "el_transcription_en": "to máti",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Τα μάτια του είναι πράσινα.",
+    "ru_example": "Его глаза зеленые.",
+    "en_example": "His eyes are green."
   },
   {
     "ru": "нос",
@@ -51,7 +66,10 @@
     "transcription": "и ми́ти",
     "el_transcription_en": "i míti",
     "gender": "женский",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Η μύτη της είναι μικρή.",
+    "ru_example": "У нее маленький нос.",
+    "en_example": "Her nose is small."
   },
   {
     "ru": "рот",
@@ -60,7 +78,10 @@
     "transcription": "то сто́ма",
     "el_transcription_en": "to stóma",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Άνοιξε το στόμα σου.",
+    "ru_example": "Открой рот.",
+    "en_example": "Open your mouth."
   },
   {
     "ru": "зуб",
@@ -69,7 +90,10 @@
     "transcription": "то до́нди",
     "el_transcription_en": "to dónti",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Το παιδί έχει ένα χαλασμένο δόντι.",
+    "ru_example": "У ребенка больной зуб.",
+    "en_example": "The child has a bad tooth."
   },
   {
     "ru": "язык",
@@ -78,7 +102,10 @@
     "transcription": "и гло́са",
     "el_transcription_en": "i glóssa",
     "gender": "женский",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Η γλώσσα της είναι κόκκινη.",
+    "ru_example": "Ее язык красный.",
+    "en_example": "Her tongue is red."
   },
   {
     "ru": "ухо",
@@ -87,7 +114,10 @@
     "transcription": "то авти́",
     "el_transcription_en": "to aftí",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Πονάει το αυτί μου.",
+    "ru_example": "У меня болит ухо.",
+    "en_example": "My ear hurts."
   },
   {
     "ru": "шея",
@@ -96,7 +126,10 @@
     "transcription": "о лэмо́с",
     "el_transcription_en": "o laimós",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Φοράει ένα κολιέ στο λαιμό του.",
+    "ru_example": "Он носит ожерелье на шее.",
+    "en_example": "He wears a necklace on his neck."
   },
   {
     "ru": "плечо",
@@ -105,7 +138,10 @@
     "transcription": "о о́мос",
     "el_transcription_en": "o ómos",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Ο ώμος του πονάει μετά την άσκηση.",
+    "ru_example": "Его плечо болит после тренировки.",
+    "en_example": "His shoulder hurts after exercising."
   },
   {
     "ru": "рука (вся)",
@@ -114,7 +150,10 @@
     "transcription": "то хэ́ри",
     "el_transcription_en": "to chéri",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει δυνατά χέρια.",
+    "ru_example": "У него сильные руки.",
+    "en_example": "He has strong arms."
   },
   {
     "ru": "локоть",
@@ -123,7 +162,10 @@
     "transcription": "о ангко́нас",
     "el_transcription_en": "o angónas",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έπεσε και χτύπησε τον αγκώνα του.",
+    "ru_example": "Он упал и ударился локтем.",
+    "en_example": "He fell and hit his elbow."
   },
   {
     "ru": "запястье",
@@ -132,7 +174,10 @@
     "transcription": "о карпо́с",
     "el_transcription_en": "o karpós",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Το ρολόι είναι στον καρπό του.",
+    "ru_example": "Часы на его запястье.",
+    "en_example": "The watch is on his wrist."
   },
   {
     "ru": "кисть руки",
@@ -141,7 +186,10 @@
     "transcription": "и пала́ми",
     "el_transcription_en": "i palámi",
     "gender": "женский",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει μια γραμμή στην παλάμη του.",
+    "ru_example": "У него линия на ладони.",
+    "en_example": "He has a line on his palm."
   },
   {
     "ru": "палец",
@@ -150,7 +198,10 @@
     "transcription": "то да́хтило",
     "el_transcription_en": "to dáchtylo",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έκοψε το δάχτυλό του.",
+    "ru_example": "Он порезал палец.",
+    "en_example": "He cut his finger."
   },
   {
     "ru": "ноготь",
@@ -159,7 +210,10 @@
     "transcription": "то ни́хи",
     "el_transcription_en": "to nýchy",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει μακριά νύχια.",
+    "ru_example": "У нее длинные ногти.",
+    "en_example": "She has long nails."
   },
   {
     "ru": "грудь",
@@ -168,7 +222,10 @@
     "transcription": "то сти́тос",
     "el_transcription_en": "to stíthos",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Πονάει το στήθος του.",
+    "ru_example": "У него болит грудь.",
+    "en_example": "His chest hurts."
   },
   {
     "ru": "живот",
@@ -177,7 +234,10 @@
     "transcription": "и килья́",
     "el_transcription_en": "i kiliá",
     "gender": "женский",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει κοιλιά από το φαγητό.",
+    "ru_example": "У него болит живот от еды.",
+    "en_example": "He has a stomach ache from the food."
   },
   {
     "ru": "спина",
@@ -186,7 +246,10 @@
     "transcription": "и пла́ти",
     "el_transcription_en": "i pláti",
     "gender": "женский",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Πονάει η πλάτη της.",
+    "ru_example": "У нее болит спина.",
+    "en_example": "Her back hurts."
   },
   {
     "ru": "нога (вся)",
@@ -195,7 +258,10 @@
     "transcription": "то по́ди",
     "el_transcription_en": "to pódi",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει ψηλά πόδια.",
+    "ru_example": "У нее длинные ноги.",
+    "en_example": "She has long legs."
   },
   {
     "ru": "бедро",
@@ -204,7 +270,10 @@
     "transcription": "о миро́с",
     "el_transcription_en": "o mirós",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Πρέπει να γυμνάσεις τους μηρούς σου.",
+    "ru_example": "Тебе нужно качать бедра.",
+    "en_example": "You need to exercise your thighs."
   },
   {
     "ru": "колено",
@@ -213,7 +282,10 @@
     "transcription": "то го́нато",
     "el_transcription_en": "to gónato",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έπεσε και χτύπησε το γόνατό του.",
+    "ru_example": "Он упал и ударился коленом.",
+    "en_example": "He fell and hit his knee."
   },
   {
     "ru": "голень",
@@ -222,7 +294,10 @@
     "transcription": "и кни́ми",
     "el_transcription_en": "i kními",
     "gender": "женский",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει λεπτές κνήμες.",
+    "ru_example": "У нее тонкие голени.",
+    "en_example": "She has thin shins."
   },
   {
     "ru": "лодыжка",
@@ -231,7 +306,10 @@
     "transcription": "о астра́галос",
     "el_transcription_en": "o astrágalos",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έστριψε τον αστράγαλο του.",
+    "ru_example": "Он подвернул лодыжку.",
+    "en_example": "He twisted his ankle."
   },
   {
     "ru": "стопа",
@@ -240,7 +318,10 @@
     "transcription": "то пэ́лма",
     "el_transcription_en": "to pélma",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει καμάρα στο πέλμα του.",
+    "ru_example": "У него свод стопы.",
+    "en_example": "He has an arch in his foot."
   },
   {
     "ru": "палец ноги",
@@ -249,7 +330,10 @@
     "transcription": "то да́хтило ту подью́",
     "el_transcription_en": "to dáchtylo tou podioú",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει μακριά δάχτυλα στα πόδια.",
+    "ru_example": "У него длинные пальцы на ногах.",
+    "en_example": "He has long toes."
   },
   {
     "ru": "кожа",
@@ -258,7 +342,10 @@
     "transcription": "то дэ́рма",
     "el_transcription_en": "to dérma",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Η επιδερμίδα του είναι ευαίσθητη.",
+    "ru_example": "У него чувствительная кожа.",
+    "en_example": "His skin is sensitive."
   },
   {
     "ru": "кость",
@@ -267,7 +354,10 @@
     "transcription": "то ко́кало",
     "el_transcription_en": "to kókalo",
     "gender": "средний",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έσπασε ένα κόκαλο στο χέρι του.",
+    "ru_example": "Он сломал кость в руке.",
+    "en_example": "He broke a bone in his arm."
   },
   {
     "ru": "мышца",
@@ -276,7 +366,10 @@
     "transcription": "о мис",
     "el_transcription_en": "o mys",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει δυνατούς μύες.",
+    "ru_example": "У него сильные мышцы.",
+    "en_example": "He has strong muscles."
   },
   {
     "ru": "кровь",
@@ -285,7 +378,10 @@
     "transcription": "то э́ма",
     "el_transcription_en": "to aíma",
     "gender": "средний",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Το αίμα είναι κόκκινο.",
+    "ru_example": "Кровь красная.",
+    "en_example": "Blood is red."
   },
   {
     "ru": "сердце",
@@ -294,7 +390,10 @@
     "transcription": "и кардья́",
     "el_transcription_en": "i kardiá",
     "gender": "женский",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Η καρδιά της χτυπάει δυνατά.",
+    "ru_example": "Ее сердце бьется сильно.",
+    "en_example": "Her heart is beating fast."
   },
   {
     "ru": "легкие",
@@ -303,7 +402,10 @@
     "transcription": "и пне́вмонэс",
     "el_transcription_en": "i pnévmones",
     "gender": "мужской (мн.ч.)",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Οι πνεύμονες είναι απαραίτητοι για την αναπνοή.",
+    "ru_example": "Легкие необходимы для дыхания.",
+    "en_example": "Lungs are essential for breathing."
   },
   {
     "ru": "желудок",
@@ -312,7 +414,10 @@
     "transcription": "то стома́хи",
     "el_transcription_en": "to stomáchi",
     "gender": "средний",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Το στομάχι του πονάει.",
+    "ru_example": "У него болит желудок.",
+    "en_example": "His stomach hurts."
   },
   {
     "ru": "печень",
@@ -321,7 +426,10 @@
     "transcription": "то сико́ти",
     "el_transcription_en": "to sykóti",
     "gender": "средний",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Η υγεία του συκωτιού του είναι καλή.",
+    "ru_example": "Его печень в хорошем состоянии.",
+    "en_example": "His liver health is good."
   },
   {
     "ru": "почки",
@@ -330,7 +438,10 @@
     "transcription": "та нэвра́",
     "el_transcription_en": "ta nefrá",
     "gender": "средний (мн.ч.)",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Οι νεφροί φιλτράρουν το αίμα.",
+    "ru_example": "Почки фильтруют кровь.",
+    "en_example": "The kidneys filter the blood."
   },
   {
     "ru": "мозг",
@@ -339,7 +450,10 @@
     "transcription": "о энгэ́фалос",
     "el_transcription_en": "o engéfalos",
     "gender": "мужской",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Ο εγκέφαλος είναι το κέντρο ελέγχου.",
+    "ru_example": "Мозг - это центр управления.",
+    "en_example": "The brain is the control center."
   },
   {
     "ru": "кишечник",
@@ -348,7 +462,10 @@
     "transcription": "то э́ндэро",
     "el_transcription_en": "to éndero",
     "gender": "средний",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Το έντερο είναι μέρος του πεπτικού συστήματος.",
+    "ru_example": "Кишечник - часть пищеварительной системы.",
+    "en_example": "The intestine is part of the digestive system."
   },
   {
     "ru": "нерв",
@@ -357,7 +474,10 @@
     "transcription": "то нэ́вро",
     "el_transcription_en": "to névro",
     "gender": "средний",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Έχει τραυματιστεί ένα νεύρο του.",
+    "ru_example": "У него поврежден нерв.",
+    "en_example": "He has a damaged nerve."
   },
   {
     "ru": "вена",
@@ -366,7 +486,10 @@
     "transcription": "и флэ́ва",
     "el_transcription_en": "i fléva",
     "gender": "женский",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Η φλέβα του είναι ορατή.",
+    "ru_example": "Его вена видна.",
+    "en_example": "His vein is visible."
   },
   {
     "ru": "артерия",
@@ -375,7 +498,10 @@
     "transcription": "и артири́а",
     "el_transcription_en": "i artiría",
     "gender": "женский",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Η αρτηρία μεταφέρει αίμα από την καρδιά.",
+    "ru_example": "Артерия несет кровь от сердца.",
+    "en_example": "The artery carries blood from the heart."
   },
   {
     "ru": "горло",
@@ -384,7 +510,10 @@
     "transcription": "о лэмо́с",
     "el_transcription_en": "o laimós",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει πονόλαιμο.",
+    "ru_example": "У него болит горло.",
+    "en_example": "He has a sore throat."
   },
   {
     "ru": "скелет",
@@ -393,7 +522,10 @@
     "transcription": "о скелэто́с",
     "el_transcription_en": "o skeletós",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Ο σκελετός στηρίζει το σώμα.",
+    "ru_example": "Скелет поддерживает тело.",
+    "en_example": "The skeleton supports the body."
   },
   {
     "ru": "спинной мозг",
@@ -402,7 +534,10 @@
     "transcription": "о нотиэ́ос мьэло́с",
     "el_transcription_en": "o notiaíos myelós",
     "gender": "мужской",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Ο νωτιαίος μυελός είναι μέρος του νευρικού συστήματος.",
+    "ru_example": "Спинной мозг - часть нервной системы.",
+    "en_example": "The spinal cord is part of the nervous system."
   },
   {
     "ru": "ребро",
@@ -411,7 +546,10 @@
     "transcription": "и плэвра́",
     "el_transcription_en": "i plevrá",
     "gender": "женский",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έσπασε ένα πλευρό του.",
+    "ru_example": "Он сломал ребро.",
+    "en_example": "He broke a rib."
   },
   {
     "ru": "сустав",
@@ -420,7 +558,10 @@
     "transcription": "и а́ртроси",
     "el_transcription_en": "i árthrosi",
     "gender": "женский",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Η άρθρωση του γόνατου πονάει.",
+    "ru_example": "Болит коленный сустав.",
+    "en_example": "The knee joint hurts."
   },
   {
     "ru": "сухожилие",
@@ -429,7 +570,10 @@
     "transcription": "о тэ́нондас",
     "el_transcription_en": "o ténontas",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει τραυματίσει τον τένοντά του.",
+    "ru_example": "Он повредил сухожилие.",
+    "en_example": "He has injured his tendon."
   },
   {
     "ru": "хрящ",
@@ -438,7 +582,10 @@
     "transcription": "о хо́ндрос",
     "el_transcription_en": "o chóndros",
     "gender": "мужской",
-    "category": "части тела"
+    "category": "части тела",
+    "el_example": "Έχει χόνδρο στο αυτί του.",
+    "ru_example": "У него хрящ в ухе.",
+    "en_example": "He has cartilage in his ear."
   },
   {
     "ru": "диафрагма",
@@ -447,6 +594,9 @@
     "transcription": "то дья́фрагма",
     "el_transcription_en": "to diáfragma",
     "gender": "средний",
-    "category": "внутренние органы"
+    "category": "внутренние органы",
+    "el_example": "Το διάφραγμα βοηθά στην αναπνοή.",
+    "ru_example": "Диафрагма помогает дышать.",
+    "en_example": "The diaphragm helps with breathing."
   }
 ]
