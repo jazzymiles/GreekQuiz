@@ -126,6 +126,13 @@
     "file": "owl 2.txt"
   },
   {
+    "name_ru": "погода",
+    "name_en": "wheater",
+    "name_el": "Καιρός",
+    "filePath": "https://www.dropbox.com/scl/fi/qto7ojrfqxmyl07ajurk0/weather.txt?rlkey=m8owgptjj9tno2ce1rq6f1n3l&st=0sgwbxwv&&raw=1",
+    "file": "weather.txt"
+  },
+  {
     "name_ru": "разное",
     "name_en": "miscellaneous",
     "name_el": "διάφορα",

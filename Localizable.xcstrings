@@ -1110,6 +1110,28 @@
         }
       }
     },
+    "mode_talkshow_display_name" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Τοκ σόου"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Talk show"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ток-шоу"
+          }
+        }
+      }
+    },
     "no_answer_selected_feedback" : {
       "extractionState" : "manual",
       "localizations" : {

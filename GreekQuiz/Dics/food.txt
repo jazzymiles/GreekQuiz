@@ -6,7 +6,10 @@
     "transcription": "фагито́",
     "el_transcription_en": "fagitó",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το φαγητό είναι έτοιμο.",
+    "ru_example": "Еда готова.",
+    "en_example": "The food is ready."
   },
   {
     "ru": "хлеб",
@@ -15,7 +18,10 @@
     "transcription": "псоми́",
     "el_transcription_en": "psomí",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Θέλω λίγο ψωμί.",
+    "ru_example": "Я хочу немного хлеба.",
+    "en_example": "I want some bread."
   },
   {
     "ru": "вода",
@@ -24,7 +30,10 @@
     "transcription": "неро́",
     "el_transcription_en": "neró",
     "category": "напитки",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το νερό είναι κρύο.",
+    "ru_example": "Вода холодная.",
+    "en_example": "The water is cold."
   },
   {
     "ru": "мясо",
@@ -33,7 +42,10 @@
     "transcription": "крэас",
     "el_transcription_en": "kréas",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κρέας είναι νόστιμο.",
+    "ru_example": "Мясо вкусное.",
+    "en_example": "The meat is delicious."
   },
   {
     "ru": "рыба",
@@ -42,7 +54,10 @@
     "transcription": "пса́ри",
     "el_transcription_en": "psári",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το ψάρι είναι φρέσκο.",
+    "ru_example": "Рыба свежая.",
+    "en_example": "The fish is fresh."
   },
   {
     "ru": "суп",
@@ -51,7 +66,10 @@
     "transcription": "су́па",
     "el_transcription_en": "soúpa",
     "category": "еда",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η σούπα είναι ζεστή.",
+    "ru_example": "Суп горячий.",
+    "en_example": "The soup is hot."
   },
   {
     "ru": "сыр",
@@ -60,7 +78,10 @@
     "transcription": "тири́",
     "el_transcription_en": "tyrí",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Μου αρέσει το τυρί.",
+    "ru_example": "Мне нравится сыр.",
+    "en_example": "I like cheese."
   },
   {
     "ru": "масло",
@@ -69,7 +90,10 @@
     "transcription": "ву́тиро",
     "el_transcription_en": "voútyro",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το βούτυρο είναι κίτρινο.",
+    "ru_example": "Масло желтое.",
+    "en_example": "The butter is yellow."
   },
   {
     "ru": "молоко",
@@ -78,7 +102,10 @@
     "transcription": "га́ла",
     "el_transcription_en": "gála",
     "category": "напитки",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το γάλα είναι κρύο.",
+    "ru_example": "Молоко холодное.",
+    "en_example": "The milk is cold."
   },
   {
     "ru": "яйцо",
@@ -87,7 +114,10 @@
     "transcription": "авго́",
     "el_transcription_en": "avgó",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το αυγό είναι βραστό.",
+    "ru_example": "Яйцо вареное.",
+    "en_example": "The egg is boiled."
   },
   {
     "ru": "овощи",
@@ -96,7 +126,10 @@
     "transcription": "лаханика́",
     "el_transcription_en": "lachaniká",
     "category": "еда",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Μου αρέσουν τα λαχανικά.",
+    "ru_example": "Мне нравятся овощи.",
+    "en_example": "I like vegetables."
   },
   {
     "ru": "фрукты",
@@ -105,7 +138,10 @@
     "transcription": "фру́та",
     "el_transcription_en": "froúta",
     "category": "еда",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Τα φρούτα είναι γλυκά.",
+    "ru_example": "Фрукты сладкие.",
+    "en_example": "The fruits are sweet."
   },
   {
     "ru": "яблоко",
@@ -114,7 +150,10 @@
     "transcription": "ми́ло",
     "el_transcription_en": "mílo",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το μήλο είναι κόκκινο.",
+    "ru_example": "Яблоко красное.",
+    "en_example": "The apple is red."
   },
   {
     "ru": "апельсин",
@@ -123,7 +162,10 @@
     "transcription": "портока́ли",
     "el_transcription_en": "portokáli",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το πορτοκάλι είναι ζουμερό.",
+    "ru_example": "Апельсин сочный.",
+    "en_example": "The orange is juicy."
   },
   {
     "ru": "картошка",
@@ -132,7 +174,10 @@
     "transcription": "пата́та",
     "el_transcription_en": "patáta",
     "category": "овощи",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η πατάτα είναι μεγάλη.",
+    "ru_example": "Картошка большая.",
+    "en_example": "The potato is big."
   },
   {
     "ru": "рис",
@@ -141,7 +186,10 @@
     "transcription": "ри́зи",
     "el_transcription_en": "rízi",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Μαγειρεύω ρύζι.",
+    "ru_example": "Я готовлю рис.",
+    "en_example": "I am cooking rice."
   },
   {
     "ru": "салат",
@@ -150,7 +198,10 @@
     "transcription": "сала́та",
     "el_transcription_en": "saláta",
     "category": "овощи",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η σαλάτα είναι φρέσκια.",
+    "ru_example": "Салат свежий.",
+    "en_example": "The salad is fresh."
   },
   {
     "ru": "кофе",
@@ -159,7 +210,10 @@
     "transcription": "кафэ́с",
     "el_transcription_en": "kafés",
     "category": "напитки",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο καφές είναι δυνατός.",
+    "ru_example": "Кофе крепкий.",
+    "en_example": "The coffee is strong."
   },
   {
     "ru": "чай",
@@ -168,7 +222,10 @@
     "transcription": "ца́и",
     "el_transcription_en": "tsái",
     "category": "напитки",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το τσάι είναι ζεστό.",
+    "ru_example": "Чай горячий.",
+    "en_example": "The tea is hot."
   },
   {
     "ru": "вино",
@@ -177,7 +234,10 @@
     "transcription": "краси́",
     "el_transcription_en": "krasí",
     "category": "напитки",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κρασί είναι κόκκινο.",
+    "ru_example": "Вино красное.",
+    "en_example": "The wine is red."
   },
   {
     "ru": "банан",
@@ -186,7 +246,10 @@
     "transcription": "бана́на",
     "el_transcription_en": "banána",
     "category": "фрукты",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η μπανάνα είναι ώριμη.",
+    "ru_example": "Банан спелый.",
+    "en_example": "The banana is ripe."
   },
   {
     "ru": "помидор",
@@ -195,7 +258,10 @@
     "transcription": "ндома́та",
     "el_transcription_en": "ntomáta",
     "category": "овощи",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η ντομάτα είναι κόκκινη.",
+    "ru_example": "Помидор красный.",
+    "en_example": "The tomato is red."
   },
   {
     "ru": "огурец",
@@ -204,7 +270,10 @@
     "transcription": "ангу́ри",
     "el_transcription_en": "angoúri",
     "category": "овощи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το αγγούρι είναι πράσινο.",
+    "ru_example": "Огурец зеленый.",
+    "en_example": "The cucumber is green."
   },
   {
     "ru": "виноград",
@@ -213,7 +282,10 @@
     "transcription": "стафи́ли",
     "el_transcription_en": "stafýli",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σταφύλι είναι γλυκό.",
+    "ru_example": "Виноград сладкий.",
+    "en_example": "The grape is sweet."
   },
   {
     "ru": "соль",
@@ -222,7 +294,10 @@
     "transcription": "ала́ти",
     "el_transcription_en": "aláti",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το φαγητό χρειάζεται αλάτι.",
+    "ru_example": "Еде нужна соль.",
+    "en_example": "The food needs salt."
   },
   {
     "ru": "перец",
@@ -231,7 +306,10 @@
     "transcription": "пипэ́ри",
     "el_transcription_en": "pipéri",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Βάλε πιπέρι.",
+    "ru_example": "Добавь перец.",
+    "en_example": "Add pepper."
   },
   {
     "ru": "уксус",
@@ -240,7 +318,10 @@
     "transcription": "кси́ди",
     "el_transcription_en": "xýdi",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το ξύδι είναι ξινό.",
+    "ru_example": "Уксус кислый.",
+    "en_example": "The vinegar is sour."
   },
   {
     "ru": "чеснок",
@@ -249,7 +330,10 @@
     "transcription": "ско́рдо",
     "el_transcription_en": "skórdo",
     "category": "овощи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σκόρδο μυρίζει έντονα.",
+    "ru_example": "Чеснок сильно пахнет.",
+    "en_example": "The garlic smells strong."
   },
   {
     "ru": "лук",
@@ -258,7 +342,10 @@
     "transcription": "крэмми́ди",
     "el_transcription_en": "kremmýdi",
     "category": "овощи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κρεμμύδι είναι κομμένο.",
+    "ru_example": "Лук нарезан.",
+    "en_example": "The onion is chopped."
   },
   {
     "ru": "морковь",
@@ -267,7 +354,10 @@
     "transcription": "каро́то",
     "el_transcription_en": "karóto",
     "category": "овощи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το καρότο είναι πορτοκαλί.",
+    "ru_example": "Морковь оранжевая.",
+    "en_example": "The carrot is orange."
   },
   {
     "ru": "арбуз",
@@ -276,7 +366,10 @@
     "transcription": "карпу́зи",
     "el_transcription_en": "karpoúzi",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το καρπούζι είναι δροσερό.",
+    "ru_example": "Арбуз прохладный.",
+    "en_example": "The watermelon is cool."
   },
   {
     "ru": "персик",
@@ -285,7 +378,10 @@
     "transcription": "рода́кино",
     "el_transcription_en": "rodákino",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το ροδάκινο είναι γλυκό.",
+    "ru_example": "Персик сладкий.",
+    "en_example": "The peach is sweet."
   },
   {
     "ru": "груша",
@@ -294,7 +390,10 @@
     "transcription": "ахла́ди",
     "el_transcription_en": "achládi",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το αχλάδι είναι πράσινο.",
+    "ru_example": "Груша зеленая.",
+    "en_example": "The pear is green."
   },
   {
     "ru": "клубника",
@@ -303,7 +402,10 @@
     "transcription": "фра́ула",
     "el_transcription_en": "fráoula",
     "category": "фрукты",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η φράουλα είναι κόκκινη.",
+    "ru_example": "Клубника красная.",
+    "en_example": "The strawberry is red."
   },
   {
     "ru": "лимон",
@@ -312,7 +414,10 @@
     "transcription": "лемо́ни",
     "el_transcription_en": "lemóni",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το λεμόνι είναι ξινό.",
+    "ru_example": "Лимон кислый.",
+    "en_example": "The lemon is sour."
   },
   {
     "ru": "маслина",
@@ -321,7 +426,10 @@
     "transcription": "элья́",
     "el_transcription_en": "eliá",
     "category": "овощи",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η ελιά είναι μαύρη.",
+    "ru_example": "Маслина черная.",
+    "en_example": "The olive is black."
   },
   {
     "ru": "инжир",
@@ -330,7 +438,10 @@
     "transcription": "си́ко",
     "el_transcription_en": "sýko",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σύκο είναι γλυκό.",
+    "ru_example": "Инжир сладкий.",
+    "en_example": "The fig is sweet."
   },
   {
     "ru": "дыня",
@@ -339,7 +450,10 @@
     "transcription": "пепо́ни",
     "el_transcription_en": "pepóni",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το πεπόνι είναι δροσερό.",
+    "ru_example": "Дыня прохладная.",
+    "en_example": "The melon is cool."
   },
   {
     "ru": "черешня",
@@ -348,7 +462,10 @@
     "transcription": "кера́си",
     "el_transcription_en": "kerási",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κεράσι είναι κόκκινο.",
+    "ru_example": "Черешня красная.",
+    "en_example": "The cherry is red."
   },
   {
     "ru": "абрикос",
@@ -357,7 +474,10 @@
     "transcription": "вери́коко",
     "el_transcription_en": "veríkoko",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το βερίκοκο είναι ώριμο.",
+    "ru_example": "Абрикос спелый.",
+    "en_example": "The apricot is ripe."
   },
   {
     "ru": "гранат",
@@ -366,7 +486,10 @@
     "transcription": "ро́ди",
     "el_transcription_en": "ródi",
     "category": "фрукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το ρόδι είναι κόκκινο.",
+    "ru_example": "Гранат красный.",
+    "en_example": "The pomegranate is red."
   },
   {
     "ru": "баклажан",
@@ -375,7 +498,10 @@
     "transcription": "мелидза́на",
     "el_transcription_en": "melitzána",
     "category": "овощи",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η μελιτζάνα είναι μοβ.",
+    "ru_example": "Баклажан фиолетовый.",
+    "en_example": "The eggplant is purple."
   },
   {
     "ru": "перец (сладкий)",
@@ -384,7 +510,10 @@
     "transcription": "пиперья́",
     "el_transcription_en": "piperiá",
     "category": "овощи",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η πιπεριά είναι μεγάλη.",
+    "ru_example": "Перец большой.",
+    "en_example": "The bell pepper is big."
   },
   {
     "ru": "фасоль",
@@ -393,7 +522,10 @@
     "transcription": "фасо́ля",
     "el_transcription_en": "fasólia",
     "category": "овощи",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Τα φασόλια είναι βραστά.",
+    "ru_example": "Фасоль вареная.",
+    "en_example": "The beans are boiled."
   },
   {
     "ru": "капуста",
@@ -402,7 +534,10 @@
     "transcription": "ла́хано",
     "el_transcription_en": "láchano",
     "category": "овощи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το λάχανο είναι πράσινο.",
+    "ru_example": "Капуста зеленая.",
+    "en_example": "The cabbage is green."
   },
   {
     "ru": "шпинат",
@@ -411,7 +546,10 @@
     "transcription": "спана́ки",
     "el_transcription_en": "spanáki",
     "category": "овощи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σπανάκι είναι υγιεινό.",
+    "ru_example": "Шпинат полезный.",
+    "en_example": "The spinach is healthy."
   },
   {
     "ru": "цукини",
@@ -420,7 +558,10 @@
     "transcription": "колокита́ки",
     "el_transcription_en": "kolokytháki",
     "category": "овощи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κολοκυθάκι είναι μακρύ.",
+    "ru_example": "Цукини длинный.",
+    "en_example": "The zucchini is long."
   },
   {
     "ru": "оливковое масло",
@@ -429,7 +570,10 @@
     "transcription": "элэо́ладо",
     "el_transcription_en": "elaiólado",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το ελαιόλαδο είναι υγιεινό.",
+    "ru_example": "Оливковое масло полезное.",
+    "en_example": "The olive oil is healthy."
   },
   {
     "ru": "оливки",
@@ -438,7 +582,10 @@
     "transcription": "элье́с",
     "el_transcription_en": "eliés",
     "category": "еда",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Οι ελιές είναι μαύρες.",
+    "ru_example": "Оливки черные.",
+    "en_example": "The olives are black."
   },
   {
     "ru": "фета",
@@ -447,7 +594,10 @@
     "transcription": "фэ́та",
     "el_transcription_en": "féta",
     "category": "сыр",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η φέτα είναι αλμυρή.",
+    "ru_example": "Фета соленая.",
+    "en_example": "The feta is salty."
   },
   {
     "ru": "йогурт",
@@ -456,7 +606,10 @@
     "transcription": "яу́рти",
     "el_transcription_en": "yaoúrti",
     "category": "молочные продукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το γιαούρτι είναι παχύ.",
+    "ru_example": "Йогурт густой.",
+    "en_example": "The yogurt is thick."
   },
   {
     "ru": "мед",
@@ -465,7 +618,10 @@
     "transcription": "мэ́ли",
     "el_transcription_en": "méli",
     "category": "еда",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το μέλι είναι γλυκό.",
+    "ru_example": "Мед сладкий.",
+    "en_example": "The honey is sweet."
   },
   {
     "ru": "курица",
@@ -474,7 +630,10 @@
     "transcription": "кото́пуло",
     "el_transcription_en": "kotópoulo",
     "category": "мясо",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κοτόπουλο ψήνεται.",
+    "ru_example": "Курица запекается.",
+    "en_example": "The chicken is baking."
   },
   {
     "ru": "свинина",
@@ -483,7 +642,10 @@
     "transcription": "хирино́",
     "el_transcription_en": "choirinó",
     "category": "мясо",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το χοιρινό είναι λιπαρό.",
+    "ru_example": "Свинина жирная.",
+    "en_example": "The pork is fatty."
   },
   {
     "ru": "баранина",
@@ -492,7 +654,10 @@
     "transcription": "арни́",
     "el_transcription_en": "arní",
     "category": "мясо",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το αρνί είναι ψητό.",
+    "ru_example": "Баранина жареная.",
+    "en_example": "The lamb is roasted."
   },
   {
     "ru": "креветки",
@@ -501,7 +666,10 @@
     "transcription": "гари́дэс",
     "el_transcription_en": "garídes",
     "category": "морепродукты",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Οι γαρίδες είναι μικρές.",
+    "ru_example": "Креветки маленькие.",
+    "en_example": "The shrimp are small."
   },
   {
     "ru": "осьминог",
@@ -510,7 +678,10 @@
     "transcription": "хтапо́ди",
     "el_transcription_en": "chtapódi",
     "category": "морепродукты",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το χταπόδι είναι μαγειρεμένο.",
+    "ru_example": "Осьминог приготовлен.",
+    "en_example": "The octopus is cooked."
   },
   {
     "ru": "хлебные палочки",
@@ -519,7 +690,10 @@
     "transcription": "паксима́дья",
     "el_transcription_en": "paximádia",
     "category": "еда",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Τα παξιμάδια είναι τραγανά.",
+    "ru_example": "Хлебные палочки хрустящие.",
+    "en_example": "The rusks are crunchy."
   },
   {
     "ru": "пирог",
@@ -528,7 +702,10 @@
     "transcription": "пи́та",
     "el_transcription_en": "píta",
     "category": "еда",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η πίτα είναι ζεστή.",
+    "ru_example": "Пирог горячий.",
+    "en_example": "The pie is hot."
   },
   {
     "ru": "кунжут",
@@ -537,7 +714,10 @@
     "transcription": "суса́ми",
     "el_transcription_en": "sousámi",
     "category": "семена",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σουσάμι είναι μικρό.",
+    "ru_example": "Кунжут маленький.",
+    "en_example": "The sesame is small."
   },
   {
     "ru": "орехи",
@@ -546,7 +726,10 @@
     "transcription": "ксири́ карпи́",
     "el_transcription_en": "xirí karpí",
     "category": "еда",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Οι ξηροί καρποί είναι θρεπτικοί.",
+    "ru_example": "Орехи питательные.",
+    "en_example": "The nuts are nutritious."
   },
   {
     "ru": "миндаль",
@@ -555,7 +738,10 @@
     "transcription": "ами́гдало",
     "el_transcription_en": "amýgdalo",
     "category": "орехи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το αμύγδαλο είναι τραγανό.",
+    "ru_example": "Миндаль хрустящий.",
+    "en_example": "The almond is crunchy."
   },
   {
     "ru": "фисташки",
@@ -564,7 +750,10 @@
     "transcription": "фисти́ки",
     "el_transcription_en": "fistíki",
     "category": "орехи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το φιστίκι είναι αλμυρό.",
+    "ru_example": "Фисташка соленая.",
+    "en_example": "The pistachio is salty."
   },
   {
     "ru": "бобы/фасоль",
@@ -573,7 +762,10 @@
     "transcription": "о́сприя",
     "el_transcription_en": "óspria",
     "category": "бобовые",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Τα όσπρια είναι υγιεινά.",
+    "ru_example": "Бобы полезные.",
+    "en_example": "The legumes are healthy."
   },
   {
     "ru": "чечевица",
@@ -582,7 +774,10 @@
     "transcription": "факе́с",
     "el_transcription_en": "fakés",
     "category": "бобовые",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Οι φακές είναι νόστιμες.",
+    "ru_example": "Чечевица вкусная.",
+    "en_example": "The lentils are delicious."
   },
   {
     "ru": "мороженое",
@@ -591,7 +786,10 @@
     "transcription": "пагото́",
     "el_transcription_en": "pagotó",
     "category": "десерт",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το παγωτό είναι κρύο.",
+    "ru_example": "Мороженое холодное.",
+    "en_example": "The ice cream is cold."
   },
   {
     "ru": "лёд",
@@ -600,7 +798,10 @@
     "transcription": "па́гос",
     "el_transcription_en": "págos",
     "category": "разное",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο πάγος είναι σκληρός.",
+    "ru_example": "Лед твердый.",
+    "en_example": "The ice is hard."
   },
   {
     "ru": "тефтельки",
@@ -609,7 +810,10 @@
     "transcription": "кефтэда́кья",
     "el_transcription_en": "keftedákia",
     "category": "мясо",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Τα κεφτεδάκια είναι τηγανητά.",
+    "ru_example": "Тефтельки жареные.",
+    "en_example": "The meatballs are fried."
   },
   {
     "ru": "колбаса",
@@ -618,7 +822,10 @@
     "transcription": "лука́нико",
     "el_transcription_en": "loukániko",
     "category": "мясо",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το λουκάνικο είναι καπνιστό.",
+    "ru_example": "Колбаса копченая.",
+    "en_example": "The sausage is smoked."
   },
   {
     "ru": "сосиски",
@@ -627,7 +834,10 @@
     "transcription": "лука́ника",
     "el_transcription_en": "loukánika",
     "category": "мясо",
-    "gender": "мн"
+    "gender": "мн",
+    "el_example": "Τα λουκάνικα είναι ψητά.",
+    "ru_example": "Сосиски жареные.",
+    "en_example": "The sausages are grilled."
   },
   {
     "ru": "стейк",
@@ -636,7 +846,10 @@
     "transcription": "бризо́ла",
     "el_transcription_en": "brizóla",
     "category": "мясо",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η μπριζόλα είναι ζουμερή.",
+    "ru_example": "Стейк сочный.",
+    "en_example": "The steak is juicy."
   },
   {
     "ru": "десерт",
@@ -645,7 +858,10 @@
     "transcription": "эпидо́рпио",
     "el_transcription_en": "epidórpio",
     "category": "десерт",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το επιδόρπιο είναι γλυκό.",
+    "ru_example": "Десерт сладкий.",
+    "en_example": "The dessert is sweet."
   },
   {
     "ru": "говядина",
@@ -654,7 +870,10 @@
     "transcription": "мосха́ри",
     "el_transcription_en": "moschári",
     "category": "мясо",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το μοσχάρι είναι μαλακό.",
+    "ru_example": "Говядина мягкая.",
+    "en_example": "The beef is tender."
   },
   {
     "ru": "вкусно",
@@ -663,7 +882,10 @@
     "transcription": "но́стимо",
     "el_transcription_en": "nóstimo",
     "category": "прилагательное",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Αυτό είναι πολύ νόστιμο.",
+    "ru_example": "Это очень вкусно.",
+    "en_example": "This is very tasty."
   },
   {
     "ru": "завтрак",
@@ -672,7 +894,10 @@
     "transcription": "проино́",
     "el_transcription_en": "proinó",
     "category": "приемы пищи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το πρωινό είναι σημαντικό.",
+    "ru_example": "Завтрак важен.",
+    "en_example": "Breakfast is important."
   },
   {
     "ru": "обед",
@@ -681,7 +906,10 @@
     "transcription": "месимериано́",
     "el_transcription_en": "mesimerianó",
     "category": "приемы пищи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το μεσημεριανό είναι ελαφρύ.",
+    "ru_example": "Обед легкий.",
+    "en_example": "Lunch is light."
   },
   {
     "ru": "ужин",
@@ -690,7 +918,10 @@
     "transcription": "врадино́",
     "el_transcription_en": "vradinó",
     "category": "приемы пищи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το βραδινό είναι νόστιμο.",
+    "ru_example": "Ужин вкусный.",
+    "en_example": "Dinner is delicious."
   },
   {
     "ru": "перекус",
@@ -699,6 +930,9 @@
     "transcription": "снак",
     "el_transcription_en": "snak",
     "category": "приемы пищи",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σνακ είναι γρήγορο.",
+    "ru_example": "Перекус быстрый.",
+    "en_example": "The snack is quick."
   }
 ]

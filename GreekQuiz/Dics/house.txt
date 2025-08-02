@@ -6,7 +6,10 @@
     "transcription": "стэ́йи",
     "el_transcription_en": "stégi",
     "category": "части дома",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η στέγη είναι κόκκινη.",
+    "ru_example": "Крыша красная.",
+    "en_example": "The roof is red."
   },
   {
     "ru": "потолок",
@@ -15,7 +18,10 @@
     "transcription": "тава́ни",
     "el_transcription_en": "taváni",
     "category": "части дома",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το ταβάνι είναι ψηλό.",
+    "ru_example": "Потолок высокий.",
+    "en_example": "The ceiling is high."
   },
   {
     "ru": "пол",
@@ -24,7 +30,10 @@
     "transcription": "па́тома",
     "el_transcription_en": "pátoma",
     "category": "части дома",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το πάτωμα είναι καθαρό.",
+    "ru_example": "Пол чистый.",
+    "en_example": "The floor is clean."
   },
   {
     "ru": "стена",
@@ -33,7 +42,10 @@
     "transcription": "ти́хос",
     "el_transcription_en": "tíchos",
     "category": "части дома",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο τοίχος είναι λευκός.",
+    "ru_example": "Стена белая.",
+    "en_example": "The wall is white."
   },
   {
     "ru": "дверь",
@@ -42,7 +54,10 @@
     "transcription": "по́рта",
     "el_transcription_en": "pórta",
     "category": "части дома",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η πόρτα είναι κλειστή.",
+    "ru_example": "Дверь закрыта.",
+    "en_example": "The door is closed."
   },
   {
     "ru": "окно",
@@ -51,7 +66,10 @@
     "transcription": "пара́тиро",
     "el_transcription_en": "paráthyro",
     "category": "части дома",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το παράθυρο είναι ανοιχτό.",
+    "ru_example": "Окно открыто.",
+    "en_example": "The window is open."
   },
   {
     "ru": "дом",
@@ -60,7 +78,10 @@
     "transcription": "спи́ти",
     "el_transcription_en": "spíti",
     "category": "здания",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σπίτι είναι μεγάλο.",
+    "ru_example": "Дом большой.",
+    "en_example": "The house is big."
   },
   {
     "ru": "комната",
@@ -69,7 +90,10 @@
     "transcription": "дома́тио",
     "el_transcription_en": "domátio",
     "category": "комнаты",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το δωμάτιο είναι φωτεινό.",
+    "ru_example": "Комната светлая.",
+    "en_example": "The room is bright."
   },
   {
     "ru": "кухня",
@@ -78,7 +102,10 @@
     "transcription": "кузи́на",
     "el_transcription_en": "kouzína",
     "category": "комнаты",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η κουζίνα είναι καινούργια.",
+    "ru_example": "Кухня новая.",
+    "en_example": "The kitchen is new."
   },
   {
     "ru": "гостиная",
@@ -87,7 +114,10 @@
     "transcription": "сало́ни",
     "el_transcription_en": "salóni",
     "category": "комнаты",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σαλόνι είναι άνετο.",
+    "ru_example": "Гостиная уютная.",
+    "en_example": "The living room is comfortable."
   },
   {
     "ru": "столовая",
@@ -96,7 +126,10 @@
     "transcription": "трапэзари́а",
     "el_transcription_en": "trapezaría",
     "category": "комнаты",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η τραπεζαρία είναι άδεια.",
+    "ru_example": "Столовая пустая.",
+    "en_example": "The dining room is empty."
   },
   {
     "ru": "спальня",
@@ -105,7 +138,10 @@
     "transcription": "ипнодома́тио",
     "el_transcription_en": "ypnodomátio",
     "category": "комнаты",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το υπνοδωμάτιο είναι ήσυχο.",
+    "ru_example": "Спальня тихая.",
+    "en_example": "The bedroom is quiet."
   },
   {
     "ru": "коридор",
@@ -114,7 +150,10 @@
     "transcription": "дья́дромос",
     "el_transcription_en": "diádromos",
     "category": "части дома",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο διάδρομος είναι μακρύς.",
+    "ru_example": "Коридор длинный.",
+    "en_example": "The corridor is long."
   },
   {
     "ru": "ванная",
@@ -123,7 +162,10 @@
     "transcription": "ба́ньо",
     "el_transcription_en": "bánio",
     "category": "комнаты",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το μπάνιο είναι μικρό.",
+    "ru_example": "Ванная маленькая.",
+    "en_example": "The bathroom is small."
   },
   {
     "ru": "подвал",
@@ -132,7 +174,10 @@
     "transcription": "ипо́йьо",
     "el_transcription_en": "ypógeio",
     "category": "части дома",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το υπόγειο είναι σκοτεινό.",
+    "ru_example": "Подвал темный.",
+    "en_example": "The basement is dark."
   },
   {
     "ru": "чердак",
@@ -141,7 +186,10 @@
     "transcription": "софи́та",
     "el_transcription_en": "sofíta",
     "category": "части дома",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η σοφίτα είναι παλιά.",
+    "ru_example": "Чердак старый.",
+    "en_example": "The attic is old."
   },
   {
     "ru": "лестница",
@@ -150,7 +198,10 @@
     "transcription": "ска́ла",
     "el_transcription_en": "skala",
     "category": "части дома",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η σκάλα είναι στενή.",
+    "ru_example": "Лестница узкая.",
+    "en_example": "The stairs are narrow."
   },
   {
     "ru": "кладовка",
@@ -159,7 +210,10 @@
     "transcription": "апоти́ки",
     "el_transcription_en": "apothíki",
     "category": "части дома",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η αποθήκη είναι γεμάτη.",
+    "ru_example": "Кладовка полная.",
+    "en_example": "The storeroom is full."
   },
   {
     "ru": "бассейн",
@@ -168,7 +222,10 @@
     "transcription": "писи́на",
     "el_transcription_en": "pisína",
     "category": "экстерьер",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η πισίνα είναι κρύα.",
+    "ru_example": "Бассейн холодный.",
+    "en_example": "The swimming pool is cold."
   },
   {
     "ru": "двор",
@@ -177,7 +234,10 @@
     "transcription": "авли́",
     "el_transcription_en": "avlí",
     "category": "экстерьер",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η αυλή είναι μεγάλη.",
+    "ru_example": "Двор большой.",
+    "en_example": "The yard is big."
   },
   {
     "ru": "сад",
@@ -186,7 +246,10 @@
     "transcription": "ки́пос",
     "el_transcription_en": "kípos",
     "category": "экстерьер",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο κήπος είναι πράσινος.",
+    "ru_example": "Сад зеленый.",
+    "en_example": "The garden is green."
   },
   {
     "ru": "балкон",
@@ -195,7 +258,10 @@
     "transcription": "балко́ни",
     "el_transcription_en": "balkóni",
     "category": "экстерьер",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το μπαλκόνι έχει θέα.",
+    "ru_example": "С балкона открывается вид.",
+    "en_example": "The balcony has a view."
   },
   {
     "ru": "почтовый ящик",
@@ -204,7 +270,10 @@
     "transcription": "грамматокиво́тио",
     "el_transcription_en": "grammatokivótio",
     "category": "экстерьер",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το γραμματοκιβώτιο είναι γεμάτο.",
+    "ru_example": "Почтовый ящик полный.",
+    "en_example": "The mailbox is full."
   },
   {
     "ru": "забор",
@@ -213,7 +282,10 @@
     "transcription": "фра́хтис",
     "el_transcription_en": "fráchtis",
     "category": "экстерьер",
-    "gender": "мужской"
+    "gender": "мужской",
+    "el_example": "Ο φράχτης είναι ψηλός.",
+    "ru_example": "Забор высокий.",
+    "en_example": "The fence is high."
   },
   {
     "ru": "гараж",
@@ -222,7 +294,10 @@
     "transcription": "гара́з",
     "el_transcription_en": "garáz",
     "category": "здания",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το γκαράζ είναι άδειο.",
+    "ru_example": "Гараж пустой.",
+    "en_example": "The garage is empty."
   },
   {
     "ru": "мансарда",
@@ -231,7 +306,10 @@
     "transcription": "софи́та",
     "el_transcription_en": "sofíta",
     "category": "части дома",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η σοφίτα είναι παλιά.",
+    "ru_example": "Мансарда старая.",
+    "en_example": "The loft is old."
   },
   {
     "ru": "гостиная (мн.ч.)",
@@ -240,7 +318,10 @@
     "transcription": "сало́нья",
     "el_transcription_en": "salónia",
     "category": "комнаты",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Τα σαλόνια είναι καθαρά.",
+    "ru_example": "Гостиные чистые.",
+    "en_example": "The living rooms are clean."
   },
   {
     "ru": "чердак (мн.ч.)",
@@ -249,6 +330,9 @@
     "transcription": "софи́тэс",
     "el_transcription_en": "sofítes",
     "category": "части дома",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Οι σοφίτες είναι σκοτεινές.",
+    "ru_example": "Чердаки темные.",
+    "en_example": "The attics are dark."
   }
 ]

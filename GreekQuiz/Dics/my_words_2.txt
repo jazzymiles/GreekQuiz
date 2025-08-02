@@ -6,7 +6,10 @@
     "category": "родственник",
     "gender": "ж",
     "en": "mother",
-    "el_transcription_en": "mitera"
+    "el_transcription_en": "mitera",
+    "el_example": "Η μητέρα μου είναι δασκάλα.",
+    "ru_example": "Моя мама - учительница.",
+    "en_example": "My mother is a teacher."
   },
   {
     "ru": "мама",
@@ -15,7 +18,10 @@
     "category": "родственник",
     "gender": "ж",
     "en": "mom",
-    "el_transcription_en": "mama"
+    "el_transcription_en": "mama",
+    "el_example": "Μαμά, σε αγαπώ.",
+    "ru_example": "Мама, я тебя люблю.",
+    "en_example": "Mom, I love you."
   },
   {
     "ru": "папа",
@@ -24,7 +30,10 @@
     "category": "родственник",
     "gender": "м",
     "en": "father",
-    "el_transcription_en": "pateras"
+    "el_transcription_en": "pateras",
+    "el_example": "Ο πατέρας μου είναι γιατρός.",
+    "ru_example": "Мой папа - врач.",
+    "en_example": "My father is a doctor."
   },
   {
     "ru": "папа",
@@ -33,7 +42,10 @@
     "category": "родственник",
     "gender": "м",
     "en": "dad",
-    "el_transcription_en": "babas"
+    "el_transcription_en": "babas",
+    "el_example": "Μπαμπά, έλα εδώ!",
+    "ru_example": "Папа, иди сюда!",
+    "en_example": "Dad, come here!"
   },
   {
     "ru": "брат",
@@ -42,7 +54,10 @@
     "category": "родственник",
     "gender": "м",
     "en": "brother",
-    "el_transcription_en": "adelfos"
+    "el_transcription_en": "adelfos",
+    "el_example": "Ο αδελφός μου είναι ψηλός.",
+    "ru_example": "Мой брат высокий.",
+    "en_example": "My brother is tall."
   },
   {
     "ru": "сестра",
@@ -51,7 +66,10 @@
     "category": "родственник",
     "gender": "ж",
     "en": "sister",
-    "el_transcription_en": "adelfi"
+    "el_transcription_en": "adelfi",
+    "el_example": "Η αδελφή μου είναι φοιτήτρια.",
+    "ru_example": "Моя сестра - студентка.",
+    "en_example": "My sister is a student."
   },
   {
     "ru": "дедушка",
@@ -60,7 +78,10 @@
     "category": "родственник",
     "gender": "м",
     "en": "grandfather",
-    "el_transcription_en": "pappous"
+    "el_transcription_en": "pappous",
+    "el_example": "Ο παππούς μου λέει ιστορίες.",
+    "ru_example": "Мой дедушка рассказывает истории.",
+    "en_example": "My grandfather tells stories."
   },
   {
     "ru": "бабушка",
@@ -69,7 +90,10 @@
     "category": "родственник",
     "gender": "ж",
     "en": "grandmother",
-    "el_transcription_en": "giagia"
+    "el_transcription_en": "giagia",
+    "el_example": "Η γιαγιά μου μαγειρεύει καλά.",
+    "ru_example": "Моя бабушка хорошо готовит.",
+    "en_example": "My grandmother cooks well."
   },
   {
     "ru": "сын",
@@ -78,7 +102,10 @@
     "category": "родственник",
     "gender": "м",
     "en": "son",
-    "el_transcription_en": "gios"
+    "el_transcription_en": "gios",
+    "el_example": "Ο γιος μου είναι ακόμα παιδί.",
+    "ru_example": "Мой сын еще ребенок.",
+    "en_example": "My son is still a child."
   },
   {
     "ru": "дочь",
@@ -87,7 +114,10 @@
     "category": "родственник",
     "gender": "ж",
     "en": "daughter",
-    "el_transcription_en": "kori"
+    "el_transcription_en": "kori",
+    "el_example": "Η κόρη μου πηγαίνει στο σχολείο.",
+    "ru_example": "Моя дочь ходит в школу.",
+    "en_example": "My daughter goes to school."
   },
   {
     "ru": "муж",
@@ -96,7 +126,10 @@
     "category": "родственник",
     "gender": "м",
     "en": "husband",
-    "el_transcription_en": "syzygos"
+    "el_transcription_en": "syzygos",
+    "el_example": "Ο σύζυγός της είναι από την Κύπρο.",
+    "ru_example": "Ее муж с Кипра.",
+    "en_example": "Her husband is from Cyprus."
   },
   {
     "ru": "жена",
@@ -105,7 +138,10 @@
     "category": "родственник",
     "gender": "ж",
     "en": "wife",
-    "el_transcription_en": "syzygos"
+    "el_transcription_en": "syzygos",
+    "el_example": "Η σύζυγός του είναι δασκάλα.",
+    "ru_example": "Его жена - учительница.",
+    "en_example": "His wife is a teacher."
   },
   {
     "ru": "мальчик",
@@ -114,7 +150,10 @@
     "category": "человек",
     "gender": "ср",
     "en": "boy",
-    "el_transcription_en": "agori"
+    "el_transcription_en": "agori",
+    "el_example": "Το αγόρι παίζει ποδόσφαιρο.",
+    "ru_example": "Мальчик играет в футбол.",
+    "en_example": "The boy is playing football."
   },
   {
     "ru": "девочка",
@@ -123,7 +162,10 @@
     "category": "человек",
     "gender": "ср",
     "en": "girl",
-    "el_transcription_en": "koritsi"
+    "el_transcription_en": "koritsi",
+    "el_example": "Το κορίτσι διαβάζει ένα βιβλίο.",
+    "ru_example": "Девочка читает книгу.",
+    "en_example": "The girl is reading a book."
   },
   {
     "ru": "мужчина",
@@ -132,7 +174,10 @@
     "category": "человек",
     "gender": "м",
     "en": "man",
-    "el_transcription_en": "andras"
+    "el_transcription_en": "andras",
+    "el_example": "Ο άνδρας φοράει ένα καπέλο.",
+    "ru_example": "Мужчина носит шляпу.",
+    "en_example": "The man is wearing a hat."
   },
   {
     "ru": "женщина",
@@ -141,6 +186,9 @@
     "category": "человек",
     "gender": "ж",
     "en": "woman",
-    "el_transcription_en": "gynaika"
+    "el_transcription_en": "gynaika",
+    "el_example": "Η γυναίκα πίνει καφέ.",
+    "ru_example": "Женщина пьет кофе.",
+    "en_example": "The woman is drinking coffee."
   }
 ]

@@ -34,9 +34,22 @@
 		028354D72E1003F0007B34C7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		023A89EF2E3E142E00CE8BC9 /* Exceptions for "GreekQuiz" folder in "GreekQuiz" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0279D99E2DD1022500288BB2 /* GreekQuiz */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0279D9A12DD1022500288BB2 /* GreekQuiz */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				023A89EF2E3E142E00CE8BC9 /* Exceptions for "GreekQuiz" folder in "GreekQuiz" target */,
+			);
 			path = GreekQuiz;
 			sourceTree = "<group>";
 		};
@@ -414,6 +427,8 @@
 				DEVELOPMENT_TEAM = 52WL2PY5B8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GreekQuiz/Info.plist;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -443,6 +458,8 @@
 				DEVELOPMENT_TEAM = 52WL2PY5B8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GreekQuiz/Info.plist;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

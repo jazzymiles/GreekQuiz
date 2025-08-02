@@ -8,11 +8,9 @@ class DictionaryService: ObservableObject {
     @Published var activeWords: [Word] = []
     @Published var selectedDictionaries: Set<String> = []
     
-    // ✨ ИЗМЕНЕНИЕ: Старые и новые свойства для отслеживания статуса
     @Published var isDownloading: Bool = false
-    @Published var statusMessage: String = "" // Для общих сообщений (успех, ошибка)
+    @Published var statusMessage: String = ""
 
-    // ✨ НОВЫЕ СВОЙСТВА для детального прогресса скачивания
     @Published var downloadProgressValue: Double = 0.0
     @Published var downloadStatusText: String = ""
     @Published var currentDictionaryName: String = ""
@@ -84,9 +82,8 @@ class DictionaryService: ObservableObject {
     }
 
     func downloadAndSaveDictionaries(source: DictionarySource, customURL: String, interfaceLanguage: String) async {
-        // ✨ ИЗМЕНЕНИЕ: Подготовка к скачиванию
         isDownloading = true
-        statusMessage = "" // Очищаем старые сообщения
+        statusMessage = ""
         downloadProgressValue = 0.0
         currentDictionaryName = ""
         downloadStatusText = NSLocalizedString("clearing_old_dictionaries", comment: "")
@@ -121,9 +118,8 @@ class DictionaryService: ObservableObject {
             
             var downloadedMetadata: [DictionaryInfo] = []
             
-            // ✨ ИЗМЕНЕНИЕ: Обновляем статус в цикле скачивания
             let total = remoteDictsInfo.count
-            downloadStatusText = NSLocalizedString("download_status_text", comment: "") // "Скачивается словарь:"
+            downloadStatusText = NSLocalizedString("download_status_text", comment: "")
             
             for (index, var dictInfo) in remoteDictsInfo.enumerated() {
                 let current = index + 1

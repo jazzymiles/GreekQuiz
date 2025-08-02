@@ -5,7 +5,10 @@
     "el": "τα ρούχα",
     "transcription": "та ру́ха",
     "el_transcription_en": "ta roúcha",
-    "gender": "средний (мн.ч.)"
+    "gender": "средний (мн.ч.)",
+    "el_example": "Τα ρούχα μου είναι καθαρά.",
+    "ru_example": "Моя одежда чистая.",
+    "en_example": "My clothes are clean."
   },
   {
     "ru": "обувь",
@@ -13,7 +16,10 @@
     "el": "τα παπούτσια",
     "transcription": "та папу́цйа",
     "el_transcription_en": "ta papoútsia",
-    "gender": "средний (мн.ч.)"
+    "gender": "средний (мн.ч.)",
+    "el_example": "Αγόρασα καινούργια παπούτσια.",
+    "ru_example": "Я купил новую обувь.",
+    "en_example": "I bought new shoes."
   },
   {
     "ru": "рубашка",
@@ -21,7 +27,10 @@
     "el": "το πουκάμισο",
     "transcription": "то пука́мисо",
     "el_transcription_en": "to poukámiso",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το πουκάμισο είναι μπλε.",
+    "ru_example": "Рубашка синяя.",
+    "en_example": "The shirt is blue."
   },
   {
     "ru": "футболка",
@@ -29,7 +38,10 @@
     "el": "το μπλουζάκι",
     "transcription": "то блуза́ки",
     "el_transcription_en": "to blouzáki",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Φοράει ένα μαύρο μπλουζάκι.",
+    "ru_example": "Он носит черную футболку.",
+    "en_example": "He is wearing a black T-shirt."
   },
   {
     "ru": "брюки",
@@ -37,7 +49,10 @@
     "el": "το παντελόνι",
     "transcription": "то пантэло́ни",
     "el_transcription_en": "to pantelóni",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το παντελόνι είναι πολύ μεγάλο.",
+    "ru_example": "Брюки слишком большие.",
+    "en_example": "The trousers are too big."
   },
   {
     "ru": "джинсы",
@@ -45,7 +60,10 @@
     "el": "το τζιν",
     "transcription": "то дзин",
     "el_transcription_en": "to tzin",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Αυτά τα τζιν είναι στενά.",
+    "ru_example": "Эти джинсы узкие.",
+    "en_example": "These jeans are tight."
   },
   {
     "ru": "юбка",
@@ -53,7 +71,10 @@
     "el": "η φούστα",
     "transcription": "и фу́ста",
     "el_transcription_en": "i foústa",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η φούστα της είναι κόκκινη.",
+    "ru_example": "Ее юбка красная.",
+    "en_example": "Her skirt is red."
   },
   {
     "ru": "платье",
@@ -61,7 +82,10 @@
     "el": "το φόρεμα",
     "transcription": "то фо́рэма",
     "el_transcription_en": "to fórema",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το φόρεμα είναι πολύ όμορφο.",
+    "ru_example": "Платье очень красивое.",
+    "en_example": "The dress is very beautiful."
   },
   {
     "ru": "пальто",
@@ -69,7 +93,10 @@
     "el": "το παλτό",
     "transcription": "то палто́",
     "el_transcription_en": "to paltó",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Χρειάζομαι ένα παλτό για το κρύο.",
+    "ru_example": "Мне нужно пальто для холодной погоды.",
+    "en_example": "I need a coat for the cold weather."
   },
   {
     "ru": "куртка",
@@ -77,7 +104,10 @@
     "el": "το μπουφάν",
     "transcription": "то буфа́н",
     "el_transcription_en": "to boufán",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το μπουφάν είναι αδιάβροχο.",
+    "ru_example": "Куртка водонепроницаемая.",
+    "en_example": "The jacket is waterproof."
   },
   {
     "ru": "свитер",
@@ -85,7 +115,10 @@
     "el": "το πουλόβερ",
     "transcription": "то пуло́вэр",
     "el_transcription_en": "to poulóver",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το πουλόβερ είναι ζεστό.",
+    "ru_example": "Свитер теплый.",
+    "en_example": "The sweater is warm."
   },
   {
     "ru": "пиджак",
@@ -93,7 +126,10 @@
     "el": "το σακάκι",
     "transcription": "то сака́ки",
     "el_transcription_en": "to sakáki",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Φοράει ένα μαύρο σακάκι.",
+    "ru_example": "Он носит черный пиджак.",
+    "en_example": "He's wearing a black blazer."
   },
   {
     "ru": "костюм",
@@ -101,7 +137,10 @@
     "el": "το κοστούμι",
     "transcription": "то косту́ми",
     "el_transcription_en": "to kostoúmi",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Αυτό το κοστούμι είναι για γάμο.",
+    "ru_example": "Этот костюм для свадьбы.",
+    "en_example": "This suit is for a wedding."
   },
   {
     "ru": "галстук",
@@ -109,7 +148,10 @@
     "el": "η γραβάτα",
     "transcription": "и грава́та",
     "el_transcription_en": "i graváta",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η γραβάτα είναι μεταξωτή.",
+    "ru_example": "Галстук шелковый.",
+    "en_example": "The tie is silk."
   },
   {
     "ru": "носки",
@@ -117,7 +159,10 @@
     "el": "οι κάλτσες",
     "transcription": "и ка́лцэс",
     "el_transcription_en": "i káltses",
-    "gender": "женский (мн.ч.)"
+    "gender": "женский (мн.ч.)",
+    "el_example": "Θέλω να αγοράσω καινούργιες κάλτσες.",
+    "ru_example": "Я хочу купить новые носки.",
+    "en_example": "I want to buy new socks."
   },
   {
     "ru": "нижнее белье",
@@ -125,7 +170,10 @@
     "el": "τα εσώρουχα",
     "transcription": "та эсо́руха",
     "el_transcription_en": "ta esóroucha",
-    "gender": "средний (мн.ч.)"
+    "gender": "средний (мн.ч.)",
+    "el_example": "Τα εσώρουχα είναι στο συρτάρι.",
+    "ru_example": "Нижнее белье в ящике.",
+    "en_example": "The underwear is in the drawer."
   },
   {
     "ru": "шапка",
@@ -133,7 +181,10 @@
     "el": "το σκούφο",
     "transcription": "то ску́фо",
     "el_transcription_en": "to skoúfo",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Φοράω τον σκούφο μου γιατί κάνει κρύο.",
+    "ru_example": "Я надеваю шапку, потому что холодно.",
+    "en_example": "I'm wearing my winter hat because it's cold."
   },
   {
     "ru": "шарф",
@@ -141,7 +192,10 @@
     "el": "το κασκόλ",
     "transcription": "то каско́л",
     "el_transcription_en": "to kaskól",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το κασκόλ είναι από μετάξι.",
+    "ru_example": "Шарф из шелка.",
+    "en_example": "The scarf is made of silk."
   },
   {
     "ru": "перчатки",
@@ -149,7 +203,10 @@
     "el": "τα γάντια",
     "transcription": "та га́нтья",
     "el_transcription_en": "ta gántia",
-    "gender": "средний (мн.ч.)"
+    "gender": "средний (мн.ч.)",
+    "el_example": "Τα γάντια μου είναι δερμάτινα.",
+    "ru_example": "Мои перчатки кожаные.",
+    "en_example": "My gloves are leather."
   },
   {
     "ru": "купальник",
@@ -157,7 +214,10 @@
     "el": "το μαγιό",
     "transcription": "то маё́",
     "el_transcription_en": "to mayió",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Πήρα το μαγιό μου για να πάω στη θάλασσα.",
+    "ru_example": "Я взял свой купальник, чтобы пойти на море.",
+    "en_example": "I took my swimsuit to go to the sea."
   },
   {
     "ru": "шорты",
@@ -165,7 +225,10 @@
     "el": "το σορτς",
     "transcription": "то сортс",
     "el_transcription_en": "to sorts",
-    "gender": "средний"
+    "gender": "средний",
+    "el_example": "Το σορτς είναι πολύ κοντό.",
+    "ru_example": "Шорты слишком короткие.",
+    "en_example": "The shorts are too short."
   },
   {
     "ru": "пижама",
@@ -173,7 +236,10 @@
     "el": "οι πιτζάμες",
     "transcription": "и пидза́мэс",
     "el_transcription_en": "i pitzámes",
-    "gender": "женский (мн.ч.)"
+    "gender": "женский (мн.ч.)",
+    "el_example": "Θα φορέσω τις πιτζάμες μου.",
+    "ru_example": "Я надену свою пижаму.",
+    "en_example": "I will put on my pajamas."
   },
   {
     "ru": "халат",
@@ -181,7 +247,10 @@
     "el": "η ρόμπα",
     "transcription": "и ро́ба",
     "el_transcription_en": "i róba",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Φοράει τη ρόμπα του μετά το μπάνιο.",
+    "ru_example": "Он носит свой халат после ванны.",
+    "en_example": "He wears his robe after the bath."
   },
   {
     "ru": "ремень",
@@ -189,7 +258,10 @@
     "el": "η ζώνη",
     "transcription": "и зо́ни",
     "el_transcription_en": "i zóni",
-    "gender": "женский"
+    "gender": "женский",
+    "el_example": "Η ζώνη του παντελονιού είναι μαύρη.",
+    "ru_example": "Ремень на брюках черный.",
+    "en_example": "The belt on the trousers is black."
   },
   {
     "ru": "кроссовки",
@@ -197,7 +269,10 @@
     "el": "τα αθλητικά παπούτσια",
     "transcription": "та атлитика́ папу́цйа",
     "el_transcription_en": "ta athlitiká papoútsia",
-    "gender": "средний (мн.ч.)"
+    "gender": "средний (мн.ч.)",
+    "el_example": "Τα αθλητικά παπούτσια μου είναι άνετα.",
+    "ru_example": "Мои кроссовки удобные.",
+    "en_example": "My sneakers are comfortable."
   },
   {
     "ru": "туфли",
@@ -205,7 +280,10 @@
     "el": "οι γόβες",
     "transcription": "и го́вэс",
     "el_transcription_en": "i góves",
-    "gender": "женский (мн.ч.)"
+    "gender": "женский (мн.ч.)",
+    "el_example": "Οι γόβες μου είναι ψηλές.",
+    "ru_example": "Мои туфли на высоком каблуке.",
+    "en_example": "My heels are high."
   },
   {
     "ru": "ботинки",
@@ -213,7 +291,10 @@
     "el": "οι μπότες",
     "transcription": "и бо́тэс",
     "el_transcription_en": "i bótes",
-    "gender": "женский (мн.ч.)"
+    "gender": "женский (мн.ч.)",
+    "el_example": "Φοράει τις μπότες της το χειμώνα.",
+    "ru_example": "Она носит ботинки зимой.",
+    "en_example": "She wears her boots in the winter."
   },
   {
     "ru": "сандалии",
@@ -221,7 +302,10 @@
     "el": "τα σανδάλια",
     "transcription": "та санда́лья",
     "el_transcription_en": "ta sandália",
-    "gender": "средний (мн.ч.)"
+    "gender": "средний (мн.ч.)",
+    "el_example": "Φοράω τα σανδάλια μου στην παραλία.",
+    "ru_example": "Я ношу свои сандалии на пляже.",
+    "en_example": "I wear my sandals at the beach."
   },
   {
     "ru": "шлепанцы",
@@ -229,7 +313,11 @@
     "el": "οι σαγιονάρες",
     "transcription": "и саёна́рэс",
     "el_transcription_en": "i sayionáres",
-    "gender": "женский (мн.ч.)"
+    "category": "обувь",
+    "gender": "женский (мн.ч.)",
+    "el_example": "Οι σαγιονάρες μου είναι άσπρες.",
+    "ru_example": "Мои шлепанцы белые.",
+    "en_example": "My flip-flops are white."
   },
   {
     "ru": "тапочки",
@@ -237,7 +325,11 @@
     "el": "οι παντόφλες",
     "transcription": "и панто́флэс",
     "el_transcription_en": "i pantófles",
-    "gender": "женский (мн.ч.)"
+    "category": "обувь",
+    "gender": "женский (мн.ч.)",
+    "el_example": "Φοράω τις παντόφλες μου στο σπίτι.",
+    "ru_example": "Я ношу тапочки дома.",
+    "en_example": "I wear my slippers at home."
   },
   {
     "ru": "ночная рубашка",
@@ -245,7 +337,11 @@
     "el": "η νυχτικιά",
     "transcription": "и нихтикья́",
     "el_transcription_en": "i nychtikiá",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Η νυχτικιά είναι από βαμβάκι.",
+    "ru_example": "Ночная рубашка из хлопка.",
+    "en_example": "The nightgown is made of cotton."
   },
   {
     "ru": "чулки",
@@ -253,7 +349,11 @@
     "el": "οι κάλτσες",
     "transcription": "и ка́лцэс",
     "el_transcription_en": "i káltses",
-    "gender": "женский (мн.ч.)"
+    "category": "одежда",
+    "gender": "женский (мн.ч.)",
+    "el_example": "Φοράει μαύρες κάλτσες.",
+    "ru_example": "Она носит черные чулки.",
+    "en_example": "She is wearing black stockings."
   },
   {
     "ru": "колготки",
@@ -261,7 +361,11 @@
     "el": "το καλσόν",
     "transcription": "то калсо́н",
     "el_transcription_en": "to kalsón",
-    "gender": "средний"
+    "category": "одежда",
+    "gender": "средний",
+    "el_example": "Το καλσόν μου είναι σκισμένο.",
+    "ru_example": "Мои колготки порваны.",
+    "en_example": "My tights are torn."
   },
   {
     "ru": "жилет",
@@ -269,7 +373,11 @@
     "el": "το γιλέκο",
     "transcription": "то йилэ́ко",
     "el_transcription_en": "to yiléko",
-    "gender": "средний"
+    "category": "одежда",
+    "gender": "средний",
+    "el_example": "Το γιλέκο του κοστουμιού είναι γκρι.",
+    "ru_example": "Жилет костюма серый.",
+    "en_example": "The vest of the suit is grey."
   },
   {
     "ru": "блузка",
@@ -277,7 +385,11 @@
     "el": "η μπλούζα",
     "transcription": "и блу́за",
     "el_transcription_en": "i bloúza",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Η μπλούζα μου είναι άσπρη.",
+    "ru_example": "Моя блузка белая.",
+    "en_example": "My blouse is white."
   },
   {
     "ru": "топ",
@@ -285,7 +397,11 @@
     "el": "το τοπ",
     "transcription": "то топ",
     "el_transcription_en": "to top",
-    "gender": "средний"
+    "category": "одежда",
+    "gender": "средний",
+    "el_example": "Φοράει ένα κόκκινο τοπ.",
+    "ru_example": "Она носит красный топ.",
+    "en_example": "She is wearing a red top."
   },
   {
     "ru": "капюшон",
@@ -293,7 +409,11 @@
     "el": "η κουκούλα",
     "transcription": "и куку́ла",
     "el_transcription_en": "i koukoúla",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Η κουκούλα του μπουφάν είναι μεγάλη.",
+    "ru_example": "Капюшон куртки большой.",
+    "en_example": "The hood of the jacket is big."
   },
   {
     "ru": "кардиган",
@@ -301,7 +421,11 @@
     "el": "η ζακέτα",
     "transcription": "и закэ́та",
     "el_transcription_en": "i zakéta",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Η ζακέτα είναι πολύ μαλακή.",
+    "ru_example": "Кардиган очень мягкий.",
+    "en_example": "The cardigan is very soft."
   },
   {
     "ru": "толстовка",
@@ -309,7 +433,11 @@
     "el": "η φούτερ",
     "transcription": "и фу́тэр",
     "el_transcription_en": "i foúter",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Φοράει μια φούτερ με κουκούλα.",
+    "ru_example": "Он носит толстовку с капюшоном.",
+    "en_example": "He is wearing a hoodie."
   },
   {
     "ru": "леггинсы",
@@ -317,7 +445,11 @@
     "el": "το κολάν",
     "transcription": "то кола́н",
     "el_transcription_en": "to kolán",
-    "gender": "средний"
+    "category": "одежда",
+    "gender": "средний",
+    "el_example": "Το κολάν είναι μαύρο.",
+    "ru_example": "Леггинсы черные.",
+    "en_example": "The leggings are black."
   },
   {
     "ru": "плащ",
@@ -325,15 +457,11 @@
     "el": "η καμπαρντίνα",
     "transcription": "и кабарди́на",
     "el_transcription_en": "i kampardína",
-    "gender": "женский"
-  },
-  {
-    "ru": "пиджак",
-    "en": "jacket, blazer",
-    "el": "το σακάκι",
-    "transcription": "то сака́ки",
-    "el_transcription_en": "to sakáki",
-    "gender": "средний"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Η καμπαρντίνα είναι αδιάβροχη.",
+    "ru_example": "Плащ водонепроницаемый.",
+    "en_example": "The trench coat is waterproof."
   },
   {
     "ru": "воротник",
@@ -341,7 +469,11 @@
     "el": "ο γιακάς",
     "transcription": "о яка́с",
     "el_transcription_en": "o yakás",
-    "gender": "мужской"
+    "category": "детали одежды",
+    "gender": "мужской",
+    "el_example": "Ο γιακάς του πουκάμισου είναι καθαρός.",
+    "ru_example": "Воротник рубашки чистый.",
+    "en_example": "The shirt collar is clean."
   },
   {
     "ru": "рукав",
@@ -349,7 +481,11 @@
     "el": "το μανίκι",
     "transcription": "то мани́ки",
     "el_transcription_en": "to maníki",
-    "gender": "средний"
+    "category": "детали одежды",
+    "gender": "средний",
+    "el_example": "Το μανίκι είναι πολύ μακρύ.",
+    "ru_example": "Рукав очень длинный.",
+    "en_example": "The sleeve is too long."
   },
   {
     "ru": "пуговица",
@@ -357,7 +493,11 @@
     "el": "το κουμπί",
     "transcription": "то кумби́",
     "el_transcription_en": "to koumbí",
-    "gender": "средний"
+    "category": "детали одежды",
+    "gender": "средний",
+    "el_example": "Το κουμπί έφυγε από το παντελόνι.",
+    "ru_example": "Пуговица оторвалась от брюк.",
+    "en_example": "The button came off the trousers."
   },
   {
     "ru": "молния",
@@ -365,7 +505,11 @@
     "el": "το φερμουάρ",
     "transcription": "то фэрмуа́р",
     "el_transcription_en": "to fermouár",
-    "gender": "средний"
+    "category": "детали одежды",
+    "gender": "средний",
+    "el_example": "Το φερμουάρ έχει χαλάσει.",
+    "ru_example": "Молния сломалась.",
+    "en_example": "The zipper is broken."
   },
   {
     "ru": "карман",
@@ -373,7 +517,11 @@
     "el": "η τσέπη",
     "transcription": "и це́пи",
     "el_transcription_en": "i tsépi",
-    "gender": "женский"
+    "category": "детали одежды",
+    "gender": "женский",
+    "el_example": "Έχω το πορτοφόλι μου στην τσέπη.",
+    "ru_example": "Мой кошелек в кармане.",
+    "en_example": "I have my wallet in my pocket."
   },
   {
     "ru": "шнурки",
@@ -381,7 +529,11 @@
     "el": "τα κορδόνια",
     "transcription": "та кордо́нья",
     "el_transcription_en": "ta kordónia",
-    "gender": "средний (мн.ч.)"
+    "category": "детали одежды",
+    "gender": "средний (мн.ч.)",
+    "el_example": "Τα κορδόνια στα παπούτσια μου είναι λυμένα.",
+    "ru_example": "Шнурки на моих ботинках развязаны.",
+    "en_example": "The laces on my shoes are untied."
   },
   {
     "ru": "каблук",
@@ -389,7 +541,11 @@
     "el": "το τακούνι",
     "transcription": "то таку́ни",
     "el_transcription_en": "to takoúni",
-    "gender": "средний"
+    "category": "детали обуви",
+    "gender": "средний",
+    "el_example": "Το τακούνι της γόβας μου έσπασε.",
+    "ru_example": "Каблук на моей туфле сломался.",
+    "en_example": "The heel of my shoe broke."
   },
   {
     "ru": "подошва",
@@ -397,7 +553,11 @@
     "el": "η σόλα",
     "transcription": "и со́ла",
     "el_transcription_en": "i sóla",
-    "gender": "женский"
+    "category": "детали обуви",
+    "gender": "женский",
+    "el_example": "Η σόλα του παπουτσιού είναι φθαρμένη.",
+    "ru_example": "Подошва ботинка изношена.",
+    "en_example": "The sole of the shoe is worn out."
   },
   {
     "ru": "носок",
@@ -405,7 +565,11 @@
     "el": "η κάλτσα",
     "transcription": "и ка́лца",
     "el_transcription_en": "i káltsa",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Φόρεσα μία κάλτσα με σχέδια.",
+    "ru_example": "Я надел носок с узором.",
+    "en_example": "I put on a patterned sock."
   },
   {
     "ru": "фартук",
@@ -413,7 +577,11 @@
     "el": "η ποδιά",
     "transcription": "и подья́",
     "el_transcription_en": "i podiá",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Φόρεσε την ποδιά για να μην λερωθεί.",
+    "ru_example": "Он надел фартук, чтобы не испачкаться.",
+    "en_example": "He put on the apron so as not to get dirty."
   },
   {
     "ru": "кожаный",
@@ -421,7 +589,11 @@
     "el": "δερμάτινος",
     "transcription": "дэрма́тинос",
     "el_transcription_en": "dermátinos",
-    "gender": "мужской"
+    "category": "материалы",
+    "gender": "мужской",
+    "el_example": "Αυτό είναι ένα δερμάτινο μπουφάν.",
+    "ru_example": "Это кожаная куртка.",
+    "en_example": "This is a leather jacket."
   },
   {
     "ru": "шерстяной",
@@ -429,7 +601,11 @@
     "el": "μάλλινος",
     "transcription": "ма́ллинос",
     "el_transcription_en": "mállinos",
-    "gender": "мужской"
+    "category": "материалы",
+    "gender": "мужской",
+    "el_example": "Αγοράσαμε έναν μάλλινο σκούφο.",
+    "ru_example": "Мы купили шерстяную шапку.",
+    "en_example": "We bought a woolen hat."
   },
   {
     "ru": "носить (одежду)",
@@ -437,7 +613,10 @@
     "el": "φοράω",
     "transcription": "фора́о",
     "el_transcription_en": "foráo",
-    "gender": "глагол"
+    "category": "глагол",
+    "el_example": "Τι φοράς σήμερα;",
+    "ru_example": "Что ты носишь сегодня?",
+    "en_example": "What are you wearing today?"
   },
   {
     "ru": "кошелек",
@@ -445,7 +624,11 @@
     "el": "το πορτοφόλι",
     "transcription": "то портофо́ли",
     "el_transcription_en": "to portofóli",
-    "gender": "средний"
+    "category": "аксессуары",
+    "gender": "средний",
+    "el_example": "Το πορτοφόλι μου είναι άδειο.",
+    "ru_example": "Мой кошелек пустой.",
+    "en_example": "My wallet is empty."
   },
   {
     "ru": "трусы",
@@ -453,7 +636,11 @@
     "el": "το σλιπ",
     "transcription": "то слип",
     "el_transcription_en": "to slip",
-    "gender": "средний"
+    "category": "одежда",
+    "gender": "средний",
+    "el_example": "Έχω ένα καινούργιο σλιπ.",
+    "ru_example": "У меня новые трусы.",
+    "en_example": "I have new briefs."
   },
   {
     "ru": "перчатка",
@@ -461,7 +648,11 @@
     "el": "το γάντι",
     "transcription": "то га́нти",
     "el_transcription_en": "to gánti",
-    "gender": "средний"
+    "category": "одежда",
+    "gender": "средний",
+    "el_example": "Έχασα το ένα μου γάντι.",
+    "ru_example": "Я потерял одну перчатку.",
+    "en_example": "I lost one of my gloves."
   },
   {
     "ru": "униформа",
@@ -469,15 +660,23 @@
     "el": "η στολή",
     "transcription": "и столи́",
     "el_transcription_en": "i stolí",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Πρέπει να φορέσει τη στολή του.",
+    "ru_example": "Он должен надеть свою униформу.",
+    "en_example": "He must wear his uniform."
   },
   {
     "ru": "шляпа",
     "en": "hat",
     "el": "το καπέλο",
-    "transcription": "то капэ́ло",
+    "transcription": "το капэ́ло",
     "el_transcription_en": "to kapélo",
-    "gender": "средний"
+    "category": "аксессуары",
+    "gender": "средний",
+    "el_example": "Το καπέλο είναι μεγάλο.",
+    "ru_example": "Шляпа большая.",
+    "en_example": "The hat is big."
   },
   {
     "ru": "блуза",
@@ -485,7 +684,11 @@
     "el": "η μπλούζα",
     "transcription": "и блу́за",
     "el_transcription_en": "i bloúza",
-    "gender": "женский"
+    "category": "одежда",
+    "gender": "женский",
+    "el_example": "Η μπλούζα μου είναι μεταξωτή.",
+    "ru_example": "Моя блуза шелковая.",
+    "en_example": "My blouse is silk."
   },
   {
     "ru": "предмет одежды",
@@ -493,7 +696,11 @@
     "el": "το ρούχο",
     "transcription": "то ру́хо",
     "el_transcription_en": "to roúcho",
-    "gender": "средний"
+    "category": "одежда",
+    "gender": "средний",
+    "el_example": "Πρέπει να πλύνω τα ρούχα μου.",
+    "ru_example": "Мне нужно постирать свою одежду.",
+    "en_example": "I need to wash my clothes."
   },
   {
     "ru": "очки",
@@ -501,6 +708,10 @@
     "el": "τα γυαλιά",
     "transcription": "та гьялья́",
     "el_transcription_en": "ta gyaliá",
-    "gender": "средний (мн.ч.)"
+    "category": "аксессуары",
+    "gender": "средний (мн.ч.)",
+    "el_example": "Τα γυαλιά του είναι καθαρά.",
+    "ru_example": "Его очки чистые.",
+    "en_example": "His glasses are clean."
   }
 ]

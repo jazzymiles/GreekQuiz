@@ -6,7 +6,10 @@
     "transcription": "и́ме",
     "el_transcription_en": "ímai",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Είμαι από την Ελλάδα.",
+    "ru_example": "Я из Греции.",
+    "en_example": "I am from Greece."
   },
   {
     "ru": "иметь",
@@ -15,7 +18,10 @@
     "transcription": "э́хо",
     "el_transcription_en": "écho",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Έχω ένα αυτοκίνητο.",
+    "ru_example": "У меня есть машина.",
+    "en_example": "I have a car."
   },
   {
     "ru": "идти",
@@ -24,7 +30,10 @@
     "transcription": "пигэ́но",
     "el_transcription_en": "pigéno",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Πηγαίνω στο σπίτι.",
+    "ru_example": "Я иду домой.",
+    "en_example": "I am going home."
   },
   {
     "ru": "приходить",
@@ -33,7 +42,10 @@
     "transcription": "э́рхомэ",
     "el_transcription_en": "érchomai",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Έρχομαι από το σχολείο.",
+    "ru_example": "Я иду из школы.",
+    "en_example": "I am coming from school."
   },
   {
     "ru": "ехать",
@@ -42,7 +54,10 @@
     "transcription": "одигó",
     "el_transcription_en": "odigó",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Οδηγώ αργά.",
+    "ru_example": "Я еду медленно.",
+    "en_example": "I am driving slowly."
   },
   {
     "ru": "есть (принимать пищу)",
@@ -51,7 +66,10 @@
     "transcription": "тро́о",
     "el_transcription_en": "tróo",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Τρώω ένα μήλο.",
+    "ru_example": "Я ем яблоко.",
+    "en_example": "I am eating an apple."
   },
   {
     "ru": "пить",
@@ -60,7 +78,10 @@
     "transcription": "пи́но",
     "el_transcription_en": "píno",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Πίνω νερό.",
+    "ru_example": "Я пью воду.",
+    "en_example": "I am drinking water."
   },
   {
     "ru": "спать",
@@ -69,7 +90,10 @@
     "transcription": "кимáмэ",
     "el_transcription_en": "kimámai",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Κοιμάμαι τώρα.",
+    "ru_example": "Я сейчас сплю.",
+    "en_example": "I am sleeping now."
   },
   {
     "ru": "читать",
@@ -78,7 +102,10 @@
     "transcription": "дьявáзо",
     "el_transcription_en": "diavázo",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Διαβάζω ένα βιβλίο.",
+    "ru_example": "Я читаю книгу.",
+    "en_example": "I am reading a book."
   },
   {
     "ru": "писать",
@@ -87,7 +114,10 @@
     "transcription": "гра́фо",
     "el_transcription_en": "gráfo",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Γράφω ένα γράμμα.",
+    "ru_example": "Я пишу письмо.",
+    "en_example": "I am writing a letter."
   },
   {
     "ru": "говорить",
@@ -96,7 +126,10 @@
     "transcription": "мила́о",
     "el_transcription_en": "miláo",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Μιλάω ελληνικά.",
+    "ru_example": "Я говорю по-гречески.",
+    "en_example": "I speak Greek."
   },
   {
     "ru": "слышать",
@@ -105,7 +138,10 @@
     "transcription": "аку́о",
     "el_transcription_en": "akúo",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Ακούω μουσική.",
+    "ru_example": "Я слышу музыку.",
+    "en_example": "I hear music."
   },
   {
     "ru": "видеть",
@@ -114,7 +150,10 @@
     "transcription": "вле́по",
     "el_transcription_en": "vlépo",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Βλέπω μια ταινία.",
+    "ru_example": "Я смотрю фильм.",
+    "en_example": "I am watching a movie."
   },
   {
     "ru": "давать",
@@ -123,7 +162,10 @@
     "transcription": "ди́но",
     "el_transcription_en": "díno",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Δίνω ένα δώρο.",
+    "ru_example": "Я дарю подарок.",
+    "en_example": "I am giving a gift."
   },
   {
     "ru": "брать",
@@ -132,7 +174,10 @@
     "transcription": "пе́рно",
     "el_transcription_en": "pérno",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Παίρνω ένα ταξί.",
+    "ru_example": "Я беру такси.",
+    "en_example": "I am taking a taxi."
   },
   {
     "ru": "жить",
@@ -141,7 +186,10 @@
     "transcription": "зо",
     "el_transcription_en": "zo",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Ζω στην Ελλάδα.",
+    "ru_example": "Я живу в Греции.",
+    "en_example": "I live in Greece."
   },
   {
     "ru": "работать",
@@ -150,6 +198,9 @@
     "transcription": "дулéво",
     "el_transcription_en": "douiévo",
     "category": "глагол",
-    "gender": "-"
+    "gender": "-",
+    "el_example": "Δουλεύω σε ένα γραφείο.",
+    "ru_example": "Я работаю в офисе.",
+    "en_example": "I work in an office."
   }
 ]

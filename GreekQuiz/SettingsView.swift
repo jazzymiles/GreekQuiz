@@ -4,8 +4,6 @@ struct SettingsView: View {
     @Binding var showTranscription: Bool
     @Binding var autoPlaySound: Bool
     @Binding var playAnswerSound: Bool
-    
-    // ✨ НОВОЕ СВОЙСТВО
     @Binding var useAllWordsInQuiz: Bool
     
     @Binding var colorSchemePreference: String
@@ -38,7 +36,6 @@ struct SettingsView: View {
                     }
                 }
                 
-                // ✨ НОВАЯ СЕКЦИЯ ДЛЯ НАСТРОЕК КВИЗА
                 Section(header: Text("quiz_settings_section")) {
                     Toggle(isOn: $useAllWordsInQuiz) {
                         Text("use_all_words_toggle")

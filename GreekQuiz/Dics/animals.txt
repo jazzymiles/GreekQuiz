@@ -6,7 +6,10 @@
     "transcription": "зо́о",
     "el_transcription_en": "zóo",
     "category": "общее",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σκυλί είναι κατοικίδιο ζώο.",
+    "ru_example": "Собака - домашнее животное.",
+    "en_example": "A dog is a pet animal."
   },
   {
     "ru": "птица",
@@ -15,7 +18,10 @@
     "transcription": "пули́",
     "el_transcription_en": "poulí",
     "category": "общее",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το πουλί πετάει στον ουρανό.",
+    "ru_example": "Птица летит в небе.",
+    "en_example": "The bird is flying in the sky."
   },
   {
     "ru": "собака",
@@ -24,7 +30,10 @@
     "transcription": "ски́лос",
     "el_transcription_en": "skílos",
     "category": "млекопитающие",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο σκύλος μου είναι πολύ έξυπνος.",
+    "ru_example": "Моя собака очень умная.",
+    "en_example": "My dog is very smart."
   },
   {
     "ru": "кошка",
@@ -33,7 +42,10 @@
     "transcription": "га́та",
     "el_transcription_en": "gáta",
     "category": "млекопитающие",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η γάτα κοιμάται στον καναπέ.",
+    "ru_example": "Кошка спит на диване.",
+    "en_example": "The cat is sleeping on the sofa."
   },
   {
     "ru": "лошадь",
@@ -42,7 +54,10 @@
     "transcription": "а́лого",
     "el_transcription_en": "álogo",
     "category": "млекопитающие",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το άλογο τρέχει γρήγορα.",
+    "ru_example": "Лошадь бежит быстро.",
+    "en_example": "The horse runs fast."
   },
   {
     "ru": "корова",
@@ -51,7 +66,10 @@
     "transcription": "агэла́да",
     "el_transcription_en": "ageláda",
     "category": "млекопитающие",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η αγελάδα δίνει γάλα.",
+    "ru_example": "Корова дает молоко.",
+    "en_example": "The cow gives milk."
   },
   {
     "ru": "свинья",
@@ -60,7 +78,10 @@
     "transcription": "гуру́ни",
     "el_transcription_en": "gouroúni",
     "category": "млекопитающие",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το γουρούνι είναι στο χωράφι.",
+    "ru_example": "Свинья на поле.",
+    "en_example": "The pig is in the field."
   },
   {
     "ru": "овца",
@@ -69,7 +90,10 @@
     "transcription": "про́вато",
     "el_transcription_en": "próvato",
     "category": "млекопитающие",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το πρόβατο τρώει χορτάρι.",
+    "ru_example": "Овца ест траву.",
+    "en_example": "The sheep is eating grass."
   },
   {
     "ru": "коза",
@@ -78,7 +102,10 @@
     "transcription": "катси́ка",
     "el_transcription_en": "katsíka",
     "category": "млекопитающие",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η κατσίκα είναι στο βουνό.",
+    "ru_example": "Коза на горе.",
+    "en_example": "The goat is on the mountain."
   },
   {
     "ru": "курица",
@@ -87,7 +114,10 @@
     "transcription": "ко́та",
     "el_transcription_en": "kóta",
     "category": "птицы",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η κότα γεννάει αυγά.",
+    "ru_example": "Курица несет яйца.",
+    "en_example": "The chicken lays eggs."
   },
   {
     "ru": "петух",
@@ -96,7 +126,10 @@
     "transcription": "ко́корас",
     "el_transcription_en": "kókoras",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο κόκορας λαλεί το πρωί.",
+    "ru_example": "Петух кукарекает утром.",
+    "en_example": "The rooster crows in the morning."
   },
   {
     "ru": "утка",
@@ -105,7 +138,10 @@
     "transcription": "па́пья",
     "el_transcription_en": "pápia",
     "category": "птицы",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η πάπια κολυμπάει στη λίμνη.",
+    "ru_example": "Утка плавает в озере.",
+    "en_example": "The duck is swimming in the lake."
   },
   {
     "ru": "гусь",
@@ -114,7 +150,10 @@
     "transcription": "хи́на",
     "el_transcription_en": "chína",
     "category": "птицы",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η χήνα είναι θορυβώδης.",
+    "ru_example": "Гусь шумный.",
+    "en_example": "The goose is noisy."
   },
   {
     "ru": "индейка",
@@ -123,7 +162,10 @@
     "transcription": "галопу́ла",
     "el_transcription_en": "galopoúla",
     "category": "птицы",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η γαλοπούλα είναι μεγάλη.",
+    "ru_example": "Индейка большая.",
+    "en_example": "The turkey is big."
   },
   {
     "ru": "голубь",
@@ -132,7 +174,10 @@
     "transcription": "пэристэ́ри",
     "el_transcription_en": "peristéri",
     "category": "птицы",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το περιστέρι είναι σύμβολο ειρήνης.",
+    "ru_example": "Голубь - символ мира.",
+    "en_example": "The dove is a symbol of peace."
   },
   {
     "ru": "воробей",
@@ -141,7 +186,10 @@
     "transcription": "спурги́ти",
     "el_transcription_en": "spourgíti",
     "category": "птицы",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σπουργίτι είναι μικρό πουλί.",
+    "ru_example": "Воробей - маленькая птица.",
+    "en_example": "The sparrow is a small bird."
   },
   {
     "ru": "орёл",
@@ -150,7 +198,10 @@
     "transcription": "аэто́с",
     "el_transcription_en": "aetós",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο αετός πετάει ψηλά.",
+    "ru_example": "Орел летает высоко.",
+    "en_example": "The eagle flies high."
   },
   {
     "ru": "сова",
@@ -159,7 +210,10 @@
     "transcription": "кукува́гья",
     "el_transcription_en": "koukouvághia",
     "category": "птицы",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η κουκουβάγια κυνηγάει τη νύχτα.",
+    "ru_example": "Сова охотится ночью.",
+    "en_example": "The owl hunts at night."
   },
   {
     "ru": "дельфин",
@@ -168,7 +222,10 @@
     "transcription": "дэлфи́ни",
     "el_transcription_en": "delfíni",
     "category": "морские животные",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το δελφίνι είναι έξυπνο ζώο.",
+    "ru_example": "Дельфин - умное животное.",
+    "en_example": "A dolphin is a smart animal."
   },
   {
     "ru": "рыба",
@@ -177,7 +234,10 @@
     "transcription": "пса́ри",
     "el_transcription_en": "psári",
     "category": "рыбы",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το ψάρι ζει στο νερό.",
+    "ru_example": "Рыба живет в воде.",
+    "en_example": "Fish live in the water."
   },
   {
     "ru": "медведь",
@@ -186,7 +246,10 @@
     "transcription": "арку́да",
     "el_transcription_en": "arkoúda",
     "category": "млекопитающие",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η αρκούδα κοιμάται το χειμώνα.",
+    "ru_example": "Медведь спит зимой.",
+    "en_example": "The bear sleeps in the winter."
   },
   {
     "ru": "волк",
@@ -195,7 +258,10 @@
     "transcription": "ли́кос",
     "el_transcription_en": "líkos",
     "category": "млекопитающие",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο λύκος ζει στο δάσος.",
+    "ru_example": "Волк живет в лесу.",
+    "en_example": "The wolf lives in the forest."
   },
   {
     "ru": "лиса",
@@ -204,7 +270,10 @@
     "transcription": "алэпу́",
     "el_transcription_en": "alepoú",
     "category": "млекопитающие",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η αλεπού είναι πονηρό ζώο.",
+    "ru_example": "Лиса - хитрое животное.",
+    "en_example": "The fox is a cunning animal."
   },
   {
     "ru": "заяц",
@@ -213,7 +282,10 @@
     "transcription": "лаго́с",
     "el_transcription_en": "lagós",
     "category": "млекопитающие",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο λαγός τρέχει πολύ γρήγορα.",
+    "ru_example": "Заяц бегает очень быстро.",
+    "en_example": "The hare runs very fast."
   },
   {
     "ru": "кролик",
@@ -222,7 +294,10 @@
     "transcription": "кунэ́ли",
     "el_transcription_en": "kounéli",
     "category": "млекопитающие",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κουνέλι τρώει καρότα.",
+    "ru_example": "Кролик ест морковку.",
+    "en_example": "The rabbit eats carrots."
   },
   {
     "ru": "мышь",
@@ -231,7 +306,10 @@
     "transcription": "понди́ки",
     "el_transcription_en": "pontíki",
     "category": "млекопитающие",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το ποντίκι είναι μικρό.",
+    "ru_example": "Мышь маленькая.",
+    "en_example": "The mouse is small."
   },
   {
     "ru": "змея",
@@ -240,7 +318,10 @@
     "transcription": "фи́ди",
     "el_transcription_en": "fídi",
     "category": "рептилии",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το φίδι είναι επικίνδυνο.",
+    "ru_example": "Змея опасна.",
+    "en_example": "The snake is dangerous."
   },
   {
     "ru": "черепаха",
@@ -249,7 +330,10 @@
     "transcription": "хело́на",
     "el_transcription_en": "chelóna",
     "category": "рептилии",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η χελώνα ζει πολλά χρόνια.",
+    "ru_example": "Черепаха живет много лет.",
+    "en_example": "The turtle lives for many years."
   },
   {
     "ru": "лягушка",
@@ -258,7 +342,10 @@
     "transcription": "ва́трахос",
     "el_transcription_en": "vátrachos",
     "category": "земноводные",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο βάτραχος πηδάει.",
+    "ru_example": "Лягушка прыгает.",
+    "en_example": "The frog jumps."
   },
   {
     "ru": "пчела",
@@ -267,7 +354,10 @@
     "transcription": "мэ́лиса",
     "el_transcription_en": "mélissa",
     "category": "насекомые",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η μέλισσα φτιάχνει μέλι.",
+    "ru_example": "Пчела делает мед.",
+    "en_example": "The bee makes honey."
   },
   {
     "ru": "муха",
@@ -276,7 +366,10 @@
     "transcription": "ми́га",
     "el_transcription_en": "mýga",
     "category": "насекомые",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η μύγα είναι ενοχλητική.",
+    "ru_example": "Муха надоедливая.",
+    "en_example": "The fly is annoying."
   },
   {
     "ru": "комар",
@@ -285,7 +378,10 @@
     "transcription": "куну́пи",
     "el_transcription_en": "kounoúpi",
     "category": "насекомые",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κουνούπι με τσίμπησε.",
+    "ru_example": "Комар меня укусил.",
+    "en_example": "The mosquito bit me."
   },
   {
     "ru": "бабочка",
@@ -294,7 +390,10 @@
     "transcription": "пэталу́да",
     "el_transcription_en": "petaloúda",
     "category": "насекомые",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η πεταλούδα έχει όμορφα φτερά.",
+    "ru_example": "У бабочки красивые крылья.",
+    "en_example": "The butterfly has beautiful wings."
   },
   {
     "ru": "муравей",
@@ -303,7 +402,10 @@
     "transcription": "мирми́ги",
     "el_transcription_en": "myrmígki",
     "category": "насекомые",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το μυρμήγκι είναι πολύ δυνατό.",
+    "ru_example": "Муравей очень сильный.",
+    "en_example": "The ant is very strong."
   },
   {
     "ru": "паук",
@@ -312,7 +414,10 @@
     "transcription": "ара́хни",
     "el_transcription_en": "aráchni",
     "category": "насекомые",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η αράχνη φτιάχνει ιστό.",
+    "ru_example": "Паук плетет паутину.",
+    "en_example": "The spider builds a web."
   },
   {
     "ru": "осьминог",
@@ -321,7 +426,10 @@
     "transcription": "хтапо́ди",
     "el_transcription_en": "chtapódi",
     "category": "морские животные",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το χταπόδι έχει οκτώ πλοκάμια.",
+    "ru_example": "У осьминога восемь щупалец.",
+    "en_example": "The octopus has eight tentacles."
   },
   {
     "ru": "кальмар",
@@ -330,7 +438,10 @@
     "transcription": "калама́ри",
     "el_transcription_en": "kalamári",
     "category": "морские животные",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το καλαμάρι είναι νόστιμο.",
+    "ru_example": "Кальмар вкусный.",
+    "en_example": "The squid is delicious."
   },
   {
     "ru": "краб",
@@ -339,7 +450,10 @@
     "transcription": "ка́вурас",
     "el_transcription_en": "kávouras",
     "category": "морские животные",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο κάβουρας περπατάει πλάγια.",
+    "ru_example": "Краб ходит боком.",
+    "en_example": "The crab walks sideways."
   },
   {
     "ru": "дельфин",
@@ -348,7 +462,10 @@
     "transcription": "дэлфи́ни",
     "el_transcription_en": "delfíni",
     "category": "морские животные",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το δελφίνι είναι φιλικό.",
+    "ru_example": "Дельфин дружелюбный.",
+    "en_example": "The dolphin is friendly."
   },
   {
     "ru": "акула",
@@ -357,7 +474,10 @@
     "transcription": "кархари́ас",
     "el_transcription_en": "karcharía",
     "category": "рыбы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο καρχαρίας είναι μεγάλο ψάρι.",
+    "ru_example": "Акула - большая рыба.",
+    "en_example": "The shark is a big fish."
   },
   {
     "ru": "кит",
@@ -366,7 +486,10 @@
     "transcription": "фа́лэна",
     "el_transcription_en": "fálaina",
     "category": "морские животные",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η φάλαινα είναι το μεγαλύτερο ζώο.",
+    "ru_example": "Кит - самое большое животное.",
+    "en_example": "The whale is the largest animal."
   },
   {
     "ru": "чайка",
@@ -375,7 +498,10 @@
     "transcription": "гла́рос",
     "el_transcription_en": "gláros",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο γλάρος πετάει πάνω από τη θάλασσα.",
+    "ru_example": "Чайка летает над морем.",
+    "en_example": "The seagull is flying over the sea."
   },
   {
     "ru": "пеликан",
@@ -384,7 +510,10 @@
     "transcription": "пэлэка́нос",
     "el_transcription_en": "pelekános",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο πελεκάνος έχει μεγάλο ράμφος.",
+    "ru_example": "У пеликана большой клюв.",
+    "en_example": "The pelican has a large beak."
   },
   {
     "ru": "цапля",
@@ -393,7 +522,10 @@
     "transcription": "эродио́с",
     "el_transcription_en": "erodiós",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο ερωδιός στέκεται ακίνητος στο νερό.",
+    "ru_example": "Цапля стоит неподвижно в воде.",
+    "en_example": "The heron stands still in the water."
   },
   {
     "ru": "аист",
@@ -402,7 +534,10 @@
     "transcription": "пэлэрга́с",
     "el_transcription_en": "pelargós",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο πελαργός φέρνει τα μωρά.",
+    "ru_example": "Аист приносит детей.",
+    "en_example": "The stork brings babies."
   },
   {
     "ru": "лебедь",
@@ -411,7 +546,10 @@
     "transcription": "ки́кнос",
     "el_transcription_en": "kýknos",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο κύκνος είναι ένα όμορφο πουλί.",
+    "ru_example": "Лебедь - красивая птица.",
+    "en_example": "The swan is a beautiful bird."
   },
   {
     "ru": "попугай",
@@ -420,7 +558,10 @@
     "transcription": "папага́лос",
     "el_transcription_en": "papagálos",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο παπαγάλος μπορεί να μιλήσει.",
+    "ru_example": "Попугай умеет говорить.",
+    "en_example": "The parrot can talk."
   },
   {
     "ru": "канарейка",
@@ -429,7 +570,10 @@
     "transcription": "канари́ни",
     "el_transcription_en": "kanaríni",
     "category": "птицы",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το καναρίνι κελαηδάει όμορφα.",
+    "ru_example": "Канарейка красиво поет.",
+    "en_example": "The canary sings beautifully."
   },
   {
     "ru": "сова (филин)",
@@ -438,7 +582,10 @@
     "transcription": "бу́фос",
     "el_transcription_en": "boúfos",
     "category": "птицы",
-    "gender": "м"
+    "gender": "м",
+    "el_example": "Ο μπούφος είναι μεγάλος και σοφός.",
+    "ru_example": "Филин большой и мудрый.",
+    "en_example": "The eagle owl is big and wise."
   },
   {
     "ru": "ласточка",
@@ -447,7 +594,10 @@
     "transcription": "хелидо́ни",
     "el_transcription_en": "chelidóni",
     "category": "птицы",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το χελιδόνι φέρνει την άνοιξη.",
+    "ru_example": "Ласточка приносит весну.",
+    "en_example": "The swallow brings spring."
   },
   {
     "ru": "сокол",
@@ -456,7 +606,10 @@
     "transcription": "гэра́ки",
     "el_transcription_en": "geráki",
     "category": "птицы",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το γεράκι κυνηγάει στο χωράφι.",
+    "ru_example": "Сокол охотится на поле.",
+    "en_example": "The hawk hunts in the field."
   },
   {
     "ru": "мех",
@@ -465,7 +618,10 @@
     "transcription": "гу́на",
     "el_transcription_en": "goúna",
     "category": "общее",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η γούνα της αρκούδας είναι χοντρή.",
+    "ru_example": "Мех медведя толстый.",
+    "en_example": "The bear's fur is thick."
   },
   {
     "ru": "млекопитающее",
@@ -474,7 +630,10 @@
     "transcription": "филастико́",
     "el_transcription_en": "thilastikó",
     "category": "общее",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Ο άνθρωπος είναι θηλαστικό.",
+    "ru_example": "Человек - млекопитающее.",
+    "en_example": "A human is a mammal."
   },
   {
     "ru": "зебра",
@@ -483,7 +642,10 @@
     "transcription": "зе́вра",
     "el_transcription_en": "zévra",
     "category": "млекопитающие",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η ζέβρα έχει ρίγες.",
+    "ru_example": "У зебры полоски.",
+    "en_example": "The zebra has stripes."
   },
   {
     "ru": "тигр",
@@ -492,7 +654,10 @@
     "transcription": "ти́гри",
     "el_transcription_en": "tígri",
     "category": "млекопитающие",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η τίγρη είναι ένα άγριο ζώο.",
+    "ru_example": "Тигр - дикое животное.",
+    "en_example": "A tiger is a wild animal."
   },
   {
     "ru": "рептилия",
@@ -501,16 +666,22 @@
     "transcription": "эрпэто́",
     "el_transcription_en": "erpetó",
     "category": "общее",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Η σαύρα είναι ερπετό.",
+    "ru_example": "Ящерица - рептилия.",
+    "en_example": "A lizard is a reptile."
   },
   {
     "ru": "хомяк",
     "en": "hamster",
-    "el": "το χάμστεр",
+    "el": "το χάμστερ",
     "transcription": "ха́мстэр",
     "el_transcription_en": "chámster",
     "category": "млекопитающие",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το χάμστερ είναι ένα μικρό κατοικίδιο.",
+    "ru_example": "Хомяк - маленький домашний питомец.",
+    "en_example": "A hamster is a small pet."
   },
   {
     "ru": "жук",
@@ -519,7 +690,10 @@
     "transcription": "ската́ри",
     "el_transcription_en": "skathári",
     "category": "насекомые",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το σκαθάρι πετάει.",
+    "ru_example": "Жук летает.",
+    "en_example": "The beetle is flying."
   },
   {
     "ru": "насекомое",
@@ -528,7 +702,10 @@
     "transcription": "э́нтомо",
     "el_transcription_en": "éntomo",
     "category": "общее",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κουνούπι είναι ένα έντομο.",
+    "ru_example": "Комар - это насекомое.",
+    "en_example": "A mosquito is an insect."
   },
   {
     "ru": "жираф",
@@ -537,7 +714,10 @@
     "transcription": "камилопа́рдальи",
     "el_transcription_en": "kamilopárdali",
     "category": "млекопитающие",
-    "gender": "ж"
+    "gender": "ж",
+    "el_example": "Η καμηλοπάρδαλη έχει μακρύ λαιμό.",
+    "ru_example": "У жирафа длинная шея.",
+    "en_example": "The giraffe has a long neck."
   },
   {
     "ru": "домашнее животное",
@@ -546,7 +726,10 @@
     "transcription": "катоики́дьо зо́о",
     "el_transcription_en": "katoikídio zóo",
     "category": "общее",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κατοικίδιό μου είναι μια γάτα.",
+    "ru_example": "Мое домашнее животное - кошка.",
+    "en_example": "My pet is a cat."
   },
   {
     "ru": "щенок",
@@ -555,6 +738,9 @@
     "transcription": "кута́ви",
     "el_transcription_en": "koutávi",
     "category": "млекопитающие",
-    "gender": "ср"
+    "gender": "ср",
+    "el_example": "Το κουτάβι παίζει με τη μπάλα.",
+    "ru_example": "Щенок играет с мячом.",
+    "en_example": "The puppy is playing with the ball."
   }
 ]
