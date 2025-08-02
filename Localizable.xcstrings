@@ -381,7 +381,7 @@
         }
       }
     },
-    "correct_translation" : {
+    "correct_answer_text" : {
       "extractionState" : "manual",
       "localizations" : {
         "el" : {
@@ -393,7 +393,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Correct translation:"
+            "value" : "A:"
           }
         },
         "ru" : {

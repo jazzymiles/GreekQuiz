@@ -106,6 +106,8 @@ struct CardView: View {
 }
 
 struct ContentView: View {
+    
+    @Environment(\.locale) private var locale
     @StateObject private var dictionaryService = DictionaryService()
 
     @State private var currentWordIndex = 0
@@ -176,6 +178,7 @@ struct ContentView: View {
     }
 
     var body: some View {
+        
         ZStack {
             backgroundColor()
                 .ignoresSafeArea()
@@ -403,18 +406,22 @@ struct ContentView: View {
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
         }
-        .frame(minHeight: 40)
-        .padding(.vertical, 10)
+        .frame(minHeight: 60)
+        .padding(.vertical, 20)
         .padding(.horizontal)
         .opacity(isVisible && hasContent ? 1.0 : 0.0)
         .animation(.easeInOut, value: isVisible && hasContent)
     }
     
     private func keyboardQuizView(for word: Word) -> some View {
-        let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + currentAnswerWord()
+        
+        print("Current locale is \(locale.identifier)")
+        
+        let feedbackString = String(localized: "correct_answer_text") + " " + currentAnswerWord()
 
         return VStack(spacing: 0) {
-            VStack(spacing: 15) {
+            // Уменьшаем spacing с 15 до 5
+            VStack(spacing: 5) {
                 WordDisplay(
                     word: word,
                     studiedLanguage: studiedLanguage,
@@ -428,25 +435,25 @@ struct ContentView: View {
             }
             .padding(.top, 40)
             
-            Spacer(minLength: 20)
-
-            VStack {
+            VStack (spacing: 5){
                 TextField("your_translation_placeholder", text: $userInput)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
-                
+
                 ActionButton(title: showAnswer ? "button_next" : "button_check") {
                     if showAnswer { nextWord() } else { checkAnswer() }
                 }
-                .padding(.top, 10)
+                .padding(.top, 20)
             }
-            .padding(.bottom, 20)
+            .padding(.bottom, 80)
+            
+            Spacer()
         }
         .padding(.horizontal)
     }
     
     private func multipleChoiceQuizView(for word: Word) -> some View {
-        let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + currentAnswerWord()
+        let feedbackString = NSLocalizedString("correct_answer_text", comment: "") + " " + currentAnswerWord()
 
         return VStack(spacing: 0) {
             VStack(spacing: 15) {
@@ -463,8 +470,8 @@ struct ContentView: View {
             }
             .padding(.top, 40)
             
-            Spacer(minLength: 20)
-
+            // Spacer(minLength: 20) — этот элемент удален
+            
             VStack {
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 10) {
                     ForEach(cardOptions, id: \.self) { option in
@@ -491,7 +498,10 @@ struct ContentView: View {
                     if showAnswer { nextWord() } else { checkCardAnswer() }
                 }
             }
-            .padding(.bottom, 20)
+            .padding(.top, 20) // Добавлен отступ сверху, чтобы отделить от предыдущего блока
+            .padding(.bottom, 20) // Оставлен отступ снизу для кнопки
+            
+            Spacer() // Добавлен в конец, чтобы прижать все элементы к верху
         }
         .padding(.horizontal)
     }
@@ -844,9 +854,9 @@ struct FeedbackText: View {
     var body: some View {
         Text(isVisible ? text : " ")
             .foregroundColor(isVisible ? textColor : .clear)
-            .padding(.vertical, 9).padding(.horizontal)
+            .padding(.vertical, 5).padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .center)
-            .frame(height: 55)
+            .frame(height: 15)
     }
 }
 
@@ -884,13 +894,12 @@ struct WordDisplay: View {
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.bottom, 8)
 
-            // ✨ ИСПРАВЛЕНИЕ: Убран ненужный `if let`
             if studiedLanguage == "el" {
                 Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
-                    .font(.system(size: 28)).foregroundColor(.gray)
+                    .font(.system(size: 20)).foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
             } else {
-                 Text(" ").font(.system(size: 28))
+                 Text(" ").font(.system(size: 16))
             }
         }
         .padding(.bottom, 16)
