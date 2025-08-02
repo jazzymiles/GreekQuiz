@@ -4,15 +4,37 @@ import WebKit
 import MediaPlayer
 
 struct CardView: View {
-    let questionWord: String
-    let answerWord: String
+    let word: Word
     let studiedLanguage: String
-    let transcription: String?
+    let answerLanguage: String
     let showTranscription: Bool
     let speakWord: (String, String) -> Void
     @Binding var showTranslation: Bool
 
+    private func getWord(for langCode: String) -> String {
+        switch langCode {
+        case "ru": return word.ru
+        case "el": return word.el
+        case "en": return word.en ?? "N/A"
+        default: return ""
+        }
+    }
+    
+    private func getExample(for langCode: String) -> String? {
+        switch langCode {
+        case "ru": return word.ru_example
+        case "el": return word.el_example
+        case "en": return word.en_example
+        default: return nil
+        }
+    }
+
     var body: some View {
+        let questionWord = getWord(for: studiedLanguage)
+        let answerWord = getWord(for: answerLanguage)
+        let studiedExample = getExample(for: studiedLanguage)
+        let answerExample = getExample(for: answerLanguage)
+        
         VStack {
             Spacer()
 
@@ -21,8 +43,9 @@ struct CardView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
 
-            if let trans = transcription, studiedLanguage == "el" {
-                Text(showTranscription ? trans : String(repeating: "*", count: trans.count))
+            // ✨ ИСПРАВЛЕНИЕ: Убран ненужный `if let`
+            if studiedLanguage == "el" {
+                Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
                     .font(.system(size: 28))
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
@@ -41,11 +64,31 @@ struct CardView: View {
             Spacer()
 
             if showTranslation {
-                Text(answerWord)
-                    .font(.system(size: 32))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-                    .transition(.opacity)
+                VStack(spacing: 15) {
+                    Text(answerWord)
+                        .font(.system(size: 32))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                    
+                    if studiedExample != nil || answerExample != nil {
+                        VStack(alignment: .center, spacing: 5) {
+                            if let example = studiedExample {
+                                Text(example)
+                                    .font(.footnote)
+                                    .italic()
+                            }
+                            if let example = answerExample {
+                                Text(example)
+                                    .font(.footnote)
+                                    .italic()
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                    }
+                }
+                .transition(.opacity)
             }
 
             Spacer()
@@ -347,7 +390,7 @@ struct ContentView: View {
         let studiedExample = getExample(for: studiedLanguage)
         let answerExample = getExample(for: answerLanguage)
         let hasContent = studiedExample != nil || answerExample != nil
-
+        
         return VStack(alignment: .center, spacing: 5) {
             Text(studiedExample ?? " ")
                 .font(.callout)
@@ -370,11 +413,10 @@ struct ContentView: View {
     private func keyboardQuizView(for word: Word) -> some View {
         let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + currentAnswerWord()
 
-        return VStack(spacing: -180) {
-            VStack(spacing: 35) {
+        return VStack(spacing: 0) {
+            VStack(spacing: 15) {
                 WordDisplay(
-                    questionWord: currentQuestionWord(),
-                    transcription: word.transcription,
+                    word: word,
                     studiedLanguage: studiedLanguage,
                     showTranscription: showTranscription,
                     speakWord: speakWord
@@ -384,7 +426,7 @@ struct ContentView: View {
                 
                 exampleSentencesView(for: word, isVisible: showAnswer)
             }
-            .padding(.top, 20)
+            .padding(.top, 40)
             
             Spacer(minLength: 20)
 
@@ -398,7 +440,7 @@ struct ContentView: View {
                 }
                 .padding(.top, 10)
             }
-            .padding(.bottom, 300)
+            .padding(.bottom, 20)
         }
         .padding(.horizontal)
     }
@@ -407,10 +449,9 @@ struct ContentView: View {
         let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + currentAnswerWord()
 
         return VStack(spacing: 0) {
-            VStack(spacing: 10) {
+            VStack(spacing: 15) {
                 WordDisplay(
-                    questionWord: currentQuestionWord(),
-                    transcription: word.transcription,
+                    word: word,
                     studiedLanguage: studiedLanguage,
                     showTranscription: showTranscription,
                     speakWord: speakWord
@@ -450,7 +491,7 @@ struct ContentView: View {
                     if showAnswer { nextWord() } else { checkCardAnswer() }
                 }
             }
-            .padding(.bottom, 200)
+            .padding(.bottom, 20)
         }
         .padding(.horizontal)
     }
@@ -458,10 +499,9 @@ struct ContentView: View {
     private func cardModeView(for word: Word) -> some View {
         VStack {
             CardView(
-                questionWord: currentQuestionWord(),
-                answerWord: currentAnswerWord(),
+                word: word,
                 studiedLanguage: studiedLanguage,
-                transcription: word.transcription,
+                answerLanguage: answerLanguage,
                 showTranscription: showTranscription,
                 speakWord: speakWord,
                 showTranslation: $showCardTranslation
@@ -811,13 +851,24 @@ struct FeedbackText: View {
 }
 
 struct WordDisplay: View {
-    let questionWord: String
-    let transcription: String?
+    let word: Word
     let studiedLanguage: String
     let showTranscription: Bool
     let speakWord: (String, String) -> Void
+    
+    // Private helper
+    private func getWord(for langCode: String) -> String {
+        switch langCode {
+        case "ru": return word.ru
+        case "el": return word.el
+        case "en": return word.en ?? "N/A"
+        default: return ""
+        }
+    }
 
     var body: some View {
+        let questionWord = getWord(for: studiedLanguage)
+        
         VStack {
             HStack(spacing: 10) {
                 Text(questionWord)
@@ -833,8 +884,9 @@ struct WordDisplay: View {
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.bottom, 8)
 
-            if let trans = transcription, studiedLanguage == "el" {
-                Text(showTranscription ? trans : String(repeating: "*", count: trans.count))
+            // ✨ ИСПРАВЛЕНИЕ: Убран ненужный `if let`
+            if studiedLanguage == "el" {
+                Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
                     .font(.system(size: 28)).foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
             } else {
