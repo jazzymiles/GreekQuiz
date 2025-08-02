@@ -43,7 +43,6 @@ struct CardView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal)
 
-            // ✨ ИСПРАВЛЕНИЕ: Убран ненужный `if let`
             if studiedLanguage == "el" {
                 Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
                     .font(.system(size: 28))
@@ -199,6 +198,8 @@ struct ContentView: View {
                 .onChange(of: quizMode, perform: handleModeChange)
                 
                 quizContainer
+
+                // Spacer()
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
 
@@ -320,12 +321,34 @@ struct ContentView: View {
                 talkShowView(for: currentWord)
             }
         } else {
-            if dictionaryService.isDownloading {
-                Text("loading_dictionaries_message")
-                    .foregroundColor(.gray)
-            } else {
-                Text("select_at_least_one_dictionary").foregroundColor(.gray)
+            VStack {
+                Spacer()
+                
+                if dictionaryService.isDownloading {
+                    VStack(spacing: 20) {
+                        ProgressView()
+                        Text("loading_dictionaries_message")
+                            .foregroundColor(.gray)
+                    }
+                } else {
+                    VStack(spacing: 20) {
+                        Text("select_at_least_one_dictionary")
+                            .font(.headline)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+
+                        Image("dic")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.gray)
+                    }
+                }
+                
+                Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 
@@ -406,21 +429,15 @@ struct ContentView: View {
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
         }
-        .frame(minHeight: 60)
-        .padding(.vertical, 20)
+        .frame(minHeight: 40)
+        .padding(.vertical, 10)
         .padding(.horizontal)
         .opacity(isVisible && hasContent ? 1.0 : 0.0)
         .animation(.easeInOut, value: isVisible && hasContent)
     }
     
     private func keyboardQuizView(for word: Word) -> some View {
-        
-        print("Current locale is \(locale.identifier)")
-        
-        let feedbackString = String(localized: "correct_answer_text") + " " + currentAnswerWord()
-
         return VStack(spacing: 0) {
-            // Уменьшаем spacing с 15 до 5
             VStack(spacing: 5) {
                 WordDisplay(
                     word: word,
@@ -429,7 +446,11 @@ struct ContentView: View {
                     speakWord: speakWord
                 )
                 
-                FeedbackText(text: feedbackString, isVisible: showAnswer)
+                FeedbackText(
+                    key: "correct_answer_text",
+                    word: currentAnswerWord(),
+                    isVisible: showAnswer
+                )
                 
                 exampleSentencesView(for: word, isVisible: showAnswer)
             }
@@ -453,8 +474,6 @@ struct ContentView: View {
     }
     
     private func multipleChoiceQuizView(for word: Word) -> some View {
-        let feedbackString = NSLocalizedString("correct_answer_text", comment: "") + " " + currentAnswerWord()
-
         return VStack(spacing: 0) {
             VStack(spacing: 15) {
                 WordDisplay(
@@ -464,13 +483,15 @@ struct ContentView: View {
                     speakWord: speakWord
                 )
                 
-                FeedbackText(text: feedbackString, isVisible: showAnswer)
+                FeedbackText(
+                    key: "correct_answer_text",
+                    word: currentAnswerWord(),
+                    isVisible: showAnswer
+                )
                 
                 exampleSentencesView(for: word, isVisible: showAnswer)
             }
             .padding(.top, 40)
-            
-            // Spacer(minLength: 20) — этот элемент удален
             
             VStack {
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 10) {
@@ -498,10 +519,10 @@ struct ContentView: View {
                     if showAnswer { nextWord() } else { checkCardAnswer() }
                 }
             }
-            .padding(.top, 20) // Добавлен отступ сверху, чтобы отделить от предыдущего блока
-            .padding(.bottom, 20) // Оставлен отступ снизу для кнопки
+            .padding(.top, 20)
+            .padding(.bottom, 20)
             
-            Spacer() // Добавлен в конец, чтобы прижать все элементы к верху
+            Spacer()
         }
         .padding(.horizontal)
     }
@@ -845,14 +866,15 @@ struct ActionButton: View {
 }
 
 struct FeedbackText: View {
-    let text: String
+    let key: LocalizedStringKey
+    let word: String
     let isVisible: Bool
 
     @Environment(\.colorScheme) private var colorScheme
     private var textColor: Color { colorScheme == .dark ? .white : .black }
 
     var body: some View {
-        Text(isVisible ? text : " ")
+        (isVisible ? (Text(key) + Text(" \(word)")) : Text(" "))
             .foregroundColor(isVisible ? textColor : .clear)
             .padding(.vertical, 5).padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .center)

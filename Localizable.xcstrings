@@ -17,6 +17,9 @@
         }
       }
     },
+    " %@" : {
+
+    },
     "all_dictionaries_updated" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -387,19 +390,19 @@
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Σωστή μετάφραση:"
+            "value" : "Απάντηση: "
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A:"
+            "value" : "Answer:"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Правильный перевод:"
+            "value" : "Ответ:"
           }
         }
       }
@@ -1297,19 +1300,19 @@
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Επιλέξτε τουλάχιστον ένα λεξικό."
+            "value" : "Επιλέξτε τουλάχιστον ένα λεξικό.\nΓια να το κάνετε αυτό, πατήστε το κουμπί στην κορυφή με αυτό το εικονίδιο"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Select at least one dictionary."
+            "value" : "Please select at least one dictionary.\nTo do this, click the button at the top with this icon"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Выберите хотя бы один словарь"
+            "value" : "Выберите хотя бы один словарь.\nДля этого нажмите на кнопку вверху с этой иконкой"
           }
         }
       }
