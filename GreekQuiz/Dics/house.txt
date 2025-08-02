@@ -1,0 +1,254 @@
+[
+  {
+    "ru": "крыша",
+    "en": "roof",
+    "el": "η στέγη",
+    "transcription": "стэ́йи",
+    "el_transcription_en": "stégi",
+    "category": "части дома",
+    "gender": "женский"
+  },
+  {
+    "ru": "потолок",
+    "en": "ceiling",
+    "el": "το ταβάνι",
+    "transcription": "тава́ни",
+    "el_transcription_en": "taváni",
+    "category": "части дома",
+    "gender": "средний"
+  },
+  {
+    "ru": "пол",
+    "en": "floor",
+    "el": "το πάτωμα",
+    "transcription": "па́тома",
+    "el_transcription_en": "pátoma",
+    "category": "части дома",
+    "gender": "средний"
+  },
+  {
+    "ru": "стена",
+    "en": "wall",
+    "el": "ο τοίχος",
+    "transcription": "ти́хос",
+    "el_transcription_en": "tíchos",
+    "category": "части дома",
+    "gender": "мужской"
+  },
+  {
+    "ru": "дверь",
+    "en": "door",
+    "el": "η πόρτα",
+    "transcription": "по́рта",
+    "el_transcription_en": "pórta",
+    "category": "части дома",
+    "gender": "женский"
+  },
+  {
+    "ru": "окно",
+    "en": "window",
+    "el": "το παράθυρο",
+    "transcription": "пара́тиро",
+    "el_transcription_en": "paráthyro",
+    "category": "части дома",
+    "gender": "средний"
+  },
+  {
+    "ru": "дом",
+    "en": "house",
+    "el": "το σπίτι",
+    "transcription": "спи́ти",
+    "el_transcription_en": "spíti",
+    "category": "здания",
+    "gender": "средний"
+  },
+  {
+    "ru": "комната",
+    "en": "room",
+    "el": "το δωμάτιο",
+    "transcription": "дома́тио",
+    "el_transcription_en": "domátio",
+    "category": "комнаты",
+    "gender": "средний"
+  },
+  {
+    "ru": "кухня",
+    "en": "kitchen",
+    "el": "η κουζίνα",
+    "transcription": "кузи́на",
+    "el_transcription_en": "kouzína",
+    "category": "комнаты",
+    "gender": "женский"
+  },
+  {
+    "ru": "гостиная",
+    "en": "living room",
+    "el": "το σαλόνι",
+    "transcription": "сало́ни",
+    "el_transcription_en": "salóni",
+    "category": "комнаты",
+    "gender": "средний"
+  },
+  {
+    "ru": "столовая",
+    "en": "dining room",
+    "el": "η τραπεζαρία",
+    "transcription": "трапэзари́а",
+    "el_transcription_en": "trapezaría",
+    "category": "комнаты",
+    "gender": "женский"
+  },
+  {
+    "ru": "спальня",
+    "en": "bedroom",
+    "el": "το υπνοδωμάτιο",
+    "transcription": "ипнодома́тио",
+    "el_transcription_en": "ypnodomátio",
+    "category": "комнаты",
+    "gender": "средний"
+  },
+  {
+    "ru": "коридор",
+    "en": "corridor, hallway",
+    "el": "ο διάδρομος",
+    "transcription": "дья́дромос",
+    "el_transcription_en": "diádromos",
+    "category": "части дома",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ванная",
+    "en": "bathroom",
+    "el": "το μπάνιο",
+    "transcription": "ба́ньо",
+    "el_transcription_en": "bánio",
+    "category": "комнаты",
+    "gender": "средний"
+  },
+  {
+    "ru": "подвал",
+    "en": "basement",
+    "el": "το υπόγειο",
+    "transcription": "ипо́йьо",
+    "el_transcription_en": "ypógeio",
+    "category": "части дома",
+    "gender": "средний"
+  },
+  {
+    "ru": "чердак",
+    "en": "attic",
+    "el": "η σοφίτα",
+    "transcription": "софи́та",
+    "el_transcription_en": "sofíta",
+    "category": "части дома",
+    "gender": "женский"
+  },
+  {
+    "ru": "лестница",
+    "en": "stairs",
+    "el": "η σκάλα",
+    "transcription": "ска́ла",
+    "el_transcription_en": "skala",
+    "category": "части дома",
+    "gender": "женский"
+  },
+  {
+    "ru": "кладовка",
+    "en": "storeroom",
+    "el": "η αποθήκη",
+    "transcription": "апоти́ки",
+    "el_transcription_en": "apothíki",
+    "category": "части дома",
+    "gender": "женский"
+  },
+  {
+    "ru": "бассейн",
+    "en": "swimming pool",
+    "el": "η πισίνα",
+    "transcription": "писи́на",
+    "el_transcription_en": "pisína",
+    "category": "экстерьер",
+    "gender": "женский"
+  },
+  {
+    "ru": "двор",
+    "en": "yard",
+    "el": "η αυλή",
+    "transcription": "авли́",
+    "el_transcription_en": "avlí",
+    "category": "экстерьер",
+    "gender": "женский"
+  },
+  {
+    "ru": "сад",
+    "en": "garden",
+    "el": "ο κήπος",
+    "transcription": "ки́пос",
+    "el_transcription_en": "kípos",
+    "category": "экстерьер",
+    "gender": "мужской"
+  },
+  {
+    "ru": "балкон",
+    "en": "balcony",
+    "el": "το μπαλκόνι",
+    "transcription": "балко́ни",
+    "el_transcription_en": "balkóni",
+    "category": "экстерьер",
+    "gender": "средний"
+  },
+  {
+    "ru": "почтовый ящик",
+    "en": "mailbox",
+    "el": "το γραμματοκιβώτιο",
+    "transcription": "грамматокиво́тио",
+    "el_transcription_en": "grammatokivótio",
+    "category": "экстерьер",
+    "gender": "средний"
+  },
+  {
+    "ru": "забор",
+    "en": "fence",
+    "el": "ο φράχτης",
+    "transcription": "фра́хтис",
+    "el_transcription_en": "fráchtis",
+    "category": "экстерьер",
+    "gender": "мужской"
+  },
+  {
+    "ru": "гараж",
+    "en": "garage",
+    "el": "το γκαράζ",
+    "transcription": "гара́з",
+    "el_transcription_en": "garáz",
+    "category": "здания",
+    "gender": "средний"
+  },
+  {
+    "ru": "мансарда",
+    "en": "loft",
+    "el": "η σοφίτα",
+    "transcription": "софи́та",
+    "el_transcription_en": "sofíta",
+    "category": "части дома",
+    "gender": "женский"
+  },
+  {
+    "ru": "гостиная (мн.ч.)",
+    "en": "living room (pl.)",
+    "el": "τα σαλόνια",
+    "transcription": "сало́нья",
+    "el_transcription_en": "salónia",
+    "category": "комнаты",
+    "gender": "средний"
+  },
+  {
+    "ru": "чердак (мн.ч.)",
+    "en": "attics",
+    "el": "οι σοφίτες",
+    "transcription": "софи́тэс",
+    "el_transcription_en": "sofítes",
+    "category": "части дома",
+    "gender": "женский"
+  }
+]

@@ -404,29 +404,6 @@
         }
       }
     },
-    "correct_translation %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "el" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Σωστή μετάφραση %@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сorrect translation %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Правильный перевод %@"
-          }
-        }
-      }
-    },
     "custom_url_dictionaries" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -583,6 +560,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Загрузка..."
+          }
+        }
+      }
+    },
+    "download_status_text" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φόρτωση λεξικού:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading dictionary:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка словаря:"
           }
         }
       }
@@ -1020,6 +1019,28 @@
         }
       }
     },
+    "loading_dictionaries_message" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Φόρτωση λεξικού:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading dictionary"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка словарей"
+          }
+        }
+      }
+    },
     "mode_cards_display_name" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1153,6 +1174,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Язык слов"
+          }
+        }
+      }
+    },
+    "quiz_settings_section" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ρυθμίσεις κουίζ"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройка квиза"
           }
         }
       }
@@ -1517,6 +1560,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Слова"
+          }
+        }
+      }
+    },
+    "use_all_words_toggle" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Όλες οι λέξεις στις απαντήσεις"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All the words in the answers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все слова в ответах"
           }
         }
       }

@@ -1,0 +1,378 @@
+[
+  {
+    "ru": "выходить",
+    "en": "to go out, to exit",
+    "el": "βγαίνω",
+    "transcription": "вгэ́но",
+    "el_transcription_en": "vgaíno",
+    "category": "движение"
+  },
+  {
+    "ru": "входить",
+    "en": "to enter, to go in",
+    "el": "μπαίνω",
+    "transcription": "бэ́но",
+    "el_transcription_en": "baíno",
+    "category": "движение"
+  },
+  {
+    "ru": "уходить, уезжать",
+    "en": "to leave, to depart",
+    "el": "φεύγω",
+    "transcription": "фэ́вго",
+    "el_transcription_en": "févgo",
+    "category": "движение"
+  },
+  {
+    "ru": "летать, бросать",
+    "en": "to fly, to throw",
+    "el": "πετάω",
+    "transcription": "пэта́о",
+    "el_transcription_en": "petáo",
+    "category": "движение"
+  },
+  {
+    "ru": "возвращаться",
+    "en": "to return",
+    "el": "επιστρέφω",
+    "transcription": "эпистрэ́фо",
+    "el_transcription_en": "epistréfo",
+    "category": "движение"
+  },
+  {
+    "ru": "сушить",
+    "en": "to dry",
+    "el": "στεγνώνω",
+    "transcription": "стэгно́но",
+    "el_transcription_en": "stegnóno",
+    "category": "действия"
+  },
+  {
+    "ru": "искать",
+    "en": "to search, to look for",
+    "el": "ψάχνω",
+    "transcription": "пса́хно",
+    "el_transcription_en": "psáchno",
+    "category": "действия"
+  },
+  {
+    "ru": "останавливать(ся)",
+    "en": "to stop",
+    "el": "σταματάω",
+    "transcription": "стамата́о",
+    "el_transcription_en": "stamatáo",
+    "category": "действия"
+  },
+  {
+    "ru": "поднимать",
+    "en": "to lift, to raise",
+    "el": "σηκώνω",
+    "transcription": "сико́но",
+    "el_transcription_en": "sikóno",
+    "category": "действия"
+  },
+  {
+    "ru": "пробовать",
+    "en": "to try, to taste",
+    "el": "δοκιμάζω",
+    "transcription": "докима́зо",
+    "el_transcription_en": "dokimázo",
+    "category": "действия"
+  },
+  {
+    "ru": "воспитывать",
+    "en": "to raise (a child)",
+    "el": "ανατρέφω",
+    "transcription": "анатрэ́фо",
+    "el_transcription_en": "anatréfo",
+    "category": "действия"
+  },
+  {
+    "ru": "быть осторожным, заботиться",
+    "en": "to take care, to be careful",
+    "el": "προσέχω",
+    "transcription": "просэ́хо",
+    "el_transcription_en": "prosécho",
+    "category": "действия"
+  },
+  {
+    "ru": "иметь значение, волновать",
+    "en": "to matter, to care",
+    "el": "νοιάζει",
+    "transcription": "нья́зи",
+    "el_transcription_en": "noiázei",
+    "category": "чувства и мысли"
+  },
+  {
+    "ru": "подписывать",
+    "en": "to sign",
+    "el": "υπογράφω",
+    "transcription": "ипогра́фо",
+    "el_transcription_en": "ypográfo",
+    "category": "действия"
+  },
+  {
+    "ru": "получать",
+    "en": "to receive",
+    "el": "παραλαμβάνω",
+    "transcription": "параламва́но",
+    "el_transcription_en": "paralambáno",
+    "category": "действия"
+  },
+  {
+    "ru": "разрешать",
+    "en": "to allow, to permit",
+    "el": "επιτρέπω",
+    "transcription": "эпитрэ́по",
+    "el_transcription_en": "epitrétpo",
+    "category": "действия"
+  },
+  {
+    "ru": "следовать",
+    "en": "to follow",
+    "el": "ακολουθώ",
+    "transcription": "аколуто́",
+    "el_transcription_en": "akolouthó",
+    "category": "действия"
+  },
+  {
+    "ru": "сомневаться",
+    "en": "to doubt",
+    "el": "αμφιβάλλω",
+    "transcription": "амфива́ло",
+    "el_transcription_en": "amfivállo",
+    "category": "чувства и мысли"
+  },
+  {
+    "ru": "верить",
+    "en": "to believe",
+    "el": "πιστεύω",
+    "transcription": "пистэ́во",
+    "el_transcription_en": "pistévo",
+    "category": "чувства и мысли"
+  },
+  {
+    "ru": "надеяться",
+    "en": "to hope",
+    "el": "ελπίζω",
+    "transcription": "элпи́зо",
+    "el_transcription_en": "elpízo",
+    "category": "чувства и мысли"
+  },
+  {
+    "ru": "значить",
+    "en": "to mean",
+    "el": "σημαίνει",
+    "transcription": "симэ́ни",
+    "el_transcription_en": "simaínei",
+    "category": "мысли"
+  },
+  {
+    "ru": "спрашивать",
+    "en": "to ask",
+    "el": "ρωτάω",
+    "transcription": "рота́о",
+    "el_transcription_en": "rotáo",
+    "category": "коммуникация"
+  },
+  {
+    "ru": "представлять",
+    "en": "to present, to introduce",
+    "el": "παρουσιάζω",
+    "transcription": "парусья́зо",
+    "el_transcription_en": "parousiázo",
+    "category": "коммуникация"
+  },
+  {
+    "ru": "смотреть",
+    "en": "to look at",
+    "el": "κοιτάζω",
+    "transcription": "кита́зо",
+    "el_transcription_en": "koitázo",
+    "category": "действия"
+  },
+  {
+    "ru": "звонить, называть",
+    "en": "to call",
+    "el": "καλώ",
+    "transcription": "кало́",
+    "el_transcription_en": "kaló",
+    "category": "коммуникация"
+  },
+  {
+    "ru": "отправлять",
+    "en": "to send",
+    "el": "στέλνω",
+    "transcription": "стэ́лно",
+    "el_transcription_en": "stélno",
+    "category": "коммуникация"
+  },
+  {
+    "ru": "изучать",
+    "en": "to study",
+    "el": "μελετώ",
+    "transcription": "мэлэто́",
+    "el_transcription_en": "meletó",
+    "category": "действия"
+  },
+  {
+    "ru": "включать в себя",
+    "en": "to include",
+    "el": "συμπεριλαμβάνω",
+    "transcription": "симпериламва́но",
+    "el_transcription_en": "symperilambáno",
+    "category": "действия"
+  },
+  {
+    "ru": "принадлежать",
+    "en": "to belong",
+    "el": "ανήκω",
+    "transcription": "ани́ко",
+    "el_transcription_en": "aníko",
+    "category": "мысли"
+  },
+  {
+    "ru": "улучшать",
+    "en": "to improve",
+    "el": "βελτιώνω",
+    "transcription": "вэльтио́но",
+    "el_transcription_en": "veltió̱no",
+    "category": "действия"
+  },
+  {
+    "ru": "стоить, заслуживать",
+    "en": "to be worth",
+    "el": "αξίζω",
+    "transcription": "акси́зо",
+    "el_transcription_en": "axízo",
+    "category": "действия"
+  },
+  {
+    "ru": "терпеть неудачу",
+    "en": "to fail",
+    "el": "αποτυγχάνω",
+    "transcription": "апотингха́но",
+    "el_transcription_en": "apotyncháno",
+    "category": "действия"
+  },
+  {
+    "ru": "терять",
+    "en": "to lose",
+    "el": "χάνω",
+    "transcription": "ха́но",
+    "el_transcription_en": "cháno",
+    "category": "действия"
+  },
+  {
+    "ru": "спасать",
+    "en": "to save",
+    "el": "σώζω",
+    "transcription": "со́зо",
+    "el_transcription_en": "sózo",
+    "category": "действия"
+  },
+  {
+    "ru": "происходить",
+    "en": "to happen",
+    "el": "συμβαίνει",
+    "transcription": "симвэ́ни",
+    "el_transcription_en": "symváinei",
+    "category": "мысли"
+  },
+  {
+    "ru": "говорить",
+    "en": "to speak, to say",
+    "el": "λέω",
+    "transcription": "лэ́о",
+    "el_transcription_en": "léo",
+    "category": "коммуникация"
+  },
+  {
+    "ru": "видеть",
+    "en": "to see",
+    "el": "βλέπω",
+    "transcription": "влэ́по",
+    "el_transcription_en": "vlépo",
+    "category": "действия"
+  },
+  {
+    "ru": "слышать",
+    "en": "to hear",
+    "el": "ακούω",
+    "transcription": "аку́о",
+    "el_transcription_en": "akoúo",
+    "category": "действия"
+  },
+  {
+    "ru": "делать",
+    "en": "to do, to make",
+    "el": "κάνω",
+    "transcription": "ка́но",
+    "el_transcription_en": "káno",
+    "category": "действия"
+  },
+  {
+    "ru": "идти",
+    "en": "to go",
+    "el": "πηγαίνω",
+    "transcription": "пигэ́но",
+    "el_transcription_en": "pigaíno",
+    "category": "движение"
+  },
+  {
+    "ru": "приходить",
+    "en": "to come",
+    "el": "έρχομαι",
+    "transcription": "э́рхоме",
+    "el_transcription_en": "érchomai",
+    "category": "движение"
+  },
+  {
+    "ru": "жить",
+    "en": "to live",
+    "el": "ζω",
+    "transcription": "зо",
+    "el_transcription_en": "zo",
+    "category": "состояние"
+  },
+  {
+    "ru": "работать",
+    "en": "to work",
+    "el": "δουλεύω",
+    "transcription": "дулэ́во",
+    "el_transcription_en": "douiévo",
+    "category": "действия"
+  },
+  {
+    "ru": "есть (кушать)",
+    "en": "to eat",
+    "el": "τρώω",
+    "transcription": "тро́о",
+    "el_transcription_en": "tróo",
+    "category": "действия"
+  },
+  {
+    "ru": "пить",
+    "en": "to drink",
+    "el": "πίνω",
+    "transcription": "пи́но",
+    "el_transcription_en": "píno",
+    "category": "действия"
+  },
+  {
+    "ru": "читать",
+    "en": "to read",
+    "el": "διαβάζω",
+    "transcription": "дьява́зо",
+    "el_transcription_en": "diavázo",
+    "category": "действия"
+  },
+  {
+    "ru": "писать",
+    "en": "to write",
+    "el": "γράφω",
+    "transcription": "гра́фо",
+    "el_transcription_en": "gráfo",
+    "category": "действия"
+  }
+]

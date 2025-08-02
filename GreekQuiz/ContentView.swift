@@ -82,6 +82,9 @@ struct ContentView: View {
     @AppStorage("showTranscription") private var showTranscription: Bool = true
     @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true
     @AppStorage("playAnswerSound") private var playAnswerSound: Bool = true
+    
+    @AppStorage("useAllWordsInQuiz") private var useAllWordsInQuiz: Bool = false
+    
     @AppStorage("colorSchemePreference") private var colorSchemePreference: String = "system"
     @AppStorage("dictionarySourcePreference") private var dictionarySource: DictionarySource = .standard
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
@@ -96,14 +99,11 @@ struct ContentView: View {
     private let synthesizer = AVSpeechSynthesizer()
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
     
-    // MARK: - Вспомогательные свойства и функции
-    
-    // ✨ НОВОЕ СВОЙСТВО: Определяет имя файла правил на основе языка ответа
     private var rulesHtmlFileName: String {
         if answerLanguage == "en" || answerLanguage == "el" {
             return "rules-en"
         } else {
-            return "rules-el" // Файл по умолчанию для остальных языков (например, русского)
+            return "rules-el"
         }
     }
 
@@ -121,13 +121,13 @@ struct ContentView: View {
     }
 
     private func currentQuestionWord() -> String {
-        guard !dictionaryService.activeWords.isEmpty else { return "" }
+        guard !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else { return "" }
         let word = dictionaryService.activeWords[currentWordIndex]
         return getWord(for: word, langCode: studiedLanguage)
     }
     
     private func currentAnswerWord() -> String {
-        guard !dictionaryService.activeWords.isEmpty else { return "" }
+        guard !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else { return "" }
         let word = dictionaryService.activeWords[currentWordIndex]
         return getWord(for: word, langCode: answerLanguage)
     }
@@ -159,12 +159,43 @@ struct ContentView: View {
                 
                 Spacer()
             }
-            .overlay(statusOverlay)
+            
+            statusOverlay
         }
         .preferredColorScheme(getPreferredColorScheme())
         .onAppear {
-            if dictionaryService.activeWords.isEmpty {
-                 dictionaryService.loadSelectedWords(interfaceLanguage: interfaceLanguage)
+            // ✨ ИСПРАВЛЕНИЕ: Логика для первого и последующих запусков
+            let hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+
+            if !hasLaunchedBefore {
+                // ПЕРВЫЙ ЗАПУСК
+                print("Первый запуск: автоматическое скачивание словарей.")
+                Task {
+                    // Запускаем скачивание стандартных словарей
+                    await dictionaryService.downloadAndSaveDictionaries(
+                        source: .standard,
+                        customURL: "",
+                        interfaceLanguage: interfaceLanguage
+                    )
+                    // Устанавливаем флаг, чтобы больше не выполнять это действие
+                    UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
+                }
+            } else {
+                // ПОСЛЕДУЮЩИЕ ЗАПУСКИ
+                // Загружаем слова с диска, если они еще не загружены
+                if dictionaryService.activeWords.isEmpty {
+                     dictionaryService.loadSelectedWords(interfaceLanguage: interfaceLanguage)
+                }
+            }
+            
+            // Этот код выполняется при каждом запуске для исправления UI
+            let currentMode = quizMode
+            DispatchQueue.main.async {
+                quizMode = currentMode
+            }
+            
+            if quizMode == .quiz {
+                generateCardOptions()
             }
         }
         .onChange(of: dictionaryService.activeWords) { _ in
@@ -179,7 +210,6 @@ struct ContentView: View {
     private var headerButtons: some View {
         HStack(spacing: 8) {
             Spacer()
-            // ✨ ИЗМЕНЕНИЕ: Передаем динамическое имя файла в RulesSheetView
             HeaderButton(imageName: "rules", action: { showingRules = true })
                 .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileName: rulesHtmlFileName) }
             
@@ -198,6 +228,7 @@ struct ContentView: View {
                         showTranscription: $showTranscription,
                         autoPlaySound: $autoPlaySound,
                         playAnswerSound: $playAnswerSound,
+                        useAllWordsInQuiz: $useAllWordsInQuiz,
                         colorSchemePreference: $colorSchemePreference,
                         dictionarySource: $dictionarySource,
                         customDictionaryURL: $customDictionaryURL,
@@ -205,6 +236,8 @@ struct ContentView: View {
                         answerLanguage: $answerLanguage,
                         interfaceLanguage: $interfaceLanguage,
                         onDownloadDictionaries: {
+                            showingSettings = false
+                            
                             Task {
                                 await dictionaryService.downloadAndSaveDictionaries(
                                     source: dictionarySource,
@@ -232,34 +265,67 @@ struct ContentView: View {
                 cardModeView(for: currentWord)
             }
         } else {
-            Text("select_at_least_one_dictionary").foregroundColor(.gray)
+            // Если идет загрузка, можно показать другой текст
+            if dictionaryService.isDownloading {
+                Text("loading_dictionaries_message") // Локализованная строка "Загрузка словарей..."
+                    .foregroundColor(.gray)
+            } else {
+                Text("select_at_least_one_dictionary").foregroundColor(.gray)
+            }
         }
     }
 
     @ViewBuilder
     private var statusOverlay: some View {
         if dictionaryService.isDownloading {
-            ProgressView(dictionaryService.statusMessage)
-                .padding()
-                .background(Color.black.opacity(0.7))
-                .cornerRadius(10)
-                .foregroundColor(.white)
-        } else if !dictionaryService.statusMessage.isEmpty {
-            Text(dictionaryService.statusMessage)
-                .padding()
-                .background(Color.black.opacity(0.7))
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                .transition(.opacity)
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        dictionaryService.statusMessage = ""
-                    }
+            Color.black.opacity(0.4).ignoresSafeArea()
+            
+            VStack(spacing: 12) {
+                HStack(spacing: 4) {
+                    Text(dictionaryService.downloadStatusText)
+                    Text(dictionaryService.downloadCounterText)
                 }
+                .font(.headline)
+                
+                Text(dictionaryService.currentDictionaryName)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .lineLimit(1)
+                
+                ProgressView(value: dictionaryService.downloadProgressValue)
+                    .progressViewStyle(LinearProgressViewStyle())
+            }
+            .padding(20)
+            .background(Material.regular)
+            .foregroundColor(Color.primary)
+            .cornerRadius(20)
+            .shadow(radius: 10)
+            .transition(.opacity.combined(with: .scale))
+            .padding(.horizontal, 40)
+
+        } else if !dictionaryService.statusMessage.isEmpty {
+            VStack {
+                Spacer()
+                Text(dictionaryService.statusMessage)
+                    .padding()
+                    .background(Material.regular)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+                    .transition(.opacity.combined(with: .move(edge: .bottom)))
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                            withAnimation {
+                                dictionaryService.statusMessage = ""
+                            }
+                        }
+                    }
+            }
+            .padding(.bottom, 30)
         }
     }
     
-    // MARK: - Quiz Views
+    // MARK: - Quiz Views and Logic (без изменений)
+
     private func keyboardQuizView(for word: Word) -> some View {
         let feedbackString = NSLocalizedString("correct_translation", comment: "") + " " + currentAnswerWord()
         
@@ -357,7 +423,6 @@ struct ContentView: View {
         }
     }
     
-    // MARK: - Quiz Logic
     private func checkAnswer() {
         let correctAnswers = parseAcceptedAnswers(from: currentAnswerWord())
         if correctAnswers.contains(userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()) {
@@ -432,7 +497,7 @@ struct ContentView: View {
     }
 
     private func generateCardOptions() {
-        guard !dictionaryService.activeWords.isEmpty else {
+        guard !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else {
             cardOptions = []
             return
         }
@@ -440,7 +505,9 @@ struct ContentView: View {
         let correctAnswer = parseAcceptedAnswers(from: currentAnswerWord()).first ?? currentAnswerWord()
         
         var options = Set([correctAnswer])
-        let allPossibleAnswers = dictionaryService.allWords.map { getWord(for: $0, langCode: answerLanguage) }
+        
+        let answerPool = useAllWordsInQuiz ? dictionaryService.allWords : dictionaryService.activeWords
+        let allPossibleAnswers = answerPool.map { getWord(for: $0, langCode: answerLanguage) }
         
         while options.count < 4 && options.count < allPossibleAnswers.count {
             if let randomAnswer = allPossibleAnswers.randomElement(), let parsed = parseAcceptedAnswers(from: randomAnswer).first, !parsed.isEmpty {
@@ -458,7 +525,6 @@ struct ContentView: View {
         }
     }
     
-    // MARK: - UI Helpers
     private func backgroundColor() -> Color {
         if isShowingFeedback { return .green.opacity(0.6) }
         if showAnswer { return isCorrect ? .green.opacity(0.6) : .red.opacity(0.6) }

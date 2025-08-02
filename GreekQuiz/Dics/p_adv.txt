@@ -241,5 +241,311 @@
     "el_transcription_en": "tsingoúnis",
     "category": "прилагательное",
     "gender": "муж."
+  },
+  {
+    "ru": "вежливый",
+    "en": "polite, kind",
+    "el": "ευγενικός",
+    "transcription": "эвйэнико́с",
+    "el_transcription_en": "evyenikós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "хороший",
+    "en": "good",
+    "el": "καλός",
+    "transcription": "кало́с",
+    "el_transcription_en": "kalós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "дружелюбный",
+    "en": "friendly",
+    "el": "φιλικός",
+    "transcription": "филико́с",
+    "el_transcription_en": "filikós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "приятный, симпатичный",
+    "en": "likeable, pleasant",
+    "el": "συμπαθητικός",
+    "transcription": "симпафитико́с",
+    "el_transcription_en": "sympathitikós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "щедрый",
+    "en": "generous",
+    "el": "γενναιόδωρος",
+    "transcription": "йэнео́дороc",
+    "el_transcription_en": "genaiódoros",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "храбрый",
+    "en": "brave",
+    "el": "γενναίος",
+    "transcription": "йэнэ́ос",
+    "el_transcription_en": "gennaíos",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "честный",
+    "en": "honest",
+    "el": "τίμιος",
+    "transcription": "ти́мьос",
+    "el_transcription_en": "tímios",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ответственный",
+    "en": "responsible",
+    "el": "υπεύθυνος",
+    "transcription": "ипэ́фтинос",
+    "el_transcription_en": "ypeúthynos",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "умный",
+    "en": "smart",
+    "el": "έξυπνος",
+    "transcription": "э́ксипнос",
+    "el_transcription_en": "éxypnos",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "общительный",
+    "en": "social",
+    "el": "κοινωνικός",
+    "transcription": "кинонико́с",
+    "el_transcription_en": "koinonikós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "независимый",
+    "en": "independent",
+    "el": "ανεξάρτητος",
+    "transcription": "анэкса́ртитос",
+    "el_transcription_en": "anexártitos",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "милый",
+    "en": "sweet",
+    "el": "γλυκός",
+    "transcription": "глико́с",
+    "el_transcription_en": "glykós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "смешной",
+    "en": "funny",
+    "el": "αστείος",
+    "transcription": "астэ́йос",
+    "el_transcription_en": "asteíos",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "тихий, спокойный",
+    "en": "quiet, calm",
+    "el": "ήσυχος",
+    "transcription": "и́сихос",
+    "el_transcription_en": "ísychos",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "позитивный",
+    "en": "positive",
+    "el": "θετικός",
+    "transcription": "тэтико́с",
+    "el_transcription_en": "thetikós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "грубый",
+    "en": "rude, impolite",
+    "el": "αγενής",
+    "transcription": "айэни́с",
+    "el_transcription_en": "agenís",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "плохой",
+    "en": "bad",
+    "el": "κακός",
+    "transcription": "како́с",
+    "el_transcription_en": "kakós",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "ужасный",
+    "en": "awful, terrible",
+    "el": "απαίσιος",
+    "transcription": "апэ́сьос",
+    "el_transcription_en": "apaísios",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "глупый",
+    "en": "stupid",
+    "el": "ανόητος",
+    "transcription": "ано́итос",
+    "el_transcription_en": "anóitos",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "отрицательный",
+    "en": "negative",
+    "el": "αρνητικός",
+    "transcription": "арнитико́с",
+    "el_transcription_en": "arnitikós",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "неприятный, антипатичный",
+    "en": "unpleasant, dislikeable",
+    "el": "αντιπαθητικός",
+    "transcription": "андипафитико́с",
+    "el_transcription_en": "antipathitikós",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "сумасшедший",
+    "en": "crazy, insane",
+    "el": "τρελός",
+    "transcription": "трэло́с",
+    "el_transcription_en": "trelós",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "странный",
+    "en": "strange, odd",
+    "el": "παράξενος",
+    "transcription": "пара́ксэнос",
+    "el_transcription_en": "paráxenos",
+    "category": "смешанные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "серьезный",
+    "en": "serious",
+    "el": "σοβαρός",
+    "transcription": "соваро́с",
+    "el_transcription_en": "sovarós",
+    "category": "смешанные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "застенчивый",
+    "en": "shy",
+    "el": "ντροπαλός",
+    "transcription": "дропало́с",
+    "el_transcription_en": "dropalós",
+    "category": "смешанные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "тихий",
+    "en": "quiet",
+    "el": "σιωπηλός",
+    "transcription": "сьопило́с",
+    "el_transcription_en": "siopilós",
+    "category": "смешанные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "умный, мудрый",
+    "en": "wise",
+    "el": "σοφός",
+    "transcription": "софо́с",
+    "el_transcription_en": "sofós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "сильный",
+    "en": "strong",
+    "el": "δυνατός",
+    "transcription": "динато́с",
+    "el_transcription_en": "dynatós",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "слабый",
+    "en": "weak",
+    "el": "αδύναμος",
+    "transcription": "ади́намос",
+    "el_transcription_en": "adýnamos",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "злой",
+    "en": "angry, mean",
+    "el": "θυμωμένος",
+    "transcription": "тимо́мэнос",
+    "el_transcription_en": "thymoménos",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "грустный",
+    "en": "sad",
+    "el": "λυπημένος",
+    "transcription": "липимэ́нос",
+    "el_transcription_en": "lypiménos",
+    "category": "отрицательные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "счастливый",
+    "en": "happy",
+    "el": "ευτυχισμένος",
+    "transcription": "эфтихисмэ́нос",
+    "el_transcription_en": "eftychisménos",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "богатый",
+    "en": "rich",
+    "el": "πλούσιος",
+    "transcription": "плу́сьос",
+    "el_transcription_en": "ploúsios",
+    "category": "положительные качества",
+    "gender": "мужской"
+  },
+  {
+    "ru": "бедный",
+    "en": "poor",
+    "el": "φτωχός",
+    "transcription": "фтохо́с",
+    "el_transcription_en": "ftochós",
+    "category": "отрицательные качества",
+    "gender": "мужской"
   }
 ]

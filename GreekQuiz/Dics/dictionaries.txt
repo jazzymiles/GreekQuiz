@@ -77,6 +77,13 @@
     "file": "body.txt"
   },
   {
+    "name_ru": "союзы и связки",
+    "name_en": "conjunctions & connectors",
+    "name_el": "Σύνδεσμοι",
+    "filePath": "https://www.dropbox.com/scl/fi/hkbyhdkkklvudgmm7cx0a/.txt?rlkey=dki5jgb7w8leaojyppyhsl3ij&st=8gxs94p4&raw=1",
+    "file": "cc.txt"
+  },
+  {
     "name_ru": "животные",
     "name_en": "animals",
     "name_el": "ζώα",
@@ -97,12 +104,26 @@
     "filePath": "https://www.dropbox.com/scl/fi/9mo0umbaxbw60n1rhhlbw/household.txt?rlkey=zl7kutiaxald50f1ojya3tvpg&st=5sf7kyaj&raw=1",
     "file": "household.txt"
   },
-    {
-    "name_ru": "союзы и связки",
-    "name_en": "conjunctions & connectors",
-    "name_el": "Σύνδεσμοι",
-    "filePath": "https://www.dropbox.com/scl/fi/hkbyhdkkklvudgmm7cx0a/.txt?rlkey=dki5jgb7w8leaojyppyhsl3ij&st=8gxs94p4&raw=1",
-    "file": "cc.txt"
+  {
+    "name_ru": "дом",
+    "name_en": "house",
+    "name_el": "Σπίτι",
+    "filePath": "https://www.dropbox.com/scl/fi/1ml7qxwzo7dntialvvd9g/house.txt?rlkey=mdrbaotlq0kjt19f7vb497nk9&st=xxkp6atd&raw=1",
+    "file": "house.txt"
+  },
+  {
+    "name_ru": "вещи 1",
+    "name_en": "things 1",
+    "name_el": "Πράγμα 1",
+    "filePath": "https://www.dropbox.com/scl/fi/nvydwwqmb5aq5g1157vwz/things_1.txt?rlkey=pmrjpufj6l84idvdhzdgv19tt&st=kwsodhmq&raw=1",
+    "file": "thing_1.txt"
+  },
+  {
+    "name_ru": "сова 2",
+    "name_en": "owl 2",
+    "name_el": "Κουκουβάγια 2",
+    "filePath": "https://www.dropbox.com/scl/fi/aw56q030y4i4kn0a52ixg/owl-2.txt?rlkey=98bz4zwujpe9j6iizetj558f7&st=tmtk9tym&raw=1",
+    "file": "owl 2.txt"
   },
   {
     "name_ru": "разное",
