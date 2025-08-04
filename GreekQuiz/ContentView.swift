@@ -121,6 +121,9 @@ struct ContentView: View {
     @State private var showingDictionarySelection = false
     @State private var showingRules = false
     @State private var showingSettings = false
+    
+    // ✨ НОВОЕ СВОЙСТВО: Для отображения окна помощи
+    @State private var showingHelp = false
 
     @State private var talkShowTimer: Timer?
     @State private var isTalkShowPlaying: Bool = false
@@ -149,6 +152,11 @@ struct ContentView: View {
         } else {
             return "rules-el"
         }
+    }
+    
+    // ✨ НОВОЕ СВОЙСТВО: Определяет имя файла помощи на основе языка интерфейса
+    private var helpHtmlFileName: String {
+        return "help-\(interfaceLanguage)"
     }
 
     private func getWord(for word: Word, langCode: String) -> String {
@@ -198,8 +206,6 @@ struct ContentView: View {
                 .onChange(of: quizMode, perform: handleModeChange)
                 
                 quizContainer
-
-                // Spacer()
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
 
@@ -263,11 +269,17 @@ struct ContentView: View {
     // MARK: - Subviews
     private var headerButtons: some View {
         HStack(spacing: 8) {
+
+            
+            HeaderButton(imageName: "questionmark.circle", action: { showingHelp = true })
+                .sheet(isPresented: $showingHelp) { RulesSheetView(htmlFileName: helpHtmlFileName) }
+            
             Spacer()
-            HeaderButton(imageName: "rules", action: { showingRules = true })
+            
+            HeaderButton(imageName: "character.book.closed", action: { showingRules = true })
                 .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileName: rulesHtmlFileName) }
 
-            HeaderButton(imageName: "dic", action: { showingDictionarySelection = true })
+            HeaderButton(imageName: "books.vertical", action: { showingDictionarySelection = true })
                 .sheet(isPresented: $showingDictionarySelection) {
                     DictionarySelectionView(
                         dictionaryService: dictionaryService,
@@ -276,7 +288,7 @@ struct ContentView: View {
                     )
                 }
 
-            HeaderButton(imageName: "settings", action: { showingSettings = true })
+            HeaderButton(imageName: "gearshape", action: { showingSettings = true })
                 .sheet(isPresented: $showingSettings) {
                     SettingsView(
                         showTranscription: $showTranscription,
@@ -338,11 +350,12 @@ struct ContentView: View {
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
 
-                        Image("dic")
+                        Image(systemName: "books.vertical")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 30, height: 30)
+                            .frame(width: 40, height: 40)
                             .foregroundColor(.gray)
+                            .fontWeight(.light)
                     }
                 }
                 
@@ -433,10 +446,11 @@ struct ContentView: View {
         .padding(.vertical, 10)
         .padding(.horizontal)
         .opacity(isVisible && hasContent ? 1.0 : 0.0)
-        .animation(.easeInOut(duration: 0.01), value: isVisible && hasContent)
+        .animation(.easeInOut(duration: 0), value: isVisible && hasContent)
     }
     
     private func keyboardQuizView(for word: Word) -> some View {
+        
         return VStack(spacing: 0) {
             VStack(spacing: 5) {
                 WordDisplay(
@@ -839,14 +853,20 @@ struct HeaderButton: View {
 
     var body: some View {
         Button(action: action) {
-            Image(imageName)
-                .resizable().scaledToFit().frame(width: 24, height: 24)
-                .padding(6).foregroundColor(iconTintColor)
-                .background(Color.gray.opacity(0.2)).cornerRadius(8)
+            Image(systemName: imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 24, height: 24)
+                .padding(6)
+                .foregroundColor(iconTintColor)
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(8)
+                .fontWeight(.light)
         }
         .buttonStyle(PlainButtonStyle())
     }
 }
+
 
 struct ActionButton: View {
     let title: LocalizedStringKey
@@ -912,6 +932,7 @@ struct WordDisplay: View {
                 }) {
                     Image(systemName: "speaker.wave.3.fill")
                         .font(.title).foregroundColor(.blue)
+
                 }
             }
             .frame(maxWidth: .infinity, alignment: .center)

@@ -38,9 +38,6 @@
 		023A89EF2E3E142E00CE8BC9 /* Exceptions for "GreekQuiz" folder in "GreekQuiz" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"Icons/new.icon/Assets/alpha-white.svg",
-				"Icons/new.icon/Assets/omega-white.svg",
-				Icons/new.icon/Assets/q.svg,
 				Info.plist,
 			);
 			target = 0279D99E2DD1022500288BB2 /* GreekQuiz */;
