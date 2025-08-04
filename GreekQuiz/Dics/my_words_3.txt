@@ -1,7 +1,7 @@
 [
   {
     "ru": "быть",
-    "en": "to be",
+    "en": "be",
     "el": "είμαι",
     "transcription": "и́ме",
     "el_transcription_en": "ímai",
@@ -9,11 +9,11 @@
     "gender": "-",
     "el_example": "Είμαι από την Ελλάδα.",
     "ru_example": "Я из Греции.",
-    "en_example": "I am from Greece."
+    "en_example": "am from Greece."
   },
   {
     "ru": "иметь",
-    "en": "to have",
+    "en": "have",
     "el": "έχω",
     "transcription": "э́хо",
     "el_transcription_en": "écho",
@@ -21,11 +21,11 @@
     "gender": "-",
     "el_example": "Έχω ένα αυτοκίνητο.",
     "ru_example": "У меня есть машина.",
-    "en_example": "I have a car."
+    "en_example": "have a car."
   },
   {
     "ru": "идти",
-    "en": "to go",
+    "en": "go",
     "el": "πηγαίνω",
     "transcription": "пигэ́но",
     "el_transcription_en": "pigéno",
@@ -33,11 +33,11 @@
     "gender": "-",
     "el_example": "Πηγαίνω στο σπίτι.",
     "ru_example": "Я иду домой.",
-    "en_example": "I am going home."
+    "en_example": "am going home."
   },
   {
     "ru": "приходить",
-    "en": "to come",
+    "en": "come",
     "el": "έρχομαι",
     "transcription": "э́рхомэ",
     "el_transcription_en": "érchomai",
@@ -45,11 +45,11 @@
     "gender": "-",
     "el_example": "Έρχομαι από το σχολείο.",
     "ru_example": "Я иду из школы.",
-    "en_example": "I am coming from school."
+    "en_example": "am coming from school."
   },
   {
     "ru": "ехать",
-    "en": "to drive",
+    "en": "drive",
     "el": "οδηγώ",
     "transcription": "одигó",
     "el_transcription_en": "odigó",
@@ -57,11 +57,11 @@
     "gender": "-",
     "el_example": "Οδηγώ αργά.",
     "ru_example": "Я еду медленно.",
-    "en_example": "I am driving slowly."
+    "en_example": "am driving slowly."
   },
   {
     "ru": "есть (принимать пищу)",
-    "en": "to eat",
+    "en": "eat",
     "el": "τρώω",
     "transcription": "тро́о",
     "el_transcription_en": "tróo",
@@ -69,11 +69,11 @@
     "gender": "-",
     "el_example": "Τρώω ένα μήλο.",
     "ru_example": "Я ем яблоко.",
-    "en_example": "I am eating an apple."
+    "en_example": "am eating an apple."
   },
   {
     "ru": "пить",
-    "en": "to drink",
+    "en": "drink",
     "el": "πίνω",
     "transcription": "пи́но",
     "el_transcription_en": "píno",
@@ -81,11 +81,11 @@
     "gender": "-",
     "el_example": "Πίνω νερό.",
     "ru_example": "Я пью воду.",
-    "en_example": "I am drinking water."
+    "en_example": "am drinking water."
   },
   {
     "ru": "спать",
-    "en": "to sleep",
+    "en": "sleep",
     "el": "κοιμάμαι",
     "transcription": "кимáмэ",
     "el_transcription_en": "kimámai",
@@ -93,11 +93,11 @@
     "gender": "-",
     "el_example": "Κοιμάμαι τώρα.",
     "ru_example": "Я сейчас сплю.",
-    "en_example": "I am sleeping now."
+    "en_example": "am sleeping now."
   },
   {
     "ru": "читать",
-    "en": "to read",
+    "en": "read",
     "el": "διαβάζω",
     "transcription": "дьявáзо",
     "el_transcription_en": "diavázo",
@@ -105,11 +105,11 @@
     "gender": "-",
     "el_example": "Διαβάζω ένα βιβλίο.",
     "ru_example": "Я читаю книгу.",
-    "en_example": "I am reading a book."
+    "en_example": "am reading a book."
   },
   {
     "ru": "писать",
-    "en": "to write",
+    "en": "write",
     "el": "γράφω",
     "transcription": "гра́фо",
     "el_transcription_en": "gráfo",
@@ -117,11 +117,11 @@
     "gender": "-",
     "el_example": "Γράφω ένα γράμμα.",
     "ru_example": "Я пишу письмо.",
-    "en_example": "I am writing a letter."
+    "en_example": "am writing a letter."
   },
   {
     "ru": "говорить",
-    "en": "to speak",
+    "en": "speak",
     "el": "μιλάω",
     "transcription": "мила́о",
     "el_transcription_en": "miláo",
@@ -129,11 +129,11 @@
     "gender": "-",
     "el_example": "Μιλάω ελληνικά.",
     "ru_example": "Я говорю по-гречески.",
-    "en_example": "I speak Greek."
+    "en_example": "speak Greek."
   },
   {
     "ru": "слышать",
-    "en": "to hear",
+    "en": "hear",
     "el": "ακούω",
     "transcription": "аку́о",
     "el_transcription_en": "akúo",
@@ -141,11 +141,11 @@
     "gender": "-",
     "el_example": "Ακούω μουσική.",
     "ru_example": "Я слышу музыку.",
-    "en_example": "I hear music."
+    "en_example": "hear music."
   },
   {
     "ru": "видеть",
-    "en": "to see",
+    "en": "see",
     "el": "βλέπω",
     "transcription": "вле́по",
     "el_transcription_en": "vlépo",
@@ -153,11 +153,11 @@
     "gender": "-",
     "el_example": "Βλέπω μια ταινία.",
     "ru_example": "Я смотрю фильм.",
-    "en_example": "I am watching a movie."
+    "en_example": "am watching a movie."
   },
   {
     "ru": "давать",
-    "en": "to give",
+    "en": "give",
     "el": "δίνω",
     "transcription": "ди́но",
     "el_transcription_en": "díno",
@@ -165,11 +165,11 @@
     "gender": "-",
     "el_example": "Δίνω ένα δώρο.",
     "ru_example": "Я дарю подарок.",
-    "en_example": "I am giving a gift."
+    "en_example": "am giving a gift."
   },
   {
     "ru": "брать",
-    "en": "to take",
+    "en": "take",
     "el": "παίρνω",
     "transcription": "пе́рно",
     "el_transcription_en": "pérno",
@@ -177,11 +177,11 @@
     "gender": "-",
     "el_example": "Παίρνω ένα ταξί.",
     "ru_example": "Я беру такси.",
-    "en_example": "I am taking a taxi."
+    "en_example": "am taking a taxi."
   },
   {
     "ru": "жить",
-    "en": "to live",
+    "en": "live",
     "el": "ζω",
     "transcription": "зо",
     "el_transcription_en": "zo",
@@ -189,11 +189,11 @@
     "gender": "-",
     "el_example": "Ζω στην Ελλάδα.",
     "ru_example": "Я живу в Греции.",
-    "en_example": "I live in Greece."
+    "en_example": "live in Greece."
   },
   {
     "ru": "работать",
-    "en": "to work",
+    "en": "work",
     "el": "δουλεύω",
     "transcription": "дулéво",
     "el_transcription_en": "douiévo",
@@ -201,6 +201,6 @@
     "gender": "-",
     "el_example": "Δουλεύω σε ένα γραφείο.",
     "ru_example": "Я работаю в офисе.",
-    "en_example": "I work in an office."
+    "en_example": "work in an office."
   }
 ]

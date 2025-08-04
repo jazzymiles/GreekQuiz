@@ -390,19 +390,19 @@
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Απάντηση: "
+            "value" : " "
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Answer:"
+            "value" : " "
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ответ:"
+            "value" : " "
           }
         }
       }

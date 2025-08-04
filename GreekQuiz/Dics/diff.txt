@@ -7,7 +7,7 @@
     "el_transcription_en": "mésa",
     "category": "расположение",
     "gender": "-",
-    "el_example": "Το κλειδί είναι μέσα στο συρτάρι.",
+    "el_example": "κλειδί είναι μέσα στο συρτάρι.",
     "ru_example": "Ключ внутри ящика.",
     "en_example": "The key is inside the drawer."
   },
@@ -19,7 +19,7 @@
     "el_transcription_en": "brostá",
     "category": "расположение",
     "gender": "-",
-    "el_example": "Ο σκύλος είναι μπροστά στην πόρτα.",
+    "el_example": "σκύλος είναι μπροστά στην πόρτα.",
     "ru_example": "Собака впереди двери.",
     "en_example": "The dog is in front of the door."
   },
@@ -31,7 +31,7 @@
     "el_transcription_en": "páno",
     "category": "расположение",
     "gender": "-",
-    "el_example": "Το βιβλίο είναι πάνω στο τραπέζι.",
+    "el_example": "βιβλίο είναι πάνω στο τραπέζι.",
     "ru_example": "Книга сверху на столе.",
     "en_example": "The book is on top of the table."
   },
@@ -67,43 +67,43 @@
     "el_transcription_en": "káto",
     "category": "расположение",
     "gender": "-",
-    "el_example": "Η γάτα είναι κάτω από το τραπέζι.",
+    "el_example": "γάτα είναι κάτω από το τραπέζι.",
     "ru_example": "Кошка снизу под столом.",
     "en_example": "The cat is below the table."
   },
   {
     "ru": "город",
     "en": "city, town",
-    "el": "η πόλη",
+    "el": "πόλη",
     "transcription": "пóли",
     "el_transcription_en": "póli",
     "category": "места",
     "gender": "женский",
-    "el_example": "Η πόλη είναι μεγάλη.",
+    "el_example": "πόλη είναι μεγάλη.",
     "ru_example": "Город большой.",
     "en_example": "The city is big."
   },
   {
     "ru": "аэропорт",
     "en": "airport",
-    "el": "το αεροδρόμιο",
+    "el": "αεροδρόμιο",
     "transcription": "аэродрóмио",
     "el_transcription_en": "aerodrómio",
     "category": "места",
     "gender": "средний",
     "el_example": "Πηγαίνω στο αεροδρόμιο.",
     "ru_example": "Я иду в аэропорт.",
-    "en_example": "I am going to the airport."
+    "en_example": "am going to the airport."
   },
   {
     "ru": "кофе",
     "en": "coffee",
-    "el": "ο καφές",
+    "el": "καφές",
     "transcription": "кафэ́с",
     "el_transcription_en": "kafés",
     "category": "напитки",
     "gender": "мужской",
-    "el_example": "Ο καφές είναι δυνατός.",
+    "el_example": "καφές είναι δυνατός.",
     "ru_example": "Кофе крепкий.",
     "en_example": "The coffee is strong."
   },
@@ -134,24 +134,24 @@
   {
     "ru": "солнце",
     "en": "sun",
-    "el": "ο ήλιος",
+    "el": "ήλιος",
     "transcription": "úлиос",
     "el_transcription_en": "ílios",
     "category": "природа",
     "gender": "мужской",
-    "el_example": "Ο ήλιος λάμπει.",
+    "el_example": "ήλιος λάμπει.",
     "ru_example": "Солнце светит.",
     "en_example": "The sun is shining."
   },
   {
     "ru": "дождь",
     "en": "rain",
-    "el": "η βροχή",
+    "el": "βροχή",
     "transcription": "врохú",
     "el_transcription_en": "vrochí",
     "category": "природа",
     "gender": "женский",
-    "el_example": "Η βροχή πέφτει δυνατά.",
+    "el_example": "βροχή πέφτει δυνατά.",
     "ru_example": "Дождь идет сильно.",
     "en_example": "The rain is falling heavily."
   },
@@ -163,26 +163,26 @@
     "el_transcription_en": "yatrós",
     "category": "профессии",
     "gender": "мужской/женский",
-    "el_example": "Ο γιατρός είναι εδώ.",
+    "el_example": "γιατρός είναι εδώ.",
     "ru_example": "Врач здесь.",
     "en_example": "The doctor is here."
   },
   {
     "ru": "учитель",
     "en": "teacher",
-    "el": "ο δάσκαλος",
+    "el": "δάσκαλος",
     "transcription": "дáскалос",
     "el_transcription_en": "dáskalos",
     "category": "профессии",
     "gender": "мужской",
-    "el_example": "Ο δάσκαλος διδάσκει.",
+    "el_example": "δάσκαλος διδάσκει.",
     "ru_example": "Учитель преподает.",
     "en_example": "The teacher is teaching."
   },
   {
     "ru": "друг",
     "en": "friend",
-    "el": "ο φίλος",
+    "el": "φίλος",
     "transcription": "фúлос",
     "el_transcription_en": "fílos",
     "category": "люди",
@@ -194,19 +194,19 @@
   {
     "ru": "семья",
     "en": "family",
-    "el": "η οικογένεια",
+    "el": "οικογένεια",
     "transcription": "икогéния",
     "el_transcription_en": "oikogéneia",
     "category": "люди",
     "gender": "женский",
-    "el_example": "Η οικογένειά μου είναι μεγάλη.",
+    "el_example": "οικογένειά μου είναι μεγάλη.",
     "ru_example": "Моя семья большая.",
     "en_example": "My family is big."
   },
   {
     "ru": "время",
     "en": "time, hour",
-    "el": "η ώρα",
+    "el": "ώρα",
     "transcription": "óра",
     "el_transcription_en": "óra",
     "category": "время",
@@ -249,7 +249,7 @@
     "gender": "-",
     "el_example": "Είμαι από την Ελλάδα.",
     "ru_example": "Я из Греции.",
-    "en_example": "I am from Greece."
+    "en_example": "am from Greece."
   },
   {
     "ru": "в, на, к",
@@ -297,7 +297,7 @@
     "gender": "-",
     "el_example": "Δεν μπορώ χωρίς εσένα.",
     "ru_example": "Я не могу без тебя.",
-    "en_example": "I can't without you."
+    "en_example": "can't without you."
   },
   {
     "ru": "над",
@@ -307,7 +307,7 @@
     "el_transcription_en": "páno apó",
     "category": "предлог",
     "gender": "-",
-    "el_example": "Το αεροπλάνο πετάει πάνω από τα σύννεφα.",
+    "el_example": "αεροπλάνο πετάει πάνω από τα σύννεφα.",
     "ru_example": "Самолет летит над облаками.",
     "en_example": "The plane is flying above the clouds."
   },
@@ -319,7 +319,7 @@
     "el_transcription_en": "káto apó",
     "category": "предлог",
     "gender": "-",
-    "el_example": "Το βιβλίο είναι κάτω από το τραπέζι.",
+    "el_example": "βιβλίο είναι κάτω από το τραπέζι.",
     "ru_example": "Книга под столом.",
     "en_example": "The book is under the table."
   },
@@ -331,7 +331,7 @@
     "el_transcription_en": "brostá apó",
     "category": "предлог",
     "gender": "-",
-    "el_example": "Το αυτοκίνητο είναι μπροστά από το σπίτι.",
+    "el_example": "αυτοκίνητο είναι μπροστά από το σπίτι.",
     "ru_example": "Машина перед домом.",
     "en_example": "The car is in front of the house."
   },
@@ -355,7 +355,7 @@
     "el_transcription_en": "akrivós",
     "gender": "мужской",
     "category": "качества",
-    "el_example": "Το ρολόι είναι ακριβό.",
+    "el_example": "ρολόι είναι ακριβό.",
     "ru_example": "Часы дорогие.",
     "en_example": "The watch is expensive."
   },
@@ -379,7 +379,7 @@
     "el_transcription_en": "zontanós",
     "gender": "мужской",
     "category": "качества",
-    "el_example": "Το φυτό είναι ζωντανό.",
+    "el_example": "φυτό είναι ζωντανό.",
     "ru_example": "Растение живое.",
     "en_example": "The plant is alive."
   },
@@ -391,7 +391,7 @@
     "el_transcription_en": "xýlinos",
     "gender": "мужской",
     "category": "материал",
-    "el_example": "Το τραπέζι είναι ξύλινο.",
+    "el_example": "τραπέζι είναι ξύλινο.",
     "ru_example": "Стол деревянный.",
     "en_example": "The table is wooden."
   },
@@ -463,7 +463,7 @@
     "el_transcription_en": "ólos",
     "gender": "мужской",
     "category": "качества",
-    "el_example": "Ο όλος κόσμος το ξέρει.",
+    "el_example": "όλος κόσμος το ξέρει.",
     "ru_example": "Весь мир это знает.",
     "en_example": "The whole world knows it."
   },
@@ -475,7 +475,7 @@
     "el_transcription_en": "olóklira",
     "gender": "наречие",
     "category": "наречия",
-    "el_example": "Το έφαγε ολόκληρο.",
+    "el_example": "έφαγε ολόκληρο.",
     "ru_example": "Он съел это целиком.",
     "en_example": "He ate it entirely."
   },
@@ -511,7 +511,7 @@
     "el_transcription_en": "zestós",
     "gender": "мужской",
     "category": "температура",
-    "el_example": "Ο καφές είναι ζεστός.",
+    "el_example": "καφές είναι ζεστός.",
     "ru_example": "Кофе горячий.",
     "en_example": "The coffee is hot."
   },
@@ -559,7 +559,7 @@
     "el_transcription_en": "kleistós",
     "gender": "мужской",
     "category": "качества",
-    "el_example": "Η πόρτα είναι κλειστή.",
+    "el_example": "πόρτα είναι κλειστή.",
     "ru_example": "Дверь закрыта.",
     "en_example": "The door is closed."
   },
@@ -595,7 +595,7 @@
     "el_transcription_en": "polýplokos",
     "gender": "мужской",
     "category": "качества",
-    "el_example": "Το πρόβλημα είναι πολύπλοκο.",
+    "el_example": "πρόβλημα είναι πολύπλοκο.",
     "ru_example": "Проблема сложная.",
     "en_example": "The problem is complex."
   },
@@ -655,7 +655,7 @@
     "el_transcription_en": "éf kola",
     "gender": "наречие",
     "category": "наречия",
-    "el_example": "Το έκανε εύκολα.",
+    "el_example": "έκανε εύκολα.",
     "ru_example": "Он сделал это легко.",
     "en_example": "He did it easily."
   },
@@ -693,7 +693,7 @@
     "category": "качества",
     "el_example": "Θέλω έναν άλλο καφέ.",
     "ru_example": "Я хочу другой кофе.",
-    "en_example": "I want another coffee."
+    "en_example": "want another coffee."
   },
   {
     "ru": "разный",
@@ -727,7 +727,7 @@
     "el_transcription_en": "epípedos",
     "gender": "мужской",
     "category": "качества",
-    "el_example": "Η επιφάνεια είναι επίπεδη.",
+    "el_example": "επιφάνεια είναι επίπεδη.",
     "ru_example": "Поверхность плоская.",
     "en_example": "The surface is flat."
   },
@@ -753,7 +753,7 @@
     "category": "состояния",
     "el_example": "Είμαι κουρασμένος.",
     "ru_example": "Я устал.",
-    "en_example": "I am tired."
+    "en_example": "am tired."
   },
   {
     "ru": "особенный",
@@ -775,7 +775,7 @@
     "el_transcription_en": "epómenos",
     "gender": "мужской",
     "category": "время",
-    "el_example": "Η επόμενη μέρα είναι Κυριακή.",
+    "el_example": "επόμενη μέρα είναι Κυριακή.",
     "ru_example": "Следующий день — воскресенье.",
     "en_example": "The next day is Sunday."
   },
@@ -823,7 +823,7 @@
     "el_transcription_en": "kýrios",
     "gender": "мужской",
     "category": "качества",
-    "el_example": "Το κυρίως πιάτο είναι νόστιμο.",
+    "el_example": "κυρίως πιάτο είναι νόστιμο.",
     "ru_example": "Главное блюдо вкусное.",
     "en_example": "The main course is delicious."
   },
@@ -835,7 +835,7 @@
     "el_transcription_en": "katharós",
     "gender": "мужской",
     "category": "качества",
-    "el_example": "Το δωμάτιο είναι καθαρό.",
+    "el_example": "δωμάτιο είναι καθαρό.",
     "ru_example": "Комната чистая.",
     "en_example": "The room is clean."
   },

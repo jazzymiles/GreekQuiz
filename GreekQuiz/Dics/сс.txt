@@ -63,7 +63,7 @@
     "category": "союзы и наречия",
     "el_example": "Μου αρέσει το φαγητό, όμως είναι πολύ αλμυρό.",
     "ru_example": "Мне нравится еда, однако она очень соленая.",
-    "en_example": "I like the food, however it's too salty."
+    "en_example": "like the food, however it's too salty."
   },
   {
     "ru": "но",
@@ -74,7 +74,7 @@
     "category": "союзы и наречия",
     "el_example": "Θέλω να πάω, αλλά δεν μπορώ.",
     "ru_example": "Я хочу пойти, но не могу.",
-    "en_example": "I want to go, but I can't."
+    "en_example": "want to go, but I can't."
   },
   {
     "ru": "потому что",
@@ -85,7 +85,7 @@
     "category": "союзы и наречия",
     "el_example": "Δεν πήγα, επειδή ήμουν άρρωστος.",
     "ru_example": "Я не пошел, потому что был болен.",
-    "en_example": "I didn't go, because I was sick."
+    "en_example": "didn't go, because I was sick."
   },
   {
     "ru": "когда",
@@ -96,7 +96,7 @@
     "category": "союзы и наречия",
     "el_example": "Θα σε πάρω τηλέφωνο, όταν φτάσω.",
     "ru_example": "Я позвоню тебе, когда приеду.",
-    "en_example": "I will call you when I arrive."
+    "en_example": "will call you when I arrive."
   },
   {
     "ru": "что (союз)",
@@ -132,7 +132,7 @@
     "en_example": "He said that he would come."
   },
   {
-    "ru": "то есть, иначе говоря",
+    "ru": "есть, иначе говоря",
     "en": "namely, in other words",
     "el": "δηλαδή",
     "transcription": "дилази́",
@@ -206,7 +206,7 @@
     "category": "наречия",
     "el_example": "Έχω μόνο λίγα χρήματα.",
     "ru_example": "У меня только немного денег.",
-    "en_example": "I only have a little money."
+    "en_example": "only have a little money."
   },
   {
     "ru": "тот же, та же, то же",
@@ -228,7 +228,7 @@
     "category": "союзы и наречия",
     "el_example": "Πήγα κι εγώ.",
     "ru_example": "Я тоже пошел.",
-    "en_example": "I went too."
+    "en_example": "went too."
   },
   {
     "ru": "а вдруг, не",
@@ -250,7 +250,7 @@
     "category": "союзы и наречия",
     "el_example": "Θέλω ψωμί και τυρί.",
     "ru_example": "Я хочу хлеб и сыр.",
-    "en_example": "I want bread and cheese."
+    "en_example": "want bread and cheese."
   },
   {
     "ru": "да",
@@ -360,7 +360,7 @@
     "category": "фразы",
     "el_example": "Δεν αισθάνομαι άσχημα.",
     "ru_example": "Я не чувствую себя плохо.",
-    "en_example": "I don't feel bad."
+    "en_example": "don't feel bad."
   },
   {
     "ru": "пожалуйста (при просьбе)",
@@ -408,25 +408,25 @@
   },
   {
     "ru": "мне нужно",
-    "en": "I need",
+    "en": "need",
     "el": "χρειάζομαι",
     "transcription": "хрья́зомэ",
     "el_transcription_en": "chreíazomai",
     "category": "фразы",
     "el_example": "Χρειάζομαι ένα ποτήρι νερό.",
     "ru_example": "Мне нужен стакан воды.",
-    "en_example": "I need a glass of water."
+    "en_example": "need a glass of water."
   },
   {
     "ru": "я хочу",
-    "en": "I want",
+    "en": "want",
     "el": "θέλω",
     "transcription": "тэ́ло",
     "el_transcription_en": "thélo",
     "category": "фразы",
     "el_example": "Θέλω ένα καφέ.",
     "ru_example": "Я хочу кофе.",
-    "en_example": "I want a coffee."
+    "en_example": "want a coffee."
   },
   {
     "ru": "где?",
@@ -523,7 +523,7 @@
     "transcription": "эки́",
     "el_transcription_en": "ekí",
     "category": "наречия места",
-    "el_example": "Το βιβλίο σου είναι εκεί.",
+    "el_example": "βιβλίο σου είναι εκεί.",
     "ru_example": "Твоя книга там.",
     "en_example": "Your book is there."
   },
@@ -569,7 +569,7 @@
     "category": "наречия времени",
     "el_example": "Δεν έχω πάει ποτέ εκεί.",
     "ru_example": "Я никогда там не был.",
-    "en_example": "I have never been there."
+    "en_example": "have never been there."
   },
   {
     "ru": "много",
@@ -591,6 +591,6 @@
     "category": "наречия количества",
     "el_example": "Έχω λίγο χρόνο.",
     "ru_example": "У меня мало времени.",
-    "en_example": "I have little time."
+    "en_example": "have little time."
   }
 ]

@@ -7,7 +7,7 @@
     "gender": "ж",
     "en": "mother",
     "el_transcription_en": "mitera",
-    "el_example": "Η μητέρα μου είναι δασκάλα.",
+    "el_example": "μητέρα μου είναι δασκάλα.",
     "ru_example": "Моя мама - учительница.",
     "en_example": "My mother is a teacher."
   },
@@ -31,7 +31,7 @@
     "gender": "м",
     "en": "father",
     "el_transcription_en": "pateras",
-    "el_example": "Ο πατέρας μου είναι γιατρός.",
+    "el_example": "πατέρας μου είναι γιατρός.",
     "ru_example": "Мой папа - врач.",
     "en_example": "My father is a doctor."
   },
@@ -55,7 +55,7 @@
     "gender": "м",
     "en": "brother",
     "el_transcription_en": "adelfos",
-    "el_example": "Ο αδελφός μου είναι ψηλός.",
+    "el_example": "αδελφός μου είναι ψηλός.",
     "ru_example": "Мой брат высокий.",
     "en_example": "My brother is tall."
   },
@@ -67,7 +67,7 @@
     "gender": "ж",
     "en": "sister",
     "el_transcription_en": "adelfi",
-    "el_example": "Η αδελφή μου είναι φοιτήτρια.",
+    "el_example": "αδελφή μου είναι φοιτήτρια.",
     "ru_example": "Моя сестра - студентка.",
     "en_example": "My sister is a student."
   },
@@ -79,7 +79,7 @@
     "gender": "м",
     "en": "grandfather",
     "el_transcription_en": "pappous",
-    "el_example": "Ο παππούς μου λέει ιστορίες.",
+    "el_example": "παππούς μου λέει ιστορίες.",
     "ru_example": "Мой дедушка рассказывает истории.",
     "en_example": "My grandfather tells stories."
   },
@@ -91,7 +91,7 @@
     "gender": "ж",
     "en": "grandmother",
     "el_transcription_en": "giagia",
-    "el_example": "Η γιαγιά μου μαγειρεύει καλά.",
+    "el_example": "γιαγιά μου μαγειρεύει καλά.",
     "ru_example": "Моя бабушка хорошо готовит.",
     "en_example": "My grandmother cooks well."
   },
@@ -103,7 +103,7 @@
     "gender": "м",
     "en": "son",
     "el_transcription_en": "gios",
-    "el_example": "Ο γιος μου είναι ακόμα παιδί.",
+    "el_example": "γιος μου είναι ακόμα παιδί.",
     "ru_example": "Мой сын еще ребенок.",
     "en_example": "My son is still a child."
   },
@@ -115,7 +115,7 @@
     "gender": "ж",
     "en": "daughter",
     "el_transcription_en": "kori",
-    "el_example": "Η κόρη μου πηγαίνει στο σχολείο.",
+    "el_example": "κόρη μου πηγαίνει στο σχολείο.",
     "ru_example": "Моя дочь ходит в школу.",
     "en_example": "My daughter goes to school."
   },
@@ -127,7 +127,7 @@
     "gender": "м",
     "en": "husband",
     "el_transcription_en": "syzygos",
-    "el_example": "Ο σύζυγός της είναι από την Κύπρο.",
+    "el_example": "σύζυγός της είναι από την Κύπρο.",
     "ru_example": "Ее муж с Кипра.",
     "en_example": "Her husband is from Cyprus."
   },
@@ -139,7 +139,7 @@
     "gender": "ж",
     "en": "wife",
     "el_transcription_en": "syzygos",
-    "el_example": "Η σύζυγός του είναι δασκάλα.",
+    "el_example": "σύζυγός του είναι δασκάλα.",
     "ru_example": "Его жена - учительница.",
     "en_example": "His wife is a teacher."
   },
@@ -151,7 +151,7 @@
     "gender": "ср",
     "en": "boy",
     "el_transcription_en": "agori",
-    "el_example": "Το αγόρι παίζει ποδόσφαιρο.",
+    "el_example": "αγόρι παίζει ποδόσφαιρο.",
     "ru_example": "Мальчик играет в футбол.",
     "en_example": "The boy is playing football."
   },
@@ -163,7 +163,7 @@
     "gender": "ср",
     "en": "girl",
     "el_transcription_en": "koritsi",
-    "el_example": "Το κορίτσι διαβάζει ένα βιβλίο.",
+    "el_example": "κορίτσι διαβάζει ένα βιβλίο.",
     "ru_example": "Девочка читает книгу.",
     "en_example": "The girl is reading a book."
   },
@@ -175,7 +175,7 @@
     "gender": "м",
     "en": "man",
     "el_transcription_en": "andras",
-    "el_example": "Ο άνδρας φοράει ένα καπέλο.",
+    "el_example": "άνδρας φοράει ένα καπέλο.",
     "ru_example": "Мужчина носит шляпу.",
     "en_example": "The man is wearing a hat."
   },
@@ -187,7 +187,7 @@
     "gender": "ж",
     "en": "woman",
     "el_transcription_en": "gynaika",
-    "el_example": "Η γυναίκα πίνει καφέ.",
+    "el_example": "γυναίκα πίνει καφέ.",
     "ru_example": "Женщина пьет кофе.",
     "en_example": "The woman is drinking coffee."
   }

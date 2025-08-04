@@ -333,7 +333,7 @@ struct ContentView: View {
                 } else {
                     VStack(spacing: 20) {
                         Text("select_at_least_one_dictionary")
-                            .font(.headline)
+                            .font(.body)
                             .foregroundColor(.gray)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
@@ -341,14 +341,14 @@ struct ContentView: View {
                         Image("dic")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 40, height: 40)
+                            .frame(width: 30, height: 30)
                             .foregroundColor(.gray)
                     }
                 }
                 
                 Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxWidth: 300, maxHeight: .infinity)
         }
     }
 
@@ -433,7 +433,7 @@ struct ContentView: View {
         .padding(.vertical, 10)
         .padding(.horizontal)
         .opacity(isVisible && hasContent ? 1.0 : 0.0)
-        .animation(.easeInOut, value: isVisible && hasContent)
+        .animation(.easeInOut(duration: 0.01), value: isVisible && hasContent)
     }
     
     private func keyboardQuizView(for word: Word) -> some View {
@@ -879,6 +879,7 @@ struct FeedbackText: View {
             .padding(.vertical, 5).padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .center)
             .frame(height: 15)
+            .font(.system(size: 24))
     }
 }
 
@@ -914,17 +915,17 @@ struct WordDisplay: View {
                 }
             }
             .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.bottom, 8)
+            .padding(.bottom, 2)
 
             if studiedLanguage == "el" {
                 Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
-                    .font(.system(size: 20)).foregroundColor(.gray)
+                    .font(.system(size: 18)).foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .center)
             } else {
                  Text(" ").font(.system(size: 16))
             }
         }
-        .padding(.bottom, 16)
+        .padding(.bottom, 10)
     }
 }
 

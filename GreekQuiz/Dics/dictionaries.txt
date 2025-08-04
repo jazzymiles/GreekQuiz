@@ -77,7 +77,7 @@
     "file": "body.txt"
   },
   {
-    "name_ru": "союзы и связки",
+    "name_ru": "союзы и пр",
     "name_en": "conjunctions & connectors",
     "name_el": "Σύνδεσμοι",
     "filePath": "https://www.dropbox.com/scl/fi/hkbyhdkkklvudgmm7cx0a/.txt?rlkey=dki5jgb7w8leaojyppyhsl3ij&st=8gxs94p4&raw=1",
@@ -127,10 +127,24 @@
   },
   {
     "name_ru": "погода",
-    "name_en": "wheater",
+    "name_en": "wheather",
     "name_el": "Καιρός",
-    "filePath": "https://www.dropbox.com/scl/fi/qto7ojrfqxmyl07ajurk0/weather.txt?rlkey=m8owgptjj9tno2ce1rq6f1n3l&st=0sgwbxwv&&raw=1",
+    "filePath": "https://www.dropbox.com/scl/fi/qto7ojrfqxmyl07ajurk0/weather.txt?rlkey=m8owgptjj9tno2ce1rq6f1n3l&st=0sgwbxwv&raw=1",
     "file": "weather.txt"
+  },
+  {
+    "name_ru": "замеры",
+    "name_en": "measure",
+    "name_el": "Μετρώ",
+    "filePath": "https://www.dropbox.com/scl/fi/qczyywqlb2j35bnv5l3ms/measure.txt?rlkey=ad1u78h9n5g0lfqagy5umfhfb&st=9nfn16s6&raw=1",
+    "file": "measure.txt"
+  },
+  {
+    "name_ru": "уроки",
+    "name_en": "lessons",
+    "name_el": "Μάθημα",
+    "filePath": "https://www.dropbox.com/scl/fi/hwk9cuo2mr20d52axipai/lessons.txt?rlkey=urdgxo3utkfdke056pdby7rap&st=94zicl71&raw=1",
+    "file": "lessons.txt"
   },
   {
     "name_ru": "разное",

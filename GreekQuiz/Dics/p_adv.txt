@@ -7,7 +7,7 @@
     "el_transcription_en": "chondrós",
     "category": "прилагательное",
     "gender": "муж.",
-    "el_example": "Ο Γιάννης είναι χοντρός.",
+    "el_example": "Γιάννης είναι χοντρός.",
     "ru_example": "Яннис толстый.",
     "en_example": "Yannis is fat."
   },
@@ -31,7 +31,7 @@
     "el_transcription_en": "psilós",
     "category": "прилагательное",
     "gender": "муж.",
-    "el_example": "Ο πατέρας μου είναι ψηλός.",
+    "el_example": "πατέρας μου είναι ψηλός.",
     "ru_example": "Мой отец высокий.",
     "en_example": "My father is tall."
   },
@@ -79,7 +79,7 @@
     "el_transcription_en": "yéros",
     "category": "прилагательное",
     "gender": "муж.",
-    "el_example": "Ο παππούς μου είναι γέρος.",
+    "el_example": "παππούς μου είναι γέρος.",
     "ru_example": "Мой дедушка старый.",
     "en_example": "My grandfather is old."
   },
@@ -127,7 +127,7 @@
     "el_transcription_en": "éxypnos",
     "category": "прилагательное",
     "gender": "муж.",
-    "el_example": "Ο φίλος μου είναι πολύ έξυπνος.",
+    "el_example": "φίλος μου είναι πολύ έξυπνος.",
     "ru_example": "Мой друг очень умный.",
     "en_example": "My friend is very smart."
   },
@@ -259,7 +259,7 @@
     "el_transcription_en": "tempélis",
     "category": "прилагательное",
     "gender": "муж.",
-    "el_example": "Ο αδερφός μου είναι πολύ τεμπέλης.",
+    "el_example": "αδερφός μου είναι πολύ τεμπέλης.",
     "ru_example": "Мой брат очень ленивый.",
     "en_example": "My brother is very lazy."
   },
@@ -583,7 +583,7 @@
     "el_transcription_en": "trelós",
     "category": "отрицательные качества",
     "gender": "мужской",
-    "el_example": "Η γιαγιά μου είναι λίγο τρελή.",
+    "el_example": "γιαγιά μου είναι λίγο τρελή.",
     "ru_example": "Моя бабушка немного сумасшедшая.",
     "en_example": "My grandmother is a bit crazy."
   },
@@ -705,7 +705,7 @@
     "gender": "мужской",
     "el_example": "Είμαι ευτυχισμένος που σε βλέπω.",
     "ru_example": "Я счастлив тебя видеть.",
-    "en_example": "I am happy to see you."
+    "en_example": "am happy to see you."
   },
   {
     "ru": "богатый",
@@ -715,7 +715,7 @@
     "el_transcription_en": "ploúsios",
     "category": "положительные качества",
     "gender": "мужской",
-    "el_example": "Ο πλούσιος άντρας ζει σε μια μεγάλη έπαυλη.",
+    "el_example": "πλούσιος άντρας ζει σε μια μεγάλη έπαυλη.",
     "ru_example": "Богатый мужчина живет в большом особняке.",
     "en_example": "The rich man lives in a large mansion."
   },
@@ -727,7 +727,7 @@
     "el_transcription_en": "ftochós",
     "category": "отрицательные качества",
     "gender": "мужской",
-    "el_example": "Οι φτωχοί άνθρωποι χρειάζονται βοήθεια.",
+    "el_example": "φτωχοί άνθρωποι χρειάζονται βοήθεια.",
     "ru_example": "Бедные люди нуждаются в помощи.",
     "en_example": "Poor people need help."
   }

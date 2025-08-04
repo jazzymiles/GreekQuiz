@@ -9,7 +9,7 @@
     "el_transcription_en": "egó",
     "el_example": "Εγώ είμαι εδώ.",
     "ru_example": "Я здесь.",
-    "en_example": "I am here."
+    "en_example": "am here."
   },
   {
     "ru": "ты",
@@ -127,7 +127,7 @@
     "gender": "-",
     "en": "my",
     "el_transcription_en": "mou",
-    "el_example": "Το σπίτι μου είναι μεγάλο.",
+    "el_example": "σπίτι μου είναι μεγάλο.",
     "ru_example": "Мой дом большой.",
     "en_example": "My house is big."
   },
@@ -139,7 +139,7 @@
     "gender": "-",
     "en": "your (singular)",
     "el_transcription_en": "sou",
-    "el_example": "Το αυτοκίνητό σου είναι καινούργιο.",
+    "el_example": "αυτοκίνητό σου είναι καινούργιο.",
     "ru_example": "Твоя машина новая.",
     "en_example": "Your car is new."
   },
@@ -151,7 +151,7 @@
     "gender": "м",
     "en": "his",
     "el_transcription_en": "tou",
-    "el_example": "Ο σκύλος του είναι άσπρος.",
+    "el_example": "σκύλος του είναι άσπρος.",
     "ru_example": "Его собака белая.",
     "en_example": "His dog is white."
   },
@@ -163,7 +163,7 @@
     "gender": "ж",
     "en": "her",
     "el_transcription_en": "tis",
-    "el_example": "Η γάτα της είναι μαύρη.",
+    "el_example": "γάτα της είναι μαύρη.",
     "ru_example": "Её кошка черная.",
     "en_example": "Her cat is black."
   },
@@ -175,7 +175,7 @@
     "gender": "ср",
     "en": "its",
     "el_transcription_en": "tou",
-    "el_example": "Το όνομά του είναι Μίκι.",
+    "el_example": "όνομά του είναι Μίκι.",
     "ru_example": "Его зовут Микки.",
     "en_example": "Its name is Mickey."
   },
@@ -187,7 +187,7 @@
     "gender": "-",
     "en": "our",
     "el_transcription_en": "mas",
-    "el_example": "Το σπίτι μας είναι όμορφο.",
+    "el_example": "σπίτι μας είναι όμορφο.",
     "ru_example": "Наш дом красивый.",
     "en_example": "Our house is beautiful."
   },
@@ -199,7 +199,7 @@
     "gender": "-",
     "en": "your (plural/formal)",
     "el_transcription_en": "sas",
-    "el_example": "Το γραφείο σας είναι μεγάλο.",
+    "el_example": "γραφείο σας είναι μεγάλο.",
     "ru_example": "Ваш офис большой.",
     "en_example": "Your office is big."
   },
@@ -211,7 +211,7 @@
     "gender": "м",
     "en": "their (masc.)",
     "el_transcription_en": "tous",
-    "el_example": "Οι γονείς τους είναι καλοί.",
+    "el_example": "γονείς τους είναι καλοί.",
     "ru_example": "Их родители хорошие.",
     "en_example": "Their parents are good."
   },
@@ -223,7 +223,7 @@
     "gender": "ж",
     "en": "their (fem.)",
     "el_transcription_en": "tous",
-    "el_example": "Οι φίλες τους είναι έξυπνες.",
+    "el_example": "φίλες τους είναι έξυπνες.",
     "ru_example": "Их подруги умные.",
     "en_example": "Their friends are smart."
   },
@@ -235,7 +235,7 @@
     "gender": "ср",
     "en": "their (neut.)",
     "el_transcription_en": "tous",
-    "el_example": "Τα βιβλία τους είναι ενδιαφέροντα.",
+    "el_example": "βιβλία τους είναι ενδιαφέροντα.",
     "ru_example": "Их книги интересные.",
     "en_example": "Their books are interesting."
   }
