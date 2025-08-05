@@ -23,7 +23,6 @@ struct FlowLayout<Data: Hashable, Content: View>: View {
         var currentY: CGFloat = 0
         var rowHeight: CGFloat = 0
 
-        // ⬇️ Предварительно вычисляем позиции
         for item in data {
             let size = CGSize(width: 1000, height: CGFloat.infinity) // placeholder
             let proposedSize = CGSize(width: geometry.size.width, height: .infinity)

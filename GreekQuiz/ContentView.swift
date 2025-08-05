@@ -3,106 +3,7 @@ import AVFoundation
 import WebKit
 import MediaPlayer
 
-struct CardView: View {
-    let word: Word
-    let studiedLanguage: String
-    let answerLanguage: String
-    let showTranscription: Bool
-    let speakWord: (String, String) -> Void
-    @Binding var showTranslation: Bool
-
-    private func getWord(for langCode: String) -> String {
-        switch langCode {
-        case "ru": return word.ru
-        case "el": return word.el
-        case "en": return word.en ?? "N/A"
-        default: return ""
-        }
-    }
-    
-    private func getExample(for langCode: String) -> String? {
-        switch langCode {
-        case "ru": return word.ru_example
-        case "el": return word.el_example
-        case "en": return word.en_example
-        default: return nil
-        }
-    }
-
-    var body: some View {
-        let questionWord = getWord(for: studiedLanguage)
-        let answerWord = getWord(for: answerLanguage)
-        let studiedExample = getExample(for: studiedLanguage)
-        let answerExample = getExample(for: answerLanguage)
-        
-        VStack {
-            Spacer()
-
-            Text(questionWord)
-                .font(.system(size: 40, weight: .bold))
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-
-            if studiedLanguage == "el" {
-                Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
-                    .font(.system(size: 28))
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-            }
-
-            Button(action: {
-                speakWord(questionWord, studiedLanguage)
-            }) {
-                Image(systemName: "speaker.wave.3.fill")
-                    .font(.title)
-                    .foregroundColor(.blue)
-            }
-            .padding(.top, 10)
-
-            Spacer()
-
-            if showTranslation {
-                VStack(spacing: 15) {
-                    Text(answerWord)
-                        .font(.system(size: 32))
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
-                    
-                    if studiedExample != nil || answerExample != nil {
-                        VStack(alignment: .center, spacing: 5) {
-                            if let example = studiedExample {
-                                Text(example)
-                                    .font(.footnote)
-                                    .italic()
-                            }
-                            if let example = answerExample {
-                                Text(example)
-                                    .font(.footnote)
-                                    .italic()
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal)
-                    }
-                }
-                .transition(.opacity)
-            }
-
-            Spacer()
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white.opacity(0.1))
-        .cornerRadius(20)
-        .padding()
-        .onTapGesture {
-            withAnimation {
-                showTranslation.toggle()
-            }
-        }
-    }
-}
+// CardView остается без изменений
 
 struct ContentView: View {
     
@@ -122,7 +23,6 @@ struct ContentView: View {
     @State private var showingRules = false
     @State private var showingSettings = false
     
-    // ✨ НОВОЕ СВОЙСТВО: Для отображения окна помощи
     @State private var showingHelp = false
 
     @State private var talkShowTimer: Timer?
@@ -154,7 +54,6 @@ struct ContentView: View {
         }
     }
     
-    // ✨ НОВОЕ СВОЙСТВО: Определяет имя файла помощи на основе языка интерфейса
     private var helpHtmlFileName: String {
         return "help-\(interfaceLanguage)"
     }
@@ -206,6 +105,8 @@ struct ContentView: View {
                 .onChange(of: quizMode, perform: handleModeChange)
                 
                 quizContainer
+                
+                Spacer()
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
 
@@ -269,10 +170,10 @@ struct ContentView: View {
     // MARK: - Subviews
     private var headerButtons: some View {
         HStack(spacing: 8) {
-
             
             HeaderButton(imageName: "questionmark.circle", action: { showingHelp = true })
-                .sheet(isPresented: $showingHelp) { RulesSheetView(htmlFileName: helpHtmlFileName) }
+                // ✨ ИЗМЕНЕНИЕ: Вызываем новое View для помощи
+                .sheet(isPresented: $showingHelp) { HelpSheetView(htmlFileName: helpHtmlFileName) }
             
             Spacer()
             
@@ -324,13 +225,57 @@ struct ContentView: View {
 
             switch quizMode {
             case .keyboard:
-                keyboardQuizView(for: currentWord)
+                KeyboardQuizView(
+                    word: currentWord,
+                    answerWord: currentAnswerWord(),
+                    studiedLanguage: studiedLanguage,
+                    showTranscription: showTranscription,
+                    speakWord: speakWord,
+                    userInput: $userInput,
+                    showAnswer: $showAnswer,
+                    isTextFieldFocused: $isTextFieldFocused,
+                    onCheckAnswer: checkAnswer,
+                    onNextWord: nextWord
+                )
             case .quiz:
-                multipleChoiceQuizView(for: currentWord)
+                MultipleChoiceQuizView(
+                    word: currentWord,
+                    options: cardOptions,
+                    studiedLanguage: studiedLanguage,
+                    answerLanguage: answerLanguage,
+                    showTranscription: showTranscription,
+                    speakWord: speakWord,
+                    selectedAnswer: $selectedAnswer,
+                    showAnswer: $showAnswer,
+                    onSelectAnswer: { selectedOption in
+                        self.selectedAnswer = selectedOption
+                        if self.playAnswerSound {
+                            self.speakWord(selectedOption, self.answerLanguage)
+                        }
+                    },
+                    onCheckAnswer: checkCardAnswer,
+                    onNextWord: nextWord
+                )
             case .cards:
-                cardModeView(for: currentWord)
+                CardModeView(
+                    word: currentWord,
+                    studiedLanguage: studiedLanguage,
+                    answerLanguage: answerLanguage,
+                    showTranscription: showTranscription,
+                    speakWord: speakWord,
+                    showCardTranslation: $showCardTranslation,
+                    onNextWord: nextWord,
+                    onPreviousWord: previousWord
+                )
             case .talkShow:
-                talkShowView(for: currentWord)
+                TalkShowView(
+                    questionWord: currentQuestionWord(),
+                    answerWord: currentAnswerWord(),
+                    isPlaying: $isTalkShowPlaying,
+                    onTogglePlayPause: togglePlayPause,
+                    onSkipToPrevious: skipToPreviousTalkShowWord,
+                    onSkipToNext: skipToNextTalkShowWord
+                )
             }
         } else {
             VStack {
@@ -414,198 +359,6 @@ struct ContentView: View {
         }
     }
 
-    // MARK: - Quiz Views
-    
-    private func exampleSentencesView(for word: Word, isVisible: Bool) -> some View {
-        func getExample(for langCode: String) -> String? {
-            switch langCode {
-            case "ru": return word.ru_example
-            case "el": return word.el_example
-            case "en": return word.en_example
-            default: return nil
-            }
-        }
-
-        let studiedExample = getExample(for: studiedLanguage)
-        let answerExample = getExample(for: answerLanguage)
-        let hasContent = studiedExample != nil || answerExample != nil
-        
-        return VStack(alignment: .center, spacing: 5) {
-            Text(studiedExample ?? " ")
-                .font(.callout)
-                .italic()
-                .multilineTextAlignment(.center)
-            
-            Text(answerExample ?? " ")
-                .font(.callout)
-                .italic()
-                .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
-        }
-        .frame(minHeight: 40)
-        .padding(.vertical, 10)
-        .padding(.horizontal)
-        .opacity(isVisible && hasContent ? 1.0 : 0.0)
-        .animation(.easeInOut(duration: 0), value: isVisible && hasContent)
-    }
-    
-    private func keyboardQuizView(for word: Word) -> some View {
-        
-        return VStack(spacing: 0) {
-            VStack(spacing: 5) {
-                WordDisplay(
-                    word: word,
-                    studiedLanguage: studiedLanguage,
-                    showTranscription: showTranscription,
-                    speakWord: speakWord
-                )
-                
-                FeedbackText(
-                    key: "correct_answer_text",
-                    word: currentAnswerWord(),
-                    isVisible: showAnswer
-                )
-                
-                exampleSentencesView(for: word, isVisible: showAnswer)
-            }
-            .padding(.top, 40)
-            
-            VStack (spacing: 5){
-                TextField("your_translation_placeholder", text: $userInput)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-
-                ActionButton(title: showAnswer ? "button_next" : "button_check") {
-                    if showAnswer { nextWord() } else { checkAnswer() }
-                }
-                .padding(.top, 20)
-            }
-            .padding(.bottom, 80)
-            
-            Spacer()
-        }
-        .padding(.horizontal)
-    }
-    
-    private func multipleChoiceQuizView(for word: Word) -> some View {
-        return VStack(spacing: 0) {
-            VStack(spacing: 15) {
-                WordDisplay(
-                    word: word,
-                    studiedLanguage: studiedLanguage,
-                    showTranscription: showTranscription,
-                    speakWord: speakWord
-                )
-                
-                FeedbackText(
-                    key: "correct_answer_text",
-                    word: currentAnswerWord(),
-                    isVisible: showAnswer
-                )
-                
-                exampleSentencesView(for: word, isVisible: showAnswer)
-            }
-            .padding(.top, 40)
-            
-            VStack {
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 10) {
-                    ForEach(cardOptions, id: \.self) { option in
-                        Button(action: {
-                            selectedAnswer = option
-                            if playAnswerSound {
-                                speakWord(option, answerLanguage)
-                            }
-                        }) {
-                            Text(option)
-                                .font(.headline)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                                .background(selectedAnswer == option ? Color.orange.opacity(0.8) : Color.gray.opacity(0.3))
-                                .foregroundColor(getPreferredColorScheme() == .light ? .black : .white)
-                                .cornerRadius(10)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                    }
-                }
-                .padding(.horizontal)
-
-                ActionButton(title: showAnswer ? "button_next" : "button_check") {
-                    if showAnswer { nextWord() } else { checkCardAnswer() }
-                }
-            }
-            .padding(.top, 20)
-            .padding(.bottom, 20)
-            
-            Spacer()
-        }
-        .padding(.horizontal)
-    }
-
-    private func cardModeView(for word: Word) -> some View {
-        VStack {
-            CardView(
-                word: word,
-                studiedLanguage: studiedLanguage,
-                answerLanguage: answerLanguage,
-                showTranscription: showTranscription,
-                speakWord: speakWord,
-                showTranslation: $showCardTranslation
-            )
-            .gesture(
-                DragGesture().onEnded { gesture in
-                    if gesture.translation.width < -50 { nextWord() }
-                    else if gesture.translation.width > 50 { previousWord() }
-                }
-            )
-            Spacer()
-
-            HStack {
-                NavButton(systemName: "arrow.left.circle.fill", action: previousWord)
-                Spacer()
-                NavButton(systemName: "arrow.right.circle.fill", action: nextWord)
-            }
-            .padding(.horizontal, 40)
-            .padding(.bottom, 20)
-        }
-    }
-
-    private func talkShowView(for word: Word) -> some View {
-        VStack(spacing: 20) {
-            Spacer()
-            
-            Text(currentQuestionWord())
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-
-            Text(currentAnswerWord())
-                .font(.title2)
-                .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-            
-            Spacer()
-
-            HStack(spacing: 40) {
-                Button(action: skipToPreviousTalkShowWord) {
-                    Image(systemName: "backward.fill")
-                }
-                
-                Button(action: togglePlayPause) {
-                    Image(systemName: isTalkShowPlaying ? "pause.fill" : "play.fill")
-                        .frame(width: 44, height: 44)
-                }
-                
-                Button(action: skipToNextTalkShowWord) {
-                    Image(systemName: "forward.fill")
-                }
-            }
-            .font(.system(size: 44))
-            .foregroundColor(.blue)
-            .padding(.bottom, 40)
-        }
-    }
 
     // MARK: - Quiz Logic
     private func checkAnswer() {
@@ -840,128 +593,6 @@ struct ContentView: View {
     }
 }
 
-// MARK: - Reusable Components
-struct HeaderButton: View {
-    let imageName: String
-    let action: () -> Void
-
-    @Environment(\.colorScheme) private var colorScheme
-
-    private var iconTintColor: Color {
-        colorScheme == .dark ? .white : .black
-    }
-
-    var body: some View {
-        Button(action: action) {
-            Image(systemName: imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 24, height: 24)
-                .padding(6)
-                .foregroundColor(iconTintColor)
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .fontWeight(.light)
-        }
-        .buttonStyle(PlainButtonStyle())
-    }
-}
-
-
-struct ActionButton: View {
-    let title: LocalizedStringKey
-    let action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            Text(title)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue).foregroundColor(.white)
-                .cornerRadius(10)
-        }
-        .buttonStyle(PlainButtonStyle())
-        .padding(.horizontal)
-    }
-}
-
-struct FeedbackText: View {
-    let key: LocalizedStringKey
-    let word: String
-    let isVisible: Bool
-
-    @Environment(\.colorScheme) private var colorScheme
-    private var textColor: Color { colorScheme == .dark ? .white : .black }
-
-    var body: some View {
-        (isVisible ? (Text(key) + Text(" \(word)")) : Text(" "))
-            .foregroundColor(isVisible ? textColor : .clear)
-            .padding(.vertical, 5).padding(.horizontal)
-            .frame(maxWidth: .infinity, alignment: .center)
-            .frame(height: 15)
-            .font(.system(size: 24))
-    }
-}
-
-struct WordDisplay: View {
-    let word: Word
-    let studiedLanguage: String
-    let showTranscription: Bool
-    let speakWord: (String, String) -> Void
-    
-    // Private helper
-    private func getWord(for langCode: String) -> String {
-        switch langCode {
-        case "ru": return word.ru
-        case "el": return word.el
-        case "en": return word.en ?? "N/A"
-        default: return ""
-        }
-    }
-
-    var body: some View {
-        let questionWord = getWord(for: studiedLanguage)
-        
-        VStack {
-            HStack(spacing: 10) {
-                Text(questionWord)
-                    .font(.system(size: 40, weight: .bold))
-
-                Button(action: {
-                    speakWord(questionWord, studiedLanguage)
-                }) {
-                    Image(systemName: "speaker.wave.3.fill")
-                        .font(.title).foregroundColor(.blue)
-
-                }
-            }
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.bottom, 2)
-
-            if studiedLanguage == "el" {
-                Text(showTranscription ? word.transcription : String(repeating: "*", count: word.transcription.count))
-                    .font(.system(size: 18)).foregroundColor(.gray)
-                    .frame(maxWidth: .infinity, alignment: .center)
-            } else {
-                 Text(" ").font(.system(size: 16))
-            }
-        }
-        .padding(.bottom, 10)
-    }
-}
-
-struct NavButton: View {
-    let systemName: String
-    let action: () -> Void
-
-    var body: some View {
-        Button(action: action) {
-            Image(systemName: systemName)
-                .font(.largeTitle).foregroundColor(.blue)
-                .background(Color.white.opacity(0.1)).cornerRadius(8)
-        }
-    }
-}
 
 #Preview {
     ContentView()

@@ -3,12 +3,11 @@ import WebKit
 
 struct RulesView: UIViewRepresentable {
     let htmlFileName: String
-    @Binding var localHtmlURL: URL? // NEW: Привязка для URL локального файла
+    @Binding var localHtmlURL: URL?
     @Environment(\.dismiss) var dismiss
 
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
-        // NEW: Добавляем координатор для обработки навигации (если нужно, например, для открытия внешних ссылок)
         webView.navigationDelegate = context.coordinator
         return webView
     }
@@ -17,12 +16,26 @@ struct RulesView: UIViewRepresentable {
         if let localURL = localHtmlURL {
             uiView.loadFileURL(localURL, allowingReadAccessTo: localURL.deletingLastPathComponent())
             print("Загрузка HTML из локального URL: \(localURL.lastPathComponent)")
-        } else if let url = Bundle.main.url(forResource: htmlFileName, withExtension: "html") {
-            let request = URLRequest(url: url)
-            uiView.load(request)
-            print("Загрузка HTML из бандла: \(htmlFileName).html")
         } else {
-            print("Error: Could not find \(htmlFileName).html in bundle or local URL is nil.")
+            //  ИСПРАВЛЕНИЕ: Новая, более точная логика поиска локализованного файла
+            // Сначала получаем код языка из окружения, который мы установили в GreekQuizApp.swift
+            let languageCode = context.environment.locale.identifier
+            
+            // Ищем URL файла в папке для конкретного языка (например, "en.lproj")
+            if let url = Bundle.main.url(forResource: htmlFileName, withExtension: "html", subdirectory: nil, localization: languageCode) {
+                let request = URLRequest(url: url)
+                uiView.load(request)
+                print("Загрузка HTML из бандла для языка '\(languageCode)': \(htmlFileName).html")
+            } else {
+                // Если файл для нужного языка не найден, пробуем найти любой (запасной вариант)
+                if let url = Bundle.main.url(forResource: htmlFileName, withExtension: "html") {
+                    let request = URLRequest(url: url)
+                    uiView.load(request)
+                    print("Загрузка HTML из бандла (запасной вариант): \(htmlFileName).html")
+                } else {
+                    print("Error: Could not find \(htmlFileName).html in bundle or local URL is nil.")
+                }
+            }
         }
     }
 
@@ -37,10 +50,8 @@ struct RulesView: UIViewRepresentable {
             self.parent = parent
         }
 
-        // Пример, если нужно обрабатывать переходы по ссылкам
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             if navigationAction.navigationType == .linkActivated {
-                // Если это внешняя ссылка, открыть в Safari
                 if let url = navigationAction.request.url, url.host != nil && url.host != webView.url?.host {
                     UIApplication.shared.open(url)
                     decisionHandler(.cancel)
