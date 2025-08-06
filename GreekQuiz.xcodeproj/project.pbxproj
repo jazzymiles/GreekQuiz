@@ -38,6 +38,9 @@
 		023A89EF2E3E142E00CE8BC9 /* Exceptions for "GreekQuiz" folder in "GreekQuiz" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"Icons/alpha-white.svg",
+				"Icons/omega-white.svg",
+				Icons/q.svg,
 				Info.plist,
 			);
 			target = 0279D99E2DD1022500288BB2 /* GreekQuiz */;
@@ -423,7 +426,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"GreekQuiz/Preview Content\"";
 				DEVELOPMENT_TEAM = BBKLF4S57V;
 				ENABLE_PREVIEWS = YES;
@@ -456,7 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"GreekQuiz/Preview Content\"";
 				DEVELOPMENT_TEAM = BBKLF4S57V;
 				ENABLE_PREVIEWS = YES;
