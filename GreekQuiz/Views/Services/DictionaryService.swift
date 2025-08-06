@@ -8,14 +8,14 @@ class DictionaryService: ObservableObject {
     @Published var activeWords: [Word] = []
     @Published var selectedDictionaries: Set<String> = []
     
+    @Published var ruleInfos: [RuleInfo] = []
+    
     @Published var isDownloading: Bool = false
-    @Published var statusMessage: String = ""
-
     @Published var downloadProgressValue: Double = 0.0
     @Published var downloadStatusText: String = ""
     @Published var currentDictionaryName: String = ""
     @Published var downloadCounterText: String = ""
-    
+    @Published var statusMessage: String = ""
 
     private var downloadedDictionariesDirectory: URL {
         FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
@@ -25,7 +25,6 @@ class DictionaryService: ObservableObject {
     init() {
         if let savedSelection = UserDefaults.standard.stringArray(forKey: "selectedDictionaries") {
             self.selectedDictionaries = Set(savedSelection)
-            print("Загружен сохраненный выбор: \(savedSelection.count) словарей.")
         }
         loadDictionariesMetadata()
     }
@@ -33,11 +32,14 @@ class DictionaryService: ObservableObject {
     func loadDictionariesMetadata() {
         guard let metadataData = UserDefaults.standard.data(forKey: "downloadedDictionaryMetadata"),
               let decodedMetadata = try? JSONDecoder().decode([DictionaryInfo].self, from: metadataData) else {
-            print("Нет сохраненных метаданных для словарей.")
             return
         }
         self.allDictionaries = decodedMetadata
-        print("Загружены метаданные сохраненных словарей.")
+        
+        if let rulesData = UserDefaults.standard.data(forKey: "ruleInfos"),
+           let decodedRules = try? JSONDecoder().decode([RuleInfo].self, from: rulesData) {
+            self.ruleInfos = decodedRules
+        }
         
         let initialLanguage = UserDefaults.standard.string(forKey: "interfaceLanguage") ?? "en"
         self.loadSelectedWords(interfaceLanguage: initialLanguage)
@@ -54,7 +56,9 @@ class DictionaryService: ObservableObject {
         var tempActiveWords: [Word] = []
 
         for dictInfo in allDictionaries {
-            let filePath = downloadedDictionariesDirectory.appendingPathComponent(dictInfo.filePath)
+            let localFileName = dictInfo.file
+            let filePath = downloadedDictionariesDirectory.appendingPathComponent(localFileName)
+            
             guard FileManager.default.fileExists(atPath: filePath.path),
                   let data = try? Data(contentsOf: filePath),
                   var decodedWords = try? JSONDecoder().decode([Word].self, from: data) else {
@@ -68,7 +72,7 @@ class DictionaryService: ObservableObject {
 
             tempAllWords.append(contentsOf: decodedWords)
 
-            if self.selectedDictionaries.contains(dictInfo.filePath) {
+            if selectedDictionaries.contains(dictInfo.file) {
                 tempActiveWords.append(contentsOf: decodedWords)
             }
         }
@@ -77,8 +81,6 @@ class DictionaryService: ObservableObject {
         self.activeWords = tempActiveWords.shuffled()
         
         UserDefaults.standard.set(Array(self.selectedDictionaries), forKey: "selectedDictionaries")
-        
-        print("Актуализированы слова. Активных слов: \(self.activeWords.count). Выбор сохранен.")
     }
 
     func downloadAndSaveDictionaries(source: DictionarySource, customURL: String, interfaceLanguage: String) async {
@@ -86,21 +88,21 @@ class DictionaryService: ObservableObject {
         statusMessage = ""
         downloadProgressValue = 0.0
         currentDictionaryName = ""
-        downloadStatusText = NSLocalizedString("clearing_old_dictionaries", comment: "")
         downloadCounterText = ""
+        downloadStatusText = NSLocalizedString("clearing_old_dictionaries", comment: "")
         
         await clearDownloadedDictionaries()
 
         let urlString: String
         if source == .standard {
-            urlString = "https://www.dropbox.com/scl/fi/z9avztiil4v150g0h58i8/dictionaries.txt?rlkey=k5mrqfwgdgwz2wt8q1wu3ernj&st=peuf016l&raw=1"
+            urlString = "https://redinger.cc/greekquiz/settings.txt"
         } else {
             guard !customURL.isEmpty else {
                 statusMessage = NSLocalizedString("error_incorrect_download_url", comment: "")
                 isDownloading = false
                 return
             }
-            urlString = customURL.hasSuffix("raw=1") ? customURL : "\(customURL)&raw=1"
+            urlString = customURL
         }
 
         guard let url = URL(string: urlString) else {
@@ -112,12 +114,34 @@ class DictionaryService: ObservableObject {
         do {
             downloadStatusText = NSLocalizedString("downloading_dictionaries_list", comment: "")
             let (data, _) = try await URLSession.shared.data(from: url)
-            let remoteDictsInfo = try JSONDecoder().decode([DictionaryInfo].self, from: data)
+            
+            // ✨ ИЗМЕНЕНИЕ: Добавлена детальная обработка ошибок парсинга
+            let appSettings: AppSettings
+            do {
+                appSettings = try JSONDecoder().decode(AppSettings.self, from: data)
+            } catch {
+                // Если парсинг не удался, выводим подробную информацию
+                print("--- ОШИБКА ПАРСИНГА JSON ---")
+                print("Ошибка: \(error)")
+                if let jsonString = String(data: data, encoding: .utf8) {
+                    print("Полученные данные:\n\(jsonString)")
+                } else {
+                    print("Не удалось преобразовать полученные данные в строку.")
+                }
+                print("--------------------------")
+                // Выбрасываем ошибку дальше, чтобы ее поймал внешний catch
+                throw error
+            }
+
+            let remoteDictsInfo = appSettings.dictionaries
+            self.ruleInfos = appSettings.settings.rules
+            
+            let encodedRules = try JSONEncoder().encode(self.ruleInfos)
+            UserDefaults.standard.set(encodedRules, forKey: "ruleInfos")
             
             try FileManager.default.createDirectory(at: downloadedDictionariesDirectory, withIntermediateDirectories: true)
             
             var downloadedMetadata: [DictionaryInfo] = []
-            
             let total = remoteDictsInfo.count
             downloadStatusText = NSLocalizedString("download_status_text", comment: "")
             
@@ -130,7 +154,7 @@ class DictionaryService: ObservableObject {
                 guard let dictURL = URL(string: dictURLString) else { continue }
                 
                 let (dictData, _) = try await URLSession.shared.data(from: dictURL)
-                let localFileName = UUID().uuidString + ".txt"
+                let localFileName = dictInfo.file
                 let localFileURL = downloadedDictionariesDirectory.appendingPathComponent(localFileName)
                 try dictData.write(to: localFileURL)
                 
@@ -150,7 +174,7 @@ class DictionaryService: ObservableObject {
             statusMessage = NSLocalizedString("all_dictionaries_updated", comment: "")
             
         } catch {
-            statusMessage = String(format: NSLocalizedString("error_downloading_dictionaries", comment: ""), error.localizedDescription)
+            statusMessage = "Ошибка: " + error.localizedDescription
         }
         
         isDownloading = false
@@ -160,9 +184,11 @@ class DictionaryService: ObservableObject {
         try? FileManager.default.removeItem(at: downloadedDictionariesDirectory)
         UserDefaults.standard.removeObject(forKey: "downloadedDictionaryMetadata")
         UserDefaults.standard.removeObject(forKey: "selectedDictionaries")
+        UserDefaults.standard.removeObject(forKey: "ruleInfos")
         self.allDictionaries = []
         self.selectedDictionaries = []
         self.allWords = []
         self.activeWords = []
+        self.ruleInfos = []
     }
 }

@@ -4,7 +4,7 @@ struct KeyboardQuizView: View {
     // MARK: - Properties
     
     let word: Word
-    let questionWord: String // ✨ ДОБАВЛЕНО
+    let questionWord: String
     let answerWord: String
     let studiedLanguage: String
     let showTranscription: Bool
@@ -19,11 +19,13 @@ struct KeyboardQuizView: View {
     
     
     var body: some View {
+        // ✨ ИЗМЕНЕНИЕ: Вся структура VStack была исправлена
         VStack(spacing: 0) {
+            // --- Верхний блок ---
             VStack(spacing: 5) {
                 WordDisplay(
                     word: word,
-                    questionWord: questionWord, // ✨ ДОБАВЛЕНО
+                    questionWord: questionWord,
                     studiedLanguage: studiedLanguage,
                     showTranscription: showTranscription,
                     speakWord: speakWord
@@ -37,8 +39,11 @@ struct KeyboardQuizView: View {
                 
                 exampleSentencesView(for: word, isVisible: showAnswer)
             }
-            .padding(.top, 40)
+            .padding(.top, 40) // Отступ сверху до слова
             
+            Spacer(minLength: 20) // Гибкая распорка МЕЖДУ блоками
+
+            // --- Нижний блок ---
             VStack (spacing: 5){
                 TextField("your_translation_placeholder", text: $userInput)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -54,9 +59,7 @@ struct KeyboardQuizView: View {
                 }
                 .padding(.top, 20)
             }
-            .padding(.bottom, 80)
-            
-            Spacer()
+            .padding(.bottom, 340) // Отступ снизу от кнопок
         }
         .padding(.horizontal)
     }

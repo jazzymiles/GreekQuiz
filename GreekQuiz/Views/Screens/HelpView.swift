@@ -1,9 +1,8 @@
 import SwiftUI
 import WebKit
 
-
 struct HelpView: UIViewRepresentable {
-    let htmlFileName: String
+    let htmlFileURL: String
     @Binding var localHtmlURL: URL?
     @Environment(\.dismiss) var dismiss
 
@@ -16,7 +15,7 @@ struct HelpView: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: Context) {
         if let localURL = localHtmlURL {
             uiView.loadFileURL(localURL, allowingReadAccessTo: localURL.deletingLastPathComponent())
-        } else if let url = Bundle.main.url(forResource: htmlFileName, withExtension: "html") {
+        } else if let url = URL(string: htmlFileURL) {
             uiView.load(URLRequest(url: url))
         }
     }
@@ -45,9 +44,8 @@ struct HelpView: UIViewRepresentable {
     }
 }
 
-
 struct HelpSheetView: View {
-    let htmlFileName: String
+    let htmlFileURL: String
     @Environment(\.dismiss) var dismiss
     @Environment(\.locale) private var locale
 
@@ -58,10 +56,14 @@ struct HelpSheetView: View {
     private var documentsDirectory: URL {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     }
+    
+    private var localFileName: String {
+        return URL(string: htmlFileURL)?.lastPathComponent ?? "help.html"
+    }
 
     var body: some View {
         NavigationView {
-            HelpView(htmlFileName: htmlFileName, localHtmlURL: $localHtmlURL)
+            HelpView(htmlFileURL: htmlFileURL, localHtmlURL: $localHtmlURL)
                 .navigationTitle("help_view_title")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
@@ -109,7 +111,7 @@ struct HelpSheetView: View {
     }
 
     private func loadLocalHtmlFile() {
-        let fileURL = documentsDirectory.appendingPathComponent("\(htmlFileName).html")
+        let fileURL = documentsDirectory.appendingPathComponent(localFileName)
         if FileManager.default.fileExists(atPath: fileURL.path) {
             localHtmlURL = fileURL
         } else {
@@ -120,10 +122,9 @@ struct HelpSheetView: View {
     private func downloadAndSaveHtmlFile() async {
         isLoadingUpdate = true
         updateMessage = nil
-        let remoteURLString = "https://redinger.cc/greekquiz/\(htmlFileName).html"
-        let localFileURL = documentsDirectory.appendingPathComponent("\(htmlFileName).html")
+        let remoteURLString = htmlFileURL
+        let localFileURL = documentsDirectory.appendingPathComponent(localFileName)
 
-        // ✨ ИЗМЕНЕНИЕ: Эта функция теперь использует `locale` из `@Environment`
         func localizedString(forKey key: String, default value: String) -> String {
             guard let path = Bundle.main.path(forResource: locale.identifier, ofType: "lproj"),
                   let bundle = Bundle(path: path) else {

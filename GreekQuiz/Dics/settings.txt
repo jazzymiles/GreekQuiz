@@ -4,7 +4,7 @@
     "rules": [
       {
         "lang_code": "ru",
-        "filePath": "https://redinger.cc/greekquiz/rules-ru.html
+        "filePath": "https://redinger.cc/greekquiz/rules-ru.html"
       },
       {
         "lang_code": "en",

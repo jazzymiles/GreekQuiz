@@ -45,13 +45,14 @@ struct ContentView: View {
     private let synthesizer = AVSpeechSynthesizer()
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
 
-    private var rulesHtmlFileName: String {
-        return "rules-\(interfaceLanguage)"
+    private var rulesHtmlURL: String {
+        return dictionaryService.ruleInfos.first { $0.lang_code == interfaceLanguage }?.filePath ?? "https://redinger.cc/greekquiz/rules-en.html" //
     }
-    
-    private var helpHtmlFileName: String {
-        return "help-\(interfaceLanguage)"
+      
+    private var helpHtmlURL: String {
+        return "https://redinger.cc/greekquiz/help-\(interfaceLanguage).html"
     }
+
 
     private func getWord(for word: Word, langCode: String) -> String {
         switch langCode {
@@ -185,16 +186,15 @@ struct ContentView: View {
 
 
     private var headerButtons: some View {
-            HStack(spacing: 8) {
-                
-                HeaderButton(imageName: "questionmark.circle", action: { showingHelp = true })
-                    .sheet(isPresented: $showingHelp) { HelpSheetView(htmlFileName: helpHtmlFileName) }
-                
-                Spacer()
-                
-                HeaderButton(imageName: "character.book.closed", action: { showingRules = true })
-
-                    .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileName: rulesHtmlFileName) }
+        HStack(spacing: 8) {
+                   
+                   HeaderButton(imageName: "questionmark.circle", action: { showingHelp = true })
+                       .sheet(isPresented: $showingHelp) { HelpSheetView(htmlFileURL: helpHtmlURL) }
+                   
+                   Spacer()
+                   
+                   HeaderButton(imageName: "character.book.closed", action: { showingRules = true })
+                       .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileURL: rulesHtmlURL) }
 
                 HeaderButton(imageName: "books.vertical", action: { showingDictionarySelection = true })
                     .sheet(isPresented: $showingDictionarySelection) {
