@@ -5,7 +5,8 @@ struct SettingsView: View {
     @Binding var autoPlaySound: Bool
     @Binding var playAnswerSound: Bool
     @Binding var useAllWordsInQuiz: Bool
-    
+    @Binding var showArticle: Bool
+
     @Binding var colorSchemePreference: String
     @Binding var dictionarySource: DictionarySource
     @Binding var customDictionaryURL: String
@@ -21,6 +22,15 @@ struct SettingsView: View {
 
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
 
+    // ✨ ИЗМЕНЕНИЕ №1: Добавляем вспомогательную функцию для определения темы
+    private func getPreferredColorScheme() -> ColorScheme? {
+        switch colorSchemePreference {
+        case "light": return .light
+        case "dark": return .dark
+        default: return nil // для "system"
+        }
+    }
+
     var body: some View {
         NavigationView {
             Form {
@@ -34,9 +44,9 @@ struct SettingsView: View {
                     Toggle(isOn: $playAnswerSound) {
                         Text("answers_sounds_toggle")
                     }
-                }
-                
-                Section(header: Text("quiz_settings_section")) {
+                    Toggle(isOn: $showArticle) {
+                        Text("show_article_toggle")
+                    }
                     Toggle(isOn: $useAllWordsInQuiz) {
                         Text("use_all_words_toggle")
                     }
@@ -65,9 +75,12 @@ struct SettingsView: View {
                         Text("english_language").tag("en")
                     }
                     .pickerStyle(.segmented)
-                }
-
-                Section(header: Text("interface_language_section")) {
+                    
+                    Text("interface_language_picker") // Используем ключ для подписи
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                        .padding(.top)
+                    
                     Picker("interface_language_section", selection: $interfaceLanguage) {
                         Text("language_option_russian").tag("ru")
                         Text("language_option_english").tag("en")
@@ -117,5 +130,7 @@ struct SettingsView: View {
                 }
             }
         }
+        // ✨ ИЗМЕНЕНИЕ №2: Применяем настройку темы к самому окну настроек
+        .preferredColorScheme(getPreferredColorScheme())
     }
 }

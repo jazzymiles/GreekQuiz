@@ -1,15 +1,8 @@
-//
-//  CardView.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 
 struct CardView: View {
     let word: Word
+    let questionWord: String
     let studiedLanguage: String
     let answerLanguage: String
     let showTranscription: Bool
@@ -35,7 +28,6 @@ struct CardView: View {
     }
 
     var body: some View {
-        let questionWord = getWord(for: studiedLanguage)
         let answerWord = getWord(for: answerLanguage)
         let studiedExample = getExample(for: studiedLanguage)
         let answerExample = getExample(for: answerLanguage)
@@ -93,12 +85,17 @@ struct CardView: View {
                     }
                 }
                 .transition(.opacity)
+            } else {
+                Image(systemName: "hand.tap")
+                    .font(.largeTitle)
+                    .foregroundColor(.gray.opacity(0.3)) 
+                    .transition(.opacity)
             }
 
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white.opacity(0.1))
+        .background(Color.gray.opacity(0.10))
         .cornerRadius(20)
         .padding()
         .onTapGesture {

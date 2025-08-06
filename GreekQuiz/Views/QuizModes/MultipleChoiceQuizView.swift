@@ -1,32 +1,28 @@
 import SwiftUI
 
 struct MultipleChoiceQuizView: View {
-    // MARK: - Properties
     
-    // Data passed from the parent view
     let word: Word
+    let questionWord: String // ✨ ДОБАВЛЕНО
     let options: [String]
     let studiedLanguage: String
     let answerLanguage: String
     let showTranscription: Bool
     let speakWord: (String, String) -> Void
     
-    // Bindings to the parent's state
     @Binding var selectedAnswer: String?
     @Binding var showAnswer: Bool
     
-    // Closures for actions
     let onSelectAnswer: (String) -> Void
     let onCheckAnswer: () -> Void
     let onNextWord: () -> Void
-
-    // MARK: - Body
     
     var body: some View {
         VStack(spacing: 0) {
             VStack(spacing: 15) {
                 WordDisplay(
                     word: word,
+                    questionWord: questionWord, // ✨ ДОБАВЛЕНО
                     studiedLanguage: studiedLanguage,
                     showTranscription: showTranscription,
                     speakWord: speakWord

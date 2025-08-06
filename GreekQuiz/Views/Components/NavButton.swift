@@ -1,11 +1,3 @@
-//
-//  NavButton.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 
 struct NavButton: View {
@@ -16,7 +8,7 @@ struct NavButton: View {
         Button(action: action) {
             Image(systemName: systemName)
                 .font(.largeTitle).foregroundColor(.blue)
-                .background(Color.white.opacity(0.1)).cornerRadius(8)
+                //.background(Color.white.opacity(0.1)).cornerRadius(8)
         }
     }
 }

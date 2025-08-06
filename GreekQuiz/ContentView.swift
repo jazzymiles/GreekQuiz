@@ -3,8 +3,6 @@ import AVFoundation
 import WebKit
 import MediaPlayer
 
-// CardView остается без изменений
-
 struct ContentView: View {
     
     @Environment(\.locale) private var locale
@@ -34,6 +32,7 @@ struct ContentView: View {
     @AppStorage("autoPlaySound") private var autoPlaySound: Bool = true
     @AppStorage("playAnswerSound") private var playAnswerSound: Bool = true
     @AppStorage("useAllWordsInQuiz") private var useAllWordsInQuiz: Bool = false
+    @AppStorage("showArticle") private var showArticle: Bool = false
     @AppStorage("colorSchemePreference") private var colorSchemePreference: String = "system"
     @AppStorage("dictionarySourcePreference") private var dictionarySource: DictionarySource = .standard
     @AppStorage("customDictionaryURL") private var customDictionaryURL: String = ""
@@ -47,11 +46,7 @@ struct ContentView: View {
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
 
     private var rulesHtmlFileName: String {
-        if answerLanguage == "en" || answerLanguage == "el" {
-            return "rules-en"
-        } else {
-            return "rules-el"
-        }
+        return "rules-\(interfaceLanguage)"
     }
     
     private var helpHtmlFileName: String {
@@ -74,7 +69,28 @@ struct ContentView: View {
     private func currentQuestionWord() -> String {
         guard !dictionaryService.activeWords.isEmpty, currentWordIndex < dictionaryService.activeWords.count else { return "" }
         let word = dictionaryService.activeWords[currentWordIndex]
-        return getWord(for: word, langCode: studiedLanguage)
+        
+        var question = getWord(for: word, langCode: studiedLanguage)
+        
+        if studiedLanguage == "el" && showArticle {
+            let article: String
+            switch word.gender?.lowercased() {
+            case "m", "м":
+                article = "ο"
+            case "f", "ж":
+                article = "η"
+            case "n", "ср":
+                article = "το"
+            default:
+                article = ""
+            }
+            
+            if !article.isEmpty {
+                question = "\(article) \(question)"
+            }
+        }
+        
+        return question
     }
 
     private func currentAnswerWord() -> String {
@@ -167,54 +183,55 @@ struct ContentView: View {
         }
     }
 
-    // MARK: - Subviews
+
     private var headerButtons: some View {
-        HStack(spacing: 8) {
-            
-            HeaderButton(imageName: "questionmark.circle", action: { showingHelp = true })
-                // ✨ ИЗМЕНЕНИЕ: Вызываем новое View для помощи
-                .sheet(isPresented: $showingHelp) { HelpSheetView(htmlFileName: helpHtmlFileName) }
-            
-            Spacer()
-            
-            HeaderButton(imageName: "character.book.closed", action: { showingRules = true })
-                .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileName: rulesHtmlFileName) }
+            HStack(spacing: 8) {
+                
+                HeaderButton(imageName: "questionmark.circle", action: { showingHelp = true })
+                    .sheet(isPresented: $showingHelp) { HelpSheetView(htmlFileName: helpHtmlFileName) }
+                
+                Spacer()
+                
+                HeaderButton(imageName: "character.book.closed", action: { showingRules = true })
 
-            HeaderButton(imageName: "books.vertical", action: { showingDictionarySelection = true })
-                .sheet(isPresented: $showingDictionarySelection) {
-                    DictionarySelectionView(
-                        dictionaryService: dictionaryService,
-                        speakWord: speakWord,
-                        interfaceLanguage: interfaceLanguage
-                    )
-                }
+                    .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileName: rulesHtmlFileName) }
 
-            HeaderButton(imageName: "gearshape", action: { showingSettings = true })
-                .sheet(isPresented: $showingSettings) {
-                    SettingsView(
-                        showTranscription: $showTranscription,
-                        autoPlaySound: $autoPlaySound,
-                        playAnswerSound: $playAnswerSound,
-                        useAllWordsInQuiz: $useAllWordsInQuiz,
-                        colorSchemePreference: $colorSchemePreference,
-                        dictionarySource: $dictionarySource,
-                        customDictionaryURL: $customDictionaryURL,
-                        studiedLanguage: $studiedLanguage,
-                        answerLanguage: $answerLanguage,
-                        interfaceLanguage: $interfaceLanguage,
-                        onDownloadDictionaries: {
-                            showingSettings = false
+                HeaderButton(imageName: "books.vertical", action: { showingDictionarySelection = true })
+                    .sheet(isPresented: $showingDictionarySelection) {
+                        DictionarySelectionView(
+                            dictionaryService: dictionaryService,
+                            speakWord: speakWord,
+                            interfaceLanguage: interfaceLanguage
+                        )
+                    }
 
-                            Task {
-                                await dictionaryService.downloadAndSaveDictionaries(
-                                    source: dictionarySource,
-                                    customURL: customDictionaryURL,
-                                    interfaceLanguage: interfaceLanguage
-                                )
+                HeaderButton(imageName: "gearshape", action: { showingSettings = true })
+                    .sheet(isPresented: $showingSettings) {
+                        SettingsView(
+                            showTranscription: $showTranscription,
+                            autoPlaySound: $autoPlaySound,
+                            playAnswerSound: $playAnswerSound,
+                            useAllWordsInQuiz: $useAllWordsInQuiz,
+                            showArticle: $showArticle,
+                            colorSchemePreference: $colorSchemePreference,
+                            dictionarySource: $dictionarySource,
+                            customDictionaryURL: $customDictionaryURL,
+                            studiedLanguage: $studiedLanguage,
+                            answerLanguage: $answerLanguage,
+                            interfaceLanguage: $interfaceLanguage,
+                            onDownloadDictionaries: {
+                                showingSettings = false
+
+                                Task {
+                                    await dictionaryService.downloadAndSaveDictionaries(
+                                        source: dictionarySource,
+                                        customURL: customDictionaryURL,
+                                        interfaceLanguage: interfaceLanguage
+                                    )
+                                }
                             }
-                        }
-                    )
-                }
+                        )
+                    }
         }
     }
 
@@ -227,6 +244,7 @@ struct ContentView: View {
             case .keyboard:
                 KeyboardQuizView(
                     word: currentWord,
+                    questionWord: currentQuestionWord(),
                     answerWord: currentAnswerWord(),
                     studiedLanguage: studiedLanguage,
                     showTranscription: showTranscription,
@@ -240,6 +258,7 @@ struct ContentView: View {
             case .quiz:
                 MultipleChoiceQuizView(
                     word: currentWord,
+                    questionWord: currentQuestionWord(),
                     options: cardOptions,
                     studiedLanguage: studiedLanguage,
                     answerLanguage: answerLanguage,
@@ -259,6 +278,7 @@ struct ContentView: View {
             case .cards:
                 CardModeView(
                     word: currentWord,
+                    questionWord: currentQuestionWord(),
                     studiedLanguage: studiedLanguage,
                     answerLanguage: answerLanguage,
                     showTranscription: showTranscription,
@@ -359,8 +379,6 @@ struct ContentView: View {
         }
     }
 
-
-    // MARK: - Quiz Logic
     private func checkAnswer() {
         let correctAnswers = parseAcceptedAnswers(from: currentAnswerWord())
         if correctAnswers.contains(userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()) {
@@ -560,7 +578,7 @@ struct ContentView: View {
         }
     }
 
-    // MARK: - UI Helpers
+
     private func backgroundColor() -> Color {
         if isShowingFeedback { return .green.opacity(0.6) }
         if showAnswer { return isCorrect ? .green.opacity(0.6) : .red.opacity(0.6) }
@@ -591,9 +609,4 @@ struct ContentView: View {
         utterance.rate = 0.5
         synthesizer.speak(utterance)
     }
-}
-
-
-#Preview {
-    ContentView()
 }

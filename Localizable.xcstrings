@@ -2,8 +2,33 @@
   "sourceLanguage" : "en",
   "strings" : {
     " " : {
+
+    },
+    " %@" : {
       "localizations" : {
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " %@"
+          }
+        }
+      }
+    },
+    "_empty_string_" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        },
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : " "
@@ -16,9 +41,6 @@
           }
         }
       }
-    },
-    " %@" : {
-
     },
     "all_dictionaries_updated" : {
       "extractionState" : "manual",
@@ -817,6 +839,29 @@
         }
       }
     },
+    "help_updated_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η βοήθεια ενημερώθηκε!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help updated!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Помощь обновлена!"
+          }
+        }
+      }
+    },
     "help_view_title" : {
       "localizations" : {
         "el" : {
@@ -838,6 +883,9 @@
           }
         }
       }
+    },
+    "interface_language_picker" : {
+
     },
     "interface_language_section" : {
       "extractionState" : "manual",
@@ -1226,6 +1274,7 @@
       }
     },
     "quiz_settings_section" : {
+      "extractionState" : "stale",
       "localizations" : {
         "el" : {
           "stringUnit" : {
@@ -1243,6 +1292,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Настройка квиза"
+          }
+        }
+      }
+    },
+    "rules_updated_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Οι κανόνες ενημερώθηκαν!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rules updated!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правила обновлены!"
           }
         }
       }
@@ -1335,6 +1407,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выберите хотя бы один словарь.\nДля этого нажмите на кнопку вверху с этой иконкой"
+          }
+        }
+      }
+    },
+    "show_article_toggle" : {
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Εμφάνιση άρθρων"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show articles"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать артикли"
           }
         }
       }
@@ -1607,6 +1701,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Слова"
+          }
+        }
+      }
+    },
+    "update_error_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Σφάλμα ενημέρωσης: %@."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update error: %@."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка обновления: %@."
           }
         }
       }

@@ -1,11 +1,3 @@
-//
-//  FeedbackText.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 
 struct FeedbackText: View {
@@ -17,7 +9,7 @@ struct FeedbackText: View {
     private var textColor: Color { colorScheme == .dark ? .white : .black }
 
     var body: some View {
-        (isVisible ? (Text(key) + Text(" \(word)")) : Text(" "))
+        (isVisible ? (Text(key) + Text(" \(word)")) : Text("_empty_string_"))
             .foregroundColor(isVisible ? textColor : .clear)
             .padding(.vertical, 5).padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .center)

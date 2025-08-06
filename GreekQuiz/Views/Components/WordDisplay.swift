@@ -1,34 +1,16 @@
-//
-//  WordDisplay.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 
 struct WordDisplay: View {
     let word: Word
+    let questionWord: String 
     let studiedLanguage: String
     let showTranscription: Bool
     let speakWord: (String, String) -> Void
-    
-    private func getWord(for langCode: String) -> String {
-        switch langCode {
-        case "ru": return word.ru
-        case "el": return word.el
-        case "en": return word.en ?? "N/A"
-        default: return ""
-        }
-    }
 
     var body: some View {
-        let questionWord = getWord(for: studiedLanguage)
-        
         VStack {
             HStack(spacing: 10) {
-                Text(questionWord)
+                Text(questionWord) //
                     .font(.system(size: 40, weight: .bold))
 
                 Button(action: {
@@ -36,7 +18,6 @@ struct WordDisplay: View {
                 }) {
                     Image(systemName: "speaker.wave.3.fill")
                         .font(.title).foregroundColor(.blue)
-
                 }
             }
             .frame(maxWidth: .infinity, alignment: .center)

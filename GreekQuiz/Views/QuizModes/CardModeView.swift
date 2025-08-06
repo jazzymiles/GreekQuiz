@@ -1,17 +1,8 @@
-//
-//  CardModeView.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 
 struct CardModeView: View {
-    // MARK: - Properties
-    
     let word: Word
+    let questionWord: String
     let studiedLanguage: String
     let answerLanguage: String
     let showTranscription: Bool
@@ -22,12 +13,11 @@ struct CardModeView: View {
     let onNextWord: () -> Void
     let onPreviousWord: () -> Void
 
-    // MARK: - Body
-    
     var body: some View {
         VStack {
             CardView(
                 word: word,
+                questionWord: questionWord,
                 studiedLanguage: studiedLanguage,
                 answerLanguage: answerLanguage,
                 showTranscription: showTranscription,

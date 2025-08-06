@@ -1,39 +1,29 @@
-//
-//  KeyboardQuizView.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 
 struct KeyboardQuizView: View {
     // MARK: - Properties
     
-    // Данные, которые View получает от родителя
     let word: Word
+    let questionWord: String // ✨ ДОБАВЛЕНО
     let answerWord: String
     let studiedLanguage: String
     let showTranscription: Bool
     let speakWord: (String, String) -> Void
     
-    // Привязки к состоянию родителя
     @Binding var userInput: String
     @Binding var showAnswer: Bool
     @FocusState.Binding var isTextFieldFocused: Bool
 
-    // Функции для выполнения действий
     let onCheckAnswer: () -> Void
     let onNextWord: () -> Void
     
-    // MARK: - Body
     
     var body: some View {
         VStack(spacing: 0) {
             VStack(spacing: 5) {
                 WordDisplay(
                     word: word,
+                    questionWord: questionWord, // ✨ ДОБАВЛЕНО
                     studiedLanguage: studiedLanguage,
                     showTranscription: showTranscription,
                     speakWord: speakWord
@@ -71,7 +61,6 @@ struct KeyboardQuizView: View {
         .padding(.horizontal)
     }
     
-    // MARK: - Private Helpers
     
     private func exampleSentencesView(for word: Word, isVisible: Bool) -> some View {
         func getExample(for langCode: String) -> String? {
@@ -106,7 +95,6 @@ struct KeyboardQuizView: View {
         .animation(.easeInOut(duration: 0), value: isVisible && hasContent)
     }
     
-    // Эта переменная нужна для `exampleSentencesView`
     private var answerLanguage: String {
         return studiedLanguage == "ru" ? "el" : "ru"
     }

@@ -5,7 +5,7 @@ struct FlowLayout<Data: Hashable, Content: View>: View {
     let spacing: CGFloat
     let content: (Data) -> Content
 
-    init(_ data: [Data], spacing: CGFloat = 5, @ViewBuilder content: @escaping (Data) -> Content) {
+    init(_ data: [Data], spacing: CGFloat = 8, @ViewBuilder content: @escaping (Data) -> Content) {
         self.data = data
         self.spacing = spacing
         self.content = content
@@ -24,42 +24,30 @@ struct FlowLayout<Data: Hashable, Content: View>: View {
         var rowHeight: CGFloat = 0
 
         for item in data {
-            let size = CGSize(width: 1000, height: CGFloat.infinity) // placeholder
+            // Рассчитываем размер каждого элемента
             let proposedSize = CGSize(width: geometry.size.width, height: .infinity)
-            let hosting = UIHostingController(rootView: content(item)).view!
-            let targetSize = hosting.systemLayoutSizeFitting(proposedSize)
-            
-            let _ = print("-")
-            let _ = print(item)
-            let _ = print(currentX)
-            let _ = print(currentY)
-            
-            positions.append((x: currentX, y: currentY))
-            
-            if currentX + targetSize.width + spacing > geometry.size.width - 25 {
+            let hosting = UIHostingController(rootView: content(item).fixedSize())
+            hosting.view.translatesAutoresizingMaskIntoConstraints = false
+            let targetSize = hosting.view.systemLayoutSizeFitting(proposedSize)
+
+            if currentX + targetSize.width > geometry.size.width {
                 currentX = 0
-                currentY += rowHeight + 26
-                rowHeight = 0
-            }else{
-                currentX += targetSize.width + 2
+                currentY += rowHeight + spacing
+                rowHeight = 0 
             }
 
-            //positions.append((x: currentX, y: currentY))
+            positions.append((x: currentX, y: currentY))
 
-            
-            rowHeight = max(rowHeight, spacing)
+            currentX += targetSize.width + spacing
+
+            rowHeight = max(rowHeight, targetSize.height)
         }
 
         return ZStack(alignment: .topLeading) {
             ForEach(Array(data.enumerated()), id: \.1) { index, item in
                 content(item)
-                    .alignmentGuide(.leading) { _ in -positions[index].x }
-                    .alignmentGuide(.top) { _ in -positions[index].y }
+                    .offset(x: positions[index].x, y: positions[index].y)
             }
         }
     }
-}
-
-#Preview {
-    ContentView()
 }

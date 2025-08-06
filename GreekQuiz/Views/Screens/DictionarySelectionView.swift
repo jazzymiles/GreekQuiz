@@ -2,7 +2,6 @@ import SwiftUI
 import AVFoundation
 
 struct DictionarySelectionView: View {
-    // ✨ ИЗМЕНЕНИЕ №1: Используем @ObservedObject для всего сервиса
     @ObservedObject var dictionaryService: DictionaryService
     
     let speakWord: (String, String) -> Void
@@ -18,9 +17,7 @@ struct DictionarySelectionView: View {
                     .font(.largeTitle)
                     .padding(.bottom, 20)
 
-                // ✨ ИЗМЕНЕНИЕ №2: Используем `dictionaryService.allDictionaries`
-                FlowLayout(dictionaryService.allDictionaries, spacing: 10) { dictionary in
-                    // ✨ ИЗМЕНЕНИЕ №3: Привязка теперь к `dictionaryService.selectedDictionaries`
+                FlowLayout(dictionaryService.allDictionaries, spacing: 2) { dictionary in
                     Toggle(dictionary.localizedName(for: interfaceLanguage), isOn: Binding(
                         get: { dictionaryService.selectedDictionaries.contains(dictionary.filePath) },
                         set: { isSelected in
@@ -29,7 +26,6 @@ struct DictionarySelectionView: View {
                             } else {
                                 dictionaryService.selectedDictionaries.remove(dictionary.filePath)
                             }
-                            // ✨ ИЗМЕНЕНИЕ №4: Явно вызываем загрузку слов с нужным языком
                             dictionaryService.loadSelectedWords(interfaceLanguage: interfaceLanguage)
                         }
                     ))
@@ -38,6 +34,8 @@ struct DictionarySelectionView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
+
+                .id(interfaceLanguage)
                 
                 Spacer()
 
@@ -52,7 +50,6 @@ struct DictionarySelectionView: View {
                 .padding(.horizontal)
                 .padding(.bottom, 20)
                 .sheet(isPresented: $showingWordsList) {
-                    // ✨ ИЗМЕНЕНИЕ №5: Передаем слова из `dictionaryService`
                     WordsListView(words: dictionaryService.activeWords.isEmpty ? dictionaryService.allWords : dictionaryService.activeWords, speakWord: speakWord)
                 }
             }

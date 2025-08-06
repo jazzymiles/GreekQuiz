@@ -1,30 +1,18 @@
-//
-//  TalkShowView.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 
 struct TalkShowView: View {
-    // MARK: - Properties
-    
-    // Данные, которые View получает от родителя
+
     let questionWord: String
     let answerWord: String
     
-    // Привязка к состоянию, чтобы кнопка Play/Pause обновлялась
     @Binding var isPlaying: Bool
     
-    // Функции (замыкания), которые будут вызываться при нажатии на кнопки
+
     let onTogglePlayPause: () -> Void
     let onSkipToPrevious: () -> Void
     let onSkipToNext: () -> Void
 
-    // MARK: - Body
-    
+   
     var body: some View {
         VStack(spacing: 20) {
             Spacer()
@@ -64,16 +52,16 @@ struct TalkShowView: View {
     }
 }
 
-// MARK: - Preview
+
 
 #if DEBUG
 struct TalkShowView_Previews: PreviewProvider {
     static var previews: some View {
-        // Пример для предпросмотра с тестовыми данными
+
         TalkShowView(
             questionWord: "μπροστά",
             answerWord: "впереди",
-            isPlaying: .constant(true), // .constant позволяет использовать значение без реального @State
+            isPlaying: .constant(true),
             onTogglePlayPause: { print("Toggle Play/Pause tapped") },
             onSkipToPrevious: { print("Previous tapped") },
             onSkipToNext: { print("Next tapped") }

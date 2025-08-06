@@ -1,11 +1,3 @@
-//
-//  HelpView.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 import WebKit
 
@@ -57,6 +49,7 @@ struct HelpView: UIViewRepresentable {
 struct HelpSheetView: View {
     let htmlFileName: String
     @Environment(\.dismiss) var dismiss
+    @Environment(\.locale) private var locale
 
     @State private var localHtmlURL: URL?
     @State private var isLoadingUpdate = false
@@ -130,8 +123,20 @@ struct HelpSheetView: View {
         let remoteURLString = "https://redinger.cc/greekquiz/\(htmlFileName).html"
         let localFileURL = documentsDirectory.appendingPathComponent("\(htmlFileName).html")
 
+        // ✨ ИЗМЕНЕНИЕ: Эта функция теперь использует `locale` из `@Environment`
+        func localizedString(forKey key: String, default value: String) -> String {
+            guard let path = Bundle.main.path(forResource: locale.identifier, ofType: "lproj"),
+                  let bundle = Bundle(path: path) else {
+                return value
+            }
+            return NSLocalizedString(key, bundle: bundle, comment: "")
+        }
+
         guard let url = URL(string: remoteURLString) else {
-            //
+            await MainActor.run {
+                self.isLoadingUpdate = false
+                self.updateMessage = localizedString(forKey: "error_incorrect_download_url", default: "Invalid URL")
+            }
             return
         }
 
@@ -142,11 +147,13 @@ struct HelpSheetView: View {
             await MainActor.run {
                 self.localHtmlURL = localFileURL
                 self.isLoadingUpdate = false
-                self.updateMessage = "Помощь обновлена!"
+                self.updateMessage = localizedString(forKey: "help_updated_message", default: "Help updated!")
             }
-
         } catch {
-            //
+            await MainActor.run {
+                self.isLoadingUpdate = false
+                self.updateMessage = String(format: localizedString(forKey: "update_error_message", default: "Update error: %@."), error.localizedDescription)
+            }
         }
     }
 }

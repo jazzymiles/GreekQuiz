@@ -1,11 +1,3 @@
-//
-//  ActionButton.swift
-//  GreekQuiz
-//
-//  Created by miles on 05/08/2025.
-//
-
-
 import SwiftUI
 
 struct ActionButton: View {
