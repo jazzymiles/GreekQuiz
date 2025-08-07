@@ -46,9 +46,9 @@ struct ContentView: View {
     @Environment(\.colorScheme) var currentSystemColorScheme: ColorScheme
 
     private var rulesHtmlURL: String {
-        return dictionaryService.ruleInfos.first { $0.lang_code == interfaceLanguage }?.filePath ?? "https://redinger.cc/greekquiz/rules-en.html" //
+        return dictionaryService.ruleInfos.first { $0.lang_code == interfaceLanguage }?.filePath ?? "https://redinger.cc/greekquiz/rules-en.html"
     }
-      
+        
     private var helpHtmlURL: String {
         return "https://redinger.cc/greekquiz/help-\(interfaceLanguage).html"
     }
@@ -152,6 +152,9 @@ struct ContentView: View {
             let currentMode = quizMode
             DispatchQueue.main.async {
                 quizMode = currentMode
+                if currentMode == .keyboard {
+                    isTextFieldFocused = true
+                }
             }
 
             if quizMode == .quiz {
@@ -184,54 +187,54 @@ struct ContentView: View {
         }
     }
 
-
+    // MARK: - Subviews
     private var headerButtons: some View {
         HStack(spacing: 8) {
-                   
-                   HeaderButton(imageName: "questionmark.circle", action: { showingHelp = true })
-                       .sheet(isPresented: $showingHelp) { HelpSheetView(htmlFileURL: helpHtmlURL) }
-                   
-                   Spacer()
-                   
-                   HeaderButton(imageName: "character.book.closed", action: { showingRules = true })
-                       .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileURL: rulesHtmlURL) }
+            
+            HeaderButton(imageName: "questionmark.circle", action: { showingHelp = true })
+                .sheet(isPresented: $showingHelp) { HelpSheetView(htmlFileURL: helpHtmlURL) }
+            
+            Spacer()
+            
+            HeaderButton(imageName: "character.book.closed", action: { showingRules = true })
+                .sheet(isPresented: $showingRules) { RulesSheetView(htmlFileURL: rulesHtmlURL) }
 
-                HeaderButton(imageName: "books.vertical", action: { showingDictionarySelection = true })
-                    .sheet(isPresented: $showingDictionarySelection) {
-                        DictionarySelectionView(
-                            dictionaryService: dictionaryService,
-                            speakWord: speakWord,
-                            interfaceLanguage: interfaceLanguage
-                        )
-                    }
+            HeaderButton(imageName: "books.vertical", action: { showingDictionarySelection = true })
+                .sheet(isPresented: $showingDictionarySelection) {
+                    DictionarySelectionView(
+                        dictionaryService: dictionaryService,
+                        speakWord: speakWord,
+                        interfaceLanguage: interfaceLanguage
+                    )
+                }
 
-                HeaderButton(imageName: "gearshape", action: { showingSettings = true })
-                    .sheet(isPresented: $showingSettings) {
-                        SettingsView(
-                            showTranscription: $showTranscription,
-                            autoPlaySound: $autoPlaySound,
-                            playAnswerSound: $playAnswerSound,
-                            useAllWordsInQuiz: $useAllWordsInQuiz,
-                            showArticle: $showArticle,
-                            colorSchemePreference: $colorSchemePreference,
-                            dictionarySource: $dictionarySource,
-                            customDictionaryURL: $customDictionaryURL,
-                            studiedLanguage: $studiedLanguage,
-                            answerLanguage: $answerLanguage,
-                            interfaceLanguage: $interfaceLanguage,
-                            onDownloadDictionaries: {
-                                showingSettings = false
+            HeaderButton(imageName: "gearshape", action: { showingSettings = true })
+                .sheet(isPresented: $showingSettings) {
+                    SettingsView(
+                        showTranscription: $showTranscription,
+                        autoPlaySound: $autoPlaySound,
+                        playAnswerSound: $playAnswerSound,
+                        useAllWordsInQuiz: $useAllWordsInQuiz,
+                        showArticle: $showArticle,
+                        colorSchemePreference: $colorSchemePreference,
+                        dictionarySource: $dictionarySource,
+                        customDictionaryURL: $customDictionaryURL,
+                        studiedLanguage: $studiedLanguage,
+                        answerLanguage: $answerLanguage,
+                        interfaceLanguage: $interfaceLanguage,
+                        onDownloadDictionaries: {
+                            showingSettings = false
 
-                                Task {
-                                    await dictionaryService.downloadAndSaveDictionaries(
-                                        source: dictionarySource,
-                                        customURL: customDictionaryURL,
-                                        interfaceLanguage: interfaceLanguage
-                                    )
-                                }
+                            Task {
+                                await dictionaryService.downloadAndSaveDictionaries(
+                                    source: dictionarySource,
+                                    customURL: customDictionaryURL,
+                                    interfaceLanguage: interfaceLanguage
+                                )
                             }
-                        )
-                    }
+                        }
+                    )
+                }
         }
     }
 
@@ -379,6 +382,7 @@ struct ContentView: View {
         }
     }
 
+    // MARK: - Quiz Logic
     private func checkAnswer() {
         let correctAnswers = parseAcceptedAnswers(from: currentAnswerWord())
         if correctAnswers.contains(userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()) {
@@ -420,6 +424,10 @@ struct ContentView: View {
         if !dictionaryService.activeWords.isEmpty {
             currentWordIndex = (currentWordIndex + 1) % dictionaryService.activeWords.count
             resetForNewWord()
+            
+            if quizMode == .keyboard {
+                isTextFieldFocused = true
+            }
         }
     }
 
@@ -578,7 +586,7 @@ struct ContentView: View {
         }
     }
 
-
+    // MARK: - UI Helpers
     private func backgroundColor() -> Color {
         if isShowingFeedback { return .green.opacity(0.6) }
         if showAnswer { return isCorrect ? .green.opacity(0.6) : .red.opacity(0.6) }

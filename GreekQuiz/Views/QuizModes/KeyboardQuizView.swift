@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct KeyboardQuizView: View {
-    // MARK: - Properties
+
     
     let word: Word
     let questionWord: String
@@ -17,10 +17,9 @@ struct KeyboardQuizView: View {
     let onCheckAnswer: () -> Void
     let onNextWord: () -> Void
     
-    
     var body: some View {
-        // ✨ ИЗМЕНЕНИЕ: Вся структура VStack была исправлена
-        VStack(spacing: 0) {
+        // ✨ ИЗМЕНЕНИЕ: Структура VStack исправлена для правильного позиционирования
+        VStack(spacing: -320) {
             // --- Верхний блок ---
             VStack(spacing: 5) {
                 WordDisplay(
@@ -39,11 +38,11 @@ struct KeyboardQuizView: View {
                 
                 exampleSentencesView(for: word, isVisible: showAnswer)
             }
-            .padding(.top, 40) // Отступ сверху до слова
+            .padding(.top, 40)
             
-            Spacer(minLength: 20) // Гибкая распорка МЕЖДУ блоками
 
-            // --- Нижний блок ---
+            Spacer()
+
             VStack (spacing: 5){
                 TextField("your_translation_placeholder", text: $userInput)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -59,7 +58,8 @@ struct KeyboardQuizView: View {
                 }
                 .padding(.top, 20)
             }
-            .padding(.bottom, 340) // Отступ снизу от кнопок
+
+            .padding(.bottom, 310)
         }
         .padding(.horizontal)
     }
